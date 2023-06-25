@@ -39,7 +39,7 @@ function Sectionvisiblescroll(){
             nav_txt.classList.remove('nav_selected_txt');
         });
         nav_txt[index].classList.add('nav_selected_txt');
-        
+
         navLinks.forEach((navLink) => {
             navLink.classList.remove('nav_selected');
         });
@@ -49,3 +49,29 @@ function Sectionvisiblescroll(){
 
 }
 window.addEventListener('scroll', Sectionvisiblescroll);
+
+// -------------------------------------- logo anim ------------------------------
+
+let logoSvg = document.querySelector(".logo_svg");
+let path2 = logoSvg.querySelector(".path2");
+
+function logoAnim(){
+    setTimeout(() => {
+        path2.classList.add('path2_anim');
+    }, 2000);
+    setTimeout(() => {
+        logoSvg.classList.remove('logo_svg');
+        logoSvg.classList.add('logo_svg_anim');
+    }, 4000);
+    setTimeout(() => {
+        path2.classList.remove('path2_anim');
+    }, 6000);
+    setTimeout(() => {
+        logoSvg.classList.remove('logo_svg_anim');
+        logoSvg.classList.add('logo_svg');
+    }, 8000);
+}
+document.addEventListener('DOMContentLoaded', logoAnim);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(logoAnim, 8000);
+});

@@ -5,8 +5,9 @@
 }
 
 :root{
-    --dark-mode-off: white;
-    --dark-mode-on: black;
+    --dark-mode-off: black;
+    --dark-mode-on: white;
+    --main-color: rgb(212, 139, 27 );
 }
 
 body{
@@ -16,6 +17,48 @@ body{
 
 .hidden{
     background-color: var(--dark-mode-off) !important;; 
+}
+
+/* ----------svg---------------- */
+
+.logo_svg{
+    fill: var(--dark-mode-on);
+    width: 100px;
+    height: 100px;
+    margin-left: 5vw;
+    transform: translate(-50%);
+    margin-top: 20px;
+    position: fixed;
+    transition: 1s ease;
+}
+
+.path1{
+    stroke: var(--dark-mode-on);
+    stroke-width: 20;
+}
+
+.path2{
+    stroke: var(--main-color);
+    stroke-width: 20;
+    stroke-dasharray: 0.6;
+    stroke-dashoffset: 0.6;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.path2_anim{
+    stroke-dashoffset: 0;
+
+}
+
+.logo_svg_anim{
+    fill: var(--main-color) ;
+    width: 100px ;
+    height: 100px ;
+    margin-left: 5vw;
+    transform: translate(-50%);
+    margin-top: 20px;
+    position: fixed;
+    transition: 1s ease;
 }
 
 /* ---------burger----------*/
@@ -38,7 +81,7 @@ body{
 .bar{
     width: 45px;
     height: 4px;
-    background-color: rgb(212, 139, 27 );
+    background-color: var(--main-color);
     margin-top: 10px;
 }
 
@@ -101,7 +144,7 @@ nav ul{
 nav ul li{
     list-style: none;
     background: none;
-    border: 1px solid rgb(212, 139, 27 );
+    border: 1px solid var(--main-color);
 
     border-radius: 10px;
     padding-left: 10px;
@@ -113,12 +156,12 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: rgb(212, 139, 27 );
+    color: var(--main-color);
     font-size: 20px;
 }
 
 .nav_selected{
-    background-color: rgb(212, 139, 27 );
+    background-color: var(--main-color);
 }
 .nav_selected_txt{
     color: var(--dark-mode-off);
