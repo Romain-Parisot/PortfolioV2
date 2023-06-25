@@ -5,7 +5,8 @@
 }
 
 :root{
-    --first-section-color: red;
+    --dark-mode-off: white;
+    --dark-mode-on: black;
 }
 
 body{
@@ -14,7 +15,7 @@ body{
 }
 
 .hidden{
-    background-color: var(--first-section-color) !important;; 
+    background-color: var(--dark-mode-off) !important;; 
 }
 
 /* ---------burger----------*/
@@ -24,14 +25,14 @@ body{
     flex-direction: column;
     background: none;
     border: none;
-    position: absolute;
+    position: fixed;
     margin-left: 95vw;
     transform: translate(-50%);
     margin-top: 20px;
 }
 
 .burger:hover .bar{
-    background-color: black;
+    background-color: var(--dark-mode-on);
 }
 
 .bar{
@@ -68,12 +69,16 @@ header{
     transform: translate(-50%, -200px);
     display: flex;
     border-radius: 15px;
-    background-color: black;
+    background-color: var(--dark-mode-off);
     padding: 20px;
 
-    transition: 0.4s ease;
-    position: relative;
-        z-index: 10;
+    transition: 0.2s ease;
+    position: fixed;
+    z-index: 10;
+
+    box-shadow: 0px 0px 5px -1px var(--dark-mode-on);
+    -webkit-box-shadow: 0px 0px 5px -1px var(--dark-mode-on);
+    -moz-box-shadow: 0px 0px 5px -1px var(--dark-mode-on);
 }
 
 header.animationHeader{
@@ -95,18 +100,28 @@ nav ul{
 
 nav ul li{
     list-style: none;
-    background-color: white;
+    background: none;
+    border: 1px solid rgb(212, 139, 27 );
+
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    transition: 0.5s linear;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: #000;
+    color: rgb(212, 139, 27 );
     font-size: 20px;
+}
+
+.nav_selected{
+    background-color: rgb(212, 139, 27 );
+}
+.nav_selected_txt{
+    color: var(--dark-mode-off);
 }
 
 /* ----------section--------------- */
@@ -114,7 +129,7 @@ nav ul li a{
 section{
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: var(--dark-mode-off);
     margin-bottom: 10px;
 }
 
