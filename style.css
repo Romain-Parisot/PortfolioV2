@@ -3,3 +3,119 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --first-section-color: red;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.hidden{
+    background-color: var(--first-section-color) !important;; 
+}
+
+/* ---------burger----------*/
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    position: absolute;
+    margin-left: 95vw;
+    transform: translate(-50%);
+    margin-top: 20px;
+}
+
+.burger:hover .bar{
+    background-color: black;
+}
+
+.bar{
+    width: 45px;
+    height: 4px;
+    background-color: rgb(212, 139, 27 );
+    margin-top: 10px;
+}
+
+.bar_mid{
+    width: 30px;
+}
+
+.bar_up , .bar_down{
+    transition: 0.4s;
+    transform: rotate(0deg);
+}
+
+.barAnimationTop{
+    transform: rotate(45deg) translate(10px, 10px);
+
+}
+
+.barAnimationBot{
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+/* ---------header----------- */
+
+header{
+    width: 40vw;
+    height: 60px;
+    margin-left: 50%;
+    transform: translate(-50%, -200px);
+    display: flex;
+    border-radius: 15px;
+    background-color: black;
+    padding: 20px;
+
+    transition: 0.4s ease;
+    position: relative;
+        z-index: 10;
+}
+
+header.animationHeader{
+    transform: translate(-50%, 10px);
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+/* ----------section--------------- */
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+/* ----------footer--------------- */
