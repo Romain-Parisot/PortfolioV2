@@ -29,20 +29,33 @@ body{
     margin-top: 20px;
     position: fixed;
     transition: 1s ease;
+    cursor: pointer;
+}
+
+
+.logo_svg_anim{
+    fill: var(--main-color) ;
+    width: 75px ;
+    height: 75px ;
+    transform: translate(-50%);
+    margin-top: 20px;
+    position: fixed;
+    transition: 1s ease;
+    cursor: pointer;
 }
 
 .logo_svg1{
-    margin-left: 5vw;
+    margin-left: 50px;
     margin-top: 20px;
 }
 
 .logo_svg2{
-    margin-left: -5vw;
+    margin-left: -200px;
     margin-top: 20px;
 }
 
 .logo_svg3{
-    margin-left: 5vw;
+    margin-left: 50px;
     margin-top: -200px;
 }
 
@@ -62,16 +75,6 @@ body{
 .path2_anim{
     stroke-dashoffset: 0;
 
-}
-
-.logo_svg_anim{
-    fill: var(--main-color) ;
-    width: 75px ;
-    height: 75px ;
-    transform: translate(-50%);
-    margin-top: 20px;
-    position: fixed;
-    transition: 1s ease;
 }
 
 /* ---------burger----------*/
