@@ -5,8 +5,8 @@
 }
 
 :root{
-    --dark-mode-off: black;
-    --dark-mode-on: white;
+    --dark-mode-off: white;
+    --dark-mode-on: black;
     --main-color: rgb(212, 139, 27 );
 }
 
@@ -23,13 +23,27 @@ body{
 
 .logo_svg{
     fill: var(--dark-mode-on);
-    width: 100px;
-    height: 100px;
-    margin-left: 5vw;
+    width: 75px;
+    height: 75px;
     transform: translate(-50%);
     margin-top: 20px;
     position: fixed;
     transition: 1s ease;
+}
+
+.logo_svg1{
+    margin-left: 5vw;
+    margin-top: 20px;
+}
+
+.logo_svg2{
+    margin-left: -5vw;
+    margin-top: 20px;
+}
+
+.logo_svg3{
+    margin-left: 5vw;
+    margin-top: -200px;
 }
 
 .path1{
@@ -40,8 +54,8 @@ body{
 .path2{
     stroke: var(--main-color);
     stroke-width: 20;
-    stroke-dasharray: 0.6;
-    stroke-dashoffset: 0.6;
+    stroke-dasharray: 0.7;
+    stroke-dashoffset: 0.7;
     transition: stroke-dashoffset 2s ease-in-out;
 }
 
@@ -52,9 +66,8 @@ body{
 
 .logo_svg_anim{
     fill: var(--main-color) ;
-    width: 100px ;
-    height: 100px ;
-    margin-left: 5vw;
+    width: 75px ;
+    height: 75px ;
     transform: translate(-50%);
     margin-top: 20px;
     position: fixed;
@@ -172,7 +185,7 @@ nav ul li a{
 section{
     width: 100vw;
     height: 100vh;
-    background-color: var(--dark-mode-off);
+    background-color: aliceblue;
     margin-bottom: 10px;
 }
 

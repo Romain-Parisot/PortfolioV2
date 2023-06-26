@@ -52,24 +52,42 @@ window.addEventListener('scroll', Sectionvisiblescroll);
 
 // -------------------------------------- logo anim ------------------------------
 
-let logoSvg = document.querySelector(".logo_svg");
-let path2 = logoSvg.querySelector(".path2");
+let logoSvgAll = document.querySelectorAll(".logo_svg");
+let path2All = document.querySelectorAll(".path2");
+
+
 
 function logoAnim(){
+
+    let logoSvg1 = document.querySelector(".logo_svg1");
+    let logoSvg2 = document.querySelector(".logo_svg2");
+    let logoSvg3 = document.querySelector(".logo_svg3");
+
     setTimeout(() => {
-        path2.classList.add('path2_anim');
+        path2All.forEach(path2 => {
+            path2.classList.add('path2_anim');
+        });
     }, 2000);
     setTimeout(() => {
-        logoSvg.classList.remove('logo_svg');
-        logoSvg.classList.add('logo_svg_anim');
+        logoSvgAll.forEach(logoSvg => {
+            logoSvg.classList.remove('logo_svg');
+            logoSvg.classList.add('logo_svg_anim');
+        });
     }, 4000);
     setTimeout(() => {
-        path2.classList.remove('path2_anim');
+        path2All.forEach(path2 => {
+            path2.classList.remove('path2_anim');
+        });
     }, 6000);
     setTimeout(() => {
-        logoSvg.classList.remove('logo_svg_anim');
-        logoSvg.classList.add('logo_svg');
+        logoSvgAll.forEach(logoSvg => {
+            logoSvg.classList.remove('logo_svg_anim');
+            logoSvg.classList.add('logo_svg');
+        });
     }, 8000);
+    logoSvg1.classList.add('logo_svg2');
+    logoSvg2.classList.add('logo_svg3');
+    logoSvg3.classList.add('logo_svg1');
 }
 document.addEventListener('DOMContentLoaded', logoAnim);
 document.addEventListener('DOMContentLoaded', () => {
