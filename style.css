@@ -223,7 +223,6 @@ h2{
 .divproject{
     border-radius: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
     color: white;
 }
@@ -276,5 +275,28 @@ h2{
     grid-row: 4;
 }
 
+/* ----------timeline----------- */
+
+#parcour{
+    /* a changer : */
+    margin-top: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divtimeline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.timelinespan{
+    width: 5px;
+    background-color: var(--main-color);
+    height: 100vh;
+
+}
 
 /* ----------footer--------------- */
