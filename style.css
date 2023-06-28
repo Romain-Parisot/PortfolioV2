@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--dark-mode-on);
 }
 
 :root{
-    --dark-mode-off: white;
-    --dark-mode-on: black;
+    --dark-mode-off: #ffffff;
+    --dark-mode-on: #000000;
     --main-color: rgb(212, 139, 27 );
 }
 
@@ -32,7 +33,6 @@ body{
     cursor: pointer;
     z-index: 10;
 }
-
 
 .logo_svg_anim{
     fill: var(--main-color) ;
@@ -121,6 +121,18 @@ body{
     transform: rotate(-45deg) translate(10px, -10px);
 }
 
+/* ----------dark mode-------- */
+
+.divbtdarkmode{
+    background-color: grey;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    margin-left: 95vw;
+    transform: translate(-50%);
+    margin-top: 90px;
+}
+
 /* ---------header----------- */
 
 header{
@@ -181,6 +193,7 @@ nav ul li a{
 .nav_selected{
     background-color: var(--main-color);
 }
+
 .nav_selected_txt{
     color: var(--dark-mode-off);
 }
@@ -190,7 +203,7 @@ nav ul li a{
 section{
     width: 100vw;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: var(--dark-mode-off);
     margin-bottom: 10px;
 }
 

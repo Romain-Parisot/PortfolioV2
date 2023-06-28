@@ -116,3 +116,23 @@ function logoAnimClick(){
 logo_svgAll.forEach(logo_svg => {
     logo_svg.addEventListener('click', logoAnimClick);
 });
+
+
+// -------------------------------------- dark mode ------------------------------
+
+let divdarkMode = document.querySelector(".divbtdarkmode");
+
+function darkMode(){
+    let varColor = document.querySelector(":root");
+    let valuevarcolor = getComputedStyle(varColor);
+
+    if (valuevarcolor.getPropertyValue('--dark-mode-off') == '#ffffff'){
+        varColor.style.setProperty('--dark-mode-off', '#000000');
+        varColor.style.setProperty('--dark-mode-on', '#ffffff');
+    }
+    else{
+        varColor.style.setProperty('--dark-mode-off', '#ffffff');
+        varColor.style.setProperty('--dark-mode-on', '#000000');
+    }
+}
+divdarkMode.addEventListener('click', darkMode);
