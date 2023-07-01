@@ -20,7 +20,7 @@ body{
     background-color: var(--dark-mode-off) !important;; 
 }
 
-/* ----------section--------------- */
+/* -------------------------------------section------------------------------------- */
 
 section{
     width: 100vw;
@@ -40,7 +40,7 @@ h3{
     text-align: center;
 }
 
-/* ----------svg---------------- */
+/* -------------------------------------logo svg------------------------------------- */
 
 .logo_svg{
     fill: var(--dark-mode-on);
@@ -81,12 +81,14 @@ h3{
     margin-top: -200px;
 }
 
-.path1{
+.path1_logo{
     stroke: var(--dark-mode-on);
     stroke-width: 20;
 }
 
-.path2{
+
+
+.path2_logo{
     stroke: var(--main-color);
     stroke-width: 20;
     stroke-dasharray: 0.7;
@@ -94,12 +96,87 @@ h3{
     transition: stroke-dashoffset 2s ease-in-out;
 }
 
-.path2_anim{
+.path2_logo_anim{
     stroke-dashoffset: 0;
-
 }
 
-/* ---------burger----------*/
+/* -------------------------------------dark mode svg------------------------------------- */
+
+.divbtdarkmode{
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    margin-left: 95vw;
+    transform: translate(-50%);
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkmode_svg{
+    fill: var(--dark-mode-on);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    transition: 1s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.darkmode_svg_spark{
+    transition: 0.5s ease;
+}
+
+.darkmode_svg_spark0{
+    transform: rotate(0deg);
+}
+
+.darkmode_svg_spark_anim{
+    transform: rotate(10deg);
+}
+
+.darkmode_svg_spark_anim2{
+    transform: rotate(-10deg);
+}
+
+.darkmode_svg_sun{
+    transition: 0.5s ease;
+}
+
+.darkmode_svg_sun_topleft_anim{
+    transform: translate(-3%, -3%);
+}
+
+.darkmode_svg_sun_topright_anim{
+    transform: translate(3%, -3%);
+}
+
+.darkmode_svg_sun_botleft_anim{
+    transform: translate(-3%, 3%);
+}
+
+.darkmode_svg_sun_botright_anim{
+    transform: translate(3%, 3%);
+}
+
+.darkmode_svg_sun_top_anim{
+    transform: translateY(-3%);
+}
+
+.darkmode_svg_sun_bot_anim{
+    transform: translateY(3%);
+}
+
+.darkmode_svg_sun_left_anim{
+    transform: translateX(-3%);
+}
+
+.darkmode_svg_sun_right_anim{
+    transform: translateX(3%);
+}
+
+/* -------------------------------------burger------------------------------------- */
 
 .burger{
     display: flex;
@@ -141,19 +218,7 @@ h3{
     transform: rotate(-45deg) translate(10px, -10px);
 }
 
-/* ----------dark mode-------- */
-
-.divbtdarkmode{
-    background-color: grey;
-    width: 75px;
-    height: 75px;
-    position: fixed;
-    margin-left: 95vw;
-    transform: translate(-50%);
-    margin-top: 90px;
-}
-
-/* ---------header----------- */
+/* -------------------------------------header------------------------------------- */
 
 header{
     width: 40vw;
@@ -172,6 +237,37 @@ header{
     box-shadow: 0px 0px 5px -1px var(--dark-mode-on);
     -webkit-box-shadow: 0px 0px 5px -1px var(--dark-mode-on);
     -moz-box-shadow: 0px 0px 5px -1px var(--dark-mode-on);
+}
+
+.header_contour{
+    width: 40vw;
+    height: 60px;
+    margin-left: 50%;
+    transition: 0.2s ease;
+    fill: var(--main-color) ;
+    position: fixed;
+    z-index: 10;
+    transform: translate(-50%, 10px)
+
+}
+
+.path1_header{
+    stroke: var(--dark-mode-on);
+    stroke-width: 20;
+    transform: rotate(90deg);
+}
+
+.path2_header{
+    stroke: var(--main-color);
+    stroke-width: 20;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 2s ease-in-out;
+    transform: rotate(90deg);
+}
+
+.path2_header_anim{
+    stroke-dashoffset: 0;
 }
 
 header.animationHeader{
@@ -219,7 +315,7 @@ nav ul li a{
 }
 
 
-/* ------------projets---------- */
+/* -------------------------------------projets------------------------------------- */
 
 #projects{
     display: flex;
@@ -293,7 +389,7 @@ nav ul li a{
     grid-row: 4;
 }
 
-/* ----------timeline----------- */
+/* -------------------------------------timeline------------------------------------- */
 
 #parcour{
     /* a changer : */
@@ -318,7 +414,7 @@ nav ul li a{
 }
 
 
-/* ---------personnality------------ */
+/* -------------------------------------personnality------------------------------------- */
 
 .parentdivpersonnality{
     display: flex;
@@ -352,4 +448,4 @@ nav ul li a{
     height: 150px;
 }
 
-/* ----------footer--------------- */
+/* -------------------------------------footer------------------------------------- */

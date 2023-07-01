@@ -1,4 +1,4 @@
-// --------------------------------------burger menu ------------------------------
+// -------------------------------------burger menu-------------------------------------
 function toggleburger(){
     let header=document.querySelector('header')
     let burger=document.querySelector('.burger')
@@ -15,7 +15,7 @@ function toggleburger(){
 }
 toggleburger();
 
-// -------------------------------------- Nav bar ------------------------------
+// -------------------------------------Nav bar-------------------------------------
 
 const navLinks = document.querySelectorAll('.nav-links li');
 const nav_txt = document.querySelectorAll('.nav-links li a');
@@ -50,43 +50,7 @@ function Sectionvisiblescroll(){
 }
 window.addEventListener('scroll', Sectionvisiblescroll);
 
-// -------------------------------------- logo anim ------------------------------
-
-let logoSvgAll = document.querySelectorAll(".logo_svg");
-let path2All = document.querySelectorAll(".path2");
-
-
-
-function logoAnim(){
-
-    setTimeout(() => {
-        path2All.forEach(path2 => {
-            path2.classList.add('path2_anim');
-        });
-    }, 2000);
-    setTimeout(() => {
-        logoSvgAll.forEach(logoSvg => {
-            logoSvg.classList.remove('logo_svg');
-            logoSvg.classList.add('logo_svg_anim');
-        });
-    }, 4000);
-    setTimeout(() => {
-        path2All.forEach(path2 => {
-            path2.classList.remove('path2_anim');
-        });
-    }, 6000);
-    setTimeout(() => {
-        logoSvgAll.forEach(logoSvg => {
-            logoSvg.classList.remove('logo_svg_anim');
-            logoSvg.classList.add('logo_svg');
-        });
-    }, 8000);
-
-}
-document.addEventListener('DOMContentLoaded', logoAnim);
-document.addEventListener('DOMContentLoaded', () => {
-    setInterval(logoAnim, 8000);
-});
+// -------------------------------------logo anim-------------------------------------
 
 let logo_svgAll = document.querySelectorAll(".logo_svg");
 
@@ -120,8 +84,45 @@ logo_svgAll.forEach(logo_svg => {
     logo_svg.addEventListener('click', logoAnimClick);
 });
 
+// -------------------------------------logo anim svg-------------------------------------
 
-// -------------------------------------- dark mode ------------------------------
+let logoSvgAll = document.querySelectorAll(".logo_svg");
+let path2_logoAll = document.querySelectorAll(".path2_logo");
+
+
+
+function logoAnim(){
+
+    setTimeout(() => {
+        path2_logoAll.forEach(path2_logo => {
+            path2_logo.classList.add('path2_logo_anim');
+        });
+    }, 2000);
+    setTimeout(() => {
+        logoSvgAll.forEach(logoSvg => {
+            logoSvg.classList.remove('logo_svg');
+            logoSvg.classList.add('logo_svg_anim');
+        });
+    }, 4000);
+    setTimeout(() => {
+        path2_logoAll.forEach(path2_logo => {
+            path2_logo.classList.remove('path2_logo_anim');
+        });
+    }, 6000);
+    setTimeout(() => {
+        logoSvgAll.forEach(logoSvg => {
+            logoSvg.classList.remove('logo_svg_anim');
+            logoSvg.classList.add('logo_svg');
+        });
+    }, 8000);
+
+}
+document.addEventListener('DOMContentLoaded', logoAnim);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(logoAnim, 8000);
+});
+
+// -------------------------------------dark mode-------------------------------------
 
 let divdarkMode = document.querySelector(".divbtdarkmode");
 
@@ -139,3 +140,86 @@ function darkMode(){
     }
 }
 divdarkMode.addEventListener('click', darkMode);
+
+
+// -------------------------------------dark mode svg-------------------------------------
+
+let darkmode_svg_sun_topleft = document.querySelector(".darkmode_svg_sun_topleft");
+let darkmode_svg_sun_topright = document.querySelector(".darkmode_svg_sun_topright");
+let darkmode_svg_sun_botleft = document.querySelector(".darkmode_svg_sun_botleft");
+let darkmode_svg_sun_botright = document.querySelector(".darkmode_svg_sun_botright");
+let darkmode_svg_sun_top = document.querySelector(".darkmode_svg_sun_top");
+let darkmode_svg_sun_left = document.querySelector(".darkmode_svg_sun_left");
+let darkmode_svg_sun_right = document.querySelector(".darkmode_svg_sun_right");
+let darkmode_svg_sun_bot = document.querySelector(".darkmode_svg_sun_bot");
+
+let darkmode_svg_spark = document.querySelector(".darkmode_svg_spark");
+
+let darkmode_svg_spark_count = 1;
+
+let darkmode_svg_timer = 1000;
+
+function darkModeAnimSvg_sun(){
+    darkmode_svg_sun_topleft.classList.toggle('darkmode_svg_sun_topleft_anim');
+    darkmode_svg_sun_topright.classList.toggle('darkmode_svg_sun_topright_anim');
+    darkmode_svg_sun_botleft.classList.toggle('darkmode_svg_sun_botleft_anim');
+    darkmode_svg_sun_botright.classList.toggle('darkmode_svg_sun_botright_anim');
+    darkmode_svg_sun_top.classList.toggle('darkmode_svg_sun_top_anim');
+    darkmode_svg_sun_left.classList.toggle('darkmode_svg_sun_left_anim');
+    darkmode_svg_sun_right.classList.toggle('darkmode_svg_sun_right_anim');
+    darkmode_svg_sun_bot.classList.toggle('darkmode_svg_sun_bot_anim');
+}
+
+function darkModeAnimSvg_spark(){
+
+    if (darkmode_svg_spark_count == 1){
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
+
+        darkmode_svg_spark.classList.add('darkmode_svg_spark_anim');
+        darkmode_svg_spark_count = 2;
+    }
+    else if (darkmode_svg_spark_count == 2){
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
+        
+        darkmode_svg_spark.classList.add('darkmode_svg_spark0');
+        darkmode_svg_spark_count = 3;
+    }
+    else if (darkmode_svg_spark_count == 3){
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
+        
+        darkmode_svg_spark.classList.add('darkmode_svg_spark_anim2');
+        darkmode_svg_spark_count = 4;
+    }
+    else if (darkmode_svg_spark_count == 4){
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
+        darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
+        
+        darkmode_svg_spark.classList.add('darkmode_svg_spark0');
+        darkmode_svg_spark_count = 1;
+    }
+
+    darkmode_svg_timer = getRandomIntInclusive(1000, 3000);
+}
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+document.addEventListener('DOMContentLoaded', darkModeAnimSvg_sun);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(darkModeAnimSvg_sun, darkmode_svg_timer);
+});
+
+document.addEventListener('DOMContentLoaded', darkModeAnimSvg_spark);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(darkModeAnimSvg_spark, darkmode_svg_timer);
+});
