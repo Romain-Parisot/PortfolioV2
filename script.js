@@ -90,26 +90,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let logo_svgAll = document.querySelectorAll(".logo_svg");
 
+let logoSvgbasic = document.querySelector(".logoSvgbasic");
+let logoSvg3 = document.querySelector(".logo_svg3");
+
+let logosvgposition = true;
+
 function logoAnimClick(){
-    
-    let logoSvg1 = document.querySelector(".logo_svg1");
-    let logoSvg2 = document.querySelector(".logo_svg2");
-    let logoSvg3 = document.querySelector(".logo_svg3");
 
-    
-    logoSvg1.classList.remove('logo_svg1');
-    logoSvg1.classList.remove('logo_svg2');
-    logoSvg1.classList.remove('logo_svg3');
-    logoSvg2.classList.remove('logo_svg1');
-    logoSvg2.classList.remove('logo_svg2');
-    logoSvg2.classList.remove('logo_svg3');
-    logoSvg3.classList.remove('logo_svg1');
-    logoSvg3.classList.remove('logo_svg2');
-    logoSvg3.classList.remove('logo_svg3');
+    if (logosvgposition == true){
+        logoSvgbasic.classList.remove('logoSvgbasic');
+        logoSvgbasic.classList.add('logo_svg2');
 
-    logoSvg1.classList.add('logo_svg2');
-    logoSvg2.classList.add('logo_svg3');
-    logoSvg3.classList.add('logo_svg1');
+        logoSvg3.classList.remove('logo_svg3');
+        logoSvg3.classList.add('logoSvgbasic');
+        logosvgposition = false;
+    }
+    else{
+        logoSvgbasic.classList.remove('logo_svg2');
+        logoSvgbasic.classList.add('logoSvgbasic');
+
+        logoSvg3.classList.remove('logoSvgbasic');
+        logoSvg3.classList.add('logo_svg3');
+        logosvgposition = true;
+    }
 
 }
 
