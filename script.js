@@ -217,3 +217,28 @@ document.addEventListener('DOMContentLoaded', darkModeAnimSvg_spark);
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(darkModeAnimSvg_spark, darkmode_svg_timer);
 });
+
+// -------------------------------------bar parcour anim-------------------------------------
+
+let parcour_svg = document.getElementById('parcour_svg');
+let progressBar = document.getElementById('parcour_bar_svg');
+let progressBarWidth = 0; // Largeur de départ du rectangle de progression
+
+function updateProgressBar() {
+
+    let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    if (scrollPercentage < 30) {
+        scrollPercentage = 0;
+      } else if (scrollPercentage > 60) {
+        scrollPercentage = 100;
+      } else {
+        // Transformation logarithmique entre 30 et 60
+        scrollPercentage = (scrollPercentage - 30) * (100 / 30);
+      }
+  
+      progressBar.style.width = `${progressBarWidth + scrollPercentage}%`;
+      console.log(scrollPercentage);
+}
+
+
+document.addEventListener('scroll', updateProgressBar);

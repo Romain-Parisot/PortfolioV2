@@ -326,9 +326,9 @@ nav ul li a:hover:after {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0px 0px 23px -9px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 23px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 23px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -9px var(--dark-mode-on);
+    -webkit-box-shadow: 0px 0px 23px -9px var(--dark-mode-on);
+    -moz-box-shadow: 0px 0px 23px -9px var(--dark-mode-on);
 }
 
 .divproject::before{
@@ -412,11 +412,37 @@ nav ul li a:hover:after {
 /* -------------------------------------timeline------------------------------------- */
 
 #parcour{
-    /* a changer : */
-    margin-top: 500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+#parcour_svg{
+    transform: rotate(90deg);
+    width: 1000px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#parcour_bar_svg {
+    width: 10px;
+    height: 10px;
+    fill: var(--main-color);
+    stroke-width: 2;
+    z-index: 12;
+    position: absolute;
+}
+
+#parcour_bar_svg2 {
+    width: 1000px;
+    height: 10px;
+    stroke: var(--main-color);
+    stroke-width: 2;
+    fill-opacity: 0;
+    z-index: 11;
+    position: absolute;
 }
 
 .divtimeline{
