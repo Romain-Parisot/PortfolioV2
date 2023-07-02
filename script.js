@@ -10,7 +10,6 @@ function toggleburger(){
         barUp.classList.toggle('barAnimationTop');
         barDown.classList.toggle('barAnimationBot');
         header.classList.toggle('animationHeader');
-
     })
 }
 toggleburger();
@@ -19,8 +18,6 @@ toggleburger();
 
 const navLinks = document.querySelectorAll('.nav-links li');
 const nav_txt = document.querySelectorAll('.nav-links li a');
-console.log(nav_txt);
-console.log(navLinks);
 
 function Sectionvisiblescroll(){
 
@@ -33,12 +30,7 @@ function Sectionvisiblescroll(){
 
     // Vérifiez si la section est visible à l'écran
     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      // Ajoutez une classe "active" à l'élément de la barre de navigation correspondant à la section visible
-        
-        nav_txt.forEach((nav_txt) => {
-            nav_txt.classList.remove('nav_selected_txt');
-        });
-        nav_txt[index].classList.add('nav_selected_txt');
+        // Ajoutez une classe "active" à l'élément de la barre de navigation correspondant à la section visible
 
         navLinks.forEach((navLink) => {
             navLink.classList.remove('nav_selected');
@@ -173,7 +165,6 @@ function darkModeAnimSvg_sun(){
 function darkModeAnimSvg_spark(){
 
     randomSideAnimation = getRandomIntInclusive(1, 2);
-    console.log(randomSideAnimation);
 
     if (darkmode_svg_spark_count == 1){
         if(randomSideAnimation == 1){
