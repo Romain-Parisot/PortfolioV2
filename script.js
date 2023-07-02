@@ -172,31 +172,33 @@ function darkModeAnimSvg_sun(){
 
 function darkModeAnimSvg_spark(){
 
-    if (darkmode_svg_spark_count == 1){
-        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
-        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
-        darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
+    randomSideAnimation = getRandomIntInclusive(1, 2);
+    console.log(randomSideAnimation);
 
-        darkmode_svg_spark.classList.add('darkmode_svg_spark_anim');
-        darkmode_svg_spark_count = 2;
-    }
-    else if (darkmode_svg_spark_count == 2){
-        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
-        darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
-        darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
-        
-        darkmode_svg_spark.classList.add('darkmode_svg_spark0');
-        darkmode_svg_spark_count = 3;
-    }
-    else if (darkmode_svg_spark_count == 3){
+    if (darkmode_svg_spark_count == 1){
+        if(randomSideAnimation == 1){
         darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
         darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
         darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
         
         darkmode_svg_spark.classList.add('darkmode_svg_spark_anim2');
-        darkmode_svg_spark_count = 4;
+        darkmode_svg_spark_count = 2;
+
+        randomSideAnimation = 2
+        }
+        else if(randomSideAnimation == 2){
+            darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
+            darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
+            darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
+
+            darkmode_svg_spark.classList.add('darkmode_svg_spark_anim');
+            darkmode_svg_spark_count = 2;
+            
+            randomSideAnimation = 1
+        }
+
     }
-    else if (darkmode_svg_spark_count == 4){
+    else if (darkmode_svg_spark_count == 2){
         darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim');
         darkmode_svg_spark.classList.remove('darkmode_svg_spark_anim2');
         darkmode_svg_spark.classList.remove('darkmode_svg_spark0');
@@ -205,7 +207,8 @@ function darkModeAnimSvg_spark(){
         darkmode_svg_spark_count = 1;
     }
 
-    darkmode_svg_timer = getRandomIntInclusive(1000, 3000);
+
+    darkmode_svg_timer = getRandomIntInclusive(1500, 3000);
 }
 
 function getRandomIntInclusive(min, max) {
@@ -216,7 +219,7 @@ function getRandomIntInclusive(min, max) {
 
 document.addEventListener('DOMContentLoaded', darkModeAnimSvg_sun);
 document.addEventListener('DOMContentLoaded', () => {
-    setInterval(darkModeAnimSvg_sun, darkmode_svg_timer);
+    setInterval(darkModeAnimSvg_sun, 2000);
 });
 
 document.addEventListener('DOMContentLoaded', darkModeAnimSvg_spark);
