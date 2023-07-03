@@ -222,22 +222,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let parcour_svg = document.getElementById('parcour_svg');
 let progressBar = document.getElementById('parcour_bar_svg');
-let progressBarWidth = 0; // Largeur de départ du rectangle de progression
+let scrollPercentagev2 = 0
 
 function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    if (scrollPercentage < 30) {
-        scrollPercentage = 0;
-      } else if (scrollPercentage > 60) {
-        scrollPercentage = 100;
-      } else {
-        // Transformation logarithmique entre 30 et 60
-        scrollPercentage = (scrollPercentage - 30) * (100 / 30);
+    if (scrollPercentage >= 30 && scrollPercentage <= 61) {
+        scrollPercentagev2 = 10/3 * (scrollPercentage - 30);
       }
-  
-      progressBar.style.width = `${progressBarWidth + scrollPercentage}%`;
-      console.log(scrollPercentage);
+    else if(scrollPercentage < 30){
+        scrollPercentagev2 = 0
+    }
+    else if(scrollPercentage > 61)
+    {
+        scrollPercentagev2 = 100
+    }  
+      progressBar.style.width = `${scrollPercentagev2}%`;
+      console.log("v1 : " + scrollPercentage);
+      console.log("v2 : " + scrollPercentagev2);
 }
 
 
