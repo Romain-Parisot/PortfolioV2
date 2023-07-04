@@ -417,6 +417,7 @@ nav ul li a:hover:after {
     justify-content: center;
     flex-direction: column;
     margin-top: 30vh;
+    height: 200vh;
 }
 
 #parcour_svg{
@@ -426,6 +427,7 @@ nav ul li a:hover:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 
 #parcour_bar_svg {
@@ -451,6 +453,7 @@ nav ul li a:hover:after {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 

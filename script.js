@@ -227,13 +227,13 @@ let scrollPercentagev2 = 0
 function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    if (scrollPercentage >= 30 && scrollPercentage <= 61) {
-        scrollPercentagev2 = 10/3 * (scrollPercentage - 30);
+    if (scrollPercentage >= 40 && scrollPercentage <= 70) {
+        scrollPercentagev2 = 10/3 * (scrollPercentage - 40);
       }
-    else if(scrollPercentage < 30){
+    else if(scrollPercentage < 40){
         scrollPercentagev2 = 0
     }
-    else if(scrollPercentage > 61)
+    else if(scrollPercentage > 71)
     {
         scrollPercentagev2 = 100
     }  
