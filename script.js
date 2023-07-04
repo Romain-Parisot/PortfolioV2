@@ -227,10 +227,10 @@ let scrollPercentagev2 = 0
 function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    if (scrollPercentage >= 40 && scrollPercentage <= 70) {
-        scrollPercentagev2 = 10/3 * (scrollPercentage - 40);
+    if (scrollPercentage >= 35 && scrollPercentage <= 70) {
+        scrollPercentagev2 = 10/3 * (scrollPercentage - 35);
       }
-    else if(scrollPercentage < 40){
+    else if(scrollPercentage < 35){
         scrollPercentagev2 = 0
     }
     else if(scrollPercentage > 71)
@@ -244,3 +244,25 @@ function updateProgressBar() {
 
 
 document.addEventListener('scroll', updateProgressBar);
+
+
+// -------------------------------------personnality anim svg-------------------------------------
+
+let path_bar_mid_support = document.querySelector(".path_bar_mid_support")
+let boolean_bar_support = true 
+
+function AnimSupport(){
+    if (boolean_bar_support = true){
+        path_bar_mid_support.classList.remove("path_bar_mid_support")
+        boolean_bar_support = false
+    }
+    else if(boolean_bar_support = false){
+        path_bar_mid_support.classList.add("path_bar_mid_support")
+        boolean_bar_support = true
+    }
+}
+
+document.addEventListener('DOMContentLoaded', AnimSupport);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(AnimSupport, 3000);
+});

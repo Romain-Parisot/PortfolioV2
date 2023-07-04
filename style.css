@@ -230,12 +230,9 @@ header{
     border-radius: 15px;
     background-color: var(--dark-mode-off);
     padding: 20px;
-
     transition: 1s ease;
     position: fixed;
     z-index: 10;
-
-
 }
 
 header.animationHeader{
@@ -258,8 +255,6 @@ nav ul{
 nav ul li{
     list-style: none;
     background: none;
-
-
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -498,5 +493,29 @@ nav ul li a:hover:after {
     width: 150px;
     height: 150px;
 }
+
+/* ------------------------------------- Personnality ------------------------------------- */
+
+.personnality_svg{
+    width: 100px;
+    height: 100px;
+}
+
+/* ------------------------------------- Personnality - Computer ------------------------------------- */
+
+.div_weight_computer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ------------------------------------- Personnality - Support ------------------------------------- */
+
+.path_bar_mid_support{
+    transform: translateY(50%);
+}
+
+
 
 /* -------------------------------------footer------------------------------------- */
