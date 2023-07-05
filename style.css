@@ -22,6 +22,7 @@
 body{
     width: 100vw;
     overflow-x: hidden;
+    background-color: var(--dark-mode-off);
 }
 
 .hidden{
@@ -32,7 +33,6 @@ body{
 
 section{
     width: 100vw;
-    height: 100vh;
     background-color: var(--dark-mode-off);
     margin-bottom: 10px;
 }
@@ -120,6 +120,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 13;
 }
 
 .darkmode_svg{
@@ -195,6 +196,7 @@ h3{
     margin-left: 95vw;
     transform: translate(-50%);
     margin-top: 20px;
+    z-index: 13;
 }
 
 .burger:hover .bar{
@@ -298,14 +300,17 @@ nav ul li a:hover:after {
     color: var(--dark-mode-off);
 }
 
+/* -------------------------------------home------------------------------------- */
+
+#home{
+    height: 100vh;
+}
+
 
 /* -------------------------------------projets------------------------------------- */
 
-#projects{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+#project{
+    height: 120vh;
 }
 
 .Galleryproject{
@@ -313,14 +318,13 @@ nav ul li a:hover:after {
     grid-template-columns: repeat(3,  1fr);
     gap: 20px;
     justify-content: center;
-    width: 800px;
-    height: 100%;
+    width: 70vw;
+    height: 100vh;
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
 .divproject{
-
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -418,13 +422,12 @@ nav ul li a:hover:after {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 30vh;
-    height: 200vh;
+    height: 150vh;
 }
 
 #parcour_svg{
     transform: rotate(90deg);
-    width: 1000px;
+    width: 150vh;
     height: 10px;
     display: flex;
     align-items: center;
@@ -507,6 +510,7 @@ nav ul li a:hover:after {
     width: 125px;
     height: 125px;
     overflow: visible;
+    fill: var(--dark-mode-on);
 }
 .personnality_svg path{
     transition: 1s ease;
@@ -565,3 +569,17 @@ nav ul li a:hover:after {
 
 
 /* -------------------------------------footer------------------------------------- */
+
+
+
+.div_social_media{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social_media_svg{
+    width: 50px;
+    height: 50px;
+
+}
