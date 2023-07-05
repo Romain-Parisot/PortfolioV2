@@ -251,13 +251,23 @@ document.addEventListener('scroll', updateProgressBar);
 let path_bar_mid_support = document.querySelector(".path_bar_mid_support")
 let path_bar_left_support = document.querySelector(".path_bar_left_support")
 let path_bar_right_support = document.querySelector(".path_bar_right_support")
+
 let path_arrow_target = document.querySelector(".path_arrow_target")
 
 function AnimPersonnalitySvg(){
     path_bar_mid_support.classList.toggle("path_bar_mid_support")
     path_bar_left_support.classList.toggle("path_bar_left_support")
     path_bar_right_support.classList.toggle("path_bar_right_support")
+
     path_arrow_target.classList.toggle("path_arrow_target")
+
+    let rootsizesvg = document.querySelector(":root");
+    rootsizesvg.style.setProperty('--computer_svg_width_random1', `${getRandomIntInclusive(50, 100)}%`);
+    rootsizesvg.style.setProperty('--computer_svg_width_random2', `${getRandomIntInclusive(50, 100)}%`);
+    rootsizesvg.style.setProperty('--computer_svg_width_random3', `${getRandomIntInclusive(50, 100)}%`);
+    rootsizesvg.style.setProperty('--computer_svg_width_random4', `${getRandomIntInclusive(50, 100)}%`);
+    rootsizesvg.style.setProperty('--computer_svg_mouse_position_x', `${getRandomIntInclusive(-2, 2)}%`);
+    rootsizesvg.style.setProperty('--computer_svg_mouse_position_y', `${getRandomIntInclusive(-2, 2)}%`);
 
 }
 

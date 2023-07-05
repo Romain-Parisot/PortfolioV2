@@ -10,6 +10,13 @@
     --dark-mode-off: #ffffff;
     --dark-mode-on: #000000;
     --main-color: rgb(212, 139, 27 );
+    
+    --computer_svg_width_random1: 100% ;
+    --computer_svg_width_random2: 100% ;
+    --computer_svg_width_random3: 100% ;
+    --computer_svg_width_random4: 100% ;
+    --computer_svg_mouse_position_x: 0%;
+    --computer_svg_mouse_position_y: 0%;
 }
 
 body{
@@ -513,6 +520,27 @@ nav ul li a:hover:after {
     justify-content: center;
     gap: 30px;
 }
+
+.path_bar1_computer{
+    transform: scaleX(var(--computer_svg_width_random1)) translateX(5%);
+}
+
+.path_bar2_computer{
+    transform: scaleX(var(--computer_svg_width_random2)) translateX(5%);
+}
+
+.path_bar3_computer{
+    transform: scaleX(var(--computer_svg_width_random3)) translateX(5%);
+}
+
+.path_bar4_computer{
+    transform: scaleX(var(--computer_svg_width_random4)) translateX(5%);
+}
+
+.path_mouse_computer{
+    transform: translate(var(--computer_svg_mouse_position_x), var(--computer_svg_mouse_position_y));
+}
+
 
 /* ------------------------------------- Personnality - Support ------------------------------------- */
 
