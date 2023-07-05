@@ -497,8 +497,12 @@ nav ul li a:hover:after {
 /* ------------------------------------- Personnality ------------------------------------- */
 
 .personnality_svg{
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
+    overflow: visible;
+}
+.personnality_svg path{
+    transition: 1s ease;
 }
 
 /* ------------------------------------- Personnality - Computer ------------------------------------- */
@@ -513,9 +517,23 @@ nav ul li a:hover:after {
 /* ------------------------------------- Personnality - Support ------------------------------------- */
 
 .path_bar_mid_support{
-    transform: translateY(50%);
+    transform: translateY(-5%);
 }
 
+.path_bar_left_support{
+    transform: translate(-5%, -5%);
+}
+
+.path_bar_right_support{
+    transform: translate(5%, -5%);
+}
+
+
+/* ------------------------------------- Personnality - target ------------------------------------- */
+
+.path_arrow_target{
+    transform: translate(5%, -5%);
+}
 
 
 /* -------------------------------------footer------------------------------------- */

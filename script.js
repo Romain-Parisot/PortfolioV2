@@ -249,20 +249,19 @@ document.addEventListener('scroll', updateProgressBar);
 // -------------------------------------personnality anim svg-------------------------------------
 
 let path_bar_mid_support = document.querySelector(".path_bar_mid_support")
-let boolean_bar_support = true 
+let path_bar_left_support = document.querySelector(".path_bar_left_support")
+let path_bar_right_support = document.querySelector(".path_bar_right_support")
+let path_arrow_target = document.querySelector(".path_arrow_target")
 
-function AnimSupport(){
-    if (boolean_bar_support = true){
-        path_bar_mid_support.classList.remove("path_bar_mid_support")
-        boolean_bar_support = false
-    }
-    else if(boolean_bar_support = false){
-        path_bar_mid_support.classList.add("path_bar_mid_support")
-        boolean_bar_support = true
-    }
+function AnimPersonnalitySvg(){
+    path_bar_mid_support.classList.toggle("path_bar_mid_support")
+    path_bar_left_support.classList.toggle("path_bar_left_support")
+    path_bar_right_support.classList.toggle("path_bar_right_support")
+    path_arrow_target.classList.toggle("path_arrow_target")
+
 }
 
-document.addEventListener('DOMContentLoaded', AnimSupport);
+document.addEventListener('DOMContentLoaded', AnimPersonnalitySvg);
 document.addEventListener('DOMContentLoaded', () => {
-    setInterval(AnimSupport, 3000);
+    setInterval(AnimPersonnalitySvg, 2000);
 });
