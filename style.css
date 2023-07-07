@@ -18,7 +18,7 @@
     --computer_svg_mouse_position_x: 0%;
     --computer_svg_mouse_position_y: 0%;
 
-    --height_parcour: 100vh;
+    --height_parcour: 200vh;
 }
 
 body{
@@ -606,7 +606,7 @@ nav ul li a:hover:after {
 }
 
 .bullet_point_parcour_animation{
-    transform: translateY(200%) translateX(-10px);
+    transform: translateY(400%) translateX(-10px);
     opacity: 100;
 }
 
@@ -622,10 +622,47 @@ nav ul li a:hover:after {
 }
 
 .parcour_elmt{
-    background-color: red;
+    background-color: aliceblue;
     transition: 1s;
     display: flex;
     margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    transition: 1s;
+    opacity: 1;
+}
+
+.parcour_elmt_right{
+    transform: translateX(300%);
+    opacity: 0;
+}
+
+.parcour_elmt_left{
+    transform: translateX(-300%);
+    opacity: 0;
+}
+
+.parcour_elmt h3{
+    font-size: 16px;
+}
+
+.parcour_elmt_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.parcour_elmt_details p{
+    font-size: 15px;
+}
+
+.parcour_elmt_date{
+    position: relative;
+    margin-left: auto;
 }
 
 .parcour_elmt1{

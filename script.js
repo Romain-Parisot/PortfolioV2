@@ -243,6 +243,12 @@ let progressBar = document.getElementById('parcour_bar_svg');
 let scrollPercentagev2 = 0;
 
 let parcour_elmt = document.querySelector('.parcour_elmt');
+let parcour_elmt1 = document.querySelector('.parcour_elmt1');
+let parcour_elmt2 = document.querySelector('.parcour_elmt2');
+let parcour_elmt3 = document.querySelector('.parcour_elmt3');
+let parcour_elmt4 = document.querySelector('.parcour_elmt4');
+
+
 
 let bullet_point_parcour1 = document.querySelector('.bullet_point_parcour1')
 let bullet_point_parcour2 = document.querySelector('.bullet_point_parcour2')
@@ -256,28 +262,36 @@ function updateProgressBar() {
         scrollPercentagev2 = 10/2.5 * (scrollPercentage - 45);
         if (scrollPercentagev2 > 25/2) {
             bullet_point_parcour1.classList.add("bullet_point_parcour_animation")
+            parcour_elmt1.classList.remove("parcour_elmt_left")
         }
         if (scrollPercentagev2 > 75/2) {
             bullet_point_parcour2.classList.add("bullet_point_parcour_animation")
+            parcour_elmt2.classList.remove("parcour_elmt_right")
         }
         if (scrollPercentagev2 > (25/2)+50) {
             bullet_point_parcour3.classList.add("bullet_point_parcour_animation")
+            parcour_elmt3.classList.remove("parcour_elmt_left")
         }
         if (scrollPercentagev2 > (75/2)+50) {
             bullet_point_parcour4.classList.add("bullet_point_parcour_animation")
+            parcour_elmt4.classList.remove("parcour_elmt_right")
         }
 
         if(scrollPercentagev2 < 25/2){
             bullet_point_parcour1.classList.remove("bullet_point_parcour_animation")
+            parcour_elmt1.classList.add("parcour_elmt_left")
         }
         if(scrollPercentagev2 < 75/2){
             bullet_point_parcour2.classList.remove("bullet_point_parcour_animation")
+            parcour_elmt2.classList.add("parcour_elmt_right")
         }
         if(scrollPercentagev2 < (25/2)+50){
             bullet_point_parcour3.classList.remove("bullet_point_parcour_animation")
+            parcour_elmt3.classList.add("parcour_elmt_left")
         }
         if (scrollPercentagev2 < (75/2)+50) {
             bullet_point_parcour4.classList.remove("bullet_point_parcour_animation")
+            parcour_elmt4.classList.add("parcour_elmt_right")
         }
       }
     else if(scrollPercentage < 45){
