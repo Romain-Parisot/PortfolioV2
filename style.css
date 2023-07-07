@@ -523,7 +523,7 @@ nav ul li a:hover:after {
     width: 30px;
     height: 30px;
     border-radius: 100px;
-    transform: translateY(10%) translateX(-50%);
+    transform: translateY(-100%) translateX(-10px);
     transition: 1s;
     opacity: 0;
     background-color: var(--main-color);
@@ -563,7 +563,7 @@ nav ul li a:hover:after {
 }
 
 .bullet_point_parcour_animation{
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(200%) translateX(-10px);
     opacity: 100;
 }
 

@@ -254,25 +254,26 @@ function updateProgressBar() {
         if (scrollPercentagev2 > 25/2) {
             bullet_point_parcour1.classList.add("bullet_point_parcour_animation")
         }
-        else{
-            bullet_point_parcour1.classList.remove("bullet_point_parcour_animation")
-        }
         if (scrollPercentagev2 > 75/2) {
             bullet_point_parcour2.classList.add("bullet_point_parcour_animation")
         }
-        else{
-            bullet_point_parcour2.classList.remove("bullet_point_parcour_animation")
-        }
         if (scrollPercentagev2 > (25/2)+50) {
-            bullet_point_parcour3.classList.remove("bullet_point_parcour_animation")
-        }
-        else{
             bullet_point_parcour3.classList.add("bullet_point_parcour_animation")
         }
         if (scrollPercentagev2 > (75/2)+50) {
             bullet_point_parcour4.classList.add("bullet_point_parcour_animation")
         }
-        else{
+
+        if(scrollPercentagev2 < 25/2){
+            bullet_point_parcour1.classList.remove("bullet_point_parcour_animation")
+        }
+        if(scrollPercentagev2 < 75/2){
+            bullet_point_parcour2.classList.remove("bullet_point_parcour_animation")
+        }
+        if(scrollPercentagev2 < (25/2)+50){
+            bullet_point_parcour3.classList.remove("bullet_point_parcour_animation")
+        }
+        if (scrollPercentagev2 < (75/2)+50) {
             bullet_point_parcour4.classList.remove("bullet_point_parcour_animation")
         }
       }
