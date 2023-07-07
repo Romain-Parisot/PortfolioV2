@@ -1,3 +1,18 @@
+// -------------------------------------animation opening page-------------------------------------
+
+let parent_Animation_loading_page=document.querySelector('.parent_Animation_loading_page')
+let Animation_loading_page=document.querySelector('.Animation_loading_page')
+let Animation_loading_page2=document.querySelector('.Animation_loading_page2')
+
+function AnimationOpeningPage(){
+    setTimeout(() => {
+        Animation_loading_page.classList.add('Animation_loading_page_add')
+        Animation_loading_page2.classList.add('Animation_loading_page2_add')
+    }, 1000);
+}
+document.addEventListener('DOMContentLoaded', AnimationOpeningPage);
+
+
 // -------------------------------------burger menu-------------------------------------
 function toggleburger(){
     let header=document.querySelector('header')
