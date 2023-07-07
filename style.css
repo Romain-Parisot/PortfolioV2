@@ -28,8 +28,8 @@ body{
 }
 
 #mainpage{
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     margin-left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -615,7 +615,7 @@ nav ul li a:hover:after {
     grid-template-columns: 1fr 10px 1fr;
     grid-template-rows: 1% 24% 1% 24% 1% 24% 1% 24% 1%;
     height: var(--height_parcour);
-    width: 80vw;
+    width: 85vw;
     margin-left: 50%;
     transform: translate(-50%);
     
@@ -625,7 +625,7 @@ nav ul li a:hover:after {
     background-color: aliceblue;
     transition: 1s;
     display: flex;
-    margin: 10px;
+    margin: 20px;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -645,7 +645,7 @@ nav ul li a:hover:after {
 }
 
 .parcour_elmt h3{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .parcour_elmt_details{
@@ -657,7 +657,8 @@ nav ul li a:hover:after {
 }
 
 .parcour_elmt_details p{
-    font-size: 15px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .parcour_elmt_date{
