@@ -241,13 +241,39 @@ let scrollPercentagev2 = 0;
 
 let parcour_elmt = document.querySelector('.parcour_elmt');
 
+let bullet_point_parcour1 = document.querySelector('.bullet_point_parcour1')
+let bullet_point_parcour2 = document.querySelector('.bullet_point_parcour2')
+let bullet_point_parcour3 = document.querySelector('.bullet_point_parcour3')
+let bullet_point_parcour4 = document.querySelector('.bullet_point_parcour4')
+
 function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
     if (scrollPercentage >= 45 && scrollPercentage <= 70) {
         scrollPercentagev2 = 10/2.5 * (scrollPercentage - 45);
-        if (scrollPercentagev2 == 10) {
-            
+        if (scrollPercentagev2 > 25/2) {
+            bullet_point_parcour1.classList.add("bullet_point_parcour_animation")
+        }
+        else{
+            bullet_point_parcour1.classList.remove("bullet_point_parcour_animation")
+        }
+        if (scrollPercentagev2 > 75/2) {
+            bullet_point_parcour2.classList.add("bullet_point_parcour_animation")
+        }
+        else{
+            bullet_point_parcour2.classList.remove("bullet_point_parcour_animation")
+        }
+        if (scrollPercentagev2 > (25/2)+50) {
+            bullet_point_parcour3.classList.remove("bullet_point_parcour_animation")
+        }
+        else{
+            bullet_point_parcour3.classList.add("bullet_point_parcour_animation")
+        }
+        if (scrollPercentagev2 > (75/2)+50) {
+            bullet_point_parcour4.classList.add("bullet_point_parcour_animation")
+        }
+        else{
+            bullet_point_parcour4.classList.remove("bullet_point_parcour_animation")
         }
       }
     else if(scrollPercentage < 45){
