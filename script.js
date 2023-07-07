@@ -258,8 +258,8 @@ let bullet_point_parcour4 = document.querySelector('.bullet_point_parcour4')
 function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    if (scrollPercentage >= 45 && scrollPercentage <= 70) {
-        scrollPercentagev2 = 10/2.5 * (scrollPercentage - 45);
+    if (scrollPercentage >= 40 && scrollPercentage <= 80) {
+        scrollPercentagev2 = 10/4 * (scrollPercentage - 40);
         if (scrollPercentagev2 > 25/2) {
             bullet_point_parcour1.classList.add("bullet_point_parcour_animation")
             parcour_elmt1.classList.remove("parcour_elmt_left")
@@ -294,10 +294,10 @@ function updateProgressBar() {
             parcour_elmt4.classList.add("parcour_elmt_right")
         }
       }
-    else if(scrollPercentage < 45){
+    else if(scrollPercentage < 40){
         scrollPercentagev2 = 0
     }
-    else if(scrollPercentage > 71)
+    else if(scrollPercentage > 80)
     {
         scrollPercentagev2 = 100
     }  
