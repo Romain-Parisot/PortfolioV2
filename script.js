@@ -9,6 +9,9 @@ function AnimationOpeningPage(){
         Animation_loading_page.classList.add('Animation_loading_page_add')
         Animation_loading_page2.classList.add('Animation_loading_page2_add')
     }, 1000);
+    setTimeout(() => {
+        parent_Animation_loading_page.classList.add('dpnone')
+    }, 4000);
 }
 document.addEventListener('DOMContentLoaded', AnimationOpeningPage);
 
