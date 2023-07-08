@@ -586,6 +586,26 @@ nav ul li a:hover:after {
     display: flex;
 }
 
+.path_bullet_point_sideB{
+    transform-origin: center;
+    transition: 4s linear;
+    transform: rotate(0deg);
+}
+
+.path_bullet_point_sideB_anim{
+    transform: rotate(360deg) !important;
+}
+
+.path_bullet_point_sideA{
+    transform-origin: center;
+    transition: 4s linear;
+    transform: rotate(0deg);
+}
+
+.path_bullet_point_sideA_anim{
+    transform: rotate(-360deg) !important;
+}
+
 .bullet_point_parcour1{
     grid-column-start: 2;
     grid-column-end: 3;

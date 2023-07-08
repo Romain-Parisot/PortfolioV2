@@ -288,7 +288,7 @@ function updateProgressBar() {
             bullet_point_parcour4.classList.remove("bullet_point_parcour_animation")
             parcour_elmt4.classList.add("parcour_elmt_right")
         }
-      }
+    }
     else if(scrollPercentage < 40){
         scrollPercentagev2 = 0
     }
@@ -304,6 +304,30 @@ function updateProgressBar() {
 
 document.addEventListener('scroll', updateProgressBar);
 
+// -------------------------------------bullet point anim-------------------------------------
+
+let path_bullet_point_sideB = document.querySelectorAll(".path_bullet_point_sideB")
+let path_bullet_point_sideA = document.querySelectorAll(".path_bullet_point_sideA")
+
+function BulletPointAnimSideB(){
+    path_bullet_point_sideB.forEach(path_sideB => {
+        path_sideB.classList.toggle("path_bullet_point_sideB_anim")
+    });
+}
+document.addEventListener('DOMContentLoaded', BulletPointAnimSideB);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(BulletPointAnimSideB, 4000);
+});
+
+function BulletPointAnimSideA(){
+    path_bullet_point_sideA.forEach(path_sideA => {
+        path_sideA.classList.toggle("path_bullet_point_sideA_anim")
+    });
+}
+document.addEventListener('DOMContentLoaded', BulletPointAnimSideA);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(BulletPointAnimSideA, 4000);
+});
 
 // -------------------------------------personnality anim svg-------------------------------------
 
