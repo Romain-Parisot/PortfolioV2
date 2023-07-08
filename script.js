@@ -312,20 +312,42 @@ document.addEventListener('scroll', updateProgressBar);
 
 // -------------------------------------personnality anim svg-------------------------------------
 
+// hand
 let path_bar_mid_support = document.querySelector(".path_bar_mid_support")
 let path_bar_left_support = document.querySelector(".path_bar_left_support")
 let path_bar_right_support = document.querySelector(".path_bar_right_support")
 
+// target
 let path_arrow_target = document.querySelector(".path_arrow_target")
 
+// mountain
+let path_bird_right_dare = document.querySelector(".path_bird_right_dare")
+let path_bird_left_dare = document.querySelector(".path_bird_left_dare")
+let path_stick_flag_dare = document.querySelector(".path_stick_flag_dare")
+let path_flag_dare = document.querySelector(".path_flag_dare")
+
+
 function AnimPersonnalitySvg(){
+    let rootsizesvg = document.querySelector(":root");
+    // hand
     path_bar_mid_support.classList.toggle("path_bar_mid_support")
     path_bar_left_support.classList.toggle("path_bar_left_support")
     path_bar_right_support.classList.toggle("path_bar_right_support")
 
+    // target
     path_arrow_target.classList.toggle("path_arrow_target")
 
-    let rootsizesvg = document.querySelector(":root");
+    // mountain
+    rootsizesvg.style.setProperty('--mountain_svg_bird_right_position_x', `${getRandomIntInclusive(-5, 5)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_right_position_y', `${getRandomIntInclusive(-5, 10)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_right_scale', `${getRandomIntInclusive(100, 150)}%`);
+
+    rootsizesvg.style.setProperty('--mountain_svg_bird_left_position_x', `${getRandomIntInclusive(-5, 5)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_left_position_y', `${getRandomIntInclusive(-5, 10)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_left_scale', `${getRandomIntInclusive(80, 130)}%`);
+
+
+    // computer
     rootsizesvg.style.setProperty('--computer_svg_width_random1', `${getRandomIntInclusive(50, 100)}%`);
     rootsizesvg.style.setProperty('--computer_svg_width_random2', `${getRandomIntInclusive(50, 100)}%`);
     rootsizesvg.style.setProperty('--computer_svg_width_random3', `${getRandomIntInclusive(50, 100)}%`);
