@@ -577,13 +577,12 @@ nav ul li a:hover:after {
 }
 
 .bullet_point_parcour{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     border-radius: 100px;
     transform: translateY(-100%) translateX(-10px);
     transition: 1s;
     opacity: 0;
-    background-color: var(--main-color);
     display: flex;
 }
 
@@ -620,7 +619,7 @@ nav ul li a:hover:after {
 }
 
 .bullet_point_parcour_animation{
-    transform: translateY(calc(((24 * var(--height_parcour))/100)/2)) translateX(-10px);
+    transform: translateY(calc(((24 * var(--height_parcour))/100)/2)) translateX(-25px);
     opacity: 100;
 }
 
