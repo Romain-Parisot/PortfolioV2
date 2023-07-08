@@ -18,6 +18,15 @@
     --computer_svg_mouse_position_x: 0%;
     --computer_svg_mouse_position_y: 0%;
 
+    
+    --mountain_svg_bird_right_scale: 100%;
+    --mountain_svg_bird_right_position_x: 0%;
+    --mountain_svg_bird_right_position_y: 0%;
+
+    --mountain_svg_bird_left_scale: 100%;
+    --mountain_svg_bird_left_position_x: 0%;
+    --mountain_svg_bird_left_position_y: 0%;
+
     --height_parcour: 250vh;
 }
 
@@ -772,9 +781,43 @@ nav ul li a:hover:after {
     transition: 1s ease;
 }
 
+/* ------------------------------------- Personnality - sport ------------------------------------- */
+
+.sport_svg{
+    fill: none;
+    stroke: var(--dark-mode-on);
+    stroke-width: 30;
+}
+
+/* ------------------------------------- Personnality - mountain ------------------------------------- */
+
+.path_stick_flag_dare{
+    fill: var(--dark-mode-on);
+    stroke: var(--dark-mode-on);
+    stroke-width: 10;
+}
+
+.path_dare{
+    transition: 1s ease;
+}
+
+.path_flag_dare{
+    fill: none;
+    stroke: var(--dark-mode-on);
+    stroke-width: 20;
+}
+
+.path_bird_left_dare{
+    transform: translateX(var(--mountain_svg_bird_left_position_x))  translateY(var(--mountain_svg_bird_left_position_y)) scale(var(--mountain_svg_bird_left_scale))
+}
+
+.path_bird_right_dare{
+    transform: translateX(var(--mountain_svg_bird_right_position_x)) translateY(var(--mountain_svg_bird_right_position_y)) scale(var(--mountain_svg_bird_right_scale));
+}
+
 /* ------------------------------------- Personnality - Computer ------------------------------------- */
 
-.div_weight_computer{
+.div_sport_computer{
     display: flex;
     align-items: center;
     justify-content: center;
