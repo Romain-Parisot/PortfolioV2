@@ -620,7 +620,7 @@ nav ul li a:hover:after {
 }
 
 .bullet_point_parcour_animation{
-    transform: translateY(500%) translateX(-10px);
+    transform: translateY(calc(((24 * var(--height_parcour))/100)/2)) translateX(-10px);
     opacity: 100;
 }
 
@@ -789,22 +789,63 @@ nav ul li a:hover:after {
     stroke-width: 30;
 }
 
+.path_body_sport{
+    transform: rotate(1deg);
+}
+.path_body_sport_anim{
+    transform: rotate(-1deg);
+}
+
+.path_head_sport{
+    transform: rotate(1deg);
+}
+.path_head_sport_anim{
+    transform: rotate(-1deg) translateX(2%);
+}
+
+.path_weight_small_sport_anim{
+    transform: rotate(4deg) translate(5%, -5%);
+}
+
+.path_weight_small_sport{
+    transform: rotate(4deg) translate(-1%, 1%);
+}
+
+.path_weight_big_sport_anim{
+    transform: rotate(4deg) translate(5%, -5%);
+}
+
+.path_weight_big_sport{
+    transform: rotate(4deg) translate(-1%, 1%);
+}
+
+
 /* ------------------------------------- Personnality - mountain ------------------------------------- */
 
 .path_stick_flag_dare{
     fill: var(--dark-mode-on);
     stroke: var(--dark-mode-on);
     stroke-width: 10;
+    transform: translateY(-2%);
+}
+
+.path_stick_flag_dare_anim{
+    transform: translateY(2%);
 }
 
 .path_dare{
-    transition: 1s ease;
+    transition: 2s ease !important;
 }
 
 .path_flag_dare{
     fill: none;
     stroke: var(--dark-mode-on);
     stroke-width: 20;
+    transform: translateY(-2%);
+}
+
+.path_flag_dare_anim{
+    transform: translateY(2%);
 }
 
 .path_bird_left_dare{

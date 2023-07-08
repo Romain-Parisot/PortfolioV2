@@ -42,21 +42,16 @@ function Sectionvisiblescroll(){
     let sections = document.querySelectorAll('section');
 
     sections.forEach((section, index) => {
-    // Obtenez la position de chaque section par rapport au haut de la page
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    // Vérifiez si la section est visible à l'écran
     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        // Ajoutez une classe "active" à l'élément de la barre de navigation correspondant à la section visible
-
         navLinks.forEach((navLink) => {
             navLink.classList.remove('nav_selected');
         });
         navLinks[index].classList.add('nav_selected');
     }
 });
-
 }
 window.addEventListener('scroll', Sectionvisiblescroll);
 
@@ -326,6 +321,12 @@ let path_bird_left_dare = document.querySelector(".path_bird_left_dare")
 let path_stick_flag_dare = document.querySelector(".path_stick_flag_dare")
 let path_flag_dare = document.querySelector(".path_flag_dare")
 
+// sport
+let path_body_sport = document.querySelector(".path_body_sport")
+let path_weight_big_sport = document.querySelector(".path_weight_big_sport")
+let path_weight_small_sport = document.querySelector(".path_weight_small_sport")
+let path_head_sport = document.querySelector(".path_head_sport")
+
 
 function AnimPersonnalitySvg(){
     let rootsizesvg = document.querySelector(":root");
@@ -338,13 +339,16 @@ function AnimPersonnalitySvg(){
     path_arrow_target.classList.toggle("path_arrow_target")
 
     // mountain
-    rootsizesvg.style.setProperty('--mountain_svg_bird_right_position_x', `${getRandomIntInclusive(-5, 5)}%`);
-    rootsizesvg.style.setProperty('--mountain_svg_bird_right_position_y', `${getRandomIntInclusive(-5, 10)}%`);
-    rootsizesvg.style.setProperty('--mountain_svg_bird_right_scale', `${getRandomIntInclusive(100, 150)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_right_position_x', `${getRandomIntInclusive(-3, 3)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_right_position_y', `${getRandomIntInclusive(-3, 5)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_right_scale', `${getRandomIntInclusive(100, 130)}%`);
 
-    rootsizesvg.style.setProperty('--mountain_svg_bird_left_position_x', `${getRandomIntInclusive(-5, 5)}%`);
-    rootsizesvg.style.setProperty('--mountain_svg_bird_left_position_y', `${getRandomIntInclusive(-5, 10)}%`);
-    rootsizesvg.style.setProperty('--mountain_svg_bird_left_scale', `${getRandomIntInclusive(80, 130)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_left_position_x', `${getRandomIntInclusive(-3, 3)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_left_position_y', `${getRandomIntInclusive(-3, 5)}%`);
+    rootsizesvg.style.setProperty('--mountain_svg_bird_left_scale', `${getRandomIntInclusive(90, 120)}%`);
+    
+    path_stick_flag_dare.classList.toggle("path_stick_flag_dare_anim")
+    path_flag_dare.classList.toggle("path_flag_dare_anim")
 
 
     // computer
@@ -354,6 +358,16 @@ function AnimPersonnalitySvg(){
     rootsizesvg.style.setProperty('--computer_svg_width_random4', `${getRandomIntInclusive(50, 100)}%`);
     rootsizesvg.style.setProperty('--computer_svg_mouse_position_x', `${getRandomIntInclusive(-2, 2)}%`);
     rootsizesvg.style.setProperty('--computer_svg_mouse_position_y', `${getRandomIntInclusive(-2, 2)}%`);
+
+    //sport
+    path_body_sport.classList.toggle("path_body_sport_anim")
+    path_head_sport.classList.toggle("path_head_sport_anim")
+    path_weight_big_sport.classList.toggle("path_weight_big_sport_anim")
+    path_weight_big_sport.classList.toggle("path_weight_big_sport")
+    path_weight_small_sport.classList.toggle("path_weight_small_sport")
+    path_weight_small_sport.classList.toggle("path_weight_small_sport_anim")
+    
+
 
 }
 
