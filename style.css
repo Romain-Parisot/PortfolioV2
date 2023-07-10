@@ -426,7 +426,7 @@ nav ul li a:hover:after {
 /* -------------------------------------projets------------------------------------- */
 
 #project{
-    height: 160vh;
+    height: 250vh;
     width: 100%;
 }
 
@@ -436,7 +436,7 @@ nav ul li a:hover:after {
     gap: 20px;
     justify-content: center;
     width: 70vw;
-    height: 140vh;
+    height: 90%;
     margin-left: 50%;
     transform: translateX(-50%);
 }
@@ -500,6 +500,7 @@ nav ul li a:hover:after {
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
+    z-index: 10;
 }
 
 .divproject_child_last{
@@ -535,6 +536,43 @@ nav ul li a:hover:after {
 
 .votreprojet_divproject:hover:after {
     width: 100%;
+}
+
+.description_divproject{
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+}
+
+.timeproject{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.txt_timeproject{
+    text-align: end;
+    color: var(--dark-mode-on);
+}
+
+.div_competence_divproject{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.competence_divproject{
+    border-radius: 10px;
+    background-color: var(--dark-mode-on);
+}
+
+.txt_competence_divproject{
+    padding: 10px;
+    text-align: center;
+    color: var(--dark-mode-off) !important;
+
 }
 
 .divproject1{
