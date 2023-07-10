@@ -426,8 +426,20 @@ nav ul li a:hover:after {
 /* -------------------------------------projets------------------------------------- */
 
 #project{
-    height: 300vh;
+    height: 2500px;
     width: 100%;
+}
+
+@media (max-width: 1500px) {
+    #project{
+        height: 2000px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #project{
+        height: 1500px;
+    }
 }
 
 .Galleryproject{
@@ -435,7 +447,7 @@ nav ul li a:hover:after {
     grid-template-columns: repeat(4,  1fr);
     gap: 20px;
     justify-content: center;
-    width: 70vw;
+    width: 85vw;
     height: 90%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -562,10 +574,29 @@ nav ul li a:hover:after {
     font-size: 16px;
 }
 
+.personsproject{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.txt_personsproject{
+    text-align: start;
+    color: var(--dark-mode-on);
+    font-size: 12px;
+}
+
+.txt_personsproject_big{
+    font-size: 16px;
+}
+
 .div_competence_divproject{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -575,10 +606,23 @@ nav ul li a:hover:after {
 }
 
 .txt_competence_divproject{
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;    
+    font-size: 14px;
     text-align: center;
     color: var(--dark-mode-off) !important;
+}
 
+.txt_competence_divproject_big{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--dark-mode-off) !important;
 }
 
 .divproject1{
