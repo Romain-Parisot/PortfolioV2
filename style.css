@@ -426,7 +426,7 @@ nav ul li a:hover:after {
 /* -------------------------------------projets------------------------------------- */
 
 #project{
-    height: 250vh;
+    height: 300vh;
     width: 100%;
 }
 
@@ -496,7 +496,6 @@ nav ul li a:hover:after {
 
 .divproject_child{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
@@ -548,12 +547,19 @@ nav ul li a:hover:after {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 100%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .txt_timeproject{
     text-align: end;
     color: var(--dark-mode-on);
+    font-size: 12px;
+}
+
+.txt_timeproject_big{
+    font-size: 16px;
 }
 
 .div_competence_divproject{
