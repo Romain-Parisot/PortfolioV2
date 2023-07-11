@@ -399,3 +399,42 @@ document.addEventListener('DOMContentLoaded', AnimPersonnalitySvg);
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(AnimPersonnalitySvg, 2000);
 });
+
+
+// -------------------------------------click project-------------------------------------
+
+let divprojects = document.querySelectorAll(".divproject");
+let project = document.querySelector("#project")
+
+function ClickProject(SelectedDiv) {
+    divprojects.forEach(divproject => {
+        divproject.classList.add("opacity_null");
+    });
+
+    setTimeout(() => { 
+        divprojects.forEach(divproject => {
+            divproject.classList.remove("divproject1");
+            divproject.classList.remove("divproject4");
+            divproject.classList.remove("divproject11");
+            divproject.classList.remove("divproject13");
+            divproject.classList.remove("divprojectSelected");
+        });
+
+        SelectedDiv.classList.add("divprojectSelected");
+
+        project.scrollIntoView({ behavior: "smooth" });
+
+        divprojects.forEach(divproject => {
+            divproject.classList.remove("opacity_null");
+        });
+
+    }, 1000);
+}
+
+
+
+divprojects.forEach(div => {
+    div.addEventListener('click', function() {
+        ClickProject(div);
+    });
+});
