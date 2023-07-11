@@ -467,7 +467,7 @@ nav ul li a:hover:after {
     -webkit-box-shadow: 0px 0px 23px -9px var(--dark-mode-on);
     -moz-box-shadow: 0px 0px 23px -9px var(--dark-mode-on);
     padding: 20px;
-    transition: 1s ease;
+    transition: 0.5s ease;
 }
 
 .divproject::before{

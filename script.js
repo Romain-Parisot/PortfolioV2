@@ -406,29 +406,59 @@ document.addEventListener('DOMContentLoaded', () => {
 let divprojects = document.querySelectorAll(".divproject");
 let project = document.querySelector("#project")
 
+let divproject1 =document.querySelector(".divproject1")
+let divproject4 =document.querySelector(".divproject4")
+let divproject11 =document.querySelector(".divproject11")
+let divproject13 =document.querySelector(".divproject13")
+
+
 function ClickProject(SelectedDiv) {
-    divprojects.forEach(divproject => {
-        divproject.classList.add("opacity_null");
-    });
-
-    setTimeout(() => { 
+    if (SelectedDiv.classList.contains("divprojectSelected")) {
         divprojects.forEach(divproject => {
-            divproject.classList.remove("divproject1");
-            divproject.classList.remove("divproject4");
-            divproject.classList.remove("divproject11");
-            divproject.classList.remove("divproject13");
-            divproject.classList.remove("divprojectSelected");
+            divproject.classList.add("opacity_null");
         });
 
-        SelectedDiv.classList.add("divprojectSelected");
+        setTimeout(() => { 
+            SelectedDiv.classList.remove("divprojectSelected");
+            divproject1.classList.add("divproject1");
+            divproject4.classList.add("divproject4");
+            divproject11.classList.add("divproject11");
+            divproject13.classList.add("divproject13");
+            
+            
 
-        project.scrollIntoView({ behavior: "smooth" });
+            divprojects.forEach(divproject => {
+                divproject.classList.remove("opacity_null");
+            });
+    
+        }, 500);
+
+    }
+    else{
 
         divprojects.forEach(divproject => {
-            divproject.classList.remove("opacity_null");
+            divproject.classList.add("opacity_null");
         });
-
-    }, 1000);
+    
+        setTimeout(() => { 
+            divprojects.forEach(divproject => {
+                divproject.classList.remove("divproject1");
+                divproject.classList.remove("divproject4");
+                divproject.classList.remove("divproject11");
+                divproject.classList.remove("divproject13");
+                divproject.classList.remove("divprojectSelected");
+            });
+    
+            SelectedDiv.classList.add("divprojectSelected");
+    
+            project.scrollIntoView({ behavior: "smooth" });
+    
+            divprojects.forEach(divproject => {
+                divproject.classList.remove("opacity_null");
+            });
+    
+        }, 500);
+    }
 }
 
 
