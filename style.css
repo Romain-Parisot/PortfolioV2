@@ -660,8 +660,6 @@ nav ul li a:hover:after {
     justify-content: center;
 }
 
-
-
 .Gif_container img {
     flex-shrink: 0;
     width: 100%;
@@ -678,6 +676,40 @@ nav ul li a:hover:after {
 .txt_DateProject{
     text-align: center;
 }
+
+.DefaultViewProject{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.DefaultViewProjectChild{
+    transition: 0.5 ease;
+}
+
+
+.DefaultViewProject p{
+    text-decoration: none;
+    color: var(--dark-mode-on);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.DefaultViewProject p:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: rgb(212, 139, 27 );
+    transition: 300ms;
+}
+
+.DefaultViewProject p:hover:after {
+    width: 100%;
+}
+
 
 /* -------------------------------------projects - slider------------------------------------- */
 

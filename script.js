@@ -411,14 +411,51 @@ let divproject4 =document.querySelector(".divproject4")
 let divproject11 =document.querySelector(".divproject11")
 let divproject13 =document.querySelector(".divproject13")
 
+let DefaultViewProjectChild = document.querySelector(".DefaultViewProjectChild")
+
+
+function ClickResetGallery() {
+    divprojects.forEach(divproject => {
+        divproject.classList.add("opacity_null");
+    });
+    DefaultViewProjectChild.classList.add("opacity_null")
+
+    setTimeout(() => { 
+        DefaultViewProjectChild.classList.add("dpnone")
+
+        divprojects.forEach(divproject => {
+            divproject.classList.remove("divprojectSelected");
+        });
+
+        divproject1.classList.add("divproject1");
+        divproject4.classList.add("divproject4");
+        divproject11.classList.add("divproject11");
+        divproject13.classList.add("divproject13");
+
+        divprojects.forEach(divproject => {
+            divproject.classList.remove("opacity_null");
+        });
+
+    }, 500);
+
+}
+DefaultViewProjectChild.addEventListener('click', ClickResetGallery)
+
 
 function ClickProject(SelectedDiv) {
+
+
     if (SelectedDiv.classList.contains("divprojectSelected")) {
+
+        DefaultViewProjectChild.classList.add("opacity_null")
+
         divprojects.forEach(divproject => {
             divproject.classList.add("opacity_null");
         });
 
         setTimeout(() => { 
+            DefaultViewProjectChild.classList.add("dpnone")
+
             SelectedDiv.classList.remove("divprojectSelected");
             divproject1.classList.add("divproject1");
             divproject4.classList.add("divproject4");
@@ -435,6 +472,9 @@ function ClickProject(SelectedDiv) {
 
     }
     else{
+
+        DefaultViewProjectChild.classList.remove("dpnone")
+        DefaultViewProjectChild.classList.remove("opacity_null")
 
         divprojects.forEach(divproject => {
             divproject.classList.add("opacity_null");
