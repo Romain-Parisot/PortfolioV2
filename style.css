@@ -722,6 +722,17 @@ nav ul li a:hover:after {
     height: fit-content;
 }
 
+.DateProject{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt_DateProject{
+    text-align: center;
+}
+
 /* -------------------------------------projects - slider------------------------------------- */
 
 .slider_container {
