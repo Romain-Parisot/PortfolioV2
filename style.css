@@ -513,6 +513,7 @@ nav ul li a:hover:after {
     flex-direction: column;
     height: 100%;
     z-index: 10;
+    width: 100%;
 }
 
 .divproject_child_last{
@@ -749,6 +750,32 @@ nav ul li a:hover:after {
         transform: translateX(-300%);
     }
 } 
+.SliderEtDesc_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.slider_container_desactivate{
+    width: 50%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.slider_container_desactivate img {
+    flex-shrink: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.slider_desactivate{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
 
 /* -------------------------------------ytb container------------------------------------- */
 
@@ -756,6 +783,7 @@ nav ul li a:hover:after {
     overflow: hidden;
     z-index: 10;
     width: 100%;
+    background-color: red;
 }
 
 /* -------------------------------------timeline------------------------------------- */

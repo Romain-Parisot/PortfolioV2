@@ -418,6 +418,7 @@ let description_divproject = document.querySelectorAll(".description_divproject"
 let slider_container = document.querySelectorAll(".slider_container")
 let linkytb_container = document.querySelectorAll(".linkytb_container")
 
+
 function ClickResetGallery() {
     divprojects.forEach(divproject => {
         divproject.classList.add("opacity_null");
@@ -525,9 +526,15 @@ function ClickProject(SelectedDiv) {
 
             let slider_container_unique = SelectedDiv.querySelector(".slider_container");
             let linkytb_container_unique = SelectedDiv.querySelector(".linkytb_container");
-            console.log(linkytb_container_unique);
+            let slider_unique = slider_container_unique.querySelector(".slider")
 
-            slider_container_unique.classList.add("dpnone");
+            slider_container_unique.classList.remove("slider_container");
+            slider_container_unique.classList.add("slider_container_desactivate");
+
+            slider_unique.classList.remove("slider")
+            slider_unique.classList.add("slider_desactivate")
+            
+
             linkytb_container_unique.classList.remove("dpnone");
 
             SelectedDiv.classList.add("divprojectSelected");
