@@ -297,8 +297,8 @@ function updateProgressBar() {
         scrollPercentagev2 = 100
     }  
       progressBar.style.height = `${scrollPercentagev2}%`;
-      console.log("v1 : " + scrollPercentage);
-      console.log("v2 : " + scrollPercentagev2);
+    //   console.log("v1 : " + scrollPercentage);
+    //   console.log("v2 : " + scrollPercentagev2);
 }
 
 
@@ -415,6 +415,9 @@ let DefaultViewProjectChild = document.querySelector(".DefaultViewProjectChild")
 
 let description_divproject = document.querySelectorAll(".description_divproject")
 
+let slider_container = document.querySelectorAll(".slider_container")
+let linkytb_container = document.querySelectorAll(".linkytb_container")
+
 function ClickResetGallery() {
     divprojects.forEach(divproject => {
         divproject.classList.add("opacity_null");
@@ -432,6 +435,14 @@ function ClickResetGallery() {
         divproject4.classList.add("divproject4");
         divproject11.classList.add("divproject11");
         divproject13.classList.add("divproject13");
+
+        slider_container.forEach(slidercontainer => {
+            slidercontainer.classList.remove("dpnone")
+        })
+
+        linkytb_container.forEach(ytbcontainer =>{
+            ytbcontainer.classList.add("dpnone")
+        })
 
         description_divproject.forEach(descproject => {
             descproject.classList.remove("dpnone")
@@ -465,6 +476,14 @@ function ClickProject(SelectedDiv) {
             divproject4.classList.add("divproject4");
             divproject11.classList.add("divproject11");
             divproject13.classList.add("divproject13");
+
+            slider_container.forEach(slidercontainer => {
+                slidercontainer.classList.remove("dpnone")
+            })
+    
+            linkytb_container.forEach(ytbcontainer =>{
+                ytbcontainer.classList.add("dpnone")
+            })
 
             description_divproject.forEach(descproject => {
                 descproject.classList.remove("dpnone")
@@ -502,6 +521,15 @@ function ClickProject(SelectedDiv) {
                 }
             });
 
+
+
+            let slider_container_unique = SelectedDiv.querySelector(".slider_container");
+            let linkytb_container_unique = SelectedDiv.querySelector(".linkytb_container");
+            console.log(linkytb_container_unique);
+
+            slider_container_unique.classList.add("dpnone");
+            linkytb_container_unique.classList.remove("dpnone");
+
             SelectedDiv.classList.add("divprojectSelected");
     
             project.scrollIntoView({ behavior: "smooth" });
@@ -521,3 +549,21 @@ divprojects.forEach(div => {
         ClickProject(div);
     });
 });
+
+
+// -------------------------------------video ytb play-------------------------------------
+
+
+let player;
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('linkytb_container', {
+      videoId: 'QXR44Y2Mg7I',
+      playerVars: {
+        // Ajoutez ici les paramètres de lecture personnalisés
+      },
+      events: {
+        // Ajoutez ici les gestionnaires d'événements du lecteur
+      }
+    });
+  }
