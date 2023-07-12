@@ -433,6 +433,10 @@ function ClickResetGallery() {
         divproject11.classList.add("divproject11");
         divproject13.classList.add("divproject13");
 
+        description_divproject.forEach(descproject => {
+            descproject.classList.remove("dpnone")
+        });
+
         divprojects.forEach(divproject => {
             divproject.classList.remove("opacity_null");
         });
@@ -462,6 +466,10 @@ function ClickProject(SelectedDiv) {
             divproject11.classList.add("divproject11");
             divproject13.classList.add("divproject13");
 
+            description_divproject.forEach(descproject => {
+                descproject.classList.remove("dpnone")
+            });
+
             divprojects.forEach(divproject => {
                 divproject.classList.remove("opacity_null");
             });
@@ -489,11 +497,10 @@ function ClickProject(SelectedDiv) {
             });
 
             description_divproject.forEach(descproject => {
-                descproject.classList.add("dpnone")
+                if (descproject.parentElement.parentElement !== SelectedDiv) {
+                    descproject.classList.add("dpnone");
+                }
             });
-
-            SelectedDiv.classList.remove("dpnone")
-            console.log(SelectedDiv);
 
             SelectedDiv.classList.add("divprojectSelected");
     
