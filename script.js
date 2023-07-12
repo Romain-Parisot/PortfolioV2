@@ -413,6 +413,7 @@ let divproject13 =document.querySelector(".divproject13")
 
 let DefaultViewProjectChild = document.querySelector(".DefaultViewProjectChild")
 
+let description_divproject = document.querySelectorAll(".description_divproject")
 
 function ClickResetGallery() {
     divprojects.forEach(divproject => {
@@ -444,7 +445,6 @@ DefaultViewProjectChild.addEventListener('click', ClickResetGallery)
 
 function ClickProject(SelectedDiv) {
 
-
     if (SelectedDiv.classList.contains("divprojectSelected")) {
 
         DefaultViewProjectChild.classList.add("opacity_null")
@@ -461,8 +461,6 @@ function ClickProject(SelectedDiv) {
             divproject4.classList.add("divproject4");
             divproject11.classList.add("divproject11");
             divproject13.classList.add("divproject13");
-            
-            
 
             divprojects.forEach(divproject => {
                 divproject.classList.remove("opacity_null");
@@ -482,13 +480,21 @@ function ClickProject(SelectedDiv) {
     
         setTimeout(() => { 
             divprojects.forEach(divproject => {
+
                 divproject.classList.remove("divproject1");
                 divproject.classList.remove("divproject4");
                 divproject.classList.remove("divproject11");
                 divproject.classList.remove("divproject13");
                 divproject.classList.remove("divprojectSelected");
             });
-    
+
+            description_divproject.forEach(descproject => {
+                descproject.classList.add("dpnone")
+            });
+
+            SelectedDiv.classList.remove("dpnone")
+            console.log(SelectedDiv);
+
             SelectedDiv.classList.add("divprojectSelected");
     
             project.scrollIntoView({ behavior: "smooth" });
