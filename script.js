@@ -505,7 +505,6 @@ function ClickProject(SelectedDiv) {
                 slider_self.classList.remove("slider_desactivate")
             })
 
-
     
             linkytb_container.forEach(ytbcontainer =>{
                 ytbcontainer.classList.add("dpnone")
