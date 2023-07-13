@@ -417,7 +417,8 @@ let description_divproject = document.querySelectorAll(".description_divproject"
 
 let slider_container = document.querySelectorAll(".slider_container")
 let linkytb_container = document.querySelectorAll(".linkytb_container")
-
+let descriptionsliderdesactivateall = document.querySelectorAll(".descriptionsliderdesactivate")
+let slider = document.querySelectorAll(".slider")
 
 function ClickResetGallery() {
     divprojects.forEach(divproject => {
@@ -439,6 +440,17 @@ function ClickResetGallery() {
 
         slider_container.forEach(slidercontainer => {
             slidercontainer.classList.remove("dpnone")
+            slidercontainer.classList.add("slider_container")
+            slidercontainer.classList.remove("slider_container_desactivate")
+        })
+
+        descriptionsliderdesactivateall.forEach(descriptionsliderdesactivateall => {
+            descriptionsliderdesactivateall.classList.add("dpnone")
+        })
+
+        slider.forEach(slider_self => {
+            slider_self.classList.add("slider")
+            slider_self.classList.remove("slider_desactivate")
         })
 
         linkytb_container.forEach(ytbcontainer =>{
@@ -480,7 +492,20 @@ function ClickProject(SelectedDiv) {
 
             slider_container.forEach(slidercontainer => {
                 slidercontainer.classList.remove("dpnone")
+                slidercontainer.classList.add("slider_container")
+                slidercontainer.classList.remove("slider_container_desactivate")
             })
+    
+            descriptionsliderdesactivateall.forEach(descriptionsliderdesactivateall => {
+                descriptionsliderdesactivateall.classList.add("dpnone")
+            })
+    
+            slider.forEach(slider_self => {
+                slider_self.classList.add("slider")
+                slider_self.classList.remove("slider_desactivate")
+            })
+
+
     
             linkytb_container.forEach(ytbcontainer =>{
                 ytbcontainer.classList.add("dpnone")
@@ -522,18 +547,18 @@ function ClickProject(SelectedDiv) {
                 }
             });
 
-
-
             let slider_container_unique = SelectedDiv.querySelector(".slider_container");
             let linkytb_container_unique = SelectedDiv.querySelector(".linkytb_container");
             let slider_unique = slider_container_unique.querySelector(".slider")
+            let descriptionsliderdesactivate = SelectedDiv.querySelector(".descriptionsliderdesactivate")
 
             slider_container_unique.classList.remove("slider_container");
             slider_container_unique.classList.add("slider_container_desactivate");
 
             slider_unique.classList.remove("slider")
             slider_unique.classList.add("slider_desactivate")
-            
+
+            descriptionsliderdesactivate.classList.remove("dpnone")
 
             linkytb_container_unique.classList.remove("dpnone");
 
