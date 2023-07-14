@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // -------------------------------------click project-------------------------------------
 
 let divprojects = document.querySelectorAll(".divproject");
-let project = document.querySelector("#project")
+let project = document.querySelector(".project")
 
 let divproject1 =document.querySelector(".divproject1")
 let divproject4 =document.querySelector(".divproject4")
@@ -420,6 +420,25 @@ let linkytb_container = document.querySelectorAll(".linkytb_container")
 let descriptionsliderdesactivateall = document.querySelectorAll(".descriptionsliderdesactivate")
 let slider = document.querySelectorAll(".slider")
 
+// let iframe = document.querySelectorAll("iframe")
+
+
+function Stopvideo ( element ) {
+	let iframe = element.querySelectorAll( 'iframe');
+	let video = element.querySelectorAll( 'video' );
+    iframe.forEach(ifr => {
+        if ( ifr ) {
+            let iframeSrc = ifr.src;
+            ifr.src = iframeSrc;
+        }
+    });
+    video.forEach(vid => {
+        if ( vid ) {
+            vid.pause();
+        }
+    }); 
+};
+
 function ClickResetGallery() {
     divprojects.forEach(divproject => {
         divproject.classList.add("opacity_null");
@@ -427,6 +446,10 @@ function ClickResetGallery() {
     DefaultViewProjectChild.classList.add("opacity_null")
 
     setTimeout(() => { 
+
+        project.classList.add("project");
+        project.classList.remove("project_selected");
+
         DefaultViewProjectChild.classList.add("dpnone")
 
         divprojects.forEach(divproject => {
@@ -455,6 +478,7 @@ function ClickResetGallery() {
 
         linkytb_container.forEach(ytbcontainer =>{
             ytbcontainer.classList.add("dpnone")
+            Stopvideo(ytbcontainer);
         })
 
         description_divproject.forEach(descproject => {
@@ -482,6 +506,10 @@ function ClickProject(SelectedDiv) {
         });
 
         setTimeout(() => { 
+
+            project.classList.add("project");
+            project.classList.remove("project_selected");
+
             DefaultViewProjectChild.classList.add("dpnone")
 
             SelectedDiv.classList.remove("divprojectSelected");
@@ -508,6 +536,7 @@ function ClickProject(SelectedDiv) {
     
             linkytb_container.forEach(ytbcontainer =>{
                 ytbcontainer.classList.add("dpnone")
+                Stopvideo(ytbcontainer);
             })
 
             description_divproject.forEach(descproject => {
@@ -531,6 +560,12 @@ function ClickProject(SelectedDiv) {
         });
     
         setTimeout(() => { 
+
+            // animation pendant que les projets sont en opacité 0
+
+            project.classList.remove("project");
+            project.classList.add("project_selected");
+
             divprojects.forEach(divproject => {
 
                 divproject.classList.remove("divproject1");

@@ -425,20 +425,31 @@ nav ul li a:hover:after {
 
 /* -------------------------------------projets------------------------------------- */
 
-#project{
+.project{
     height: 3000px;
     width: 100%;
 }
 
+.project_selected{
+    height: calc(3000px + 50vh);
+    width: 100%;
+}
+
 @media (max-width: 1500px) {
-    #project{
+    .project{
         height: 2500px;
+    }
+    .project_selected{
+        height: calc(2500px + 50vh);
     }
 }
 
 @media (max-width: 1000px) {
-    #project{
+    .project{
         height: 2000px;
+    }
+    .project_selected{
+        height: calc(2000px + 50vh);
     }
 }
 
