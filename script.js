@@ -497,6 +497,30 @@ DefaultViewProjectChild.addEventListener('click', ClickResetGallery)
 
 function ClickProject(SelectedDiv) {
 
+    slider_container.forEach(slidercontainer => {
+        slidercontainer.classList.remove("dpnone")
+        slidercontainer.classList.add("slider_container")
+        slidercontainer.classList.remove("slider_container_desactivate")
+    })
+
+    descriptionsliderdesactivateall.forEach(descriptionsliderdesactivateall => {
+        descriptionsliderdesactivateall.classList.add("dpnone")
+    })
+
+    slider.forEach(slider_self => {
+        // ici je copie le add et remove pour qu'ils puissent commencer l'animation du slider en même temps, si je ass que celui manquant tout les autres serons encore avec le même moment de départ mais pas celui qui vient d'être rajouter.
+        slider_self.classList.remove("slider")
+        slider_self.classList.add("slider")
+
+        slider_self.classList.add("slider_desactivate")
+        slider_self.classList.remove("slider_desactivate")
+    })
+
+    linkytb_container.forEach(ytbcontainer =>{
+        ytbcontainer.classList.add("dpnone")
+        Stopvideo(ytbcontainer);
+    })
+
     if (SelectedDiv.classList.contains("divprojectSelected")) {
 
         DefaultViewProjectChild.classList.add("opacity_null")
@@ -506,6 +530,15 @@ function ClickProject(SelectedDiv) {
         });
 
         setTimeout(() => { 
+
+            iframeSelected = SelectedDiv.querySelector("iframe")
+            console.log(iframeSelected);
+            listYoutubeVideoId = ["Mousdik","","","WikiFilm","","","","","RCunvxP3ED0","0JSebRjxqmg","ViolonFrance","","Plessis-Robinsson","","MeteoArduino","","BjPaKBPly_o","",""];
+            for (let i = 1; i < 20; i++) {
+                if (SelectedDiv.classList.contains("divproject" + i)) {
+                    iframeSelected.src = "https://www.youtube.com/embed/" + listYoutubeVideoId[i-1];
+                }
+            }
 
             project.classList.add("project");
             project.classList.remove("project_selected");
@@ -517,27 +550,6 @@ function ClickProject(SelectedDiv) {
             divproject4.classList.add("divproject4");
             divproject11.classList.add("divproject11");
             divproject13.classList.add("divproject13");
-
-            slider_container.forEach(slidercontainer => {
-                slidercontainer.classList.remove("dpnone")
-                slidercontainer.classList.add("slider_container")
-                slidercontainer.classList.remove("slider_container_desactivate")
-            })
-    
-            descriptionsliderdesactivateall.forEach(descriptionsliderdesactivateall => {
-                descriptionsliderdesactivateall.classList.add("dpnone")
-            })
-    
-            slider.forEach(slider_self => {
-                slider_self.classList.add("slider")
-                slider_self.classList.remove("slider_desactivate")
-            })
-
-    
-            linkytb_container.forEach(ytbcontainer =>{
-                ytbcontainer.classList.add("dpnone")
-                Stopvideo(ytbcontainer);
-            })
 
             description_divproject.forEach(descproject => {
                 descproject.classList.remove("dpnone")
@@ -595,6 +607,7 @@ function ClickProject(SelectedDiv) {
             descriptionsliderdesactivate.classList.remove("dpnone")
 
             linkytb_container_unique.classList.remove("dpnone");
+            
 
             SelectedDiv.classList.add("divprojectSelected");
     
@@ -606,6 +619,8 @@ function ClickProject(SelectedDiv) {
     
         }, 500);
     }
+
+
 }
 
 
