@@ -531,15 +531,6 @@ function ClickProject(SelectedDiv) {
 
         setTimeout(() => { 
 
-            iframeSelected = SelectedDiv.querySelector("iframe")
-            console.log(iframeSelected);
-            listYoutubeVideoId = ["Mousdik","","","WikiFilm","","","","","RCunvxP3ED0","0JSebRjxqmg","ViolonFrance","","Plessis-Robinsson","","MeteoArduino","","BjPaKBPly_o","",""];
-            for (let i = 1; i < 20; i++) {
-                if (SelectedDiv.classList.contains("divproject" + i)) {
-                    iframeSelected.src = "https://www.youtube.com/embed/" + listYoutubeVideoId[i-1];
-                }
-            }
-
             project.classList.add("project");
             project.classList.remove("project_selected");
 
@@ -572,6 +563,17 @@ function ClickProject(SelectedDiv) {
         });
     
         setTimeout(() => { 
+
+            let iframeSelected = SelectedDiv.querySelector("iframe")
+            console.log(iframeSelected);
+            listYoutubeVideoId = ["Mousdik","","","WikiFilm","","","","","RCunvxP3ED0","0JSebRjxqmg","ViolonFrance","","Plessis-Robinsson","","MeteoArduino","","BjPaKBPly_o","",""];
+            for (let i = 1; i < 20; i++){
+                console.log("divprokect" + i);
+                console.log("https://www.youtube.com/embed/" + listYoutubeVideoId[i-1]);
+                if (SelectedDiv.classList.contains("divproject" + i)) {
+                    iframeSelected.src = "https://www.youtube.com/embed/" + listYoutubeVideoId[i-1];
+                }
+            }
 
             // animation pendant que les projets sont en opacité 0
 
@@ -630,21 +632,3 @@ divprojects.forEach(div => {
         ClickProject(div);
     });
 });
-
-
-// -------------------------------------video ytb play-------------------------------------
-
-
-let player;
-
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('linkytb_container', {
-      videoId: 'QXR44Y2Mg7I',
-      playerVars: {
-        // Ajoutez ici les paramètres de lecture personnalisés
-      },
-      events: {
-        // Ajoutez ici les gestionnaires d'événements du lecteur
-      }
-    });
-  }
