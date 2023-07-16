@@ -780,6 +780,15 @@ nav ul li a:hover:after {
     flex-shrink: 0;
     width: 100%;
     height: fit-content;
+    transition: 0.2s;
+}
+
+.slider_container_desactivate img:hover{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(50%) translate(50%, calc(50% - 80px));
+    width: 100%;
 }
 
 .slider_desactivate{
