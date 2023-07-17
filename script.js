@@ -568,8 +568,8 @@ function ClickProject(SelectedDiv) {
             console.log(iframeSelected);
             listYoutubeVideoId = ["Mousdik","","","WikiFilm","","","","","RCunvxP3ED0","0JSebRjxqmg","ViolonFrance","","Plessis-Robinsson","","MeteoArduino","","BjPaKBPly_o","",""];
             for (let i = 1; i < 20; i++){
-                console.log("divprokect" + i);
-                console.log("https://www.youtube.com/embed/" + listYoutubeVideoId[i-1]);
+                // console.log("divproject" + i);
+                // console.log("https://www.youtube.com/embed/" + listYoutubeVideoId[i-1]);
                 if (SelectedDiv.classList.contains("divproject" + i)) {
                     iframeSelected.src = "https://www.youtube.com/embed/" + listYoutubeVideoId[i-1];
                 }
@@ -637,4 +637,20 @@ divprojects.forEach(div => {
 // -------------------------------------Slider desac-------------------------------------
 
 let imgslider = document.querySelectorAll(".slider img")
-console.log(imgslider);
+
+function SliderMouseenter(SelectedImg){
+    if (SelectedImg.parentElement.classList.contains("slider_desactivate") ) {
+        imgslider.forEach(imgsli => {
+            imgsli.classList.remove("img_hover_slider_container_desactivate")
+        });
+        SelectedImg.classList.add("img_hover_slider_container_desactivate")
+    }
+}
+
+
+
+imgslider.forEach(img => {
+    img.addEventListener('mouseenter', function(){
+        SliderMouseenter(img)
+    })
+})

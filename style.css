@@ -783,7 +783,7 @@ nav ul li a:hover:after {
     transition: 0.2s;
 }
 
-.slider_container_desactivate img:hover{
+.img_hover_slider_container_desactivate{
     grid-column-start: 1;
     grid-column-end: 3;
 
