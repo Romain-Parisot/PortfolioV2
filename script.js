@@ -632,3 +632,9 @@ divprojects.forEach(div => {
         ClickProject(div);
     });
 });
+
+
+// -------------------------------------Slider desac-------------------------------------
+
+let imgslider = document.querySelectorAll(".slider img")
+console.log(imgslider);
