@@ -787,8 +787,9 @@ nav ul li a:hover:after {
     grid-column-start: 1;
     grid-column-end: 3;
 
-    grid-row-start: 1;
-    grid-row-end: 3;
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    transform: scale(105%);
 }
 
 .slider_desactivate{

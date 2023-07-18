@@ -644,8 +644,22 @@ function SliderMouseenter(SelectedImg){
             imgsli.classList.remove("img_hover_slider_container_desactivate")
         });
         SelectedImg.classList.add("img_hover_slider_container_desactivate")
+        let slider_container_desactivate_selected = SelectedImg.parentElement
+        console.log(slider_container_desactivate_selected);
+
+        slider_container_desactivate_selected.addEventListener('mouseover', function(){
+            SliderMouseover(slider_container_desactivate_selected)
+        })
     }
 }
+
+function SliderMouseover(gridimg) {
+    console.log("test");
+    imgslider.forEach(imgsli => {
+        imgsli.classList.remove("img_hover_slider_container_desactivate")
+    })
+}
+
 
 
 
@@ -654,3 +668,4 @@ imgslider.forEach(img => {
         SliderMouseenter(img)
     })
 })
+
