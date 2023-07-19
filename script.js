@@ -644,24 +644,27 @@ function SliderMouseenter(SelectedImg){
             imgsli.classList.remove("img_hover_slider_container_desactivate")
         });
         SelectedImg.classList.add("img_hover_slider_container_desactivate")
-        let slider_container_desactivate_selected = SelectedImg.parentElement
+        let slider_container_desactivate_selected = SelectedImg.parentElement.parentElement
         console.log(slider_container_desactivate_selected);
 
-        slider_container_desactivate_selected.addEventListener('mouseover', function(){
-            SliderMouseover(slider_container_desactivate_selected)
-        })
+        
     }
 }
 
-function SliderMouseover(gridimg) {
-    console.log("test");
-    imgslider.forEach(imgsli => {
-        imgsli.classList.remove("img_hover_slider_container_desactivate")
-    })
+function SliderMouseover(slidercont) {
+    if (slidercont.classList.contains("slider_container_desactivate")) {
+        console.log("test");
+        imgslider.forEach(imgslid => {
+            imgslid.classList.remove("img_hover_slider_container_desactivate")
+        });
+    }
 }
 
-
-
+slider_container.forEach(slidercont => {
+    slidercont.addEventListener('mouseover', function(){
+        SliderMouseover(slidercont)
+    })
+});
 
 imgslider.forEach(img => {
     img.addEventListener('mouseenter', function(){
