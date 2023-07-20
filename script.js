@@ -661,7 +661,7 @@ function SliderMouseover(slidercont) {
 }
 
 slider_container.forEach(slidercont => {
-    slidercont.addEventListener('mouseover', function(){
+    slidercont.addEventListener('mouseleave', function(){
         SliderMouseover(slidercont)
     })
 });
