@@ -253,8 +253,8 @@ let bullet_point_parcour4 = document.querySelector('.bullet_point_parcour4')
 function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    if (scrollPercentage >= 40 && scrollPercentage <= 80) {
-        scrollPercentagev2 = 10/4 * (scrollPercentage - 40);
+    if (scrollPercentage >= 60 && scrollPercentage <= 80) {
+        scrollPercentagev2 = 10/4 * (scrollPercentage - 60);
         if (scrollPercentagev2 > 25/2) {
             bullet_point_parcour1.classList.add("bullet_point_parcour_animation")
             parcour_elmt1.classList.remove("parcour_elmt_left")
@@ -297,8 +297,8 @@ function updateProgressBar() {
         scrollPercentagev2 = 100
     }  
       progressBar.style.height = `${scrollPercentagev2}%`;
-    //   console.log("v1 : " + scrollPercentage);
-    //   console.log("v2 : " + scrollPercentagev2);
+      console.log("v1 : " + scrollPercentage);
+      console.log("v2 : " + scrollPercentagev2);
 }
 
 
@@ -645,15 +645,11 @@ function SliderMouseenter(SelectedImg){
         });
         SelectedImg.classList.add("img_hover_slider_container_desactivate")
         let slider_container_desactivate_selected = SelectedImg.parentElement.parentElement
-        console.log(slider_container_desactivate_selected);
-
-        
     }
 }
 
 function SliderMouseover(slidercont) {
     if (slidercont.classList.contains("slider_container_desactivate")) {
-        console.log("test");
         imgslider.forEach(imgslid => {
             imgslid.classList.remove("img_hover_slider_container_desactivate")
         });
