@@ -254,7 +254,7 @@ function updateProgressBar() {
 
     let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
     if (scrollPercentage >= 50 && scrollPercentage <= 90) {
-        scrollPercentagev2 = 10/4 * (scrollPercentage - 50);
+        scrollPercentagev2 = 10/3 * (scrollPercentage - 50);
         if (scrollPercentagev2 > 25/2) {
             bullet_point_parcour1.classList.add("bullet_point_parcour_animation")
             parcour_elmt1.classList.remove("parcour_elmt_left")
