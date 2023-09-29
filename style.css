@@ -29,6 +29,8 @@
     --mountain_svg_bird_left_position_y: 0%;
 
     --height_parcour: 250vh;
+
+    --rotate_sv_star: 0deg;
 }
 
 body{
@@ -516,7 +518,8 @@ h1{
 .svg_star{
     fill: var(--star-color);
     width: 35px;
-
+    transform: rotate(var(--rotate_sv_star));
+    transition: 1s ease;
 }
 
 

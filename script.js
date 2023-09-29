@@ -668,3 +668,35 @@ imgslider.forEach(img => {
     })
 })
 
+// -------------------------------------Star anim-------------------------------------
+let oldrandomstar = 0;
+function StarAnim(){
+    let rootsizesvg = document.querySelector(":root");
+    let randomStar = getRandomIntInclusive(1, 5);
+
+    while (randomStar == oldrandomstar) {
+        randomStar = getRandomIntInclusive(1, 5);
+    }
+
+    if (randomStar == 1) {
+        rootsizesvg.style.setProperty('--rotate_sv_star', `72deg`);
+    }
+    else if (randomStar == 2) {
+        rootsizesvg.style.setProperty('--rotate_sv_star', `144deg`);
+    }
+    else if (randomStar == 3) {
+        rootsizesvg.style.setProperty('--rotate_sv_star', `216deg`);
+    }
+    else if (randomStar == 4) {
+        rootsizesvg.style.setProperty('--rotate_sv_star', `288deg`);
+    }
+    else if (randomStar == 5) {
+        rootsizesvg.style.setProperty('--rotate_sv_star', `360deg`);
+    }
+
+    oldrandomstar = randomStar;
+}
+document.addEventListener('DOMContentLoaded', StarAnim);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(StarAnim, 3000);
+});
