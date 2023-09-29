@@ -10,6 +10,7 @@
     --dark-mode-off: #ffffff;
     --dark-mode-on: #000000;
     --main-color: rgb(212, 139, 27 );
+    --star-color: #dddd5d;
     
     --computer_svg_width_random1: 100% ;
     --computer_svg_width_random2: 100% ;
@@ -474,6 +475,8 @@ h1{
 
 .star_elmt{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -508,6 +511,12 @@ h1{
     z-index: 9;
     display: flex;
     bottom: 0;
+}
+
+.svg_star{
+    fill: var(--star-color);
+    width: 35px;
+
 }
 
 
