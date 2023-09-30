@@ -757,3 +757,11 @@ document.addEventListener('DOMContentLoaded', ArrowAnim);
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(ArrowAnim, 4000);
 });
+
+
+// -------------------------------------Scroll anim-------------------------------------
+
+function scrollToParcour() {
+    let parcourSection = document.getElementById('parcour');
+    parcourSection.scrollIntoView({ behavior: 'smooth' });
+}
