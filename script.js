@@ -679,19 +679,19 @@ function StarAnim(){
     }
 
     if (randomStar == 1) {
-        rootsizesvg.style.setProperty('--rotate_sv_star', `72deg`);
+        rootsizesvg.style.setProperty('--rotate_svg_star', `72deg`);
     }
     else if (randomStar == 2) {
-        rootsizesvg.style.setProperty('--rotate_sv_star', `144deg`);
+        rootsizesvg.style.setProperty('--rotate_svg_star', `144deg`);
     }
     else if (randomStar == 3) {
-        rootsizesvg.style.setProperty('--rotate_sv_star', `216deg`);
+        rootsizesvg.style.setProperty('--rotate_svg_star', `216deg`);
     }
     else if (randomStar == 4) {
-        rootsizesvg.style.setProperty('--rotate_sv_star', `288deg`);
+        rootsizesvg.style.setProperty('--rotate_svg_star', `288deg`);
     }
     else if (randomStar == 5) {
-        rootsizesvg.style.setProperty('--rotate_sv_star', `360deg`);
+        rootsizesvg.style.setProperty('--rotate_svg_star', `360deg`);
     }
 
     oldrandomstar = randomStar;
@@ -699,4 +699,61 @@ function StarAnim(){
 document.addEventListener('DOMContentLoaded', StarAnim);
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(StarAnim, 3000);
+});
+
+// -------------------------------------Arrow anim-------------------------------------
+
+let pauseArrowAnim = false;
+
+
+function ArrowAnim() {
+    let rootpositionsvg = document.querySelector(":root");
+    let arrow_bt_project = document.querySelector(".arrow_bt_project");
+
+    if (pauseArrowAnim === true) {
+        rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt1', '300px');
+        rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt2', '300px');
+        rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt3', '300px');
+        rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt4', '300px');
+        arrow_bt_project.style.transform = 'translateX(130px)';
+    }    
+    else{
+        arrow_bt_project.style.transform = 'translateX(0px)';
+        if (rootpositionsvg.style.getPropertyValue('--arrow_svg_position_x_elmt1') == "10px") {
+            rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt1', '300px');
+            setTimeout(() => {
+                rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt2', '300px');
+            }, 1000);
+            setTimeout(() => {
+                rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt3', '300px');
+            }, 2000);
+            setTimeout(() => {
+                rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt4', '300px');
+            }, 3000);
+        } else {
+            rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt1', '10px');
+            rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt2', '10px');
+            rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt3', '10px');
+            rootpositionsvg.style.setProperty('--arrow_svg_position_x_elmt4', '10px');
+        }
+    }
+}
+
+
+let buttonproject = document.querySelector('.bttoproject');
+
+buttonproject.addEventListener('mouseenter', () => {
+    pauseArrowAnim = true
+    ArrowAnim();
+});
+
+buttonproject.addEventListener('mouseleave', () => {
+    pauseArrowAnim = false
+    ArrowAnim();
+});
+
+
+document.addEventListener('DOMContentLoaded', ArrowAnim);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(ArrowAnim, 4000);
 });
