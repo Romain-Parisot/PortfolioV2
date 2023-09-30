@@ -35,25 +35,30 @@ toggleburger();
 // -------------------------------------Nav bar-------------------------------------
 
 const navLinks = document.querySelectorAll('.nav-links li');
-const nav_txt = document.querySelectorAll('.nav-links li a');
 
-function Sectionvisiblescroll(){
-
+function Sectionvisiblescroll() {
     let sections = document.querySelectorAll('section');
 
     sections.forEach((section, index) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
 
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        navLinks.forEach((navLink) => {
-            navLink.classList.remove('nav_selected');
-        });
-        navLinks[index].classList.add('nav_selected');
-    }
-});
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach((navLink) => {
+                navLink.classList.remove('nav_selected');
+            });
+
+            console.log("1" + index);
+            console.log("2" + section);
+            console.log("3" + navLinks);
+            console.log("4" + navLinks[index]);
+            navLinks[index].classList.add('nav_selected');
+        }
+    });
 }
+
 window.addEventListener('scroll', Sectionvisiblescroll);
+
 
 // -------------------------------------logo anim-------------------------------------
 
@@ -764,4 +769,19 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToParcour() {
     let parcourSection = document.getElementById('parcour');
     parcourSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToProjets() {
+    let projetSection = document.getElementsByClassName('project')[0];
+    projetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToHome() {
+    let homeSection = document.getElementById('home');
+    homeSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToContact() {
+    let contactSection = document.getElementById('contact');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
 }

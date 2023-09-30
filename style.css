@@ -392,6 +392,10 @@ header{
     z-index: 10;
 }
 
+.elmt_header{
+    cursor: pointer;
+}
+
 header.animationHeader{
     transform: translate(-50%, 20px);
 }
@@ -512,6 +516,11 @@ h1{
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.star_elmt p{
+    font-size: 16px;
+    font-style: italic;
 }
 
 .rect1_home img{
