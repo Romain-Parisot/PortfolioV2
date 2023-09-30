@@ -47,11 +47,6 @@ function Sectionvisiblescroll() {
             navLinks.forEach((navLink) => {
                 navLink.classList.remove('nav_selected');
             });
-
-            console.log("1" + index);
-            console.log("2" + section);
-            console.log("3" + navLinks);
-            console.log("4" + navLinks[index]);
             navLinks[index].classList.add('nav_selected');
         }
     });
