@@ -172,8 +172,8 @@ h3{
 
 .logo_svg{
     fill: var(--dark-mode-on);
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     transform: translate(-50%);
     margin-top: 20px;
     position: fixed;
@@ -184,8 +184,8 @@ h3{
 
 .logo_svg_anim{
     fill: var(--main-color) ;
-    width: 75px ;
-    height: 75px ;
+    width: 100px ;
+    height:  100px ;
     transform: translate(-50%);
     margin-top: 20px;
     position: fixed;
@@ -211,14 +211,12 @@ h3{
 
 .path1_logo{
     stroke: var(--dark-mode-on);
-    stroke-width: 20;
+    stroke-width: 13;
 }
-
-
 
 .path2_logo{
     stroke: var(--main-color);
-    stroke-width: 20;
+    stroke-width: 15;
     stroke-dasharray: 0.7;
     stroke-dashoffset: 0.7;
     transition: stroke-dashoffset 2s ease-in-out;
@@ -620,7 +618,7 @@ h1{
 }
 
 .svg_arrow_circle{
-    fill: var(--main-color-80-no-opa);
+    fill: var(--dark-mode-on);
     width: 40px;
     height: 40px;
     position: absolute;
