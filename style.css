@@ -620,7 +620,7 @@ h1{
 }
 
 .svg_arrow_circle{
-    fill: var(--dark-mode-on);
+    fill: var(--main-color-80-no-opa);
     width: 40px;
     height: 40px;
     position: absolute;
@@ -1227,20 +1227,27 @@ h1{
     width: 85vw;
     margin-left: 50%;
     transform: translate(-50%);
-    
 }
 
 .parcour_elmt{
-    background-color: var(--main-color-10-no-opa);
     transition: 1s;
     display: flex;
     margin: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     padding: 10px;
-    transition: 1s;
     opacity: 1;
+}
+
+.parcour_elmt_child{
+    background-color: var(--main-color-10-no-opa);
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .parcour_elmt_right{
@@ -1262,17 +1269,17 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
 }
 
 .parcour_elmt_details p{
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
+    padding: 15px;
 }
 
 .parcour_elmt_details a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -1292,6 +1299,7 @@ h1{
 .parcour_elmt_date{
     position: relative;
     margin-left: auto;
+    padding: 0px 20px;
 }
 
 .parcour_elmt1{
@@ -1324,6 +1332,29 @@ h1{
 
     grid-row-start: 8;
     grid-row-end: 9;
+}
+
+.parcour_elmt_child a{
+    text-decoration: none;
+    color: var(--main-color);
+    text-align: center;
+    position: relative;
+}
+
+.parcour_elmt_child a:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: rgb(212, 139, 27 );
+    transition: width 300ms;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.parcour_elmt_child a:hover:after {
+    width: 100%;
 }
 
 
