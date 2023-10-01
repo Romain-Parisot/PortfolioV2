@@ -1,0 +1,266 @@
+/* -------------------------------------home------------------------------------- */
+
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#poste{
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.leftHome{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin-top: 10vh;
+}
+
+.rightHome{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin-top: 10vh;
+}
+
+.topHome{
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+.bottomHome{
+  width: 100%;
+}
+
+.containerRectHome{
+  display: flex;
+  align-items: left;
+  width: 100%;
+}
+
+.starContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.starElmt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.starElmt p{
+  font-size: 16px;
+  font-style: italic;
+}
+
+.rect1Home img{
+  width: 350px;
+  border-radius: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.rect2Home{
+  background-color: var(--main-color-20-no-opa);
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rect2Home h3{
+  padding: 10px 20px;
+}
+
+.descriptionRect2Home{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: dashed;
+}
+
+.descriptionRect2Home a{
+  text-decoration: none;
+  color: var(--main-color);
+  text-align: center;
+  position: relative;
+}
+
+.descriptionRect2Home a:after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: rgb(212, 139, 27 );
+  transition: width 300ms;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.descriptionRect2Home a:hover:after {
+  width: 100%;
+}
+
+.rect3Home{
+  background: linear-gradient(var(--main-color-40-no-opa), var(--dark-mode-off));
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+  margin-left: -250px;
+  margin-top: 15%;
+  z-index: 9;
+}
+
+.svgWaveHome{
+  fill: var(--main-color-70-no-opa);
+  z-index: 9;
+  display: flex;
+  bottom: 0;
+}
+
+.svgStar{
+  fill: var(--star-color);
+  width: 35px;
+  transform: rotate(var(--rotateSvgStar));
+  transition: 1s ease;
+}
+
+.svgCircle{
+  fill: var(--main-color-40-no-opa);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-left: 205px;
+  margin-top: 190px;
+  z-index: 12;
+}
+
+.aArrowCircle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.svgArrowCircle{
+  fill: var(--dark-mode-on);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: 220px;
+  z-index: 13;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}   
+
+.svgArrowCircle:hover{
+  transform: rotate(90deg);
+  fill: var(--dark-mode-off);
+}
+
+.containerBtToProject{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.btToProject{
+  width: 200px;
+  height: 50px;
+  border: 2px solid var(--main-color);
+  background: none;
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  transform: translateZ(0);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btToProject:hover{
+  color: var(--dark-mode-off);
+}
+.bttoproject:hover svg{
+  fill: var(--dark-mode-off);
+}
+
+.btToProject::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 0.5s ;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.btToProject::before{
+  transform: scaleX(0);
+}
+
+.btToProject:hover::before{
+  transform: scaleX(1);
+}
+
+.arrowBtProject{
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  overflow: visible;
+  fill: var(--main-color);
+  transition: transform 0.5s ease;
+}
+
+#arrowElmt1{
+  transform: translateX(var(--arrowSvgPositionXElmt1));
+  transition: 1s ease;
+}
+#arrowElmt2{
+  transform: translateX(var(--arrowSvgPositionXElmt2));
+  transition: 1s ease;
+}
+#arrowElmt3{
+  transform: translateX(var(--arrowSvgPositionXElmt3));
+  transition: 1s ease;
+}
+#arrowElmt4{
+  transform: translateX(var(--arrowSvgPositionXElmt4));
+  transition: 1s ease;
+}

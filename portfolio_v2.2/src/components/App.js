@@ -1,10 +1,11 @@
 import React, { useState, useCallback } from 'react';
-import Onloadanimation from './OnLoadAnimation/Onloadanimation';
 import './App.module.css';
-import Logoanimation from './LogoAnimation/Logoanimation';
-import Burgermenu from './BurgerMenu/Burgermenu';
-import Header from './Header/Header';
-import Darkmode from './DarkMode/Darkmode';
+import Onloadanimation from './PositionFixedComponents/OnLoadAnimation/Onloadanimation';
+import Logoanimation from './PositionFixedComponents/LogoAnimation/Logoanimation';
+import Burgermenu from './PositionFixedComponents/BurgerMenu/Burgermenu';
+import Header from './PositionFixedComponents/Header/Header';
+import Darkmode from './PositionFixedComponents/DarkMode/Darkmode';
+import Home from './Home/Home';
 
 export default function App() {
   const [isBurgerOpen, setisBurgerOpen] = useState(false);
@@ -18,6 +19,13 @@ export default function App() {
       <Burgermenu onToggleburger={toggleburger} isBurgerOpen={isBurgerOpen} />
       <Header isBurgerOpen={isBurgerOpen} />
       <Darkmode />
+      <main id="mainpage">
+        <Home />
+        {/* <Parcour />
+        <Project />
+        <Competence />
+        <Contact /> */}
+      </main>
     </div>
   );
 }

@@ -36,30 +36,30 @@
 
   --star-color: #dddd5d;
   
-  --computer_svg_width_random1: 100% ;
-  --computer_svg_width_random2: 100% ;
-  --computer_svg_width_random3: 100% ;
-  --computer_svg_width_random4: 100% ;
-  --computer_svg_mouse_position_x: 0%;
-  --computer_svg_mouse_position_y: 0%;
+  --computerSvgWidthRandom1: 100% ;
+  --computerSvgWidthRandom2: 100% ;
+  --computerSvgWidthRandom3: 100% ;
+  --computerSvgWidthRandom4: 100% ;
+  --computerSvgMousePositionX: 0%;
+  --computerSvgMousePositionY: 0%;
 
   
-  --mountain_svg_bird_right_scale: 100%;
-  --mountain_svg_bird_right_position_x: 0%;
-  --mountain_svg_bird_right_position_y: 0%;
+  --mountainSvgBirdRightScale: 100%;
+  --mountainSvgBirdRightPositionX: 0%;
+  --mountainSvgBirdRightPositionY: 0%;
 
-  --mountain_svg_bird_left_scale: 100%;
-  --mountain_svg_bird_left_position_x: 0%;
-  --mountain_svg_bird_left_position_y: 0%;
+  --mountainSvgBirdLeftScale: 100%;
+  --mountainSvgBirdLeftPositionX: 0%;
+  --mountainSvgBirdLeftPositionY: 0%;
 
-  --height_parcour: 250vh;
+  --heightParcour: 250vh;
 
-  --rotate_svg_star: 0deg;
+  --rotateSvgStar: 0deg;
 
-  --arrow_svg_position_x_elmt1: 10px;
-  --arrow_svg_position_x_elmt2: 10px;
-  --arrow_svg_position_x_elmt3: 10px;
-  --arrow_svg_position_x_elmt4: 10px;
+  --arrowSvgPositionXElmt1: 10px;
+  --arrowSvgPositionXElmt2: 10px;
+  --arrowSvgPositionXElmt3: 10px;
+  --arrowSvgPositionXElmt4: 10px;
 }
 
 body{
@@ -88,7 +88,7 @@ html{
   background-color: var(--dark-mode-off) !important;; 
 }
 
-.opacity_null{
+.opacityNull{
   opacity: 0;
 }
 
