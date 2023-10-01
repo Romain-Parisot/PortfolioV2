@@ -1,0 +1,44 @@
+.burger{
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  position: fixed;
+  margin-left: 95vw;
+  transform: translate(-50%);
+  margin-top: 20px;
+  z-index: 13;
+}
+
+.burger:hover .bar{
+  background-color: var(--dark-mode-on);
+}
+
+.bar{
+  width: 45px;
+  height: 4px;
+  background-color: var(--main-color);
+  margin-top: 10px;
+}
+
+.barMid{
+  width: 30px;
+}
+
+.barUp , .barDown{
+  transition: 0.4s;
+  transform: rotate(0deg);
+}
+
+.barAnimationTop{
+  transform: rotate(45deg) translate(10px, 10px);
+
+}
+
+.barAnimationBot{
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.hidden{
+  background-color: var(--dark-mode-off) !important;; 
+}
