@@ -213,7 +213,7 @@ h1{
 .btToProject:hover{
   color: var(--dark-mode-off);
 }
-.bttoproject:hover svg{
+.btToProject:hover svg{
   fill: var(--dark-mode-off);
 }
 
@@ -263,4 +263,11 @@ h1{
 #arrowElmt4{
   transform: translateX(var(--arrowSvgPositionXElmt4));
   transition: 1s ease;
+}
+
+#translateX130{
+  transform: translateX(130px);
+}
+#translateX0{
+  transform: translateX(0px);
 }

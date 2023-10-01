@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import PersonalPicture from '../../assets/PersonalPicture.png';
 
@@ -11,6 +11,44 @@ export default function Home() {
     const projetSection = document.getElementsByClassName('project')[0];
     projetSection.scrollIntoView({ behavior: 'smooth' });
   }
+
+  const [pauseArrowAnimation, setPauseArrowAnimation] = useState(false);
+  function ClasicArrowAnimation() {
+    console.log(pauseArrowAnimation);
+    if (pauseArrowAnimation === true) {
+      document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '300px');
+      document.documentElement.style.setProperty('--arrowSvgPositionXElmt2', '300px');
+      document.documentElement.style.setProperty('--arrowSvgPositionXElmt3', '300px');
+      document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '300px');
+    } else if (pauseArrowAnimation === false) {
+      if (getComputedStyle(document.documentElement).getPropertyValue === '10px') {
+        document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '300px');
+        setTimeout(() => {
+          document.documentElement.style.setProperty('--arrowSvgPositionXElmt2', '300px');
+        }, 1000);
+        setTimeout(() => {
+          document.documentElement.style.setProperty('--arrowSvgPositionXElmt3', '300px');
+        }, 2000);
+        setTimeout(() => {
+          document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '300px');
+        }, 3000);
+      } else {
+        document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '10px');
+        document.documentElement.style.setProperty('--arrowSvgPositionXElmt2', '10px');
+        document.documentElement.style.setProperty('--arrowSvgPositionXElmt3', '10px');
+        document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '10px');
+      }
+    }
+  }
+
+  useEffect(() => {
+    ClasicArrowAnimation();
+    const interval = setInterval(() => {
+      ClasicArrowAnimation();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id={`${styles.home}`}>
       <div className={`${styles.topHome}`}>
@@ -39,10 +77,24 @@ export default function Home() {
             </div>
           </div>
           <div className={`${styles.containerBtToProject}`}>
-            <button type="button" className={`${styles.btToProject}`} onClick={() => scrollToProjets()}>
+            <button
+              type="button"
+              className={`${styles.btToProject}`}
+              onMouseEnter={() => {
+                setPauseArrowAnimation(true);
+                ClasicArrowAnimation();
+              }}
+              onMouseLeave={() => {
+                setPauseArrowAnimation(false);
+                ClasicArrowAnimation();
+              }}
+              onClick={() => scrollToProjets()}
+            >
               <svg
                 version="1.1"
-                className={`${styles.arrowBtProject}`}
+                className={`${styles.arrowBtProject} ${
+                  pauseArrowAnimation ? styles.translateX130 : styles.translateX0
+                }`}
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 1000 1000"
