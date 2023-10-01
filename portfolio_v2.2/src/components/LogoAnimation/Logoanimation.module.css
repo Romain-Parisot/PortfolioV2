@@ -1,0 +1,55 @@
+.logoSvg{
+  fill: var(--dark-mode-on);
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%);
+  margin-top: 20px;
+  position: fixed;
+  transition: 1s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.logoSvg_anim{
+  fill: var(--main-color) ;
+  width: 100px ;
+  height:  100px ;
+  transform: translate(-50%);
+  margin-top: 20px;
+  position: fixed;
+  transition: 1s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.logoSvgbasic{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.logoSvg2{
+  margin-left: -200px;
+  margin-top: 20px;
+}
+
+.logoSvg3{
+  margin-left: 50px;
+  margin-top: -200px;
+}
+
+.path1Logo{
+  stroke: var(--dark-mode-on);
+  stroke-width: 13;
+}
+
+.path2Logo{
+  stroke: var(--main-color);
+  stroke-width: 15;
+  stroke-dasharray: 0.7;
+  stroke-dashoffset: 0.7;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.path2Logo_anim{
+  stroke-dashoffset: 0;
+}
