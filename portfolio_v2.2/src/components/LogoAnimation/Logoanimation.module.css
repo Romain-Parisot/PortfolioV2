@@ -10,7 +10,7 @@
   z-index: 10;
 }
 
-.logoSvg_anim{
+.logoSvgAnim{
   fill: var(--main-color) ;
   width: 100px ;
   height:  100px ;
@@ -50,6 +50,6 @@
   transition: stroke-dashoffset 2s ease-in-out;
 }
 
-.path2Logo_anim{
+.path2LogoAnim{
   stroke-dashoffset: 0;
 }
