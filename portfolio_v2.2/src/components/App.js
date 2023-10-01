@@ -4,6 +4,7 @@ import './App.module.css';
 import Logoanimation from './LogoAnimation/Logoanimation';
 import Burgermenu from './BurgerMenu/Burgermenu';
 import Header from './Header/Header';
+import Darkmode from './DarkMode/Darkmode';
 
 export default function App() {
   const [isBurgerOpen, setisBurgerOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function App() {
       <Logoanimation />
       <Burgermenu onToggleburger={toggleburger} isBurgerOpen={isBurgerOpen} />
       <Header isBurgerOpen={isBurgerOpen} />
+      <Darkmode />
     </div>
   );
 }

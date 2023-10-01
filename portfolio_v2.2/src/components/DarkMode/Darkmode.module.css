@@ -1,0 +1,74 @@
+.divbtdarkmode{
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  margin-left: 95vw;
+  transform: translate(-50%);
+  margin-top: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 13;
+}
+
+.darkmode_svg{
+  fill: var(--dark-mode-on);
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  transition: 1s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.darkmode_svg_spark{
+  transition: 1s ease;
+}
+
+.darkmode_svg_spark0{
+  transform: rotate(0deg);
+}
+
+.darkmode_svg_spark_anim{
+  transform: rotate(10deg);
+}
+
+.darkmode_svg_spark_anim2{
+  transform: rotate(-10deg);
+}
+
+.darkmode_svg_sun{
+  transition: 1s ease;
+}
+
+.darkmode_svg_sun_topleft_anim{
+  transform: translate(-3%, -3%);
+}
+
+.darkmode_svg_sun_topright_anim{
+  transform: translate(3%, -3%);
+}
+
+.darkmode_svg_sun_botleft_anim{
+  transform: translate(-3%, 3%);
+}
+
+.darkmode_svg_sun_botright_anim{
+  transform: translate(3%, 3%);
+}
+
+.darkmode_svg_sun_top_anim{
+  transform: translateY(-3%);
+}
+
+.darkmode_svg_sun_bot_anim{
+  transform: translateY(3%);
+}
+
+.darkmode_svg_sun_left_anim{
+  transform: translateX(-3%);
+}
+
+.darkmode_svg_sun_right_anim{
+  transform: translateX(3%);
+}
