@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--dark-mode-on);
+  font-family: 'Spectral', serif;
+}
+
+:root{
+  --dark-mode-off: #ffffff;
+  --dark-mode-on: #000000;
+
+  --main-color: rgb(212, 139, 27);
+
+  /* variation opa */
+  --main-color-10: rgb(212, 139, 27, 0.1);
+  --main-color-20: rgb(212, 139, 27, 0.2);
+  --main-color-30: rgb(212, 139, 27, 0.3);
+  --main-color-40: rgb(212, 139, 27, 0.4);
+  --main-color-50: rgb(212, 139, 27, 0.5);
+  --main-color-60: rgb(212, 139, 27, 0.6);
+  --main-color-70: rgb(212, 139, 27, 0.7);
+  --main-color-80: rgb(212, 139, 27, 0.8);
+  --main-color-90: rgb(212, 139, 27, 0.9);
+
+  /* variation no opa */
+  --main-color-10-no-opa: rgba(251,243,232,255);
+  --main-color-20-no-opa: rgba(246,232,209,255);
+  --main-color-30-no-opa: rgba(242,220,186,255);
+  --main-color-40-no-opa: rgba(238,209,164,255);
+  --main-color-50-no-opa: rgba(233,197,141,255);
+  --main-color-60-no-opa: rgba(229,185,118,255);
+  --main-color-70-no-opa: rgba(225,174,95,255);
+  --main-color-80-no-opa: rgba(221,162,73,255);
+  --main-color-90-no-opa: rgba(216,150,49,255);
+
+  --star-color: #dddd5d;
+  
+  --computer_svg_width_random1: 100% ;
+  --computer_svg_width_random2: 100% ;
+  --computer_svg_width_random3: 100% ;
+  --computer_svg_width_random4: 100% ;
+  --computer_svg_mouse_position_x: 0%;
+  --computer_svg_mouse_position_y: 0%;
+
+  
+  --mountain_svg_bird_right_scale: 100%;
+  --mountain_svg_bird_right_position_x: 0%;
+  --mountain_svg_bird_right_position_y: 0%;
+
+  --mountain_svg_bird_left_scale: 100%;
+  --mountain_svg_bird_left_position_x: 0%;
+  --mountain_svg_bird_left_position_y: 0%;
+
+  --height_parcour: 250vh;
+
+  --rotate_svg_star: 0deg;
+
+  --arrow_svg_position_x_elmt1: 10px;
+  --arrow_svg_position_x_elmt2: 10px;
+  --arrow_svg_position_x_elmt3: 10px;
+  --arrow_svg_position_x_elmt4: 10px;
+}
+
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--dark-mode-off);
+}
+
+html{
+  width: 100vw;
+}
+
+#mainpage{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 85vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hidden{
+  background-color: var(--dark-mode-off) !important;; 
+}
+
+.opacity_null{
+  opacity: 0;
+}
+
+.dpnone{
+  display: none !important;
+}

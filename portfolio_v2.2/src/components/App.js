@@ -1,7 +1,11 @@
 import React from 'react';
+import Onloadanimation from './OnLoadAnimation/Onloadanimation';
+import './App.module.css';
 
-function App() {
-  return <div className="App" />;
+export default function App() {
+  return (
+    <div className="App">
+      <Onloadanimation />
+    </div>
+  );
 }
-
-export default App;
