@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Logoanimation.module.css';
 
 export default function Logoanimation() {
+  // Animation of color logo
   const [path2AnimationRunning, setpath2AnimationRunning] = useState(false);
   const [logoSvgAnimationRunning, setlogoSvgAnimationRunning] = useState(false);
 
@@ -20,6 +21,16 @@ export default function Logoanimation() {
     }, 8000);
   };
 
+  // Animation of click on logo
+  const [initialLogo, setinitialLogo] = useState(true);
+  function clickOnLogo() {
+    if (initialLogo) {
+      setinitialLogo(false);
+    } else {
+      setinitialLogo(true);
+    }
+  }
+
   useEffect(() => {
     animationOfLogo();
     const interval = setInterval(() => {
@@ -34,11 +45,12 @@ export default function Logoanimation() {
       <svg
         version="1.1"
         className={`${styles.logoSvg} ${logoSvgAnimationRunning ? styles.logoSvgAnim : styles.logoSvg} ${
-          styles.logoSvgbasic
+          initialLogo ? styles.logoSvgbasic : styles.logoSvg2
         }`}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 1000 1000"
+        onClick={clickOnLogo}
       >
         <path
           className={`${styles.path1Logo}`}
@@ -55,11 +67,12 @@ export default function Logoanimation() {
       <svg
         version="1.1"
         className={`${logoSvgAnimationRunning ? styles.logoSvgAnim : styles.logoSvg} ${styles.logoSvg} ${
-          styles.logoSvg3
+          initialLogo ? styles.logoSvg3 : styles.logoSvgbasic
         }`}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 1000 1000"
+        onClick={clickOnLogo}
       >
         <path
           className={`${styles.path1Logo}`}
