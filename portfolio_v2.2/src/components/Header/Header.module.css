@@ -44,13 +44,14 @@ nav ul li{
   transition: 0.5s linear;
 }
 
-nav ul li a{
-  text-decoration: none;
+nav ul li button{
   color: var(--dark-mode-on);
   font-size: 20px;
+  border: none;
+  background: none;
 }
 
-nav ul li a:after {
+nav ul li button:after {
   content: '';
   width: 0px;
   height: 1px;
@@ -59,7 +60,7 @@ nav ul li a:after {
   transition: 300ms;
 }
 
-nav ul li a:hover:after {
+nav ul li button:hover:after {
   width: 100%;
 }
 

@@ -25,24 +25,24 @@ export default function Header({ isBurgerOpen }) {
       <nav>
         <ul className={`${styles.navLinks}`}>
           <li className={`${styles.navSelected}`}>
-            <a className={`${styles.elmtHeader}`} onClick={scrollToHome}>
+            <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToHome}>
               Accueil
-            </a>
+            </button>
           </li>
           <li>
-            <a className={`${styles.elmtHeader}`} onClick={scrollToProjets}>
+            <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToProjets}>
               Projets
-            </a>
+            </button>
           </li>
           <li>
-            <a className={`${styles.elmtHeader}`} onClick={scrollToParcour}>
+            <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToParcour}>
               A propos
-            </a>
+            </button>
           </li>
           <li>
-            <a className={`${styles.elmtHeader}`} onClick={scrollToContact}>
+            <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToContact}>
               Contact
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
