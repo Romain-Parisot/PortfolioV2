@@ -9,9 +9,11 @@
   align-items: center;
   justify-content: center;
   z-index: 13;
+  border: none;
+  background: none;
 }
 
-.darkmode_svg{
+.darkmodeSvg{
   fill: var(--dark-mode-on);
   width: 50px;
   height: 50px;
@@ -21,54 +23,54 @@
   z-index: 10;
 }
 
-.darkmode_svg_spark{
+.darkmodeSvgSpark{
   transition: 1s ease;
 }
 
-.darkmode_svg_spark0{
+.darkmodeSvgSpark0{
   transform: rotate(0deg);
 }
 
-.darkmode_svg_spark_anim{
+.darkmodeSvgSparkAnim{
   transform: rotate(10deg);
 }
 
-.darkmode_svg_spark_anim2{
+.darkmodeSvgSparkAnim2{
   transform: rotate(-10deg);
 }
 
-.darkmode_svg_sun{
+.darkmodeSvgSun{
   transition: 1s ease;
 }
 
-.darkmode_svg_sun_topleft_anim{
+.darkmodeSvgSunTopLeftAnim{
   transform: translate(-3%, -3%);
 }
 
-.darkmode_svg_sun_topright_anim{
+.darkmodeSvgSunTopRightAnim{
   transform: translate(3%, -3%);
 }
 
-.darkmode_svg_sun_botleft_anim{
+.darkmodeSvgSunBotLeftAnim{
   transform: translate(-3%, 3%);
 }
 
-.darkmode_svg_sun_botright_anim{
+.darkmodeSvgSunBotRightAnim{
   transform: translate(3%, 3%);
 }
 
-.darkmode_svg_sun_top_anim{
+.darkmodeSvgSunTopAnim{
   transform: translateY(-3%);
 }
 
-.darkmode_svg_sun_bot_anim{
+.darkmodeSvgSunBotAnim{
   transform: translateY(3%);
 }
 
-.darkmode_svg_sun_left_anim{
+.darkmodeSvgSunLeftAnim{
   transform: translateX(-3%);
 }
 
-.darkmode_svg_sun_right_anim{
+.darkmodeSvgSunRightAnim{
   transform: translateX(3%);
 }
