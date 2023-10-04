@@ -1,8 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Home.module.css';
 import PersonalPicture from '../../assets/PersonalPicture.png';
 
 export default function Home() {
+  const [pauseArrowAnimation, setPauseArrowAnimation] = useState(false);
+
+  const handleMouseEnter = useCallback(() => {
+    setPauseArrowAnimation(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setPauseArrowAnimation(false);
+    console.log('leave');
+  }, []);
+
   function scrollToParcour() {
     const parcourSection = document.getElementById('parcour');
     parcourSection.scrollIntoView({ behavior: 'smooth' });
@@ -12,17 +23,20 @@ export default function Home() {
     projetSection.scrollIntoView({ behavior: 'smooth' });
   }
 
-  const [pauseArrowAnimation, setPauseArrowAnimation] = useState(false);
+  let side = true;
   function ClasicArrowAnimation() {
-    console.log(pauseArrowAnimation);
     if (pauseArrowAnimation === true) {
       document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '300px');
       document.documentElement.style.setProperty('--arrowSvgPositionXElmt2', '300px');
       document.documentElement.style.setProperty('--arrowSvgPositionXElmt3', '300px');
       document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '300px');
+      side = true;
     } else if (pauseArrowAnimation === false) {
-      if (getComputedStyle(document.documentElement).getPropertyValue === '10px') {
-        document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '300px');
+      console.log(pauseArrowAnimation);
+      if (side) {
+        setTimeout(() => {
+          document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '300px');
+        }, 1);
         setTimeout(() => {
           document.documentElement.style.setProperty('--arrowSvgPositionXElmt2', '300px');
         }, 1000);
@@ -31,23 +45,29 @@ export default function Home() {
         }, 2000);
         setTimeout(() => {
           document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '300px');
+          side = false;
         }, 3000);
       } else {
         document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '10px');
         document.documentElement.style.setProperty('--arrowSvgPositionXElmt2', '10px');
         document.documentElement.style.setProperty('--arrowSvgPositionXElmt3', '10px');
         document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '10px');
+        side = true;
       }
     }
   }
 
   useEffect(() => {
     ClasicArrowAnimation();
+
     const interval = setInterval(() => {
-      ClasicArrowAnimation();
-    }, 5000);
+      if (!pauseArrowAnimation) {
+        ClasicArrowAnimation();
+      }
+    }, 4000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [pauseArrowAnimation]);
 
   return (
     <section id={`${styles.home}`}>
@@ -80,14 +100,8 @@ export default function Home() {
             <button
               type="button"
               className={`${styles.btToProject}`}
-              onMouseEnter={() => {
-                setPauseArrowAnimation(true);
-                ClasicArrowAnimation();
-              }}
-              onMouseLeave={() => {
-                setPauseArrowAnimation(false);
-                ClasicArrowAnimation();
-              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               onClick={() => scrollToProjets()}
             >
               <svg
