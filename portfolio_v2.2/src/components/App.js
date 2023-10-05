@@ -2,6 +2,7 @@ import React from 'react';
 import './App.module.css';
 
 import Home from './Home/Home';
+import Parcour from './Parcour/Parcour';
 import PositionFixedComponents from './PositionFixedComponents/FixedComponents';
 
 export default function App() {
@@ -10,9 +11,10 @@ export default function App() {
       <PositionFixedComponents />
       <main id="mainpage">
         <Home />
-        {/* <Parcour />
-        <Project />
-        <Competence />
+        <Parcour />
+
+        {/* <Project />
+        <Skills />
         <Contact /> */}
       </main>
     </div>
