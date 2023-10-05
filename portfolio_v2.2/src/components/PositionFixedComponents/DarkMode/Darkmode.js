@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Darkmode.module.css';
+import { getRandomIntInclusive } from '../../Home/Home';
 
 export default function Darkmode() {
   // on click to activate dark mode
@@ -15,11 +16,6 @@ export default function Darkmode() {
     }
   }
   // animation of svg dark mode
-  function getRandomIntInclusive(min, max) {
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
-    return Math.floor(Math.random() * (maxFloored - minCeiled + 1)) + minCeiled;
-  }
 
   const [SunAnim, setSunAnim] = useState(true);
   function SvgSunAnim() {

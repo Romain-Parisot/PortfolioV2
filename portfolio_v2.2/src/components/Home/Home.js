@@ -2,13 +2,46 @@ import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Home.module.css';
 import PersonalPicture from '../../assets/PersonalPicture.png';
 
+// random number generator
+
+export function getRandomIntInclusive(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1)) + minCeiled;
+}
+
 export default function Home() {
+  // star animation
+  let oldrandomstar = 0;
+  function StarAnim() {
+    let randomStar = getRandomIntInclusive(1, 5);
+    while (randomStar === oldrandomstar) {
+      randomStar = getRandomIntInclusive(1, 5);
+    }
+    if (randomStar === 1) {
+      document.documentElement.style.setProperty('--rotateSvgStar', `72deg`);
+    } else if (randomStar === 2) {
+      document.documentElement.style.setProperty('--rotateSvgStar', `144deg`);
+    } else if (randomStar === 3) {
+      document.documentElement.style.setProperty('--rotateSvgStar', `216deg`);
+    } else if (randomStar === 4) {
+      document.documentElement.style.setProperty('--rotateSvgStar', `288deg`);
+    } else if (randomStar === 5) {
+      document.documentElement.style.setProperty('--rotateSvgStar', `360deg`);
+    }
+    oldrandomstar = randomStar;
+  }
+  document.addEventListener('DOMContentLoaded', StarAnim);
+  document.addEventListener('DOMContentLoaded', () => {
+    setInterval(StarAnim, 3000);
+  });
+
+  // arrow animation
   const [pauseArrowAnimation, setPauseArrowAnimation] = useState(false);
 
   const handleMouseEnter = useCallback(() => {
     setPauseArrowAnimation(true);
   }, []);
-
   const handleMouseLeave = useCallback(() => {
     setPauseArrowAnimation(false);
     console.log('leave');
@@ -59,13 +92,13 @@ export default function Home() {
 
   useEffect(() => {
     ClasicArrowAnimation();
-
+    StarAnim();
     const interval = setInterval(() => {
       if (!pauseArrowAnimation) {
         ClasicArrowAnimation();
       }
+      StarAnim();
     }, 4000);
-
     return () => clearInterval(interval);
   }, [pauseArrowAnimation]);
 
