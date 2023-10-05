@@ -44,7 +44,6 @@ export default function Home() {
   }, []);
   const handleMouseLeave = useCallback(() => {
     setPauseArrowAnimation(false);
-    console.log('leave');
   }, []);
 
   function scrollToParcour() {
@@ -65,7 +64,6 @@ export default function Home() {
       document.documentElement.style.setProperty('--arrowSvgPositionXElmt4', '300px');
       side = true;
     } else if (pauseArrowAnimation === false) {
-      console.log(pauseArrowAnimation);
       if (side) {
         setTimeout(() => {
           document.documentElement.style.setProperty('--arrowSvgPositionXElmt1', '300px');
