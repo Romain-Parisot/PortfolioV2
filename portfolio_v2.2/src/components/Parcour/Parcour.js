@@ -10,16 +10,16 @@ export default function Parcour() {
   }
 
   return (
-    <div>{bulletPoints}</div>
-    // <section id="parcour">
-    //   <h2>Mon parcour :</h2>
-    //   <div class="divtimeline">
-    //     <svg id="parcour_svg">
-    //       <rect id="parcour_bar_svg" />
-    //       <rect id="parcour_bar_svg2" />
-    //     </svg>
+    <section id="parcour">
+      {bulletPoints}
+      {/* <h2>Mon parcour :</h2>
+      <div class="divtimeline">
+        <svg id="parcour_svg">
+          <rect id="parcour_bar_svg" />
+          <rect id="parcour_bar_svg2" />
+        </svg>
 
-    /* <div class="parcour_elmt parcour_elmt_left parcour_elmt1">
+        <div class="parcour_elmt parcour_elmt_left parcour_elmt1">
           <div class="parcour_elmt_child">
             <h3>
               Étudiant en Coding & Digital Innovation a l'
@@ -85,7 +85,7 @@ export default function Parcour() {
             <p class="parcour_elmt_date">Septembre/2023 - Toujours en activité</p>
           </div>
         </div>
-      </div>
-    </section> */
+      </div> */}
+    </section>
   );
 }
