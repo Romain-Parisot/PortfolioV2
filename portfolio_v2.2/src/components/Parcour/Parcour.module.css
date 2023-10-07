@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: calc(var(--height_parcour) + 30vh);
+  height: calc(var(--heightParcour) + 30vh);
   width: 100%;
 }
 
 #parcourSvg{
   width: 10px;
-  height: var(--height_parcour);
+  height: var(--heightParcour);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@
 
 #parcourBarSvg2 {
   width: 10px;
-  height: var(--height_parcour);
+  height: var(--heightParcour);
   stroke: var(--main-color);
   stroke-width: 4;
   fill-opacity: 0;
@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: 1fr 10px 1fr;
   grid-template-rows: 1% 24% 1% 24% 1% 24% 1% 24% 1%;
-  height: var(--height_parcour);
+  height: var(--heightParcour);
   width: 85vw;
   margin-left: 50%;
   transform: translate(-50%);
@@ -182,3 +182,4 @@
   margin-bottom: 50px;
   font-size: 25px;
 }
+

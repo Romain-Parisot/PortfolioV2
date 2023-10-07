@@ -3,14 +3,64 @@ import styles from './Parcour.module.css';
 import BulletPointParcour from './BulletPointParcour/BulletPointParcour';
 
 export default function Parcour() {
+  // animation timeline
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [scrollPercentage2, setScrollPercentage2] = useState(0);
+  const [displayFirstParcourElement, setDisplayFirstParcourElement] = useState(false);
+  const [displaySecondParcourElement, setDisplaySecondParcourElement] = useState(false);
+  const [displayThirdParcourElement, setDisplayThirdParcourElement] = useState(false);
+  const [displayFourthParcourElement, setDisplayFourthParcourElement] = useState(false);
+
+  const updateProgressBar = () => {
+    const startingListeningPoint = 20;
+    const endingListeningPoint = 100;
+    const scalingFactor = endingListeningPoint / 100;
+    if (scrollPercentage > startingListeningPoint) {
+      // Calculate scrollPercentage2 based on the same scale as scrollPercentage
+      const adjustedPercentage =
+        ((scrollPercentage - startingListeningPoint) / (endingListeningPoint - startingListeningPoint)) * 100;
+
+      // Ensure scrollPercentage2 reaches 100 at a slower rate than scrollPercentage
+      const cappedPercentage2 = Math.min(adjustedPercentage * scalingFactor, 100);
+
+      setScrollPercentage2(cappedPercentage2);
+    } else {
+      setScrollPercentage2(0);
+    }
+
+    if (scrollPercentage > 31) {
+      setDisplayFirstParcourElement(true);
+    } else if (scrollPercentage < 31) {
+      setDisplayFirstParcourElement(false);
+    }
+    if (scrollPercentage > 51) {
+      setDisplaySecondParcourElement(true);
+    } else if (scrollPercentage < 51) {
+      setDisplaySecondParcourElement(false);
+    }
+    if (scrollPercentage > 71) {
+      setDisplayThirdParcourElement(true);
+    } else if (scrollPercentage < 71) {
+      setDisplayThirdParcourElement(false);
+    }
+    if (scrollPercentage > 91) {
+      setDisplayFourthParcourElement(true);
+    } else if (scrollPercentage < 91) {
+      setDisplayFourthParcourElement(false);
+    }
+  };
+
   // get scroll percentage
-  const [, setScrollPercentage] = useState(0);
 
   useEffect(() => {
     const updateScrollPercentage = () => {
       const newScrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       setScrollPercentage(newScrollPercentage);
+      updateProgressBar();
+      console.log('scrollPercentage');
       console.log(newScrollPercentage);
+      console.log('scrollPercentage2');
+      console.log(scrollPercentage2);
     };
 
     document.addEventListener('scroll', updateScrollPercentage);
@@ -18,28 +68,41 @@ export default function Parcour() {
     return () => {
       document.removeEventListener('scroll', updateScrollPercentage);
     };
-  }, []);
-
-  // animation timeline
+  }, [scrollPercentage]);
 
   // call bullet point component 4 times
   const bulletPoints = [];
 
   for (let i = 0; i < 4; i += 1) {
-    bulletPoints.push(<BulletPointParcour key={i} index={i} />);
+    bulletPoints.push(
+      <BulletPointParcour
+        key={i}
+        index={i}
+        display={
+          (i === 0 && displayFirstParcourElement) ||
+          (i === 1 && displaySecondParcourElement) ||
+          (i === 2 && displayThirdParcourElement) ||
+          (i === 3 && displayFourthParcourElement)
+        }
+      />,
+    );
   }
 
   return (
-    <section id={styles.Parcour}>
-      {bulletPoints}
-      <h2 className={styles.parcourTitle}>Mon parcour :</h2>
+    <section id={styles.parcour}>
+      <h2 className={`${styles.parcourTitle}`}>Mon parcours :</h2>
       <div className={styles.divtimeline}>
         <svg id={styles.parcourSvg}>
-          <rect id={styles.parcourBarSvg} />
+          <rect id={styles.parcourBarSvg} style={{ height: `${scrollPercentage2}%` }} />
           <rect id={styles.parcourBarSvg2} />
         </svg>
+        {bulletPoints}
 
-        <div className={`${styles.parcourElmt} ${styles.parcourElmtLeft} ${styles.parcourElmt1}`}>
+        <div
+          className={`${styles.parcourElmt} ${displayFirstParcourElement ? '' : styles.parcourElmtLeft} ${
+            styles.parcourElmt1
+          }`}
+        >
           <div className={styles.parcourElmtChild}>
             <h3>
               Étudiant en Coding & Digital Innovation a l&apos;
@@ -68,10 +131,18 @@ export default function Parcour() {
             <p className={styles.parcourElmtDate}>Septembre/2021 - Août/2026</p>
           </div>
         </div>
-        <div className={`${styles.parcourElmt} ${styles.parcourElmt_right} ${styles.parcourElmt2}`}>
+        <div
+          className={`${styles.parcourElmt} ${displaySecondParcourElement ? '' : styles.parcourElmtRight} ${
+            styles.parcourElmt2
+          }`}
+        >
           <div className={styles.parcourElmtChild} />
         </div>
-        <div className={`${styles.parcourElmt} ${styles.parcourElmtLeft} ${styles.parcourElmt3}`}>
+        <div
+          className={`${styles.parcourElmt} ${displayThirdParcourElement ? '' : styles.parcourElmtLeft} ${
+            styles.parcourElmt3
+          }`}
+        >
           <div className={styles.parcourElmtChild}>
             <h3>
               Dévellopeur chez{' '}
@@ -89,7 +160,11 @@ export default function Parcour() {
             <p className={styles.parcourElmtDate}>Mai/2023 - Juillet/2023</p>
           </div>
         </div>
-        <div className={`${styles.parcourElmt} ${styles.parcourElmt_right} ${styles.parcourElmt4}`}>
+        <div
+          className={`${styles.parcourElmt} ${displayFourthParcourElement ? '' : styles.parcourElmtRight} ${
+            styles.parcourElmt4
+          }`}
+        >
           <div className={styles.parcourElmtChild}>
             <h3>
               Dévellopeur web & logiciel chez{' '}

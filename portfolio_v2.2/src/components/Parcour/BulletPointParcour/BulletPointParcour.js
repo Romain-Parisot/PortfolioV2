@@ -1,12 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './BulletPointParcour.module.css';
 
-export default function BulletPointParcour(index) {
-  const className = `bulletPointParcour bulletPointParcour${index}`;
+export default function BulletPointParcour({ index, display }) {
+  const bulletPointParcourIndex = styles[`bulletPointParcour${index + 1}`];
+  const animationClass = display ? styles.bulletPointParcourAnimation : '';
+
   return (
     <svg
       version="1.1"
-      className={(className, `${styles.bulletPointParcour}`)}
+      className={`${styles.bulletPointParcour} ${bulletPointParcourIndex} ${animationClass}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1000 1000"
     >
@@ -29,3 +32,8 @@ export default function BulletPointParcour(index) {
     </svg>
   );
 }
+
+BulletPointParcour.propTypes = {
+  index: PropTypes.number.isRequired,
+  display: PropTypes.bool.isRequired,
+};

@@ -61,6 +61,6 @@
 }
 
 .bulletPointParcourAnimation{
-  transform: translateY(calc(((24 * var(--height_parcour))/100)/2)) translateX(-25px);
+  transform: translateY(calc(((24 * var(--heightParcour))/100)/2)) translateX(-25px);
   opacity: 100;
 }
