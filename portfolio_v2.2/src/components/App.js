@@ -3,6 +3,7 @@ import './App.module.css';
 
 import Home from './Home/Home';
 import Parcour from './Parcour/Parcour';
+import Project from './Project/Project';
 import PositionFixedComponents from './PositionFixedComponents/FixedComponents';
 
 export default function App() {
@@ -12,9 +13,8 @@ export default function App() {
       <main id="mainpage">
         <Home />
         <Parcour />
-
-        {/* <Project />
-        <Skills />
+        <Project />
+        {/* <Skills />
         <Contact /> */}
       </main>
     </div>
