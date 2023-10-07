@@ -175,3 +175,10 @@
 .parcourElmtChild a:hover:after {
   width: 100%;
 }
+
+.parcourTitle{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
