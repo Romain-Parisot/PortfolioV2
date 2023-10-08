@@ -27,22 +27,22 @@ export default function Header({ isBurgerOpen, selectedLanguage }) {
         <ul className={`${styles.navLinks}`}>
           <li className={`${styles.navSelected}`}>
             <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToHome}>
-              {translations[selectedLanguage].common.home}
+              {translations[selectedLanguage].header.home}
             </button>
           </li>
           <li>
             <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToProjets}>
-              Projets
+              {translations[selectedLanguage].header.projects}
             </button>
           </li>
           <li>
             <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToParcour}>
-              A propos
+              {translations[selectedLanguage].header.about}
             </button>
           </li>
           <li>
             <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToContact}>
-              Contact
+              {translations[selectedLanguage].header.contact}
             </button>
           </li>
         </ul>

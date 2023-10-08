@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styles from './Home.module.css';
 import PersonalPicture from '../../assets/PersonalPicture.png';
+import translations from '../../translations/translations';
 
 // random number generator
 
@@ -10,7 +12,7 @@ export function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (maxFloored - minCeiled + 1)) + minCeiled;
 }
 
-export default function Home() {
+export default function Home({ selectedLanguage }) {
   // star animation
   let oldrandomstar = 0;
   function StarAnim() {
@@ -108,22 +110,22 @@ export default function Home() {
           {/* mettre un effet pour que le texte se tape au clavier puis s'afface, s'écrit a nouveau etc ... */}
           <div>
             <h2 id={`${styles.poste}`}>
-              Chef de projet
+              {translations[selectedLanguage].home.JobTitle1}
               <br />&<br />
-              Développeur Web/Logiciel
+              {translations[selectedLanguage].home.JobTitle2}
             </h2>
             <div className={`${styles.starContainer}`}>
               <div className={`${styles.starElmt}`}>
                 <svg className={`${styles.svgStar}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
                   <path d="m780.7,994.2c-6.35-2.48-13.04-4.28-18.99-7.55-85.22-46.79-170.39-93.69-255.41-140.87-6.8-3.77-11.91-4.16-18.93-.26-84.65,47.03-169.53,93.61-254.24,140.53-10.05,5.57-20.19,8.8-31.31,5.64-17.45-4.95-28.18-23.63-25.09-42.54,16.59-101.67,32.99-203.37,50-304.96,1.27-7.6-1.36-11.12-5.62-15.48-69.02-70.58-137.92-141.29-207.03-211.78C5.25,407.92-.64,397.94.06,384.82c.9-16.88,11.45-30.53,27.81-33.55,28.21-5.21,56.63-9.18,84.98-13.54,63.18-9.71,126.22-20.79,189.64-28.21,22.93-2.68,32.89-13.42,42.11-33.73,38.07-83.84,78.06-166.72,116.9-250.18C468.94,9.65,479.32-.05,496.65,0c17.37.05,27.56,9.98,34.97,25.9,41.59,89.28,83.77,178.26,125.47,267.49,3.67,7.86,7.59,11.58,16.63,12.9,94.84,13.89,189.56,28.63,284.32,43.05,15.52,2.36,27.9,9.41,33,25.73,5.04,16.13-.01,29.56-11.52,41.3-69.1,70.5-137.97,141.25-207.05,211.77-5,5.1-7.33,9.34-5.95,17.54,16.34,97.08,32.16,194.25,47.8,291.46,1.48,9.2,2.54,19.12.85,28.09-3.29,17.51-17.1,27.7-34.5,28.97Z" />
                 </svg>
-                <p>+10 Projets réalisé</p>
+                <p>{translations[selectedLanguage].home.StarMessage1}</p>
               </div>
               <div className={`${styles.starElmt}`}>
                 <svg className={`${styles.svgStar}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
                   <path d="m780.7,994.2c-6.35-2.48-13.04-4.28-18.99-7.55-85.22-46.79-170.39-93.69-255.41-140.87-6.8-3.77-11.91-4.16-18.93-.26-84.65,47.03-169.53,93.61-254.24,140.53-10.05,5.57-20.19,8.8-31.31,5.64-17.45-4.95-28.18-23.63-25.09-42.54,16.59-101.67,32.99-203.37,50-304.96,1.27-7.6-1.36-11.12-5.62-15.48-69.02-70.58-137.92-141.29-207.03-211.78C5.25,407.92-.64,397.94.06,384.82c.9-16.88,11.45-30.53,27.81-33.55,28.21-5.21,56.63-9.18,84.98-13.54,63.18-9.71,126.22-20.79,189.64-28.21,22.93-2.68,32.89-13.42,42.11-33.73,38.07-83.84,78.06-166.72,116.9-250.18C468.94,9.65,479.32-.05,496.65,0c17.37.05,27.56,9.98,34.97,25.9,41.59,89.28,83.77,178.26,125.47,267.49,3.67,7.86,7.59,11.58,16.63,12.9,94.84,13.89,189.56,28.63,284.32,43.05,15.52,2.36,27.9,9.41,33,25.73,5.04,16.13-.01,29.56-11.52,41.3-69.1,70.5-137.97,141.25-207.05,211.77-5,5.1-7.33,9.34-5.95,17.54,16.34,97.08,32.16,194.25,47.8,291.46,1.48,9.2,2.54,19.12.85,28.09-3.29,17.51-17.1,27.7-34.5,28.97Z" />
                 </svg>
-                <p>Un autre atout important</p>
+                <p>{translations[selectedLanguage].home.StarMessage2}</p>
               </div>
             </div>
           </div>
@@ -162,25 +164,26 @@ export default function Home() {
                   d="M613.16,396.75c13.43,14.34,16.02,27.23,11.07,41.2c-4.76,13.46-14.95,21.81-29.14,22.31c-25.96,0.92-52,1.14-77.96,0.34c-18.97-0.59-32.02-16.03-31.91-35.14c0.1-19.14,13.25-34.18,32.29-34.82c-25.32-0.86-50.7-1.01-76.01-0.13C601.38,390.78,609.09,395.38,613.16,396.75z"
                 />
               </svg>
-              Projets
+              {translations[selectedLanguage].header.projects}
             </button>
           </div>
         </div>
         <div className={`${styles.rightHome}`}>
           <div className={`${styles.containerRectHome}`}>
             <div className={`${styles.rect2Home}`}>
-              <h3>Romain en quelques points:</h3>
+              <h3>{translations[selectedLanguage].home.MeInSomePoints}</h3>
               <div className={`${styles.descriptionRect2Home}`}>
-                <p>20 ans</p>
+                <p>{translations[selectedLanguage].home.MePoint1}</p>
+                <p>{translations[selectedLanguage].home.MePoint2}</p>
                 <p>
-                  Alternant chez
+                  {translations[selectedLanguage].home.MePoint3}
                   <a href="https://www.altusgroup.com/" target="_blank" rel="noopener noreferrer">
                     {' '}
                     Altus Group
                   </a>
                 </p>
                 <p>
-                  Etudiant a l&apos;
+                  {translations[selectedLanguage].home.MePoint4}
                   <a href="https://www.iim.fr/" target="_blank" rel="noopener noreferrer">
                     IIM
                   </a>
@@ -191,11 +194,11 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Bachelor{' '}
+                    {translations[selectedLanguage].home.MePoint5}{' '}
                   </a>
-                  en fin d&apos;année
+                  {translations[selectedLanguage].home.MePoint6}
                 </p>
-                <p>Rugby / Musculation / Art martiaux</p>
+                <p>{translations[selectedLanguage].home.MePoint7}</p>
               </div>
             </div>
             <svg className={`${styles.svgCircle}`} viewBox="0 0 1000 1000">
@@ -225,3 +228,7 @@ export default function Home() {
     </section>
   );
 }
+
+Home.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+};

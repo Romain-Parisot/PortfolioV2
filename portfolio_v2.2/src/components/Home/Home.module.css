@@ -80,7 +80,7 @@ h1{
 
 .rect2Home{
   background-color: var(--main-color-20-no-opa);
-  width: 250px;
+  width: 300px;
   height: 250px;
   border-radius: 20px;
   margin-right: 10px;
@@ -100,6 +100,10 @@ h1{
   align-items: center;
   justify-content: center;
   text-decoration: dashed;
+}
+
+.descriptionRect2Home p{
+  text-align: center;
 }
 
 .descriptionRect2Home a{
@@ -155,7 +159,7 @@ h1{
   width: 100px;
   height: 100px;
   position: absolute;
-  margin-left: 205px;
+  margin-left: 255px;
   margin-top: 190px;
   z-index: 12;
 }
@@ -172,7 +176,7 @@ h1{
   width: 40px;
   height: 40px;
   position: absolute;
-  margin-left: 240px;
+  margin-left: 290px;
   margin-top: 220px;
   z-index: 13;
   cursor: pointer;
