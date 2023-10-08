@@ -3,7 +3,8 @@ import './App.module.css';
 
 import Home from './Home/Home';
 import Parcour from './Parcour/Parcour';
-import Project from './Project/Project';
+// import Project from './Project/Project';
+import Skills from './Skills/skills';
 import PositionFixedComponents from './PositionFixedComponents/FixedComponents';
 
 export default function App() {
@@ -18,9 +19,9 @@ export default function App() {
       <main id="mainpage">
         <Home selectedLanguage={selectedLanguage} />
         <Parcour />
-        <Project />
-        {/* <Skills />
-        <Contact /> */}
+        {/* <Project /> */}
+        <Skills />
+        {/* <Contact /> */}
       </main>
     </div>
   );
