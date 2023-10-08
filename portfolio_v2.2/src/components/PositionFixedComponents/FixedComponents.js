@@ -11,13 +11,18 @@ export default function PositionFixedComponents() {
   const toggleburger = useCallback(() => {
     setisBurgerOpen(prevIsBurgerOpen => !prevIsBurgerOpen);
   }, []);
+  const [selectedLanguage, setSelectedLanguage] = useState('fr');
+
+  const updateLanguage = newLanguage => {
+    setSelectedLanguage(newLanguage);
+  };
   return (
     <div>
       <Onloadanimation />
       <Logoanimation />
       <Burgermenu onToggleburger={toggleburger} isBurgerOpen={isBurgerOpen} />
-      <LanguageSelector />
-      <Header isBurgerOpen={isBurgerOpen} />
+      <LanguageSelector selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />
+      <Header isBurgerOpen={isBurgerOpen} selectedLanguage={selectedLanguage} />
       <Darkmode />
     </div>
   );

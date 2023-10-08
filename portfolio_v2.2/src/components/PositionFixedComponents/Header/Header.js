@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Header.module.css';
+import translations from '../../../translations/translations';
 
-export default function Header({ isBurgerOpen }) {
+export default function Header({ isBurgerOpen, selectedLanguage }) {
   function scrollToParcour() {
     const parcourSection = document.getElementById('parcour');
     parcourSection.scrollIntoView({ behavior: 'smooth' });
@@ -26,7 +27,7 @@ export default function Header({ isBurgerOpen }) {
         <ul className={`${styles.navLinks}`}>
           <li className={`${styles.navSelected}`}>
             <button type="button" className={`${styles.elmtHeader}`} onClick={scrollToHome}>
-              Accueil
+              {translations[selectedLanguage].common.home}
             </button>
           </li>
           <li>
@@ -51,5 +52,6 @@ export default function Header({ isBurgerOpen }) {
 }
 
 Header.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
   isBurgerOpen: PropTypes.bool.isRequired,
 };

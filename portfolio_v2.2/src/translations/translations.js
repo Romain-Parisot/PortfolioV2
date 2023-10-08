@@ -1,12 +1,38 @@
 const translations = {
   en: {
-    greeting: 'Hello!',
-    intro: 'This is an introduction in English.',
+    common: {
+      home: 'Home',
+      projects: 'Projects',
+      about: 'About',
+      contact: 'Contact',
+    },
   },
 
   fr: {
-    greeting: 'Bonjour !',
-    intro: 'Ceci est une introduction en français.',
+    common: {
+      home: 'Accueil',
+      projects: 'Projets',
+      about: 'A propos',
+      contact: 'Contact',
+    },
+  },
+
+  de: {
+    common: {
+      home: 'Startseite',
+      projects: 'Projekte',
+      about: 'Über',
+      contact: 'Kontakt',
+    },
+  },
+
+  es: {
+    common: {
+      home: 'Inicio',
+      projects: 'Proyectos',
+      about: 'Acerca de',
+      contact: 'Contacto',
+    },
   },
 };
 

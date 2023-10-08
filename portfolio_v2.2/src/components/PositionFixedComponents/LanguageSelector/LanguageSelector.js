@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './LanguageSelector.module.css';
 
-export default function LanguageSelector() {
-  const [selectedLanguage, setSelectedLanguage] = useState('fr');
+export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
   const [showFlags, setShowFlags] = useState(true);
   const [showFlags2, setShowFlags2] = useState(true);
   const [flagSide, setFlagSide] = useState(false);
@@ -24,7 +24,7 @@ export default function LanguageSelector() {
   }, [selectedLanguage]);
 
   const changeLanguage = language => {
-    setSelectedLanguage(language);
+    updateLanguage(language);
   };
 
   return (
@@ -120,3 +120,8 @@ export default function LanguageSelector() {
     </div>
   );
 }
+
+LanguageSelector.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  updateLanguage: PropTypes.func.isRequired,
+};
