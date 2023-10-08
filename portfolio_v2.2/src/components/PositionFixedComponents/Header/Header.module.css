@@ -9,7 +9,7 @@ header{
   padding: 20px;
   transition: 0.3s ease;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
 }
 
 .elmtHeader{

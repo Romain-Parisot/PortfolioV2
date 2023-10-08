@@ -5,7 +5,6 @@
   border: none;
   position: fixed;
   margin-left: 95vw;
-  transform: translate(-50%);
   margin-top: 20px;
   z-index: 13;
 }

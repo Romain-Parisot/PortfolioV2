@@ -4,6 +4,7 @@ import Logoanimation from './LogoAnimation/Logoanimation';
 import Burgermenu from './BurgerMenu/Burgermenu';
 import Header from './Header/Header';
 import Darkmode from './DarkMode/Darkmode';
+import LanguageSelector from './LanguageSelector/LanguageSelector';
 
 export default function PositionFixedComponents() {
   const [isBurgerOpen, setisBurgerOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function PositionFixedComponents() {
       <Onloadanimation />
       <Logoanimation />
       <Burgermenu onToggleburger={toggleburger} isBurgerOpen={isBurgerOpen} />
+      <LanguageSelector />
       <Header isBurgerOpen={isBurgerOpen} />
       <Darkmode />
     </div>
