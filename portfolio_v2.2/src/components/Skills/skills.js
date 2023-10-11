@@ -15,6 +15,10 @@ import SymphonySvg from './backsvg/SymphonySvg';
 import SqlSvg from './backsvg/SqlSvg';
 
 // microsoft imports
+import PowerAppSvg from './microsoftsvg/PowerAppSvg';
+import PowerAutomateSvg from './microsoftsvg/PowerAutomateSvg';
+import PowerBiSvg from './microsoftsvg/PowerBiSvg';
+import SharepointSvg from './microsoftsvg/SharepointSvg';
 
 // cms imports
 import ShopifySvg from './cmssvg/ShopifySvg';
@@ -26,23 +30,31 @@ export default function Skills() {
     <section id={styles.skills}>
       <h2 className={styles.titleSkillsContainer}>Front-end</h2>
       <div className={styles.skillsContainer}>
-        <ReactSvg />
         <VuejsSvg />
         <TypescriptSvg />
-        <SassSvg />
+        <ReactSvg />
         <TailwindSvg />
+        <SassSvg />
       </div>
       <h2 className={styles.titleSkillsContainer}>Back-end</h2>
       <div className={styles.skillsContainer}>
-        <p>just to not let empty</p>
+        <PythonSvg />
+        <SymphonySvg />
+        <PhpSvg />
+        <SqlSvg />
       </div>
       <h2 className={styles.titleSkillsContainer}>Microsoft</h2>
       <div className={styles.skillsContainer}>
-        <p>just to not let empty</p>
+        <PowerAppSvg />
+        <PowerAutomateSvg />
+        <PowerBiSvg />
+        <SharepointSvg />
       </div>
       <h2 className={styles.titleSkillsContainer}>CMS</h2>
       <div className={styles.skillsContainer}>
-        <p>just to not let empty</p>
+        <WordpressSvg />
+        <ShopifySvg />
+        <WebflowSvg />
       </div>
     </section>
   );
