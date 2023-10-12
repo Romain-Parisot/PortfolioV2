@@ -30,31 +30,79 @@ export default function Skills() {
     <section id={styles.skills}>
       <h2 className={styles.titleSkillsContainer}>Front-end</h2>
       <div className={styles.skillsContainer}>
-        <VuejsSvg />
-        <TypescriptSvg />
-        <ReactSvg />
-        <TailwindSvg />
-        <SassSvg />
+        <div className={styles.cardSkills}>
+          <VuejsSvg />
+          <h3>Vue Js</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <TypescriptSvg />
+          <h3>TypeScript</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <ReactSvg />
+          <h3>React</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <TailwindSvg />
+          <h3>Tailwind</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <SassSvg />
+          <h3>Sass</h3>
+        </div>
       </div>
       <h2 className={styles.titleSkillsContainer}>Back-end</h2>
       <div className={styles.skillsContainer}>
-        <PythonSvg />
-        <SymphonySvg />
-        <PhpSvg />
-        <SqlSvg />
+        <div className={styles.cardSkills}>
+          <PythonSvg />
+          <h3>Python</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <PhpSvg />
+          <h3>Php</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <SymphonySvg />
+          <h3>Symphony</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <SqlSvg />
+          <h3>SQL</h3>
+        </div>
       </div>
       <h2 className={styles.titleSkillsContainer}>Microsoft</h2>
       <div className={styles.skillsContainer}>
-        <PowerAppSvg />
-        <PowerAutomateSvg />
-        <PowerBiSvg />
-        <SharepointSvg />
+        <div className={styles.cardSkills}>
+          <PowerAppSvg />
+          <h3>Power App</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <PowerAutomateSvg />
+          <h3>Power Automate</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <PowerBiSvg />
+          <h3>Power BI</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <SharepointSvg />
+          <h3>Sharepoint</h3>
+        </div>
       </div>
       <h2 className={styles.titleSkillsContainer}>CMS</h2>
       <div className={styles.skillsContainer}>
-        <WordpressSvg />
-        <ShopifySvg />
-        <WebflowSvg />
+        <div className={styles.cardSkills}>
+          <WordpressSvg />
+          <h3>Wordpress</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <ShopifySvg />
+          <h3>Shopify</h3>
+        </div>
+        <div className={styles.cardSkills}>
+          <WebflowSvg />
+          <h3>Webflow</h3>
+        </div>
       </div>
     </section>
   );
