@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './App.module.css';
 
+import PositionFixedComponents from './PositionFixedComponents/FixedComponents';
 import Home from './Home/Home';
 import Parcour from './Parcour/Parcour';
 // import Project from './Project/Project';
 import Skills from './Skills/skills';
-import PositionFixedComponents from './PositionFixedComponents/FixedComponents';
+import Contact from './Contact/contact';
 
 export default function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('fr');
@@ -21,7 +22,7 @@ export default function App() {
         <Parcour />
         {/* <Project /> */}
         <Skills />
-        {/* <Contact /> */}
+        <Contact />
       </main>
     </div>
   );
