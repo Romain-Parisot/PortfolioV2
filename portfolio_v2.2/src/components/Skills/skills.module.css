@@ -17,6 +17,10 @@
   padding: 50px 100px;
 }
 
+.skillsContainer a{
+  text-decoration: none;
+}
+
 .skillsContainer svg{
   width: 100px;
   height: 100px;
