@@ -20,6 +20,20 @@ const translations = {
       MePoint6: 'at the end of the year',
       MePoint7: 'Rugby / Powerlifter / Martial arts',
     },
+    project: {
+      title: 'My projects :',
+      returnToDefaultView: 'Return to default view',
+      project1: {
+        ProjectName: 'Mousdik Pianos',
+        ProjectDescription:
+          'A client who wanted to digitize a part of his business of resale and renovation of pianos.',
+        ProjectCompetence: 'Wordpress',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
+    },
   },
 
   fr: {
@@ -42,6 +56,20 @@ const translations = {
       MePoint5: 'Bachelor',
       MePoint6: "en fin d'année",
       MePoint7: 'Rugby / Powerlifter / Art martiaux',
+    },
+    project: {
+      title: 'Mes projets :',
+      returnToDefaultView: 'Retour à la vue par défaut',
+      project1: {
+        ProjectName: 'Mousdik Pianos',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectCompetence: 'Wordpress',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
     },
   },
 
