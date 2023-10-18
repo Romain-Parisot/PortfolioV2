@@ -27,7 +27,6 @@ const translations = {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
           'A client who wanted to digitize a part of his business of resale and renovation of pianos.',
-        ProjectCompetence: 'Wordpress',
         ProjectDate: '03-2022 / 04-2023',
         ProjectTime: '90 ~ 110 h',
         ProjectPersons: '10 Pers.',
@@ -64,7 +63,6 @@ const translations = {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
           '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
-        ProjectCompetence: 'Wordpress',
         ProjectDate: '03-2022 / 04-2023',
         ProjectTime: '90 ~ 110 h',
         ProjectPersons: '10 Pers.',

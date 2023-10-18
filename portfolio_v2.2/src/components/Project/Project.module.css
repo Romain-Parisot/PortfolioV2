@@ -90,3 +90,17 @@
   padding: 5px;
 }
 
+.txtCompetenceDivproject{
+  background-color: var(--dark-mode-on);
+  color: var(--dark-mode-off);
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.competenceDivproject{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

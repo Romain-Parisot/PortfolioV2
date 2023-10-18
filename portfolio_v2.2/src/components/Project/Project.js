@@ -5,6 +5,42 @@ import translations from '../../translations/translations';
 
 export default function Project({ selectedLanguage, IndexProject }) {
   const projectKey = `project${IndexProject}`;
+
+  function getProjectCompetence(ProjectID) {
+    switch (ProjectID) {
+      case 1:
+        return (
+          <div className={styles.competenceDivproject}>
+            <p className={`${styles.txtCompetenceDivproject}`}>Wordpress</p>
+            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
+          </div>
+        );
+      case 2:
+        return (
+          <div className={styles.competenceDivproject}>
+            <p className={`${styles.txtCompetenceDivproject}`}>Another Skill</p>
+            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
+          </div>
+        );
+      case 3:
+        return (
+          <div className={styles.competenceDivproject}>
+            <p className={`${styles.txtCompetenceDivproject}`}>Yet Another Skill</p>
+            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
+          </div>
+        );
+      case 4:
+        return (
+          <div className={styles.competenceDivproject}>
+            <p className={`${styles.txtCompetenceDivproject}`}>One More Skill</p>
+            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
+          </div>
+        );
+      default:
+        return null;
+    }
+  }
+
   return (
     <div className={`${styles.project}`}>
       {/* before & after are here */}
@@ -23,13 +59,6 @@ export default function Project({ selectedLanguage, IndexProject }) {
         <p className={styles.descriptionDivproject}>
           {translations[selectedLanguage].project[projectKey].ProjectDescription}
         </p>
-        <div className={styles.divCompetenceDivproject}>
-          <div className={styles.competenceDivproject}>
-            <p className={`${styles.txtCompetenceDivproject} ${styles.txtCompetenceDivprojectBig}`}>
-              {translations[selectedLanguage].project[projectKey].ProjectCompetence}
-            </p>
-          </div>
-        </div>
 
         <div className={styles.linkytbContainer}>{translations[selectedLanguage].project[projectKey].ProjectVideo}</div>
 
@@ -43,6 +72,8 @@ export default function Project({ selectedLanguage, IndexProject }) {
             </div>
           </div>
         </div>
+
+        <div className={styles.divCompetenceDivproject}>{getProjectCompetence(IndexProject)}</div>
 
         <div className={styles.DateProject}>
           <p className={styles.txtDateProject}>{translations[selectedLanguage].project[projectKey].ProjectDate}</p>
