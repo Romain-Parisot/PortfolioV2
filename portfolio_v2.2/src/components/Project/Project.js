@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
+import ViolonFrancePic1 from '../../assets/project/violonfrance/ViolonFrance_img1.JPG';
+
 export default function Project({ selectedLanguage, IndexProject }) {
   const projectKey = `project${IndexProject}`;
 
@@ -41,6 +43,49 @@ export default function Project({ selectedLanguage, IndexProject }) {
     }
   }
 
+  function getProjectImages(ProjectID) {
+    switch (ProjectID) {
+      case 1:
+        return (
+          <div className={styles.slider}>
+            <img src={ViolonFrancePic1} alt="illustration 1 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
+          </div>
+        );
+      case 2:
+        return (
+          <div className={styles.slider}>
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
+          </div>
+        );
+      case 3:
+        return (
+          <div className={styles.slider}>
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
+          </div>
+        );
+      case 4:
+        return (
+          <div className={styles.slider}>
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
+            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
+          </div>
+        );
+      default:
+        return null;
+    }
+  }
+
   return (
     <div className={`${styles.project}`}>
       {/* before & after are here */}
@@ -63,14 +108,7 @@ export default function Project({ selectedLanguage, IndexProject }) {
         <div className={styles.linkytbContainer}>{translations[selectedLanguage].project[projectKey].ProjectVideo}</div>
 
         <div className={styles.SliderEtDescContainer}>
-          <div className={styles.sliderContainer}>
-            <div className={styles.slider}>
-              <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
-              <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
-              <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
-              <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
-            </div>
-          </div>
+          <div className={styles.sliderContainer}>{getProjectImages(IndexProject)}</div>
         </div>
 
         <div className={styles.divCompetenceDivproject}>{getProjectCompetence(IndexProject)}</div>
