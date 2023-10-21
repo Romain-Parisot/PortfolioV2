@@ -1,0 +1,11 @@
+.MouseCircle{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--dark-mode-on);
+  position: absolute;
+  z-index: 100;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+}

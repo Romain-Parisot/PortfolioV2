@@ -10,6 +10,8 @@ import Contact from './Contact/contact';
 
 import translations from '../translations/translations';
 
+import Mousetrail from './MouseTrail/Mousetrail';
+
 export default function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('fr');
 
@@ -18,6 +20,7 @@ export default function App() {
   };
   return (
     <div className="App">
+      <Mousetrail />
       <PositionFixedComponents selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />
       <main id="mainpage">
         <Home selectedLanguage={selectedLanguage} />
