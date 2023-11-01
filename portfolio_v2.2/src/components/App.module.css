@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: var(--dark-mode-on);
   font-family: 'Spectral', serif;
+  cursor: none;
 }
 
 :root{

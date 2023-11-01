@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Mousetrail.module.css';
 import usePointerPosition from './usePointerPosition';
@@ -14,6 +14,8 @@ function Dot({ position, opacity, scale }) {
 }
 
 export default function MouseTrail() {
+  const [scale, setScale] = useState(1);
+
   const delay = 0.5;
   const pos1 = usePointerPosition();
   const pos2 = useDelayedValue(pos1, delay);
@@ -35,29 +37,36 @@ export default function MouseTrail() {
   const pos18 = useDelayedValue(pos17, delay);
   const pos19 = useDelayedValue(pos18, delay);
   const pos20 = useDelayedValue(pos19, delay);
+
+  const ChangeScale = () => {
+    setScale(1.5);
+    sleep(500);
+    setScale(1);
+  };
+
   return (
-    <>
-      <Dot position={pos1} opacity={1} scale={1} />
-      <Dot position={pos2} opacity={0.9} scale={0.9} />
-      <Dot position={pos3} opacity={0.9} scale={0.9} />
-      <Dot position={pos4} opacity={0.8} scale={0.8} />
-      <Dot position={pos5} opacity={0.8} scale={0.8} />
-      <Dot position={pos6} opacity={0.7} scale={0.7} />
-      <Dot position={pos7} opacity={0.7} scale={0.7} />
-      <Dot position={pos8} opacity={0.6} scale={0.6} />
-      <Dot position={pos9} opacity={0.6} scale={0.6} />
-      <Dot position={pos10} opacity={0.5} scale={0.5} />
-      <Dot position={pos11} opacity={0.5} scale={0.5} />
-      <Dot position={pos12} opacity={0.4} scale={0.4} />
-      <Dot position={pos13} opacity={0.4} scale={0.4} />
-      <Dot position={pos14} opacity={0.3} scale={0.3} />
-      <Dot position={pos15} opacity={0.3} scale={0.3} />
-      <Dot position={pos16} opacity={0.2} scale={0.2} />
-      <Dot position={pos17} opacity={0.2} scale={0.2} />
-      <Dot position={pos18} opacity={0.1} scale={0.1} />
-      <Dot position={pos19} opacity={0.1} scale={0.1} />
-      <Dot position={pos20} opacity={0.1} scale={0.1} />
-    </>
+    <div onClick={ChangeScale}>
+      <Dot position={pos1} opacity={1} scale={scale} />
+      <Dot position={pos2} opacity={0.9} scale={scale - 0.1} />
+      <Dot position={pos3} opacity={0.9} scale={scale - 0.1} />
+      <Dot position={pos4} opacity={0.8} scale={scale - 0.2} />
+      <Dot position={pos5} opacity={0.8} scale={scale - 0.2} />
+      <Dot position={pos6} opacity={0.7} scale={scale - 0.3} />
+      <Dot position={pos7} opacity={0.7} scale={scale - 0.3} />
+      <Dot position={pos8} opacity={0.6} scale={scale - 0.4} />
+      <Dot position={pos9} opacity={0.6} scale={scale - 0.4} />
+      <Dot position={pos10} opacity={0.5} scale={scale - 0.5} />
+      <Dot position={pos11} opacity={0.5} scale={scale - 0.5} />
+      <Dot position={pos12} opacity={0.4} scale={scale - 0.6} />
+      <Dot position={pos13} opacity={0.4} scale={scale - 0.6} />
+      <Dot position={pos14} opacity={0.3} scale={scale - 0.7} />
+      <Dot position={pos15} opacity={0.3} scale={scale - 0.7} />
+      <Dot position={pos16} opacity={0.2} scale={scale - 0.8} />
+      <Dot position={pos17} opacity={0.2} scale={scale - 0.8} />
+      <Dot position={pos18} opacity={0.1} scale={scale - 0.9} />
+      <Dot position={pos19} opacity={0.1} scale={scale - 0.9} />
+      <Dot position={pos20} opacity={0.1} scale={scale - 0.9} />
+    </div>
   );
 }
 

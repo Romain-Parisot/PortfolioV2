@@ -6,7 +6,7 @@ export default function usePointerPosition() {
     function handleMove(e) {
       setPosition({ x: e.clientX, y: e.clientY });
     }
-    window.addEventListener('pointermove', handleMove);
+    window.addEventListener('mousemove', handleMove);
     return () => window.removeEventListener('pointermove', handleMove);
   }, []);
   return position;

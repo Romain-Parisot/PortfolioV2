@@ -3,7 +3,7 @@
   width: 20px;
   border-radius: 50%;
   background-color: var(--dark-mode-on);
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: -10px;
   left: -10px;
