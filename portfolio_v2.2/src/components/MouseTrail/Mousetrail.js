@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Mousetrail.module.css';
 import usePointerPosition from './usePointerPosition';
 import useDelayedValue from './useDelayedValue';
 
-function Dot({ position, opacity, scale }) {
+function Dot({ position, opacity, scale, onClick }) {
+  const handleClick = event => {
+    console.log('test');
+    event.stopPropagation();
+    if (onClick) {
+      onClick(event);
+    }
+  };
   return (
     <div
       className={styles.MouseCircle}
       style={{ opacity, transform: `translate(${position.x}px, ${position.y}px) scale(${scale})` }}
+      onClick={handleClick}
+      onKeyDown={e => {
+        if (e.key === 'Enter') {
+          handleClick(e);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Mouse"
     />
   );
 }
@@ -39,13 +55,21 @@ export default function MouseTrail() {
   const pos20 = useDelayedValue(pos19, delay);
 
   const ChangeScale = () => {
-    setScale(1.5);
-    sleep(500);
-    setScale(1);
+    setScale(1.3);
+    setTimeout(() => {
+      setScale(1);
+    }, 50);
   };
 
+  useEffect(() => {
+    document.addEventListener('click', ChangeScale);
+    return () => {
+      document.removeEventListener('click', ChangeScale);
+    };
+  }, []);
+
   return (
-    <div onClick={ChangeScale}>
+    <div>
       <Dot position={pos1} opacity={1} scale={scale} />
       <Dot position={pos2} opacity={0.9} scale={scale - 0.1} />
       <Dot position={pos3} opacity={0.9} scale={scale - 0.1} />
@@ -77,4 +101,9 @@ Dot.propTypes = {
   }).isRequired,
   opacity: PropTypes.number.isRequired,
   scale: PropTypes.number.isRequired,
+  onClick: PropTypes.func,
+};
+
+Dot.defaultProps = {
+  onClick: () => {},
 };
