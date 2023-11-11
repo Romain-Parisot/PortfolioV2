@@ -132,7 +132,7 @@ export default function Home({ selectedLanguage }) {
           <div className={`${styles.containerBtToProject}`}>
             <button
               type="button"
-              className={`${styles.btToProject}`}
+              className={`${styles.btToProject} MouseHoverEffect`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onClick={() => scrollToProjets()}

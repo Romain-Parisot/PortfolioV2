@@ -4,9 +4,8 @@ import styles from './Mousetrail.module.css';
 import usePointerPosition from './usePointerPosition';
 import useDelayedValue from './useDelayedValue';
 
-function Dot({ position, opacity, scale, onClick }) {
+function Dot({ position, opacity, scale, onClick, hover }) {
   const handleClick = event => {
-    console.log('test');
     event.stopPropagation();
     if (onClick) {
       onClick(event);
@@ -15,7 +14,11 @@ function Dot({ position, opacity, scale, onClick }) {
   return (
     <div
       className={styles.MouseCircle}
-      style={{ opacity, transform: `translate(${position.x}px, ${position.y}px) scale(${scale})` }}
+      style={{
+        opacity,
+        transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+        border: hover ? '2px solid var(--dark-mode-off)' : undefined,
+      }}
       onClick={handleClick}
       onKeyDown={e => {
         if (e.key === 'Enter') {
@@ -31,6 +34,8 @@ function Dot({ position, opacity, scale, onClick }) {
 
 export default function MouseTrail() {
   const [scale, setScale] = useState(1);
+  const [opacity, setOpacity] = useState(1);
+  const [hover, setHover] = useState(false);
 
   const delay = 0.5;
   const pos1 = usePointerPosition();
@@ -61,6 +66,30 @@ export default function MouseTrail() {
     }, 50);
   };
 
+  const ElementMouseEnter = () => {
+    setScale(0.7);
+    setOpacity(0.5);
+    setHover(true);
+  };
+
+  const ElementMouseLeave = () => {
+    setScale(1);
+    setOpacity(1);
+    setHover(false);
+  };
+
+  useEffect(() => {
+    const elementHoverEffect = document.querySelectorAll('.MouseHoverEffect');
+    if (elementHoverEffect.length > 0) {
+      elementHoverEffect.forEach(element => {
+        element.addEventListener('mouseenter', ElementMouseEnter);
+        element.addEventListener('mouseleave', ElementMouseLeave);
+      });
+    } else {
+      console.log('No element with class MouseHoverEffect');
+    }
+  }, []);
+
   useEffect(() => {
     document.addEventListener('click', ChangeScale);
     return () => {
@@ -70,26 +99,26 @@ export default function MouseTrail() {
 
   return (
     <div>
-      <Dot position={pos1} opacity={1} scale={scale} />
-      <Dot position={pos2} opacity={0.9} scale={scale - 0.1} />
-      <Dot position={pos3} opacity={0.9} scale={scale - 0.1} />
-      <Dot position={pos4} opacity={0.8} scale={scale - 0.2} />
-      <Dot position={pos5} opacity={0.8} scale={scale - 0.2} />
-      <Dot position={pos6} opacity={0.7} scale={scale - 0.3} />
-      <Dot position={pos7} opacity={0.7} scale={scale - 0.3} />
-      <Dot position={pos8} opacity={0.6} scale={scale - 0.4} />
-      <Dot position={pos9} opacity={0.6} scale={scale - 0.4} />
-      <Dot position={pos10} opacity={0.5} scale={scale - 0.5} />
-      <Dot position={pos11} opacity={0.5} scale={scale - 0.5} />
-      <Dot position={pos12} opacity={0.4} scale={scale - 0.6} />
-      <Dot position={pos13} opacity={0.4} scale={scale - 0.6} />
-      <Dot position={pos14} opacity={0.3} scale={scale - 0.7} />
-      <Dot position={pos15} opacity={0.3} scale={scale - 0.7} />
-      <Dot position={pos16} opacity={0.2} scale={scale - 0.8} />
-      <Dot position={pos17} opacity={0.2} scale={scale - 0.8} />
-      <Dot position={pos18} opacity={0.1} scale={scale - 0.9} />
-      <Dot position={pos19} opacity={0.1} scale={scale - 0.9} />
-      <Dot position={pos20} opacity={0.1} scale={scale - 0.9} />
+      <Dot position={pos1} opacity={opacity} scale={scale} hover={hover} />
+      <Dot position={pos2} opacity={opacity - 0.1} scale={scale - 0.1} hover={hover} />
+      <Dot position={pos3} opacity={opacity - 0.1} scale={scale - 0.1} hover={hover} />
+      <Dot position={pos4} opacity={opacity - 0.2} scale={scale - 0.2} hover={hover} />
+      <Dot position={pos5} opacity={opacity - 0.2} scale={scale - 0.2} hover={hover} />
+      <Dot position={pos6} opacity={opacity - 0.3} scale={scale - 0.3} hover={hover} />
+      <Dot position={pos7} opacity={opacity - 0.3} scale={scale - 0.3} hover={hover} />
+      <Dot position={pos8} opacity={opacity - 0.4} scale={scale - 0.4} hover={hover} />
+      <Dot position={pos9} opacity={opacity - 0.4} scale={scale - 0.4} hover={hover} />
+      <Dot position={pos10} opacity={opacity - 0.5} scale={scale - 0.5} hover={hover} />
+      <Dot position={pos11} opacity={opacity - 0.5} scale={scale - 0.5} hover={hover} />
+      <Dot position={pos12} opacity={opacity - 0.6} scale={scale - 0.6} hover={hover} />
+      <Dot position={pos13} opacity={opacity - 0.6} scale={scale - 0.6} hover={hover} />
+      <Dot position={pos14} opacity={opacity - 0.7} scale={scale - 0.7} hover={hover} />
+      <Dot position={pos15} opacity={opacity - 0.7} scale={scale - 0.7} hover={hover} />
+      <Dot position={pos16} opacity={opacity - 0.8} scale={scale - 0.8} hover={hover} />
+      <Dot position={pos17} opacity={opacity - 0.8} scale={scale - 0.8} hover={hover} />
+      <Dot position={pos18} opacity={opacity - 0.9} scale={scale - 0.9} hover={hover} />
+      <Dot position={pos19} opacity={opacity - 0.9} scale={scale - 0.9} hover={hover} />
+      <Dot position={pos20} opacity={opacity - 0.9} scale={scale - 0.9} hover={hover} />
     </div>
   );
 }
@@ -102,6 +131,7 @@ Dot.propTypes = {
   opacity: PropTypes.number.isRequired,
   scale: PropTypes.number.isRequired,
   onClick: PropTypes.func,
+  hover: PropTypes.bool.isRequired,
 };
 
 Dot.defaultProps = {
