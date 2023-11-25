@@ -179,7 +179,6 @@ h1{
   margin-left: 290px;
   margin-top: 220px;
   z-index: 13;
-  cursor: pointer;
   transition: transform 0.5s ease;
 }   
 

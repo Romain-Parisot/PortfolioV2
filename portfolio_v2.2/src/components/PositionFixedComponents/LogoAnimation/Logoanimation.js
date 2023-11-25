@@ -46,7 +46,7 @@ export default function Logoanimation() {
         version="1.1"
         className={`${styles.logoSvg} ${logoSvgAnimationRunning ? styles.logoSvgAnim : styles.logoSvg} ${
           initialLogo ? styles.logoSvgbasic : styles.logoSvg2
-        }`}
+        } MouseHoverEffect`}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 1000 1000"
@@ -68,7 +68,7 @@ export default function Logoanimation() {
         version="1.1"
         className={`${logoSvgAnimationRunning ? styles.logoSvgAnim : styles.logoSvg} ${styles.logoSvg} ${
           initialLogo ? styles.logoSvg3 : styles.logoSvgbasic
-        }`}
+        } MouseHoverEffect`}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 1000 1000"

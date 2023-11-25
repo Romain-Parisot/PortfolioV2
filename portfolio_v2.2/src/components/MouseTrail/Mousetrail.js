@@ -67,7 +67,7 @@ export default function MouseTrail() {
   };
 
   const ElementMouseEnter = () => {
-    setScale(0.7);
+    setScale(0.9);
     setOpacity(0.5);
     setHover(true);
   };
@@ -85,8 +85,6 @@ export default function MouseTrail() {
         element.addEventListener('mouseenter', ElementMouseEnter);
         element.addEventListener('mouseleave', ElementMouseLeave);
       });
-    } else {
-      console.log('No element with class MouseHoverEffect');
     }
   }, []);
 

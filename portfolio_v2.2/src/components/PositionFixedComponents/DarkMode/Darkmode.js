@@ -47,7 +47,7 @@ export default function Darkmode() {
   }, []);
 
   return (
-    <button type="button" className={`${styles.divbtdarkmode}`} onClick={darkMode}>
+    <button type="button" className={`${styles.divbtdarkmode} MouseHoverEffect`} onClick={darkMode}>
       <svg
         version="1.1"
         className={`${styles.darkmodeSvg}`}

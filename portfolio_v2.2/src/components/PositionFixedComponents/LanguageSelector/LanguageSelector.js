@@ -46,6 +46,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
             }, 100);
           }
         }}
+        className="MouseHoverEffect"
       >
         {selectedLanguage === 'fr' && (
           <img
@@ -77,7 +78,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         onClick={() => changeLanguage('fr')}
         className={`${showFlags2 && selectedLanguage !== 'fr' ? styles.flagDisplay : styles.flagHidden} ${
           showFlags && selectedLanguage !== 'fr' ? '' : styles.dpnone
-        }`}
+        } MouseHoverEffect`}
       >
         <img
           src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1eb-1f1f7.svg"
@@ -89,7 +90,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         onClick={() => changeLanguage('en')}
         className={`${showFlags2 && selectedLanguage !== 'en' ? styles.flagDisplay : styles.flagHidden} ${
           showFlags && selectedLanguage !== 'en' ? '' : styles.dpnone
-        }`}
+        } MouseHoverEffect`}
       >
         <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ec-1f1e7.svg" alt="UK flag" />
       </button>
@@ -98,7 +99,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         onClick={() => changeLanguage('de')}
         className={`${showFlags2 && selectedLanguage !== 'de' ? styles.flagDisplay : styles.flagHidden} ${
           showFlags && selectedLanguage !== 'de' ? '' : styles.dpnone
-        }`}
+        } MouseHoverEffect`}
       >
         <img
           src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1e9-1f1ea.svg"
@@ -110,7 +111,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         onClick={() => changeLanguage('es')}
         className={`${showFlags2 && selectedLanguage !== 'es' ? styles.flagDisplay : styles.flagHidden} ${
           showFlags && selectedLanguage !== 'es' ? '' : styles.dpnone
-        }`}
+        } MouseHoverEffect`}
       >
         <img
           src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ea-1f1f8.svg"
