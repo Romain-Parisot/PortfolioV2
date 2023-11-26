@@ -32,6 +32,33 @@ const translations = {
         ProjectPersons: '10 Pers.',
         ProjectVideo: '',
       },
+      project2: {
+        ProjectName: 'Other Project',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
+      project3: {
+        ProjectName: 'Other Project',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
+      project4: {
+        ProjectName: 'Other Project',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
     },
   },
 
@@ -61,6 +88,33 @@ const translations = {
       returnToDefaultView: 'Retour à la vue par défaut',
       project1: {
         ProjectName: 'Mousdik Pianos',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
+      project2: {
+        ProjectName: 'Other Project',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
+      project3: {
+        ProjectName: 'Other Project',
+        ProjectDescription:
+          '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
+        ProjectDate: '03-2022 / 04-2023',
+        ProjectTime: '90 ~ 110 h',
+        ProjectPersons: '10 Pers.',
+        ProjectVideo: '',
+      },
+      project4: {
+        ProjectName: 'Other Project',
         ProjectDescription:
           '"Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos."',
         ProjectDate: '03-2022 / 04-2023',

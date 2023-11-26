@@ -4,124 +4,48 @@ import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
 import ViolonFrancePic1 from '../../assets/project/violonfrance/ViolonFrance_img1.JPG';
+import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
+import CrossIcon from '../../assets/project/SwipperBar/cross.png';
 
-export default function Project({ selectedLanguage, IndexProject }) {
-  const projectKey = `project${IndexProject}`;
+export default function Project({ selectedLanguage }) {
+  function generateProjectElements() {
+    const numberProject = 4;
+    const projectElements = [];
 
-  function getProjectCompetence(ProjectID) {
-    switch (ProjectID) {
-      case 1:
-        return (
-          <div className={styles.competenceDivproject}>
-            <p className={`${styles.txtCompetenceDivproject}`}>Wordpress</p>
-            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
+    for (let index = 1; index < numberProject; index += 1) {
+      projectElements.push(
+        <div key={index} className={`${styles.swipper_element}`}>
+          <div className={`${styles.swipper_image_container}`}>
+            <img src={ViolonFrancePic1} alt="" />
+            <p>{translations[selectedLanguage].project[`project${index}`].ProjectName}</p>
           </div>
-        );
-      case 2:
-        return (
-          <div className={styles.competenceDivproject}>
-            <p className={`${styles.txtCompetenceDivproject}`}>Another Skill</p>
-            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
+          <div className={`${styles.swipper_buttons_container}`}>
+            <div className={`${styles.container_button_close}`}>
+              <button type="button" className={`${styles.button_swipper_bar}`}>
+                <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
+              </button>
+            </div>
+            <div className={`${styles.container_middle_button}`}>Mid</div>
+            <div className={`${styles.container_button_expand}`}>
+              <button type="button" className={`${styles.button_swipper_bar}`}>
+                <img src={ExpandIcon} alt="Expand Icon" className={`${styles.img_swipper_bar}`} />
+              </button>
+            </div>
           </div>
-        );
-      case 3:
-        return (
-          <div className={styles.competenceDivproject}>
-            <p className={`${styles.txtCompetenceDivproject}`}>Yet Another Skill</p>
-            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
-          </div>
-        );
-      case 4:
-        return (
-          <div className={styles.competenceDivproject}>
-            <p className={`${styles.txtCompetenceDivproject}`}>One More Skill</p>
-            <p className={`${styles.txtCompetenceDivproject}`}>Test</p>
-          </div>
-        );
-      default:
-        return null;
+        </div>,
+      );
     }
-  }
 
-  function getProjectImages(ProjectID) {
-    switch (ProjectID) {
-      case 1:
-        return (
-          <div className={styles.slider}>
-            <img src={ViolonFrancePic1} alt="illustration 1 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
-          </div>
-        );
-      case 2:
-        return (
-          <div className={styles.slider}>
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
-          </div>
-        );
-      case 3:
-        return (
-          <div className={styles.slider}>
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
-          </div>
-        );
-      case 4:
-        return (
-          <div className={styles.slider}>
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img1.JPG" alt="illustration 1 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img2.JPG" alt="illustration 2 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img3.JPG" alt="illustration 3 du site" />
-            <img src="img/projectContent/ViolonFrance/png/ViolonFrance_img4.JPG" alt="illustration 4 du site" />
-          </div>
-        );
-      default:
-        return null;
-    }
+    return projectElements;
   }
 
   return (
-    <div className={`${styles.project}`}>
-      {/* before & after are here */}
-      <div className={styles.projectcontainer}>
-        <div className={styles.timeproject}>
-          <p>{translations[selectedLanguage].project[projectKey].ProjectTime}</p>
-        </div>
-
-        <div className={styles.personsproject}>
-          <p className={`${styles.txtPersonsproject} ${styles.txtPersonsprojectBig}`}>
-            {translations[selectedLanguage].project[projectKey].ProjectPersons}
-          </p>
-        </div>
-
-        <h3 className={styles.titleDivproject}>{translations[selectedLanguage].project[projectKey].ProjectName}</h3>
-        <p className={styles.descriptionDivproject}>
-          {translations[selectedLanguage].project[projectKey].ProjectDescription}
-        </p>
-
-        <div className={styles.linkytbContainer}>{translations[selectedLanguage].project[projectKey].ProjectVideo}</div>
-
-        <div className={styles.SliderEtDescContainer}>
-          <div className={styles.sliderContainer}>{getProjectImages(IndexProject)}</div>
-        </div>
-
-        <div className={styles.divCompetenceDivproject}>{getProjectCompetence(IndexProject)}</div>
-
-        <div className={styles.DateProject}>
-          <p className={styles.txtDateProject}>{translations[selectedLanguage].project[projectKey].ProjectDate}</p>
-        </div>
-      </div>
-    </div>
+    <section id={`${styles.project}`}>
+      <div className={`${styles.swipper_list_element}`}>{generateProjectElements()}</div>
+    </section>
   );
 }
 
 Project.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
-  IndexProject: PropTypes.number.isRequired,
 };

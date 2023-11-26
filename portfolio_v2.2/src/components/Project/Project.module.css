@@ -1,106 +1,53 @@
-.project{
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  color: var(--dark-mode-on);
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 20px;
-  transition: 0.5s ease;
-  margin-bottom: 100px;
-  border: 1px solid var(--dark-mode-on-20);
-}
-
-.project::before{
-  content: "";
-  position: absolute;
-  transition: 0.5s ;
-  width: 300%;
-  height: 600%;
-  animation: spiningBorderHover 3s linear infinite;
-}
-
-.project::after{
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
-  content: "";
-  position: absolute;
-  background-color: var(--dark-mode-off);
-  border-radius: 10px;
+#project{
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.project:hover::before{
-  background-image: conic-gradient(
-      var(--main-color) 20deg,
-      transparent 120deg
-  );
-}
-
-@keyframes spiningBorderHover{
-  0%{
-      transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(-360deg);
-  }
-}
-
-.projectcontainer{
+.swipper_list_element{
+  overflow-x: hidden;
+  width: 800px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.swipper_element{
+  border-radius: 15px;
+  display: flex;
   flex-direction: column;
-  height: 100%;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipper_image_container{
   width: 100%;
 }
 
-.timeproject{
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.personsproject{
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.titleDivproject{
-  font-size: 20px;
-  text-align: center;
-  padding: 20px;
-}
-
-.descriptionDivproject{
-  font-size: 16px;
-  text-align: center;
-  padding: 5px;
-}
-
-.txtCompetenceDivproject{
-  background-color: var(--dark-mode-on);
-  color: var(--dark-mode-off);
-  border-radius: 10px;
-  padding: 5px 10px;
-  text-align: center;
-}
-
-.competenceDivproject{
+.swipper_buttons_container{
+  height: 20%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 32px;
+}
+
+.button_swipper_bar{
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color-70-no-opa);
+  padding: 15px;
+  border: none;
+  border-radius: 100%;
+}
+
+.img_swipper_bar{
+  width: 100%;
+  height: 100%;
+}
+
+.dpnone{
+  display: none !important;
 }
