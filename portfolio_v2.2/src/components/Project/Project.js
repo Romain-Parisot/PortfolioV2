@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TinderCard from 'react-tinder-card';
 import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
