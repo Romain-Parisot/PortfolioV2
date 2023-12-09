@@ -5,14 +5,6 @@
   justify-content: center;
 }
 
-.swipper_list_element{
-  overflow-x: hidden;
-  width: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .swipper_element{
   border-radius: 15px;
   display: flex;
