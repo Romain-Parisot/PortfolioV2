@@ -8,27 +8,30 @@ import ViolonFrancePic1 from '../../assets/project/violonfrance/ViolonFrance_img
 import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
 import CrossIcon from '../../assets/project/SwipperBar/cross.png';
 
-export default function ProjectsSwipper({ selectedLanguage }) {
-  let projects = [
-    {
-      name: 'Project 1',
-    },
-    {
-      name: 'Project 2',
-    },
-    {
-      name: 'Project 3',
-    },
-    {
-      name: 'Project 4',
-    },
-  ];
-  const alredyRemoved = [];
+const initialBaseProjectsList = [
+  {
+    name: 'Project 1',
+  },
+  {
+    name: 'Project 2',
+  },
+  {
+    name: 'Project 3',
+  },
+  {
+    name: 'Project 4',
+  },
+];
+const alredyRemoved = [];
+let baseProjectsList = initialBaseProjectsList;
+// This fixes issues with updating projectsList state forcing it to use the current state and not the state that was active when the card was created.
 
-  const [characters, setCharacters] = useState(projects);
+export default function ProjectsSwipper({ selectedLanguage }) {
+  const [projectsList, setProjectsList] = useState(initialBaseProjectsList);
+
   const childRefs = useMemo(
     () =>
-      Array(projects.length)
+      Array(initialBaseProjectsList.length)
         .fill(0)
         .map(() => React.createRef()),
     [],
@@ -39,50 +42,44 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   };
 
   const outOfFrame = name => {
-    projects = projects.filter(project => project.name !== name);
-    setCharacters(projects);
+    baseProjectsList = baseProjectsList.filter(project => project.name !== name);
+    setProjectsList(baseProjectsList);
   };
 
   const swipe = dir => {
-    const cardsLeft = characters.filter(person => !alredyRemoved.includes(person.name));
-    if (cardsLeft.length) {
-      const toBeRemoved = cardsLeft[cardsLeft.length - 1].name; // Find the card object to be removed
-      const index = projects.map(person => person.name).indexOf(toBeRemoved); // Find the index of which to make the reference to
-      alredyRemoved.push(toBeRemoved); // Make sure the next card gets removed next time if this card do not have time to exit the screen
-      childRefs[index].current.swipe(dir); // Swipe the card!
+    const projectsLeft = projectsList.filter(project => !alredyRemoved.includes(project.name));
+    if (projectsLeft.length) {
+      const toBeRemoved = projectsLeft[projectsLeft.length - 1].name;
+      const index = initialBaseProjectsList.map(project => project.name).indexOf(toBeRemoved);
+      alredyRemoved.push(toBeRemoved);
+      childRefs[index].current.swipe(dir);
     }
   };
   return (
     <div className={`${styles.projects_swipper}`}>
       <div className={`${styles.swipper_card_container}`}>
-        {projects.map((project, index) => {
-          let zIndexClass = '';
-          if (index === 0) {
-            zIndexClass = styles.zIndex1;
-          } else if (index === 1) {
-            zIndexClass = styles.zIndex2;
-          } else if (index === 2) {
-            zIndexClass = styles.zIndex3;
-          } else if (index === 3) {
-            zIndexClass = styles.zIndex4;
-          }
-          return (
-            <TinderCard
-              ref={childRefs[index]}
-              className={`${styles.swipper_card} ${zIndexClass}`}
-              key={project.name}
-              onSwipe={dir => swiped(dir, project.name)}
-              onCardLeftScreen={() => outOfFrame(project.name)}
+        {projectsList.map((project, index) => (
+          <TinderCard
+            ref={childRefs[index]}
+            className={`${styles.swipper_card}`}
+            key={project.name}
+            onSwipe={dir => swiped(dir, project.name)}
+            onCardLeftScreen={() => outOfFrame(project.name)}
+          >
+            <div
+              className={`${styles.card}`}
+              style={{
+                backgroundImage: `url(${ViolonFrancePic1})`,
+              }}
             >
-              <img className={`${styles.swipper_card_img}`} src={ViolonFrancePic1} alt="" />
               <div className={`${styles.swipper_card_overlay}`}>
                 <p className={`${styles.swipper_card_text}`}>
                   {translations[selectedLanguage].project[`project${index + 1}`].ProjectName}
                 </p>
               </div>
-            </TinderCard>
-          );
-        })}
+            </div>
+          </TinderCard>
+        ))}
       </div>
       <div className={`${styles.swipper_buttons_container}`}>
         <div className={`${styles.container_button_close}`}>

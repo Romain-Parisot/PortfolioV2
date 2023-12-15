@@ -24,16 +24,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   border-radius: 15px;
 }
 
 .swipper_card{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,11 +37,16 @@
   border-radius: 15px;
 }
 
-
-.swipper_card_img{
+.card{
+  position: relative;
+  width: 50vw;
+  height: 50vh;
   border-radius: 15px;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swipper_card_overlay{
@@ -84,7 +84,6 @@
   padding: 15px;
   border: none;
   border-radius: 100%;
-  
 }
 
 .img_swipper_bar{
@@ -94,20 +93,4 @@
 
 .dpnone{
   display: none !important;
-}
-
-.zIndex1{
-  z-index: 1;
-}
-
-.zIndex2{
-  z-index: 2;
-}
-
-.zIndex3{
-  z-index: 3;
-}
-
-.zIndex4{
-  z-index: 4;
 }
