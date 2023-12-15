@@ -5,21 +5,28 @@ import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
 import ViolonFrancePic1 from '../../assets/project/violonfrance/ViolonFrance_img1.JPG';
+import ViolonFrancePic2 from '../../assets/project/violonfrance/ViolonFrance_img2.JPG';
+import ViolonFrancePic3 from '../../assets/project/violonfrance/ViolonFrance_img3.JPG';
+import ViolonFrancePic4 from '../../assets/project/violonfrance/ViolonFrance_img4.JPG';
 import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
 import CrossIcon from '../../assets/project/SwipperBar/cross.png';
 
 const initialBaseProjectsList = [
   {
     name: 'Project 1',
+    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
   {
     name: 'Project 2',
+    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
   {
     name: 'Project 3',
+    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
   {
     name: 'Project 4',
+    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
 ];
 const alredyRemoved = [];
@@ -55,6 +62,26 @@ export default function ProjectsSwipper({ selectedLanguage }) {
       childRefs[index].current.swipe(dir);
     }
   };
+
+  let indexProject1 = 0;
+  const handleClickNextPicture = next => () => {
+    console.log('next', next);
+    if (next) {
+      if (indexProject1 === projectsList[0].picture.length - 1) {
+        indexProject1 = 0;
+      } else {
+        indexProject1 += 1;
+      }
+    }
+    if (!next) {
+      if (indexProject1 === 0) {
+        indexProject1 = projectsList[0].picture.length - 1;
+      } else {
+        indexProject1 -= 1;
+      }
+    }
+  };
+
   return (
     <div className={`${styles.projects_swipper}`}>
       <div className={`${styles.swipper_card_container}`}>
@@ -69,9 +96,27 @@ export default function ProjectsSwipper({ selectedLanguage }) {
             <div
               className={`${styles.card}`}
               style={{
-                backgroundImage: `url(${ViolonFrancePic1})`,
+                backgroundImage: `url(${project.picture[indexProject1]})`,
               }}
             >
+              <div className={`${styles.swipper_click} MouseHoverEffect`}>
+                <div
+                  role="button"
+                  className={`${styles.swipper_previous_pic}`}
+                  onClick={handleClickNextPicture(false)}
+                  onKeyDown={k => k.key === 'Enter' && handleClickNextPicture(false)}
+                  tabIndex={0}
+                  aria-label="Previous Picture"
+                />
+                <div
+                  role="button"
+                  className={`${styles.swipper_next_pic}`}
+                  onClick={handleClickNextPicture(true)}
+                  onKeyDown={k => k.key === 'Enter' && handleClickNextPicture(true)}
+                  tabIndex={0}
+                  aria-label="Next Picture"
+                />
+              </div>
               <div className={`${styles.swipper_card_overlay}`}>
                 <p className={`${styles.swipper_card_text}`}>
                   {translations[selectedLanguage].project[`project${index + 1}`].ProjectName}
