@@ -4,21 +4,30 @@ import TinderCard from 'react-tinder-card';
 import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
-import ViolonFrancePic1 from '../../assets/project/violonfrance/ViolonFrance_img1.JPG';
-import ViolonFrancePic2 from '../../assets/project/violonfrance/ViolonFrance_img2.JPG';
-import ViolonFrancePic3 from '../../assets/project/violonfrance/ViolonFrance_img3.JPG';
-import ViolonFrancePic4 from '../../assets/project/violonfrance/ViolonFrance_img4.JPG';
+// SwipperBar Icons
 import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
 import CrossIcon from '../../assets/project/SwipperBar/cross.png';
 
+// ViolonFrance Pictures
+import ViolonFrancePic1 from '../../assets/project/violonFrance/ViolonFrance_img1.JPG';
+import ViolonFrancePic2 from '../../assets/project/violonFrance/ViolonFrance_img2.JPG';
+import ViolonFrancePic3 from '../../assets/project/violonFrance/ViolonFrance_img3.JPG';
+import ViolonFrancePic4 from '../../assets/project/violonFrance/ViolonFrance_img4.JPG';
+
+// plessisRobinson Pictures
+import PlessisRobinsonPic1 from '../../assets/project/plessisRobinson/Plessis-Robinson_img1.png';
+import PlessisRobinsonPic2 from '../../assets/project/plessisRobinson/Plessis-Robinson_img2.png';
+import PlessisRobinsonPic3 from '../../assets/project/plessisRobinson/Plessis-Robinson_img3.png';
+import PlessisRobinsonPic4 from '../../assets/project/plessisRobinson/Plessis-Robinson_img4.png';
+
 const initialBaseProjectsList = [
   {
-    name: 'Project 1',
+    name: 'ViolonFrance',
     picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
   {
-    name: 'Project 2',
-    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
+    name: 'PlessisRobinson',
+    picture: [PlessisRobinsonPic1, PlessisRobinsonPic2, PlessisRobinsonPic3, PlessisRobinsonPic4],
   },
   {
     name: 'Project 3',
@@ -35,6 +44,7 @@ let baseProjectsList = initialBaseProjectsList;
 
 export default function ProjectsSwipper({ selectedLanguage }) {
   const [projectsList, setProjectsList] = useState(initialBaseProjectsList);
+  const [indexProject1, setIndexProject1] = useState(0);
 
   const childRefs = useMemo(
     () =>
@@ -63,23 +73,23 @@ export default function ProjectsSwipper({ selectedLanguage }) {
     }
   };
 
-  let indexProject1 = 0;
   const handleClickNextPicture = next => () => {
     console.log('next', next);
     if (next) {
       if (indexProject1 === projectsList[0].picture.length - 1) {
-        indexProject1 = 0;
+        setIndexProject1(0);
       } else {
-        indexProject1 += 1;
+        setIndexProject1(prevIndex => prevIndex + 1);
       }
     }
     if (!next) {
       if (indexProject1 === 0) {
-        indexProject1 = projectsList[0].picture.length - 1;
+        setIndexProject1(projectsList[0].picture.length - 1);
       } else {
-        indexProject1 -= 1;
+        setIndexProject1(prevIndex => prevIndex - 1);
       }
     }
+    console.log(indexProject1);
   };
 
   return (
@@ -128,13 +138,21 @@ export default function ProjectsSwipper({ selectedLanguage }) {
       </div>
       <div className={`${styles.swipper_buttons_container}`}>
         <div className={`${styles.container_button_close}`}>
-          <button type="button" className={`${styles.button_swipper_bar}`} onClick={() => swipe('left')}>
+          <button
+            type="button"
+            className={`${styles.button_swipper_bar} MouseHoverEffect`}
+            onClick={() => swipe('left')}
+          >
             <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
           </button>
         </div>
         {/* <div className={`${styles.container_middle_button}`}>Mid</div> */}
         <div className={`${styles.container_button_expand}`}>
-          <button type="button" className={`${styles.button_swipper_bar}`} onClick={() => swipe('right')}>
+          <button
+            type="button"
+            className={`${styles.button_swipper_bar} MouseHoverEffect`}
+            onClick={() => swipe('right')}
+          >
             <img src={ExpandIcon} alt="Expand Icon" className={`${styles.img_swipper_bar}`} />
           </button>
         </div>
