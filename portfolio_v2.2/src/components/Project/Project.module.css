@@ -19,7 +19,7 @@
 }
 
 .swipper_card_container{
-  width: 70vw;
+  width: 50vw;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@
 
 .card{
   position: relative;
-  width: 70vw;
+  width: 50vw;
   height: 50vh;
   border-radius: 15px;
   background-size: cover;

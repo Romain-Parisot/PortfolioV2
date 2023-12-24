@@ -9,10 +9,10 @@ import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
 import CrossIcon from '../../assets/project/SwipperBar/cross.png';
 
 // ViolonFrance Pictures
-import ViolonFrancePic1 from '../../assets/project/violonFrance/ViolonFrance_img1.JPG';
-import ViolonFrancePic2 from '../../assets/project/violonFrance/ViolonFrance_img2.JPG';
-import ViolonFrancePic3 from '../../assets/project/violonFrance/ViolonFrance_img3.JPG';
-import ViolonFrancePic4 from '../../assets/project/violonFrance/ViolonFrance_img4.JPG';
+import ViolonFrancePic1 from '../../assets/project/violonfrance/ViolonFrance_img1.JPG';
+import ViolonFrancePic2 from '../../assets/project/violonfrance/ViolonFrance_img2.JPG';
+import ViolonFrancePic3 from '../../assets/project/violonfrance/ViolonFrance_img3.JPG';
+import ViolonFrancePic4 from '../../assets/project/violonfrance/ViolonFrance_img4.JPG';
 
 // plessisRobinson Pictures
 import PlessisRobinsonPic1 from '../../assets/project/plessisRobinson/Plessis-Robinson_img1.png';
