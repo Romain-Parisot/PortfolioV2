@@ -28,7 +28,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
   };
 
   return (
-    <div className={styles.btLanguageContainer}>
+    <div className={`${styles.btLanguageContainer}`}>
       <button
         type="button"
         onClick={() => {

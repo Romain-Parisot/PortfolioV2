@@ -12,10 +12,6 @@ header{
   z-index: 15;
 }
 
-.elmtHeader{
-  cursor: pointer;
-}
-
 header.animationHeader{
   transform: translate(-50%, 20px);
 }
