@@ -22,6 +22,10 @@ import PlessisRobinsonPic4 from '../../assets/project/plessisRobinson/Plessis-Ro
 
 const initialBaseProjectsList = [
   {
+    name: 'MousdikPianos',
+    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
+  },
+  {
     name: 'ViolonFrance',
     picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
@@ -31,10 +35,6 @@ const initialBaseProjectsList = [
   },
   {
     name: 'Project 3',
-    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
-  },
-  {
-    name: 'Project 4',
     picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
 ];
