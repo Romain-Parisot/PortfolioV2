@@ -5,9 +5,9 @@
   position: fixed;
   flex-direction: column;
   margin-left: 95vw;
-  margin-top: 100px;
+  margin-top: 70px;
   z-index: 13;
-  width: 45px;
+  width: 40px;
 }
 
 .btLanguageContainer > button{
