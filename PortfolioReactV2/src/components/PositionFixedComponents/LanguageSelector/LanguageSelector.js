@@ -28,7 +28,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
   };
 
   return (
-    <div className={styles.btLanguageContainer}>
+    <div className={`${styles.btLanguageContainer}`}>
       <button
         type="button"
         onClick={() => {
@@ -70,6 +70,48 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           <img
             src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ea-1f1f8.svg"
             alt="Spanish flag"
+          />
+        )}
+        {selectedLanguage === 'zh' && (
+          <img
+            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1e8-1f1f3.svg"
+            alt="Chinese flag"
+          />
+        )}
+        {selectedLanguage === 'hi' && (
+          <img
+            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f3.svg"
+            alt="Indian flag"
+          />
+        )}
+        {selectedLanguage === 'ru' && (
+          <img
+            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f7-1f1fa.svg"
+            alt="Russian flag"
+          />
+        )}
+        {/* {selectedLanguage === 'ar' && (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Flag_of_the_Arab_League.svg/800px-Flag_of_the_Arab_League.svg.png"
+            alt="Arab League flag"
+          />
+        )} */}
+        {selectedLanguage === 'pt' && (
+          <img
+            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f5-1f1f9.svg"
+            alt="Portuguese flag"
+          />
+        )}
+        {selectedLanguage === 'it' && (
+          <img
+            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f9.svg"
+            alt="Italian flag"
+          />
+        )}
+        {selectedLanguage === 'ja' && (
+          <img
+            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ef-1f1f5.svg"
+            alt="Japanese flag"
           />
         )}
       </button>
@@ -116,6 +158,90 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         <img
           src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ea-1f1f8.svg"
           alt="Spanish flag"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => changeLanguage('zh')}
+        className={`${showFlags2 && selectedLanguage !== 'zh' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'zh' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1e8-1f1f3.svg"
+          alt="Chinese flag"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => changeLanguage('hi')}
+        className={`${showFlags2 && selectedLanguage !== 'hi' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'hi' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f3.svg"
+          alt="Indian flag"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => changeLanguage('ru')}
+        className={`${showFlags2 && selectedLanguage !== 'ru' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'ru' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f7-1f1fa.svg"
+          alt="Russian flag"
+        />
+      </button>
+      {/* <button
+        type="button"
+        onClick={() => changeLanguage('ar')}
+        className={`${showFlags2 && selectedLanguage !== 'ar' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'ar' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Flag_of_the_Arab_League.svg/800px-Flag_of_the_Arab_League.svg.png"
+          alt="Arab League flag"
+        />
+      </button> */}
+      <button
+        type="button"
+        onClick={() => changeLanguage('pt')}
+        className={`${showFlags2 && selectedLanguage !== 'pt' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'pt' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f5-1f1f9.svg"
+          alt="Portuguese flag"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => changeLanguage('it')}
+        className={`${showFlags2 && selectedLanguage !== 'it' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'it' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f9.svg"
+          alt="Italian flag"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => changeLanguage('ja')}
+        className={`${showFlags2 && selectedLanguage !== 'ja' ? styles.flagDisplay : styles.flagHidden} ${
+          showFlags && selectedLanguage !== 'ja' ? '' : styles.dpnone
+        } MouseHoverEffect`}
+      >
+        <img
+          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ef-1f1f5.svg"
+          alt="Japanese flag"
         />
       </button>
     </div>
