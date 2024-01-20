@@ -118,6 +118,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Formulaire de contact :',
+      description:
+        "N'hésitez pas à m'envoyer un message pour avoir des renseignements sur les étapes de réalisation de votre projet 🚀",
+      form: {
+        name: 'Nom',
+        placeholderName: 'Entrer votre nom',
+        email: 'Email',
+        placeholderEmail: 'Entrer votre email',
+        message: 'Message',
+        placeholderMessage: 'Entrer votre message',
+        submit: 'Envoyer',
+      },
+    },
   },
   de: {
     header: {

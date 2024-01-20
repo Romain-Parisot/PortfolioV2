@@ -27,7 +27,7 @@ export default function App() {
         <Parcour />
         <Project selectedLanguage={selectedLanguage} />
         <Skills />
-        <Contact />
+        <Contact selectedLanguage={selectedLanguage} />
       </main>
     </div>
   );
