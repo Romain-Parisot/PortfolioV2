@@ -197,7 +197,7 @@ export default function Home({ selectedLanguage }) {
                     {translations[selectedLanguage].home.MePoint5}{' '}
                   </a>
                   {translations[selectedLanguage].home.MePoint6}
-                  {' 2023'}
+                  {' 2024'}
                 </p>
                 <p>{translations[selectedLanguage].home.MePoint7}</p>
               </div>

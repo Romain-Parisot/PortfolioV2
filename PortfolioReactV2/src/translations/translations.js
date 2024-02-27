@@ -58,6 +58,19 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Contact form :',
+      description: 'Feel free to send me a message to get information on the steps of realization of your project 🚀',
+      form: {
+        name: 'Name',
+        placeholderName: 'Enter your name',
+        email: 'Email',
+        placeholderEmail: 'Enter your email',
+        message: 'Message',
+        placeholderMessage: 'Enter your message',
+        submit: 'Send',
+      },
+    },
   },
   fr: {
     header: {
@@ -192,6 +205,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Kontaktformular :',
+      description:
+        'Zögern Sie nicht, mir eine Nachricht zu senden, um Informationen zu den Schritten zur Realisierung Ihres Projekts zu erhalten 🚀',
+      form: {
+        name: 'Name',
+        placeholderName: 'Geben Sie Ihren Namen ein',
+        email: 'Email',
+        placeholderEmail: 'Geben Sie Ihre E-Mail-Adresse ein',
+        message: 'Nachricht',
+        placeholderMessage: 'Geben Sie Ihre Nachricht ein',
+        submit: 'Senden',
+      },
+    },
   },
   es: {
     header: {
@@ -252,6 +279,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Formulario de contacto :',
+      description:
+        'No dude en enviarme un mensaje para obtener información sobre los pasos de realización de su proyecto 🚀',
+      form: {
+        name: 'Nombre',
+        placeholderName: 'Ingrese su nombre',
+        email: 'Correo electrónico',
+        placeholderEmail: 'Ingrese su correo electrónico',
+        message: 'Mensaje',
+        placeholderMessage: 'Ingrese su mensaje',
+        submit: 'Enviar',
+      },
+    },
   },
   zh: {
     header: {
@@ -308,6 +349,19 @@ const translations = {
         ProjectTime: '35 ~ 45 小时',
         ProjectPersons: '2 人员',
         ProjectVideo: '',
+      },
+    },
+    contact: {
+      title: '联系表格 :',
+      description: '随时给我发送消息，以获取有关项目实现步骤的信息 🚀',
+      form: {
+        name: '名称',
+        placeholderName: '输入您的名称',
+        email: '电子邮件',
+        placeholderEmail: '输入您的电子邮件',
+        message: '消息',
+        placeholderMessage: '输入您的消息',
+        submit: '发送',
       },
     },
   },
@@ -370,6 +424,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'संपर्क प्रपत्र :',
+      description:
+        'अपने परियोजना के निर्माण के चरणों पर जानकारी प्राप्त करने के लिए मुझे संदेश भेजने के लिए बेझिझक संपर्क करें 🚀',
+      form: {
+        name: 'नाम',
+        placeholderName: 'अपना नाम दर्ज करें',
+        email: 'ईमेल',
+        placeholderEmail: 'अपना ईमेल दर्ज करें',
+        message: 'संदेश',
+        placeholderMessage: 'अपना संदेश दर्ज करें',
+        submit: 'भेजें',
+      },
+    },
   },
   ru: {
     header: {
@@ -430,6 +498,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Контактная форма :',
+      description:
+        'Не стесняйтесь отправлять мне сообщение, чтобы получить информацию о шагах реализации вашего проекта 🚀',
+      form: {
+        name: 'Имя',
+        placeholderName: 'Введите ваше имя',
+        email: 'Электронная почта',
+        placeholderEmail: 'Введите ваш адрес электронной почты',
+        message: 'Сообщение',
+        placeholderMessage: 'Введите ваше сообщение',
+        submit: 'Отправить',
+      },
+    },
   },
   ar: {
     header: {
@@ -486,6 +568,19 @@ const translations = {
         ProjectTime: '35 ~ 45 ساعة',
         ProjectPersons: '2 شخص',
         ProjectVideo: '',
+      },
+    },
+    contact: {
+      title: 'نموذج الاتصال :',
+      description: 'لا تتردد في إرسال لي رسالة للحصول على معلومات حول خطوات تنفيذ مشروعك 🚀',
+      form: {
+        name: 'اسم',
+        placeholderName: 'أدخل اسمك',
+        email: 'البريد الإلكتروني',
+        placeholderEmail: 'أدخل بريدك الإلكتروني',
+        message: 'رسالة',
+        placeholderMessage: 'أدخل رسالتك',
+        submit: 'إرسال',
       },
     },
   },
@@ -548,6 +643,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Formulário de contato :',
+      description:
+        'Sinta-se à vontade para me enviar uma mensagem para obter informações sobre as etapas de realização do seu projeto 🚀',
+      form: {
+        name: 'Nome',
+        placeholderName: 'Digite seu nome',
+        email: 'Email',
+        placeholderEmail: 'Digite seu email',
+        message: 'Mensagem',
+        placeholderMessage: 'Digite sua mensagem',
+        submit: 'Enviar',
+      },
+    },
   },
   it: {
     header: {
@@ -608,6 +717,20 @@ const translations = {
         ProjectVideo: '',
       },
     },
+    contact: {
+      title: 'Modulo di contatto :',
+      description:
+        'Non esitare a inviarmi un messaggio per ottenere informazioni sulle fasi di realizzazione del tuo progetto 🚀',
+      form: {
+        name: 'Nome',
+        placeholderName: 'Inserisci il tuo nome',
+        email: 'Email',
+        placeholderEmail: 'Inserisci la tua email',
+        message: 'Messaggio',
+        placeholderMessage: 'Inserisci il tuo messaggio',
+        submit: 'Invia',
+      },
+    },
   },
   ja: {
     header: {
@@ -665,6 +788,19 @@ const translations = {
         ProjectTime: '35 ~ 45時間',
         ProjectPersons: '2人',
         ProjectVideo: '',
+      },
+    },
+    contact: {
+      title: 'お問い合わせフォーム :',
+      description: 'プロジェクトの実行手順に関する情報を入手するためにメッセージを送信してください 🚀',
+      form: {
+        name: '名前',
+        placeholderName: '名前を入力してください',
+        email: 'Eメール',
+        placeholderEmail: 'メールアドレスを入力してください',
+        message: 'メッセージ',
+        placeholderMessage: 'メッセージを入力してください',
+        submit: '送信',
       },
     },
   },

@@ -6,7 +6,6 @@ import translations from '../../translations/translations';
 export default function Contact({ selectedLanguage }) {
   return (
     <section id={`${styles.contact}`}>
-      <h2>{translations[selectedLanguage].contact.title}</h2>
       <p>{translations[selectedLanguage].contact.description}</p>
       <div className={`${styles.contact_div}`}>
         <form action="#" method="post">
