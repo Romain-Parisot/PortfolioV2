@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Parcour.module.css';
 import translations from '../../translations/translations';
-// import BulletPointParcour from './BulletPointParcour/BulletPointParcour';
 
 gsap.registerPlugin(ScrollTrigger);
 
