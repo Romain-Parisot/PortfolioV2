@@ -24,7 +24,7 @@ export default function App() {
       <PositionFixedComponents selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />
       <main id="mainpage">
         <Home selectedLanguage={selectedLanguage} />
-        <Parcour />
+        <Parcour selectedLanguage={selectedLanguage} />
         <Project selectedLanguage={selectedLanguage} />
         <Skills />
         <Contact selectedLanguage={selectedLanguage} />

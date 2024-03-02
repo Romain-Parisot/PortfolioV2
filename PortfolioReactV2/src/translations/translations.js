@@ -20,6 +20,49 @@ const translations = {
       MePoint6: 'at the end of the year',
       MePoint7: 'Rugby / Powerlifter / Martial arts',
     },
+    course: {
+      title: 'My course :',
+      course1: {
+        CourseName: 'Student in Coding & Digital Innovation at',
+        CourseBulletPoint1: '- Skills base in Coding, Creation & Design, Digital Communication & e-Business. (1 year)',
+        CourseBulletPoint2:
+          '- Preparation for the Bachelor "Digital project manager" specialized in web development. (2 years)',
+        CourseBulletPoint3: '- Preparation for the Master "Web and mobile engineering". (2 years)',
+        CourseDate: 'September/2021 - August/2026',
+        SkillsList: 'Skills list here.',
+      },
+      course2: {
+        CourseNamept1: 'Developer at ',
+        CourseNamept2: ' - Internship',
+        CourseBulletPoint1: '- Development of management application with Power Apps.',
+        CourseBulletPoint2: '- Process automation with Power Automate.',
+        CourseBulletPoint3: '- Creation of sites and databases on SharePoint.',
+        CourseBulletPoint4: '- Realization of dashboards, dataset and dataflow on Power Bi',
+        CourseDate: 'May/2023 - July/2023',
+      },
+      course3: {
+        CourseNamept1: 'Front-end software developer at ',
+        CourseNamept2: ' - Work-study',
+        CourseBulletPoint1: '- Development of micro-frontend applications in React.',
+        CourseBulletPoint2:
+          '- Integration and configuration of interactions with PowerBi report in React applications.',
+        CourseBulletPoint3: '- Configuration of front-end applications with AWS api.',
+        CourseBulletPoint4:
+          '- Development, maintenance and deployment of React components for the Altus group Design System.',
+        CourseDate: 'September/2023 - February/2023',
+      },
+      course4: {
+        CourseNamept1: 'DevOps developer at ',
+        CourseNamept2: ' - Work-study',
+        CourseBulletPoint1: '- Maintenance of security on the group applications.',
+        CourseBulletPoint2:
+          '- Development and maintenance of pipeline for the deployment of Front-end and Back-end applications and services.',
+        CourseBulletPoint3: '- Integration of automated code quality verification produced by developers.',
+        CourseBulletPoint4:
+          '- Maintenance of the infrastructure and deployment of the group applications and services.',
+        CourseDate: 'February/2023 - Still in activity',
+      },
+    },
     project: {
       title: 'My projects :',
       returnToDefaultView: 'Return to default view',
@@ -92,6 +135,51 @@ const translations = {
       MePoint5: 'Bachelor',
       MePoint6: "en fin d'année",
       MePoint7: 'Rugby / Powerlifter / Art martiaux',
+    },
+    course: {
+      title: 'Mon parcours :',
+      course1: {
+        CourseName: "Etudiant en Coding & Digital Innovation a l'",
+        CourseBulletPoint1:
+          '- Socle de compétences en Coding, Creation & Design, Communication Digital & e-Business. (1ans)',
+        CourseBulletPoint2:
+          '- Préparation au Bachelor "Chef de projet digital" spécialisé dans le développement web. (2ans)',
+        CourseBulletPoint3: '- Préparation au Master "Ingénierie web et mobile". (2ans)',
+        CourseDate: 'Septembre/2021 - Août/2026',
+        SkillsList: 'Listes des compétences ici.',
+      },
+      course2: {
+        CourseNamept1: 'Dévellopeur chez ',
+        CourseNamept2: ' - Stage',
+        CourseBulletPoint1: '- Développement d’application de gestion avec Power Apps.',
+        CourseBulletPoint2: '- Automatisation de process avec Power Automate.',
+        CourseBulletPoint3: '- Création de sites et bases de données sur SharePoint.',
+        CourseBulletPoint4: '- Réalisation de dashboards, dataset et dataflow sur Power Bi',
+        CourseDate: 'Mai/2023 - Juillet/2023',
+      },
+      course3: {
+        CourseNamept1: 'Dévellopeur logiciel Front-end chez ',
+        CourseNamept2: ' - Alternance',
+        CourseBulletPoint1: "- Développement d'applications micro-frontend en React.",
+        CourseBulletPoint2:
+          '- Intégration et configuration des intéraction avec des report PowerBi dans des applications React.',
+        CourseBulletPoint3: '- Configuration des applications coté Front-end avec les api AWS.',
+        CourseBulletPoint4:
+          '- Développement, maintenance et déploiement de composants React pour le Design System du groupe Altus.',
+        CourseDate: 'Septembre/2023 - Février/2023',
+      },
+      course4: {
+        CourseNamept1: 'Dévellopeur DevOps chez ',
+        CourseNamept2: ' - Alternance',
+        CourseBulletPoint1: '- Maintenance de la sécutité sur les applications du groupe.',
+        CourseBulletPoint2:
+          '- Développement et maintenance de pipeline pour le déploiment des applications et services Front-end et Back-end.',
+        CourseBulletPoint3:
+          '- Intégration de vérification automatisé de la qualité du code pruduite par les développeurs.',
+        CourseBulletPoint4:
+          "- Maintenance de l'infrastructure et du déploiment des applications et services du groupe.",
+        CourseDate: 'Février/2023 - Toujours en activité',
+      },
     },
     project: {
       title: 'Mes projets :',
@@ -167,6 +255,50 @@ const translations = {
       MePoint6: 'am Ende des Jahres',
       MePoint7: 'Rugby / Powerlifter / Kampfsport',
     },
+    course: {
+      title: 'Mein Werdegang :',
+      course1: {
+        CourseName: 'Student in Coding & Digital Innovation bei',
+        CourseBulletPoint1:
+          '- Kompetenzbasis in Coding, Kreation & Design, Digital Communication & e-Business. (1 Jahr)',
+        CourseBulletPoint2:
+          '- Vorbereitung auf den Bachelor "Digital Project Manager" mit Schwerpunkt Webentwicklung. (2 Jahre)',
+        CourseBulletPoint3: '- Vorbereitung auf den Master "Web- und Mobile-Engineering". (2 Jahre)',
+        CourseDate: 'September/2021 - August/2026',
+        SkillsList: 'Fähigkeitenliste hier.',
+      },
+      course2: {
+        CourseNamept1: 'Entwickler bei ',
+        CourseNamept2: ' - Praktikum',
+        CourseBulletPoint1: '- Entwicklung von Managementanwendungen mit Power Apps.',
+        CourseBulletPoint2: '- Prozessautomatisierung mit Power Automate.',
+        CourseBulletPoint3: '- Erstellung von Websites und Datenbanken auf SharePoint.',
+        CourseBulletPoint4: '- Erstellung von Dashboards, Datensätzen und Datenflüssen auf Power Bi',
+        CourseDate: 'Mai/2023 - Juli/2023',
+      },
+      course3: {
+        CourseNamept1: 'Front-End-Softwareentwickler bei ',
+        CourseNamept2: ' - Duales Studium',
+        CourseBulletPoint1: '- Entwicklung von Micro-Frontend-Anwendungen in React.',
+        CourseBulletPoint2:
+          '- Integration und Konfiguration von Interaktionen mit PowerBi-Bericht in React-Anwendungen.',
+        CourseBulletPoint3: '- Konfiguration von Front-End-Anwendungen mit AWS-API.',
+        CourseBulletPoint4:
+          '- Entwicklung, Wartung und Bereitstellung von React-Komponenten für das Designsystem der Altus-Gruppe.',
+        CourseDate: 'September/2023 - Februar/2023',
+      },
+      course4: {
+        CourseNamept1: 'DevOps-Entwickler bei ',
+        CourseNamept2: ' - Duales Studium',
+        CourseBulletPoint1: '- Wartung der Sicherheit auf den Gruppenanwendungen.',
+        CourseBulletPoint2:
+          '- Entwicklung und Wartung von Pipelines für die Bereitstellung von Front-End- und Back-End-Anwendungen und -Diensten.',
+        CourseBulletPoint3:
+          '- Integration von automatisierten Codequalitätsprüfungen, die von Entwicklern erstellt wurden.',
+        CourseBulletPoint4: '- Wartung der Infrastruktur und Bereitstellung der Gruppenanwendungen und -dienste.',
+        CourseDate: 'Februar/2023 - Noch in Aktivität',
+      },
+    },
     project: {
       title: 'Meine Projekte :',
       returnToDefaultView: 'Zurück zur Standardansicht',
@@ -240,6 +372,51 @@ const translations = {
       MePoint5: 'Licenciatura',
       MePoint6: 'al final del año',
       MePoint7: 'Rugby / Powerlifter / Artes marciales',
+    },
+    course: {
+      title: 'Mi recorrido :',
+      course1: {
+        CourseName: 'Estudiante en Coding & Digital Innovation en',
+        CourseBulletPoint1:
+          '- Base de habilidades en Codificación, Creación y Diseño, Comunicación Digital y e-Business. (1 año)',
+        CourseBulletPoint2:
+          '- Preparación para el Bachelor "Digital Project Manager" especializado en desarrollo web. (2 años)',
+        CourseBulletPoint3: '- Preparación para el Master "Ingeniería web y móvil". (2 años)',
+        CourseDate: 'Septiembre/2021 - Agosto/2026',
+        SkillsList: 'Lista de habilidades aquí.',
+      },
+      course2: {
+        CourseNamept1: 'Desarrollador en ',
+        CourseNamept2: ' - Prácticas',
+        CourseBulletPoint1: '- Desarrollo de aplicaciones de gestión con Power Apps.',
+        CourseBulletPoint2: '- Automatización de procesos con Power Automate.',
+        CourseBulletPoint3: '- Creación de sitios y bases de datos en SharePoint.',
+        CourseBulletPoint4: '- Realización de paneles, conjuntos de datos y flujos de datos en Power Bi',
+        CourseDate: 'Mayo/2023 - Julio/2023',
+      },
+      course3: {
+        CourseNamept1: 'Desarrollador de software Front-end en ',
+        CourseNamept2: ' - Aprendizaje',
+        CourseBulletPoint1: '- Desarrollo de aplicaciones micro-frontend en React.',
+        CourseBulletPoint2:
+          '- Integración y configuración de interacciones con informes de PowerBi en aplicaciones React.',
+        CourseBulletPoint3: '- Configuración de aplicaciones front-end con la API de AWS.',
+        CourseBulletPoint4:
+          '- Desarrollo, mantenimiento y despliegue de componentes React para el Design System del grupo Altus.',
+        CourseDate: 'Septiembre/2023 - Febrero/2023',
+      },
+      course4: {
+        CourseNamept1: 'Desarrollador DevOps en ',
+        CourseNamept2: ' - Aprendizaje',
+        CourseBulletPoint1: '- Mantenimiento de la seguridad en las aplicaciones del grupo.',
+        CourseBulletPoint2:
+          '- Desarrollo y mantenimiento de canalizaciones para el despliegue de aplicaciones y servicios front-end y back-end.',
+        CourseBulletPoint3:
+          '- Integración de verificación automatizada de la calidad del código producido por los desarrolladores.',
+        CourseBulletPoint4:
+          '- Mantenimiento de la infraestructura y despliegue de las aplicaciones y servicios del grupo.',
+        CourseDate: 'Febrero/2023 - Todavía en actividad',
+      },
     },
     project: {
       title: 'Mis proyectos :',
@@ -315,6 +492,44 @@ const translations = {
       MePoint6: '年底',
       MePoint7: '橄榄球/举重/武术',
     },
+    course: {
+      title: '我的课程 :',
+      course1: {
+        CourseName: '编码与数字创新学生在',
+        CourseBulletPoint1: '- 编码、创作与设计、数字沟通与电子商务的技能基础。 (1年)',
+        CourseBulletPoint2: '- 准备本科“数字项目经理”专业的网络开发。 (2年)',
+        CourseBulletPoint3: '- 准备硕士“网络和移动工程”。 (2年)',
+        CourseDate: '2021年9月 - 2026年8月',
+        SkillsList: '技能列表在这里。',
+      },
+      course2: {
+        CourseNamept1: '实习生在 ',
+        CourseNamept2: ' - 开发人员',
+        CourseBulletPoint1: '- 使用Power Apps开发管理应用。',
+        CourseBulletPoint2: '- 使用Power Automate自动化流程。',
+        CourseBulletPoint3: '- 在SharePoint上创建网站和数据库。',
+        CourseBulletPoint4: '- 在Power Bi上创建仪表板、数据集和数据流',
+        CourseDate: '2023年5月 - 2023年7月',
+      },
+      course3: {
+        CourseNamept1: '前端软件开发人员在 ',
+        CourseNamept2: ' - 学徒',
+        CourseBulletPoint1: '- 在React中开发微前端应用程序。',
+        CourseBulletPoint2: '- 在React应用程序中集成和配置与PowerBi报告的交互。',
+        CourseBulletPoint3: '- 使用AWS api配置前端应用程序。',
+        CourseBulletPoint4: '- 为Altus集团设计系统开发、维护和部署React组件。',
+        CourseDate: '2023年9月 - 2023年2月',
+      },
+      course4: {
+        CourseNamept1: 'DevOps开发人员在 ',
+        CourseNamept2: ' - 学徒',
+        CourseBulletPoint1: '- 维护集团应用程序的安全性。',
+        CourseBulletPoint2: '- 开发和维护前端和后端应用程序和服务的部署流水线。',
+        CourseBulletPoint3: '- 集成开发人员生成的自动化代码质量验证。',
+        CourseBulletPoint4: '- 维护集团应用程序和服务的基础设施和部署。',
+        CourseDate: '2023年2月 - 活动中',
+      },
+    },
     project: {
       title: '我的项目 :',
       returnToDefaultView: '返回默认视图',
@@ -385,6 +600,44 @@ const translations = {
       MePoint5: 'स्नातक',
       MePoint6: 'साल के अंत में',
       MePoint7: 'रग्बी / पावरलिफ्टर / युद्ध कला',
+    },
+    course: {
+      title: 'मेरा पाठ्यक्रम :',
+      course1: {
+        CourseName: 'कोडिंग और डिजिटल इनोवेशन में छात्र',
+        CourseBulletPoint1: '- कोडिंग, निर्माण और डिजाइन, डिजिटल संचार और ई-व्यापार में कौशल की बेस। (1 साल)',
+        CourseBulletPoint2: '- वेब विकास में विशेषज्ञ बैचलर "डिजिटल प्रोजेक्ट मैनेजर" के लिए तैयारी। (2 साल)',
+        CourseBulletPoint3: '- मास्टर "वेब और मोबाइल इंजीनियरिंग" की तैयारी। (2 साल)',
+        CourseDate: 'सितंबर/2021 - अगस्त/2026',
+        SkillsList: 'यहाँ कौशल सूची।',
+      },
+      course2: {
+        CourseNamept1: 'डेवलपर के रूप में ',
+        CourseNamept2: ' - स्टाज',
+        CourseBulletPoint1: '- पावर ऐप्स के साथ प्रबंधन एप्लिकेशन का विकास।',
+        CourseBulletPoint2: '- पावर ऑटोमेट के साथ प्रक्रिया स्वचालन।',
+        CourseBulletPoint3: '- शेयरपॉइंट पर साइट और डेटाबेस का निर्माण।',
+        CourseBulletPoint4: '- पावर बीआई पर डैशबोर्ड, डेटासेट और डेटा फ्लो का निर्माण',
+        CourseDate: 'मई/2023 - जुलाई/2023',
+      },
+      course3: {
+        CourseNamept1: 'फ्रंट-एंड सॉफ्टवेयर डेवलपर के रूप में ',
+        CourseNamept2: ' - आपरेंटिस',
+        CourseBulletPoint1: '- रियैक्ट में माइक्रो-फ्रंट-एंड एप्लिकेशन का विकास।',
+        CourseBulletPoint2: '- रियैक्ट एप्लिकेशन में पावरबी रिपोर्ट के साथ इंटरेक्शन की इंटीग्रेशन और कॉन्फ़िगरेशन।',
+        CourseBulletPoint3: '- एडब्ल्यूएस एपीआई के साथ फ्रंट-एंड एप्लिकेशन की कॉन्फ़िगरेशन।',
+        CourseBulletPoint4: '- ग्रुप आल्टस के डिज़ाइन सिस्टम के लिए रियैक्ट कंपोनेंट का विकास, रखरखाव और डिप्लॉयमेंट।',
+        CourseDate: 'सितंबर/2023 - फरवरी/2023',
+      },
+      course4: {
+        CourseNamept1: 'डेवओप्स डेवलपर के रूप में ',
+        CourseNamept2: ' - आपरेंटिस',
+        CourseBulletPoint1: '- समूह के एप्लिकेशन की सुरक्षा की रखरखाव।',
+        CourseBulletPoint2: '- एप्लिकेशन और सेवाओं के डिप्लॉयमेंट के लिए पाइपलाइन का विकास और रखरखाव।',
+        CourseBulletPoint3: '- डेवलपर्स द्वारा उत्पन्न कोड क्वालिटी की स्वचालित जांच की इंटीग्रेशन।',
+        CourseBulletPoint4: '- समूह के एप्लिकेशन और सेवाओं के इंफ्रास्ट्रक्चर और डिप्लॉयमेंट की रखरखाव।',
+        CourseDate: 'फरवरी/2023 - वर्तमान में भी गतिविधि',
+      },
     },
     project: {
       title: 'मेरे परियोजनाओं :',
@@ -460,6 +713,48 @@ const translations = {
       MePoint6: 'в конце года',
       MePoint7: 'Регби / Пауэрлифтер / Боевые искусства',
     },
+    course: {
+      title: 'Мой курс :',
+      course1: {
+        CourseName: 'Студент в Coding & Digital Innovation в',
+        CourseBulletPoint1:
+          '- Базовые навыки в кодировании, создании и дизайне, цифровой коммуникации и электронной коммерции. (1 год)',
+        CourseBulletPoint2:
+          '- Подготовка к бакалавру "Digital Project Manager" по специализации веб-разработки. (2 года)',
+        CourseBulletPoint3: '- Подготовка к магистру "Веб- и мобильная инженерия". (2 года)',
+        CourseDate: 'Сентябрь/2021 - Август/2026',
+        SkillsList: 'Список навыков здесь.',
+      },
+      course2: {
+        CourseNamept1: 'Разработчик в ',
+        CourseNamept2: ' - Стажировка',
+        CourseBulletPoint1: '- Разработка управленческих приложений с помощью Power Apps.',
+        CourseBulletPoint2: '- Автоматизация процессов с Power Automate.',
+        CourseBulletPoint3: '- Создание сайтов и баз данных в SharePoint.',
+        CourseBulletPoint4: '- Создание панелей, наборов данных и потоков данных в Power Bi',
+        CourseDate: 'Май/2023 - Июль/2023',
+      },
+      course3: {
+        CourseNamept1: 'Разработчик фронтенда в ',
+        CourseNamept2: ' - Обучение',
+        CourseBulletPoint1: '- Разработка микро-фронтенд-приложений в React.',
+        CourseBulletPoint2: '- Интеграция и настройка взаимодействий с отчетами PowerBi в приложениях React.',
+        CourseBulletPoint3: '- Настройка фронтенд-приложений с помощью API AWS.',
+        CourseBulletPoint4:
+          '- Разработка, обслуживание и развертывание компонентов React для дизайн-системы группы Altus.',
+        CourseDate: 'Сентябрь/2023 - Февраль/2023',
+      },
+      course4: {
+        CourseNamept1: 'Разработчик DevOps в ',
+        CourseNamept2: ' - Обучение',
+        CourseBulletPoint1: '- Поддержание безопасности в приложениях группы.',
+        CourseBulletPoint2:
+          '- Разработка и поддержание конвейеров для развертывания приложений и сервисов фронтенда и бэкенда.',
+        CourseBulletPoint3: '- Интеграция автоматизированной проверки качества кода, созданного разработчиками.',
+        CourseBulletPoint4: '- Поддержание инфраструктуры и развертывание приложений и сервисов группы.',
+        CourseDate: 'Февраль/2023 - По сей день',
+      },
+    },
     project: {
       title: 'Мои проекты :',
       returnToDefaultView: 'Вернуться к стандартному виду',
@@ -534,6 +829,45 @@ const translations = {
       MePoint6: 'في نهاية السنة',
       MePoint7: 'رجبي / رفع الاثقال / فنون الدفاع عن النفس',
     },
+    course: {
+      title: 'دورتي :',
+      course1: {
+        CourseName: 'طالب في الترميز والابتكار الرقمي في',
+        CourseBulletPoint1:
+          '- المهارات الأساسية في الترميز والإنشاء والتصميم والاتصال الرقمي والتجارة الإلكترونية. (عام واحد)',
+        CourseBulletPoint2: '- التحضير للبكالوريوس "مدير مشروع رقمي" في تخصص تطوير الويب. (عامان)',
+        CourseBulletPoint3: '- التحضير للماجستير "هندسة الويب والجوال". (عامان)',
+        CourseDate: 'سبتمبر/2021 - أغسطس/2026',
+        SkillsList: 'قائمة المهارات هنا.',
+      },
+      course2: {
+        CourseNamept1: 'مطور في ',
+        CourseNamept2: ' - تدريب',
+        CourseBulletPoint1: '- تطوير تطبيقات الإدارة باستخدام Power Apps.',
+        CourseBulletPoint2: '- تلقين العمليات باستخدام Power Automate.',
+        CourseBulletPoint3: '- إنشاء مواقع وقواعد بيانات في SharePoint.',
+        CourseBulletPoint4: '- إنشاء لوحات، مجموعات بيانات وتدفقات بيانات في Power Bi',
+        CourseDate: 'مايو/2023 - يوليو/2023',
+      },
+      course3: {
+        CourseNamept1: 'مطور البرمجيات الأمامية في ',
+        CourseNamept2: ' - متدرب',
+        CourseBulletPoint1: '- تطوير تطبيقات ميكرو الأمامية في React.',
+        CourseBulletPoint2: '- تكامل وتكوين التفاعل مع تقارير PowerBi في تطبيقات React.',
+        CourseBulletPoint3: '- تكوين تطبيقات الأمامية باستخدام واجهة برمجة التطبيقات AWS.',
+        CourseBulletPoint4: '- تطوير وصيانة ونشر مكونات React لنظام التصميم لمجموعة Altus.',
+        CourseDate: 'سبتمبر/2023 - فبراير/2023',
+      },
+      course4: {
+        CourseNamept1: 'مطور DevOps في ',
+        CourseNamept2: ' - متدرب',
+        CourseBulletPoint1: '- الحفاظ على أمان تطبيقات المجموعة.',
+        CourseBulletPoint2: '- تطوير وصيانة خطوط الإنتاج لنشر تطبيقات وخدمات الأمامية والخلفية.',
+        CourseBulletPoint3: '- تكامل التحقق الآلي من جودة الكود التي تم إنشاؤها من قبل المطورين.',
+        CourseBulletPoint4: '- الحفاظ على البنية التحتية ونشر تطبيقات وخدمات المجموعة.',
+        CourseDate: 'فبراير/2023 - نشط',
+      },
+    },
     project: {
       title: 'مشاريعي :',
       returnToDefaultView: 'العودة إلى العرض الافتراضي',
@@ -604,6 +938,49 @@ const translations = {
       MePoint5: 'Bacharel',
       MePoint6: 'no final do ano',
       MePoint7: 'Rugby / Powerlifter / Artes marciais',
+    },
+    course: {
+      title: 'Meu curso :',
+      course1: {
+        CourseName: 'Estudante em Codificação e Inovação Digital em',
+        CourseBulletPoint1:
+          '- Habilidades básicas em codificação, construção e design, comunicação digital e comércio eletrônico. (1 ano)',
+        CourseBulletPoint2:
+          '- Preparação para o bacharelado "Gerente de Projetos Digitais" com especialização em desenvolvimento web. (2 anos)',
+        CourseBulletPoint3: '- Preparação para o mestrado "Engenharia Web e Móvel". (2 anos)',
+        CourseDate: 'Setembro/2021 - Agosto/2026',
+        SkillsList: 'Lista de habilidades aqui.',
+      },
+      course2: {
+        CourseNamept1: 'Desenvolvedor em ',
+        CourseNamept2: ' - Estágio',
+        CourseBulletPoint1: '- Desenvolvimento de aplicativos de gerenciamento com Power Apps.',
+        CourseBulletPoint2: '- Automação de processos com Power Automate.',
+        CourseBulletPoint3: '- Construção de sites e bancos de dados no SharePoint.',
+        CourseBulletPoint4: '- Criação de painéis, conjuntos de dados e fluxos de dados no Power Bi',
+        CourseDate: 'Maio/2023 - Julho/2023',
+      },
+      course3: {
+        CourseNamept1: 'Desenvolvedor de software front-end em ',
+        CourseNamept2: ' - Aprendiz',
+        CourseBulletPoint1: '- Desenvolvimento de aplicativos de micro-front-end em React.',
+        CourseBulletPoint2: '- Integração e configuração de interações com relatórios PowerBi em aplicativos React.',
+        CourseBulletPoint3: '- Configuração de aplicativos front-end com a API AWS.',
+        CourseBulletPoint4:
+          '- Desenvolvimento, manutenção e implantação de componentes React para o sistema de design do grupo Altus.',
+        CourseDate: 'Setembro/2023 - Fevereiro/2023',
+      },
+      course4: {
+        CourseNamept1: 'Desenvolvedor DevOps em ',
+        CourseNamept2: ' - Aprendiz',
+        CourseBulletPoint1: '- Manutenção da segurança em aplicativos do grupo.',
+        CourseBulletPoint2:
+          '- Desenvolvimento e manutenção de pipelines para implantação de aplicativos e serviços front-end e back-end.',
+        CourseBulletPoint3:
+          '- Integração de verificação automatizada da qualidade do código criado pelos desenvolvedores.',
+        CourseBulletPoint4: '- Manutenção da infraestrutura e implantação de aplicativos e serviços do grupo.',
+        CourseDate: 'Fevereiro/2023 - Atual',
+      },
     },
     project: {
       title: 'Meus projetos :',
@@ -679,6 +1056,50 @@ const translations = {
       MePoint6: 'alla fine dell anno',
       MePoint7: 'Rugby / Powerlifter / Arti marziali',
     },
+    course: {
+      title: 'Il mio corso :',
+      course1: {
+        CourseName: 'Studente in Codifica e Innovazione Digitale in',
+        CourseBulletPoint1:
+          '- Competenze di base in codifica, costruzione e design, comunicazione digitale e commercio elettronico. (1 anno)',
+        CourseBulletPoint2:
+          '- Preparazione per la laurea "Project Manager Digitale" con specializzazione nello sviluppo web. (2 anni)',
+        CourseBulletPoint3: '- Preparazione per il master "Ingegneria Web e Mobile". (2 anni)',
+        CourseDate: 'Settembre/2021 - Agosto/2026',
+        SkillsList: 'Elenco delle competenze qui.',
+      },
+      course2: {
+        CourseNamept1: 'Sviluppatore in ',
+        CourseNamept2: ' - Tirocinio',
+        CourseBulletPoint1: '- Sviluppo di applicazioni di gestione con Power Apps.',
+        CourseBulletPoint2: '- Automazione dei processi con Power Automate.',
+        CourseBulletPoint3: '- Costruzione di siti e basi di dati in SharePoint.',
+        CourseBulletPoint4: '- Creazione di dashboard, set di dati e flussi di dati in Power Bi',
+        CourseDate: 'Maggio/2023 - Luglio/2023',
+      },
+      course3: {
+        CourseNamept1: 'Sviluppatore front-end in ',
+        CourseNamept2: ' - Apprendista',
+        CourseBulletPoint1: '- Sviluppo di applicazioni micro-front-end in React.',
+        CourseBulletPoint2:
+          '- Integrazione e configurazione delle interazioni con i report PowerBi nelle applicazioni React.',
+        CourseBulletPoint3: '- Configurazione delle applicazioni front-end con l API AWS.',
+        CourseBulletPoint4:
+          '- Sviluppo, manutenzione e distribuzione di componenti React per il sistema di design del gruppo Altus.',
+        CourseDate: 'Settembre/2023 - Febbraio/2023',
+      },
+      course4: {
+        CourseNamept1: 'Sviluppatore DevOps in ',
+        CourseNamept2: ' - Apprendista',
+        CourseBulletPoint1: '- Mantenimento della sicurezza nelle applicazioni del gruppo.',
+        CourseBulletPoint2:
+          '- Sviluppo e manutenzione di pipeline per la distribuzione di applicazioni e servizi front-end e back-end.',
+        CourseBulletPoint3:
+          '- Integrazione del controllo automatizzato della qualità del codice creato dagli sviluppatori.',
+        CourseBulletPoint4: '- Mantenimento dell infrastruttura e distribuzione di applicazioni e servizi del gruppo.',
+        CourseDate: 'Febbraio/2023 - Attuale',
+      },
+    },
     project: {
       title: 'I miei progetti :',
       returnToDefaultView: 'Torna alla visualizzazione predefinita',
@@ -752,6 +1173,43 @@ const translations = {
       MePoint5: '学士',
       MePoint6: '年の終わりに',
       MePoint7: 'ラグビー/パワーリフター/武道',
+    },
+    course: {
+      title: '私のコース :',
+      course1: {
+        CourseName: 'コーディング＆デジタルイノベーションの学生',
+        CourseBulletPoint1: '- コーディング、デザイン、デジタルコミュニケーション、電子商取引の基本スキル。 (1年)',
+        CourseBulletPoint2: '- ウェブ開発に特化した「デジタルプロジェクトマネージャー」の学士号の準備。 (2年)',
+        CourseBulletPoint3: '- 「ウェブ＆モバイルエンジニアリング」の修士号の準備。 (2年)',
+        CourseDate: '2021年9月 - 2026年8月',
+        SkillsList: 'スキルリストはこちら。',
+      },
+      course2: {
+        CourseNamept1: ' - インターンシップで開発者',
+        CourseBulletPoint1: '- Power Appsを使用した管理アプリケーションの開発。',
+        CourseBulletPoint2: '- Power Automateを使用したプロセスの自動化。',
+        CourseBulletPoint3: '- SharePointでのサイトとデータベースの構築。',
+        CourseBulletPoint4: '- Power Biでのダッシュボード、データセット、データフローの作成',
+        CourseDate: '2023年5月 - 2023年7月',
+      },
+      course3: {
+        CourseNamept1: ' - トレーニングでフロントエンド開発者',
+        CourseBulletPoint1: '- Reactでのマイクロフロントエンドアプリケーションの開発。',
+        CourseBulletPoint2: '- ReactアプリケーションでPowerBiレポートとの相互作用の統合と設定。',
+        CourseBulletPoint3: '- AWS APIを使用したフロントエンドアプリケーションの設定。',
+        CourseBulletPoint4:
+          '- AltusグループのデザインシステムのためのReactコンポーネントの開発、メンテナンス、デプロイ',
+        CourseDate: '2023年9月 - 2023年2月',
+      },
+      course4: {
+        CourseNamept1: ' - トレーニングでDevOps開発者',
+        CourseBulletPoint1: '- グループのアプリケーションのセキュリティの維持。',
+        CourseBulletPoint2:
+          '- フロントエンドとバックエンドのアプリケーションとサービスの展開のためのパイプラインの開発と維持。',
+        CourseBulletPoint3: '- 開発者によって作成されたコードの自動品質チェックの統合。',
+        CourseBulletPoint4: '- グループのインフラストラクチャの維持とアプリケーションとサービスの展開。',
+        CourseDate: '2023年2月 - 現在',
+      },
     },
     project: {
       title: '私のプロジェクト :',
