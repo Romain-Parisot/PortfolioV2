@@ -1,8 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Home.module.css';
 import PersonalPicture from '../../assets/PersonalPicture.png';
 import translations from '../../translations/translations';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // random number generator
 
@@ -13,6 +17,52 @@ export function getRandomIntInclusive(min, max) {
 }
 
 export default function Home({ selectedLanguage }) {
+  const containerRef = useRef(null);
+  // gsap animation
+  useEffect(() => {
+    const fromTop = containerRef.current.querySelectorAll('.fromTopAnimation');
+    const fromLeft = containerRef.current.querySelectorAll('.fromLeftAnimation');
+    const fromRight = containerRef.current.querySelectorAll('.fromRightAnimation');
+    const fromBottom = containerRef.current.querySelectorAll('.fromBottomAnimation');
+
+    const animations = [
+      { x: 0, y: -100 }, // from top
+      { x: -100, y: 0 }, // from left
+      { x: 100, y: 0 }, // from right
+      { x: 0, y: 100 }, // from bottom
+    ];
+
+    setTimeout(() => {
+      fromTop.forEach(top => {
+        gsap.fromTo(
+          top,
+          { x: animations[0].x, y: animations[0].y, opacity: 0 },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: top },
+        );
+      });
+      fromLeft.forEach(left => {
+        gsap.fromTo(
+          left,
+          { x: animations[1].x, y: animations[1].y, opacity: 0 },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: left },
+        );
+      });
+      fromRight.forEach(right => {
+        gsap.fromTo(
+          right,
+          { x: animations[2].x, y: animations[2].y, opacity: 0 },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: right },
+        );
+      });
+      fromBottom.forEach(bottom => {
+        gsap.fromTo(
+          bottom,
+          { x: animations[3].x, y: animations[3].y, opacity: 0 },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: bottom },
+        );
+      });
+    }, 500);
+  }, []);
   // star animation
   let oldrandomstar = 0;
   function StarAnim() {
@@ -103,25 +153,25 @@ export default function Home({ selectedLanguage }) {
   }, [pauseArrowAnimation]);
 
   return (
-    <section id={`${styles.home}`}>
+    <section id={`${styles.home}`} ref={containerRef}>
       <div className={`${styles.topHome}`}>
         <div className={`${styles.leftHome}`}>
-          <h1>Romain PARISOT</h1>
+          <h1 className="fromTopAnimation">Romain PARISOT</h1>
           {/* mettre un effet pour que le texte se tape au clavier puis s'afface, s'écrit a nouveau etc ... */}
           <div>
-            <h2 id={`${styles.poste}`}>
+            <h2 id={`${styles.poste}`} className="fromTopAnimation">
               {translations[selectedLanguage].home.JobTitle1}
               <br />&<br />
               {translations[selectedLanguage].home.JobTitle2}
             </h2>
             <div className={`${styles.starContainer}`}>
-              <div className={`${styles.starElmt}`}>
+              <div className={`${styles.starElmt} fromLeftAnimation`}>
                 <svg className={`${styles.svgStar}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
                   <path d="m780.7,994.2c-6.35-2.48-13.04-4.28-18.99-7.55-85.22-46.79-170.39-93.69-255.41-140.87-6.8-3.77-11.91-4.16-18.93-.26-84.65,47.03-169.53,93.61-254.24,140.53-10.05,5.57-20.19,8.8-31.31,5.64-17.45-4.95-28.18-23.63-25.09-42.54,16.59-101.67,32.99-203.37,50-304.96,1.27-7.6-1.36-11.12-5.62-15.48-69.02-70.58-137.92-141.29-207.03-211.78C5.25,407.92-.64,397.94.06,384.82c.9-16.88,11.45-30.53,27.81-33.55,28.21-5.21,56.63-9.18,84.98-13.54,63.18-9.71,126.22-20.79,189.64-28.21,22.93-2.68,32.89-13.42,42.11-33.73,38.07-83.84,78.06-166.72,116.9-250.18C468.94,9.65,479.32-.05,496.65,0c17.37.05,27.56,9.98,34.97,25.9,41.59,89.28,83.77,178.26,125.47,267.49,3.67,7.86,7.59,11.58,16.63,12.9,94.84,13.89,189.56,28.63,284.32,43.05,15.52,2.36,27.9,9.41,33,25.73,5.04,16.13-.01,29.56-11.52,41.3-69.1,70.5-137.97,141.25-207.05,211.77-5,5.1-7.33,9.34-5.95,17.54,16.34,97.08,32.16,194.25,47.8,291.46,1.48,9.2,2.54,19.12.85,28.09-3.29,17.51-17.1,27.7-34.5,28.97Z" />
                 </svg>
                 <p>{translations[selectedLanguage].home.StarMessage1}</p>
               </div>
-              <div className={`${styles.starElmt}`}>
+              <div className={`${styles.starElmt} fromRightAnimation`}>
                 <svg className={`${styles.svgStar}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
                   <path d="m780.7,994.2c-6.35-2.48-13.04-4.28-18.99-7.55-85.22-46.79-170.39-93.69-255.41-140.87-6.8-3.77-11.91-4.16-18.93-.26-84.65,47.03-169.53,93.61-254.24,140.53-10.05,5.57-20.19,8.8-31.31,5.64-17.45-4.95-28.18-23.63-25.09-42.54,16.59-101.67,32.99-203.37,50-304.96,1.27-7.6-1.36-11.12-5.62-15.48-69.02-70.58-137.92-141.29-207.03-211.78C5.25,407.92-.64,397.94.06,384.82c.9-16.88,11.45-30.53,27.81-33.55,28.21-5.21,56.63-9.18,84.98-13.54,63.18-9.71,126.22-20.79,189.64-28.21,22.93-2.68,32.89-13.42,42.11-33.73,38.07-83.84,78.06-166.72,116.9-250.18C468.94,9.65,479.32-.05,496.65,0c17.37.05,27.56,9.98,34.97,25.9,41.59,89.28,83.77,178.26,125.47,267.49,3.67,7.86,7.59,11.58,16.63,12.9,94.84,13.89,189.56,28.63,284.32,43.05,15.52,2.36,27.9,9.41,33,25.73,5.04,16.13-.01,29.56-11.52,41.3-69.1,70.5-137.97,141.25-207.05,211.77-5,5.1-7.33,9.34-5.95,17.54,16.34,97.08,32.16,194.25,47.8,291.46,1.48,9.2,2.54,19.12.85,28.09-3.29,17.51-17.1,27.7-34.5,28.97Z" />
                 </svg>
@@ -129,7 +179,7 @@ export default function Home({ selectedLanguage }) {
               </div>
             </div>
           </div>
-          <div className={`${styles.containerBtToProject}`}>
+          <div className={`${styles.containerBtToProject} fromBottomAnimation`}>
             <button
               type="button"
               className={`${styles.btToProject} MouseHoverEffect`}
@@ -170,7 +220,7 @@ export default function Home({ selectedLanguage }) {
         </div>
         <div className={`${styles.rightHome}`}>
           <div className={`${styles.containerRectHome}`}>
-            <div className={`${styles.rect2Home}`}>
+            <div className={`${styles.rect2Home} fromTopAnimation`}>
               <h3>{translations[selectedLanguage].home.MeInSomePoints}</h3>
               <div className={`${styles.descriptionRect2Home}`}>
                 <p>{translations[selectedLanguage].home.MePoint1}</p>
@@ -218,11 +268,11 @@ export default function Home({ selectedLanguage }) {
             <div className={`${styles.rect1Home}`}>
               <img src={PersonalPicture} alt="Romain parisot" />
             </div>
-            <div className={`${styles.rect3Home}`} />
+            <div className={`${styles.rect3Home} fromRightAnimation`} />
           </div>
         </div>
       </div>
-      <div className={`${styles.bottomHome}`}>
+      <div className={`${styles.bottomHome} fromBottomAnimation`}>
         <svg className={`${styles.svgWaveHome}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fillOpacity="1"

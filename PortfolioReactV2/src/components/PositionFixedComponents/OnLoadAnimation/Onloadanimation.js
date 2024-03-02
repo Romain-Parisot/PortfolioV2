@@ -8,7 +8,7 @@ export default function Onloadanimation() {
   useEffect(() => {
     setTimeout(() => {
       setisAnimationRunning(true);
-    }, 500);
+    }, 400);
 
     setTimeout(() => {
       setIsAnimationVisible(false);
