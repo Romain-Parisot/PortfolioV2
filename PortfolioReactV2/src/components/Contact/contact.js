@@ -51,6 +51,13 @@ export default function Contact({ selectedLanguage }) {
           </div>
         </form>
       </div>
+      <footer>
+        <span className={`${styles.barFooter}`} />
+
+        <div className={`${styles.descSiteContainer}`}>
+          <p className={`${styles.descSite}`}>Portfolio 2024 - Romain PARISOT</p>
+        </div>
+      </footer>
     </section>
   );
 }
