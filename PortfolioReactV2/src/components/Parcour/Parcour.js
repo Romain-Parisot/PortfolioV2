@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Parcour.module.css';
@@ -9,6 +10,8 @@ import translations from '../../translations/translations';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Parcour({ selectedLanguage }) {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     gsap.fromTo(
       '.parcourElmt1Left',
@@ -30,33 +33,43 @@ export default function Parcour({ selectedLanguage }) {
       { x: 400, opacity: 0 },
       { x: 0, opacity: 1, duration: 1, scrollTrigger: '.parcourElmt4Right' },
     );
+    const fromTop = containerRef.current.querySelectorAll('.fromTopAnimation');
+    fromTop.forEach(top => {
+      gsap.fromTo(
+        top,
+        { x: 0, y: -100, opacity: 0 },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: top,
+            start: 'center center', // start when the center of the element hits the center of the viewport
+          },
+        },
+      );
+    });
   }, []);
-  // call bullet point component 4 times
-  // const bulletPoints = [];
-
-  // for (let i = 0; i < 4; i += 1) {
-  //   bulletPoints.push(
-  //     <BulletPointParcour
-  //       key={i}
-  //       index={i}
-  //       display={
-  //         (i === 0 && displayFirstParcourElement) ||
-  //         (i === 1 && displaySecondParcourElement) ||
-  //         (i === 2 && displayThirdParcourElement) ||
-  //         (i === 3 && displayFourthParcourElement)
-  //       }
-  //     />,
-  //   );
-  // }
 
   return (
-    <section id={styles.parcour}>
+    <section id={styles.parcour} ref={containerRef}>
       <h2 className={`${styles.parcourTitle}`}>{translations[selectedLanguage].course.title}</h2>
       <div className={styles.divtimeline}>
-        <svg id={styles.parcourSvg}>
-          <rect id={styles.parcourBarSvg} />
-          <rect id={styles.parcourBarSvg2} />
-        </svg>
+        {Array.from({ length: 4 }).map((_, index) => {
+          const key = nanoid();
+
+          return (
+            <div
+              key={key}
+              className={`${styles.middleTimelineContainer} ${styles[`middleTimelineContainer${index + 1}`]}`}
+            >
+              <div className={`${styles.middleBar} fromTopAnimation`} />
+              <div className={`${styles.middleBulletPoint} fromTopAnimation`} />
+              <div className={`${styles.middleBar} fromTopAnimation`} />
+            </div>
+          );
+        })}
         <div className={`${styles.parcourElmt} ${styles.parcourElmt1} parcourElmt1Left`}>
           <div className={styles.parcourElmtChild}>
             <h3>
