@@ -133,3 +133,7 @@
 .swipper_like_counter p{
   text-align: center;
 }
+
+.opacity50{
+  opacity: 0.5;
+}

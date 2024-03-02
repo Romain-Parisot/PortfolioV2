@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import TinderCard from 'react-tinder-card';
 import styles from './Project.module.css';
@@ -7,7 +7,8 @@ import translations from '../../translations/translations';
 // SwipperBar Icons
 import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
 import CrossIcon from '../../assets/project/SwipperBar/cross.png';
-import ThumbsUpIcon from '../../assets/project/SwipperBar/thumbsUp.png';
+// import ThumbsUpIcon from '../../assets/project/SwipperBar/thumbsUp.png';
+import UndoIcon from '../../assets/project/SwipperBar/undoArrow.png';
 
 // ViolonFrance Pictures
 import ViolonFrancePic1 from '../../assets/project/violonFrance/ViolonFrance_img1.JPG';
@@ -39,56 +40,11 @@ const initialBaseProjectsList = [
     picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
 ];
-const alredyRemoved = [];
-let baseProjectsList = initialBaseProjectsList;
-// This fixes issues with updating projectsList state forcing it to use the current state and not the state that was active when the card was created.
 
 export default function ProjectsSwipper({ selectedLanguage }) {
-  const apiPostLike = async index => {
-    const response = await fetch('/api/incrementLike', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        code: initialBaseProjectsList[index].code,
-      }),
-    });
-    const data = await response.json();
-    console.log('Post', data);
-    return data;
-  };
-  const apiGetLike = async () => {
-    const response = await fetch('/api/incrementLike', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    const data = await response.json();
-    console.log('Get', data);
-    return data;
-  };
-  const [projectsList, setProjectsList] = useState(initialBaseProjectsList);
-  const [indexProject, setIndexProject] = useState(0);
-  const [likeCounterList, setLikeCounterList] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchLikes = async () => {
-      const data = await apiGetLike();
-      const list = [];
-      for (let i = 0; i < data.length; i += 1) {
-        list.push(data[i].like);
-      }
-      setLikeCounterList(list);
-      setLoading(false);
-    };
-    fetchLikes();
-  }, []);
-
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(initialBaseProjectsList.length - 1);
   const [indexProjectPic1, setIndexProjectPic1] = useState(0);
-
+  const currentIndexRef = useRef(currentIndex);
   const childRefs = useMemo(
     () =>
       Array(initialBaseProjectsList.length)
@@ -96,33 +52,48 @@ export default function ProjectsSwipper({ selectedLanguage }) {
         .map(() => React.createRef()),
     [],
   );
-
-  const swiped = nameToDelete => {
-    alredyRemoved.push(nameToDelete);
-    if (initialBaseProjectsList.length - 1 >= indexProject) {
-      setIndexProject(prevIndex => prevIndex + 1);
-    }
-    setIndexProject(prevIndex => prevIndex + 1);
+  const updateCurrentIndex = val => {
+    setCurrentIndex(val);
+    currentIndexRef.current = val;
   };
-
-  const outOfFrame = name => {
-    baseProjectsList = baseProjectsList.filter(project => project.name !== name);
-    setProjectsList(baseProjectsList);
+  const canGoBack = currentIndex < initialBaseProjectsList.length - 1;
+  const canSwipe = currentIndex >= 0;
+  const swiped = index => {
+    updateCurrentIndex(index - 1);
   };
-
-  const swipe = dir => {
-    const projectsLeft = projectsList.filter(project => !alredyRemoved.includes(project.name));
-    if (projectsLeft.length) {
-      const toBeRemoved = projectsLeft[projectsLeft.length - 1].name;
-      const index = initialBaseProjectsList.map(project => project.name).indexOf(toBeRemoved);
-      alredyRemoved.push(toBeRemoved);
-      childRefs[index].current.swipe(dir);
+  const outOfFrame = (name, index) => {
+    console.log(`${name} (${index}) left the screen!`, currentIndexRef.current);
+    if (currentIndexRef.current >= index) {
+      childRefs[index].current.restoreCard();
     }
+  };
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+  const debouncedOutOfFrame = debounce(outOfFrame, 300);
+  const swipe = async dir => {
+    if (canSwipe && currentIndex < initialBaseProjectsList.length) {
+      await childRefs[currentIndex].current.swipe(dir);
+    }
+  };
+  const goBack = async () => {
+    if (!canGoBack) return;
+    const newIndex = currentIndex + 1;
+    updateCurrentIndex(newIndex);
+    await childRefs[newIndex].current.restoreCard();
   };
 
   const handleClickNextPicture = next => () => {
     if (next) {
-      if (indexProjectPic1 === projectsList[0].picture.length - 1) {
+      if (indexProjectPic1 === initialBaseProjectsList[0].picture.length - 1) {
         setIndexProjectPic1(0);
       } else {
         setIndexProjectPic1(prevIndex => prevIndex + 1);
@@ -130,38 +101,84 @@ export default function ProjectsSwipper({ selectedLanguage }) {
     }
     if (!next) {
       if (indexProjectPic1 === 0) {
-        setIndexProjectPic1(projectsList[0].picture.length - 1);
+        setIndexProjectPic1(initialBaseProjectsList[0].picture.length - 1);
       } else {
         setIndexProjectPic1(prevIndex => prevIndex - 1);
       }
     }
   };
 
-  const handleClickIncrement = index => async () => {
-    setIsDisabled(true);
-    const data = await apiPostLike(index);
-    console.log('data increment', await data);
+  // Like Counter
 
-    const list = [];
-    for (let i = 0; i < data.length; i += 1) {
-      list.push(data[i].like);
-    }
-    console.log('Before increment', list);
-    setLikeCounterList(list);
-    setTimeout(() => {
-      setIsDisabled(false);
-    }, 2000);
-  };
+  // const [isDisabled, setIsDisabled] = useState(false);
+
+  // const apiPostLike = async index => {
+  //   const response = await fetch('/api/incrementLike', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       code: initialBaseProjectsList[index].code,
+  //     }),
+  //   });
+  //   const data = await response.json();
+  //   console.log('Post', data);
+  //   return data;
+  // };
+  // const apiGetLike = async () => {
+  //   const response = await fetch('/api/incrementLike', {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   });
+  //   const data = await response.json();
+  //   console.log('Get', data);
+  //   return data;
+  // };
+
+  // const [likeCounterList, setLikeCounterList] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const fetchLikes = async () => {
+  //     const data = await apiGetLike();
+  //     const list = [];
+  //     for (let i = 0; i < data.length; i += 1) {
+  //       list.push(data[i].like);
+  //     }
+  //     setLikeCounterList(list);
+  //     setLoading(false);
+  //   };
+  //   fetchLikes();
+  // }, []);
+
+  // const handleClickIncrement = index => async () => {
+  //   setIsDisabled(true);
+  //   const data = await apiPostLike(index);
+  //   console.log('data increment', await data);
+
+  //   const list = [];
+  //   for (let i = 0; i < data.length; i += 1) {
+  //     list.push(data[i].like);
+  //   }
+  //   console.log('Before increment', list);
+  //   setLikeCounterList(list);
+  //   setTimeout(() => {
+  //     setIsDisabled(false);
+  //   }, 2000);
+  // };
+
   return (
     <div className={`${styles.projects_swipper}`}>
       <div className={`${styles.swipper_card_container}`}>
-        {projectsList.map((project, index) => (
+        {initialBaseProjectsList.map((project, index) => (
           <TinderCard
             ref={childRefs[index]}
             className={`${styles.swipper_card}`}
-            key={project.name}
-            onSwipe={dir => swiped(dir, project.name)}
-            onCardLeftScreen={() => outOfFrame(project.name)}
+            key={`${project.code}`}
+            onSwipe={() => swiped(index)}
+            onCardLeftScreen={() => debouncedOutOfFrame(project.code, index)}
           >
             <div
               className={`${styles.card}`}
@@ -169,9 +186,9 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                 backgroundImage: `url(${project.picture[indexProjectPic1]})`,
               }}
             >
-              <div className={`${styles.swipper_like_counter}`}>
+              {/* <div className={`${styles.swipper_like_counter}`}>
                 {loading ? <p>...</p> : <p>{likeCounterList[index]}</p>}
-              </div>
+              </div> */}
               <div className={`${styles.swipper_click} MouseHoverEffect`}>
                 <div
                   role="button"
@@ -209,7 +226,16 @@ export default function ProjectsSwipper({ selectedLanguage }) {
             <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
           </button>
         </div>
-        <div className={`${styles.container_middle_button}`}>
+        <div className={`${styles.container_middle_button} ${canGoBack ? '' : styles.opacity50}`}>
+          <button
+            type="button"
+            className={`${styles.button_swipper_bar} ${canGoBack ? '' : 'MouseHoverEffect'}`}
+            onClick={() => goBack()}
+          >
+            <img src={UndoIcon} alt="Undo Icon" className={`${styles.img_swipper_bar}`} />
+          </button>
+        </div>
+        {/* <div className={`${styles.container_middle_button}`}>
           <button
             type="button"
             className={`${styles.button_swipper_bar} MouseHoverEffect`}
@@ -218,7 +244,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
           >
             <img src={ThumbsUpIcon} alt="Thumbs Up Icon" className={`${styles.img_swipper_bar}`} />
           </button>
-        </div>
+        </div> */}
         <div className={`${styles.container_button_expand}`}>
           <button
             type="button"
