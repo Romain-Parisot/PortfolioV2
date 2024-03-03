@@ -29,36 +29,34 @@ export default function AboutMe({ selectedLanguage }) {
       { x: 0, y: 100 }, // from bottom
     ];
 
-    setTimeout(() => {
-      fromTop.forEach(top => {
-        gsap.fromTo(
-          top,
-          { x: animations[0].x, y: animations[0].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: top, start: 'top center' } },
-        );
-      });
-      fromLeft.forEach(left => {
-        gsap.fromTo(
-          left,
-          { x: animations[1].x, y: animations[1].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: left, start: 'top center' } },
-        );
-      });
-      fromRight.forEach(right => {
-        gsap.fromTo(
-          right,
-          { x: animations[2].x, y: animations[2].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: right, start: 'top center' } },
-        );
-      });
-      fromBottom.forEach(bottom => {
-        gsap.fromTo(
-          bottom,
-          { x: animations[3].x, y: animations[3].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: bottom, start: 'bottom bottom' } },
-        );
-      });
-    }, 500);
+    fromTop.forEach(top => {
+      gsap.fromTo(
+        top,
+        { x: animations[0].x, y: animations[0].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: top, start: 'top center' } },
+      );
+    });
+    fromLeft.forEach(left => {
+      gsap.fromTo(
+        left,
+        { x: animations[1].x, y: animations[1].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: left, start: 'top center' } },
+      );
+    });
+    fromRight.forEach(right => {
+      gsap.fromTo(
+        right,
+        { x: animations[2].x, y: animations[2].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: right, start: 'top center' } },
+      );
+    });
+    fromBottom.forEach(bottom => {
+      gsap.fromTo(
+        bottom,
+        { x: animations[3].x, y: animations[3].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: bottom, start: 'bottom bottom' } },
+      );
+    });
   }, []);
   return (
     <Element name="aboutMe">

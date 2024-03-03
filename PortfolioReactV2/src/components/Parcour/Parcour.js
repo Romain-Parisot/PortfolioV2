@@ -13,26 +13,30 @@ export default function Parcour({ selectedLanguage }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      '.parcourElmt1Left',
-      { x: -400, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, scrollTrigger: '.parcourElmt1Left' },
-    );
-    gsap.fromTo(
-      '.parcourElmt2Right',
-      { x: 400, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, scrollTrigger: '.parcourElmt2Right' },
-    );
-    gsap.fromTo(
-      '.parcourElmt3Left',
-      { x: -400, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, scrollTrigger: '.parcourElmt3Left' },
-    );
-    gsap.fromTo(
-      '.parcourElmt4Right',
-      { x: 400, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, scrollTrigger: '.parcourElmt4Right' },
-    );
+    const fromLeft = containerRef.current.querySelectorAll('.fromLeftAnimation');
+    const fromRight = containerRef.current.querySelectorAll('.fromRightAnimation');
+
+    const animations = [
+      { x: -100, y: 0 }, // from left
+      { x: 100, y: 0 }, // from right
+    ];
+
+    fromLeft.forEach(left => {
+      gsap.fromTo(
+        left,
+        { x: animations[0].x, y: animations[0].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: left, start: 'top center' } },
+      );
+    });
+
+    fromRight.forEach(right => {
+      gsap.fromTo(
+        right,
+        { x: animations[1].x, y: animations[1].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: right, start: 'top center' } },
+      );
+    });
+
     const fromTop = containerRef.current.querySelectorAll('.fromTopAnimation');
     fromTop.forEach(top => {
       gsap.fromTo(
@@ -71,7 +75,7 @@ export default function Parcour({ selectedLanguage }) {
               </div>
             );
           })}
-          <div className={`${styles.parcourElmt} ${styles.parcourElmt1} parcourElmt1Left`}>
+          <div className={`${styles.parcourElmt} ${styles.parcourElmt1} fromLeftAnimation`}>
             <div className={styles.parcourElmtChild}>
               <h3>
                 {translations[selectedLanguage].course.course1.CourseName}
@@ -111,7 +115,7 @@ export default function Parcour({ selectedLanguage }) {
               <p className={styles.parcourElmtDate}>{translations[selectedLanguage].course.course1.CourseDate}</p>
             </div>
           </div>
-          <div className={`${styles.parcourElmt} ${styles.parcourElmt2} parcourElmt2Right`}>
+          <div className={`${styles.parcourElmt} ${styles.parcourElmt2} fromRightAnimation`}>
             <div className={styles.parcourElmtChild}>
               <h3>
                 {translations[selectedLanguage].course.course2.CourseNamept1}
@@ -129,7 +133,7 @@ export default function Parcour({ selectedLanguage }) {
               <p className={styles.parcourElmtDate}>{translations[selectedLanguage].course.course2.CourseDate}</p>
             </div>
           </div>
-          <div className={`${styles.parcourElmt} ${styles.parcourElmt3} parcourElmt3Left`}>
+          <div className={`${styles.parcourElmt} ${styles.parcourElmt3} fromLeftAnimation`}>
             <div className={styles.parcourElmtChild}>
               <h3>
                 {translations[selectedLanguage].course.course3.CourseNamept1}
@@ -147,7 +151,7 @@ export default function Parcour({ selectedLanguage }) {
               <p className={styles.parcourElmtDate}>{translations[selectedLanguage].course.course3.CourseDate}</p>
             </div>
           </div>
-          <div className={`${styles.parcourElmt} ${styles.parcourElmt4} parcourElmt4Right`}>
+          <div className={`${styles.parcourElmt} ${styles.parcourElmt4} fromRightAnimation`}>
             <div className={styles.parcourElmtChild}>
               <h3>
                 {translations[selectedLanguage].course.course4.CourseNamept1}

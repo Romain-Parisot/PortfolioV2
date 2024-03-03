@@ -49,7 +49,16 @@ export default function Skills() {
       gsap.fromTo(
         skill,
         { x: animation.x, y: animation.y, opacity: 0 },
-        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: skill },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: skill,
+            start: 'top center',
+          },
+        },
       );
     });
   }, []);

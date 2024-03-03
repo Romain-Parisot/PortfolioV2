@@ -1,16 +1,45 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Element } from 'react-scroll';
 import styles from './contact.module.css';
 import translations from '../../translations/translations';
 import Footer from '../PositionFixedComponents/Footer/Footer';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Contact({ selectedLanguage }) {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    const fromTop = containerRef.current.querySelectorAll('.fromTopAnimation');
+    const fromLeft = containerRef.current.querySelectorAll('.fromLeftAnimation');
+
+    const animations = [
+      { x: 0, y: -100 }, // from top
+      { x: -100, y: 0 }, // from left
+    ];
+
+    fromTop.forEach(top => {
+      gsap.fromTo(
+        top,
+        { x: animations[0].x, y: animations[0].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: top, start: 'top center' } },
+      );
+    });
+    fromLeft.forEach(left => {
+      gsap.fromTo(
+        left,
+        { x: animations[1].x, y: animations[1].y, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: left, start: 'top center' } },
+      );
+    });
+  }, []);
   return (
     <Element name="contact">
-      <section id="contact" className={`${styles.contact}`}>
-        <p>{translations[selectedLanguage].contact.description}</p>
-        <div className={`${styles.contact_div}`}>
+      <section id="contact" className={`${styles.contact}`} ref={containerRef}>
+        <p className="fromLeftAnimation">{translations[selectedLanguage].contact.description}</p>
+        <div className={`${styles.contact_div} fromTopAnimation`}>
           <form action="#" method="post">
             <div className={`${styles.contact_form_field}`}>
               <label htmlFor="name">{translations[selectedLanguage].contact.form.name}</label>
