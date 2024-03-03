@@ -28,3 +28,9 @@
 .path_bar_right_support{
     transform: translate(5%, -5%);
 }
+
+/* rigorous */
+
+.path_arrow_target{
+    transform: translate(5%, -5%);
+}
