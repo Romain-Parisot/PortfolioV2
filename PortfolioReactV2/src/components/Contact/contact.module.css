@@ -59,33 +59,3 @@
 textarea{
     resize: none;
 }
-
-/* footer */
-
-footer{
-    background-color: var(--dark-mode-on);
-    height: 200px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.barFooter{
-    width: 60vw;
-    height: 2px;
-    background-color: var(--main-color);
-}
-
-.descSiteContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.descSite{
-    text-align: center;
-    color: var(--dark-mode-off);
-    padding: 32px;
-}

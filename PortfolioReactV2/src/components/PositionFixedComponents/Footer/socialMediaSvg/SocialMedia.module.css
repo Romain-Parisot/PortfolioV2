@@ -1,0 +1,13 @@
+.socialMediaPath {
+    fill: var(--dark-mode-on);
+}
+
+.socialMediaSvg {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.socialMediaSvg:hover {
+    transform: rotate(360deg) scale(1.4);
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './contact.module.css';
 import translations from '../../translations/translations';
+import Footer from '../PositionFixedComponents/Footer/Footer';
 
 export default function Contact({ selectedLanguage }) {
   return (
@@ -50,13 +51,7 @@ export default function Contact({ selectedLanguage }) {
           </div>
         </form>
       </div>
-      <footer>
-        <span className={`${styles.barFooter}`} />
-
-        <div className={`${styles.descSiteContainer}`}>
-          <p className={`${styles.descSite}`}>Portfolio 2024 - Romain PARISOT</p>
-        </div>
-      </footer>
+      <Footer />
     </section>
   );
 }
