@@ -2,8 +2,10 @@ const translations = {
   en: {
     header: {
       home: 'Home',
+      aboutMe: 'About me',
+      course: 'Course',
       projects: 'Projects',
-      about: 'About',
+      skills: 'Skills',
       contact: 'Contact',
     },
     home: {
@@ -141,9 +143,11 @@ const translations = {
   fr: {
     header: {
       home: 'Accueil',
+      aboutMe: 'A propos',
+      course: 'Parcours',
       projects: 'Projets',
-      about: 'A propos',
-      contact: 'Contact',
+      skills: 'Compétences',
+      contact: 'Me contacter',
     },
     home: {
       JobTitle1: 'Chef de projet',
@@ -285,8 +289,10 @@ const translations = {
   de: {
     header: {
       home: 'Startseite',
+      aboutMe: 'Über mich',
+      course: 'Kurs',
       projects: 'Projekte',
-      about: 'Über',
+      skills: 'Fähigkeiten',
       contact: 'Kontakt',
     },
     home: {
@@ -428,9 +434,11 @@ const translations = {
   },
   es: {
     header: {
-      home: 'Inicio',
+      home: 'Casa',
+      aboutMe: 'Sobre mí',
+      course: 'Curso',
       projects: 'Proyectos',
-      about: 'Acerca de',
+      skills: 'Habilidades',
       contact: 'Contacto',
     },
     home: {
@@ -570,9 +578,11 @@ const translations = {
   },
   zh: {
     header: {
-      home: '首页',
+      home: '家',
+      aboutMe: '关于我',
+      course: '课程',
       projects: '项目',
-      about: '关于',
+      skills: '技能',
       contact: '联系',
     },
     home: {
@@ -701,9 +711,11 @@ const translations = {
   },
   hi: {
     header: {
-      home: 'होम',
-      projects: 'परियोजनाओं',
-      about: 'के बारे में',
+      home: 'घर',
+      aboutMe: 'मेरे बारे में',
+      course: 'पाठ्यक्रम',
+      projects: 'परियोजनाएं',
+      skills: 'कौशल',
       contact: 'संपर्क करें',
     },
     home: {
@@ -837,8 +849,10 @@ const translations = {
   ru: {
     header: {
       home: 'Главная',
+      aboutMe: 'Обо мне',
+      course: 'Курс',
       projects: 'Проекты',
-      about: 'О',
+      skills: 'Навыки',
       contact: 'Контакт',
     },
     home: {
@@ -975,10 +989,12 @@ const translations = {
   },
   ar: {
     header: {
-      home: 'الصفحة الرئيسية',
-      projects: 'مشاريع',
-      about: 'حول',
-      contact: 'اتصل',
+      home: 'الرئيسية',
+      aboutMe: 'حولي',
+      course: 'دورتي',
+      projects: 'مشاريعي',
+      skills: 'مهاراتي',
+      contact: 'اتصل بي',
     },
     home: {
       JobTitle1: 'مدير المشروع',
@@ -1107,9 +1123,11 @@ const translations = {
   },
   pt: {
     header: {
-      home: 'Casa',
+      home: 'Início',
+      aboutMe: 'Sobre mim',
+      course: 'Curso',
       projects: 'Projetos',
-      about: 'Sobre',
+      skills: 'Habilidades',
       contact: 'Contato',
     },
     home: {
@@ -1247,8 +1265,10 @@ const translations = {
   it: {
     header: {
       home: 'Casa',
+      aboutMe: 'Su di me',
+      course: 'Corso',
       projects: 'Progetti',
-      about: 'Di',
+      skills: 'Abilità',
       contact: 'Contatto',
     },
     home: {
@@ -1389,10 +1409,12 @@ const translations = {
   },
   ja: {
     header: {
-      home: 'ホームページ',
+      home: 'ホーム',
+      aboutMe: '私について',
+      course: 'コース',
       projects: 'プロジェクト',
-      about: '約',
-      contact: '接触',
+      skills: 'スキル',
+      contact: 'お問い合わせ',
     },
     home: {
       JobTitle1: 'プロジェクトマネージャー',

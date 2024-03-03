@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Element } from 'react-scroll';
 import PropTypes from 'prop-types';
 import styles from './Project.module.css';
 import translations from '../../translations/translations';
@@ -17,10 +18,12 @@ export default function Project({ selectedLanguage }) {
     );
   }, []);
   return (
-    <section id={`${styles.project}`} className="projectAnimation">
-      <h2>{translations[selectedLanguage].project.title}</h2>
-      <ProjectsSwipper selectedLanguage={selectedLanguage} />
-    </section>
+    <Element name="project">
+      <section id="project" className={`${styles.project} projectAnimation`}>
+        <h2>{translations[selectedLanguage].project.title}</h2>
+        <ProjectsSwipper selectedLanguage={selectedLanguage} />
+      </section>
+    </Element>
   );
 }
 

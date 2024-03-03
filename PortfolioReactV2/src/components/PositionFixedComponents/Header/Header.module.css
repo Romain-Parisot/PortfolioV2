@@ -1,5 +1,5 @@
 header{
-  width: 40vw;
+  width: 70vw;
   height: 60px;
   margin-left: 50%;
   transform: translate(-50%, -200px);
@@ -40,14 +40,14 @@ nav ul li{
   transition: 0.5s linear;
 }
 
-nav ul li button{
+.elmtHeader{
   color: var(--dark-mode-on);
   font-size: 20px;
   border: none;
   background: none;
 }
 
-nav ul li button:after {
+.elmtHeader:after {
   content: '';
   width: 0px;
   height: 1px;
@@ -56,14 +56,13 @@ nav ul li button:after {
   transition: 300ms;
 }
 
-nav ul li button:hover:after {
+.elmtHeader:hover:after {
   width: 100%;
 }
 
 .navSelected{
   border: 1px solid var(--main-color);
 }
-
 
 .navSelected_txt{
   color: var(--dark-mode-off);

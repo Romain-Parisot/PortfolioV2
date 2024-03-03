@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Element } from 'react-scroll';
 import styles from './AboutMe.module.css';
 import translations from '../../translations/translations';
 import CooperativeSvg from './AboutMeSvg/cooperativeSvg';
@@ -60,51 +61,55 @@ export default function AboutMe({ selectedLanguage }) {
     }, 500);
   }, []);
   return (
-    <section id={`${styles.aboutMe}`} ref={containerRef}>
-      <div>
-        <h2 className={styles.aboutMeTitle}>{translations[selectedLanguage].aboutMe.title}</h2>
-        <div className={styles.parentdivpersonnality}>
-          <div className={`${styles.divpersonnality} fromLeftAnimation`}>
-            <h3>{translations[selectedLanguage].aboutMe.point1.title}</h3>
-            <CooperativeSvg />
-            <p className={styles.descriptionpersonnality}>
-              {translations[selectedLanguage].aboutMe.point1.description1}
-              <br />
-              <br />
-              {translations[selectedLanguage].aboutMe.point1.description2}
-            </p>
-          </div>
-          <div className={`${styles.divpersonnality} fromTopAnimation`}>
-            <h3>{translations[selectedLanguage].aboutMe.point2.title}</h3>
-            <BoldSvg />
-            <p className={styles.descriptionpersonnality}>
-              {translations[selectedLanguage].aboutMe.point2.description1}
-              <br />
-              <br />
-              {translations[selectedLanguage].aboutMe.point2.description2}
-            </p>
-          </div>
-          <div className={`${styles.divpersonnality} fromRightAnimation`}>
-            <h3>{translations[selectedLanguage].aboutMe.point3.title}</h3>
-            <RigorousSvg />
-            <p className={styles.descriptionpersonnality}>
-              {translations[selectedLanguage].aboutMe.point3.description1}
-              <br />
-              <br />
-              {translations[selectedLanguage].aboutMe.point3.description2}
-            </p>
+    <Element name="aboutMe">
+      <section id="aboutMe" className={`${styles.aboutMe}`} ref={containerRef}>
+        <div>
+          <h2 className={styles.aboutMeTitle}>{translations[selectedLanguage].aboutMe.title}</h2>
+          <div className={styles.parentdivpersonnality}>
+            <div className={`${styles.divpersonnality} fromLeftAnimation`}>
+              <h3>{translations[selectedLanguage].aboutMe.point1.title}</h3>
+              <CooperativeSvg />
+              <p className={styles.descriptionpersonnality}>
+                {translations[selectedLanguage].aboutMe.point1.description1}
+                <br />
+                <br />
+                {translations[selectedLanguage].aboutMe.point1.description2}
+              </p>
+            </div>
+            <div className={`${styles.divpersonnality} fromTopAnimation`}>
+              <h3>{translations[selectedLanguage].aboutMe.point2.title}</h3>
+              <BoldSvg />
+              <p className={styles.descriptionpersonnality}>
+                {translations[selectedLanguage].aboutMe.point2.description1}
+                <br />
+                <br />
+                {translations[selectedLanguage].aboutMe.point2.description2}
+              </p>
+            </div>
+            <div className={`${styles.divpersonnality} fromRightAnimation`}>
+              <h3>{translations[selectedLanguage].aboutMe.point3.title}</h3>
+              <RigorousSvg />
+              <p className={styles.descriptionpersonnality}>
+                {translations[selectedLanguage].aboutMe.point3.description1}
+                <br />
+                <br />
+                {translations[selectedLanguage].aboutMe.point3.description2}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={`${styles.divpersonnality} fromBottomAnimation`}>
-        <h3>{translations[selectedLanguage].aboutMe.point4.title}</h3>
-        <div className={styles.div_sport_computer}>
-          <ComputerSvg />
-          <SportSvg />
+        <div className={`${styles.divpersonnality} fromBottomAnimation`}>
+          <h3>{translations[selectedLanguage].aboutMe.point4.title}</h3>
+          <div className={styles.div_sport_computer}>
+            <ComputerSvg />
+            <SportSvg />
+          </div>
+          <p className={styles.descriptionpersonnality2}>
+            {translations[selectedLanguage].aboutMe.point4.description1}
+          </p>
         </div>
-        <p className={styles.descriptionpersonnality2}>{translations[selectedLanguage].aboutMe.point4.description1}</p>
-      </div>
-    </section>
+      </section>
+    </Element>
   );
 }
 
