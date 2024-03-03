@@ -16,27 +16,40 @@ import ViolonFrancePic2 from '../../assets/project/violonFrance/ViolonFrance_img
 import ViolonFrancePic3 from '../../assets/project/violonFrance/ViolonFrance_img3.JPG';
 import ViolonFrancePic4 from '../../assets/project/violonFrance/ViolonFrance_img4.JPG';
 
+// MousdikPianos Pictures
+
+import MousdikPianosPic1 from '../../assets/project/mousdikpianos/MousdikPianos_img1.PNG';
+import MousdikPianosPic2 from '../../assets/project/mousdikpianos/MousdikPianos_img2.PNG';
+import MousdikPianosPic3 from '../../assets/project/mousdikpianos/MousdikPianos_img3.PNG';
+import MousdikPianosPic4 from '../../assets/project/mousdikpianos/MousdikPianos_img4.PNG';
+
 // plessisRobinson Pictures
 import PlessisRobinsonPic1 from '../../assets/project/plessisRobinson/Plessis-Robinson_img1.png';
 import PlessisRobinsonPic2 from '../../assets/project/plessisRobinson/Plessis-Robinson_img2.png';
 import PlessisRobinsonPic3 from '../../assets/project/plessisRobinson/Plessis-Robinson_img3.png';
 import PlessisRobinsonPic4 from '../../assets/project/plessisRobinson/Plessis-Robinson_img4.png';
 
+// wikifilms Pictures
+import WikifilmsPic1 from '../../assets/project/wikiFilms/Wikifilm_img1.PNG';
+import WikifilmsPic2 from '../../assets/project/wikiFilms/Wikifilm_img2.PNG';
+import WikifilmsPic3 from '../../assets/project/wikiFilms/Wikifilm_img3.PNG';
+import WikifilmsPic4 from '../../assets/project/wikiFilms/Wikifilm_img4.PNG';
+
 const initialBaseProjectsList = [
   {
-    code: 'VF',
-    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
+    code: 'WK',
+    picture: [WikifilmsPic1, WikifilmsPic2, WikifilmsPic3, WikifilmsPic4],
   },
   {
     code: 'PR',
     picture: [PlessisRobinsonPic1, PlessisRobinsonPic2, PlessisRobinsonPic3, PlessisRobinsonPic4],
   },
   {
-    code: 'P3',
-    picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
+    code: 'MP',
+    picture: [MousdikPianosPic1, MousdikPianosPic2, MousdikPianosPic3, MousdikPianosPic4],
   },
   {
-    code: 'P4',
+    code: 'VF',
     picture: [ViolonFrancePic1, ViolonFrancePic2, ViolonFrancePic3, ViolonFrancePic4],
   },
 ];
@@ -169,6 +182,9 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   //   }, 2000);
   // };
 
+  // this is the order of the projects name, instead of editing all the translations file to modify the order of the projects, i can just change the order of the array here
+  const ProjectNameOrder = [4, 3, 1, 2];
+
   return (
     <div className={`${styles.projects_swipper}`}>
       <div className={`${styles.swipper_card_container}`}>
@@ -209,7 +225,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               </div>
               <div className={`${styles.swipper_card_overlay}`}>
                 <p className={`${styles.swipper_card_text}`}>
-                  {translations[selectedLanguage].project[`project${index + 1}`].ProjectName}
+                  {translations[selectedLanguage].project[`project${ProjectNameOrder[index]}`].ProjectName}
                 </p>
               </div>
             </div>
