@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './AboutMe.module.css';
-// import translations from '../../translations/translations';
+import translations from '../../translations/translations';
 import CooperativeSvg from './AboutMeSvg/cooperativeSvg';
 import BoldSvg from './AboutMeSvg/boldSvg';
 import ComputerSvg from './AboutMeSvg/computerSvg';
@@ -13,7 +13,6 @@ import SportSvg from './AboutMeSvg/sportSvg';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe({ selectedLanguage }) {
-  console.log(selectedLanguage);
   const containerRef = useRef(null);
   // gsap animation
   useEffect(() => {
@@ -63,51 +62,47 @@ export default function AboutMe({ selectedLanguage }) {
   return (
     <section id={`${styles.aboutMe}`} ref={containerRef}>
       <div>
-        <h2 className={styles.aboutMeTitle}>About me :</h2>
+        <h2 className={styles.aboutMeTitle}>{translations[selectedLanguage].aboutMe.title}</h2>
         <div className={styles.parentdivpersonnality}>
           <div className={styles.divpersonnality}>
-            <h3>Coopératif</h3>
+            <h3>{translations[selectedLanguage].aboutMe.point1.title}</h3>
             <CooperativeSvg />
             <p className={styles.descriptionpersonnality}>
-              Communiquer, partager et transmettre permettent de progresser ensemble.
+              {translations[selectedLanguage].aboutMe.point1.description1}
               <br />
               <br />
-              Je pense que la collaboration est la qualité la plus importante dans la réussite d&apos;un projet.
+              {translations[selectedLanguage].aboutMe.point1.description2}
             </p>
           </div>
           <div className={styles.divpersonnality}>
-            <h3>Audacieux</h3>
+            <h3>{translations[selectedLanguage].aboutMe.point2.title}</h3>
             <BoldSvg />
             <p className={styles.descriptionpersonnality}>
-              J&apos;aime oser essayer, risquer et prendre des initiatives.
+              {translations[selectedLanguage].aboutMe.point2.description1}
               <br />
               <br />
-              L&apos;audace me permet d&apos;expérimenter et d&apos;apprendre, lors de mes réussites, mais d&apos;autant
-              plus lors de mes échecs.
+              {translations[selectedLanguage].aboutMe.point2.description2}
             </p>
           </div>
           <div className={styles.divpersonnality}>
-            <h3>Rigoureux</h3>
+            <h3>{translations[selectedLanguage].aboutMe.point3.title}</h3>
             <RigorousSvg />
             <p className={styles.descriptionpersonnality}>
-              La discipline, l&apos;abnégation et l&apos;ambition font partie de ma façon d&apos;être.
+              {translations[selectedLanguage].aboutMe.point3.description1}
               <br />
-              <br /> Je ne compte jamais mes heures et cela me pousse à aller jusqu&apos;au bout de ce que
-              j&apos;entreprends.
+              <br />
+              {translations[selectedLanguage].aboutMe.point3.description2}
             </p>
           </div>
         </div>
       </div>
       <div className={styles.divpersonnality}>
-        <h3>Mise en œuvre</h3>
+        <h3>{translations[selectedLanguage].aboutMe.point4.title}</h3>
         <div className={styles.div_sport_computer}>
           <ComputerSvg />
           <SportSvg />
         </div>
-        <p className={styles.descriptionpersonnality2}>
-          Tous ces traits de personnalité sont mis en application au quotidien pour évoluer dans tout les aspects de ma
-          vie : <br /> Le travail et le sport.
-        </p>
+        <p className={styles.descriptionpersonnality2}>{translations[selectedLanguage].aboutMe.point4.description1}</p>
       </div>
     </section>
   );

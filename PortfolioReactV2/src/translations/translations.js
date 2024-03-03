@@ -20,6 +20,29 @@ const translations = {
       MePoint6: 'at the end of the year',
       MePoint7: 'Rugby / Powerlifter / Martial arts',
     },
+    aboutMe: {
+      title: 'My personality :',
+      point1: {
+        title: 'Cooperative',
+        description1: 'Communicating, sharing and transmitting allow us to progress together.',
+        description2: 'I think that collaboration is one of the most important qualities in the success of a project.',
+      },
+      point2: {
+        title: 'Audacious',
+        description1: 'I like to dare, take risks and take initiatives.',
+        description2: 'Audacity allows me to experiment and learn from my successes, and even more from my failures.',
+      },
+      point3: {
+        title: 'Rigorous',
+        description1: 'Discipline, self-denial and ambition are part of my way of being.',
+        description2: 'I never count my hours and it pushes me to go to the end of what I undertake.',
+      },
+      point4: {
+        title: 'Implementation',
+        description1:
+          'All these personality traits are put into practice every day to evolve in all aspects of my life.',
+      },
+    },
     course: {
       title: 'My course :',
       course1: {
@@ -135,6 +158,31 @@ const translations = {
       MePoint5: 'Bachelor',
       MePoint6: "en fin d'année",
       MePoint7: 'Rugby / Powerlifter / Art martiaux',
+    },
+    aboutMe: {
+      title: 'Ma personnalité :',
+      point1: {
+        title: 'Coopératif',
+        description1: 'Communiquer, partager et transmettre permettent de progresser ensemble.',
+        description2:
+          "Je pense que la collaboration est l'une des qualités les plus importantes dans la réussite d'un projet.",
+      },
+      point2: {
+        title: 'Audacieux',
+        description1: "J'aime oser, risquer et prendre des initiatives.",
+        description2:
+          "L'audace me permet d'expérimenter et d'apprendre de mes réussites, et d'autant plus de mes échecs.",
+      },
+      point3: {
+        title: 'Rigoureux',
+        description1: "La discipline, l'abnégation et l'ambition font partie de ma façon d'être.",
+        description2: "Je ne compte jamais mes heures et cela me pousse à aller jusqu'au bout de ce que j'entreprends.",
+      },
+      point4: {
+        title: 'Mise en œuvre',
+        description1:
+          'Tous ces traits de personnalités sont mis en application au quotidien pour évoluer dans tous les aspects de ma vie.',
+      },
     },
     course: {
       title: 'Mon parcours :',
@@ -255,6 +303,32 @@ const translations = {
       MePoint6: 'am Ende des Jahres',
       MePoint7: 'Rugby / Powerlifter / Kampfsport',
     },
+    aboutMe: {
+      title: 'Meine Persönlichkeit :',
+      point1: {
+        title: 'Kooperativ',
+        description1: 'Kommunikation, Teilen und Übermitteln ermöglichen es uns, gemeinsam voranzukommen.',
+        description2:
+          'Ich denke, dass die Zusammenarbeit eine der wichtigsten Qualitäten für den Erfolg eines Projekts ist.',
+      },
+      point2: {
+        title: 'Kühn',
+        description1: 'Ich mag es, zu wagen, Risiken einzugehen und Initiativen zu ergreifen.',
+        description2:
+          'Kühnheit ermöglicht es mir, zu experimentieren und aus meinen Erfolgen zu lernen, und noch mehr aus meinen Misserfolgen.',
+      },
+      point3: {
+        title: 'Rigoros',
+        description1: 'Disziplin, Selbstverleugnung und Ehrgeiz gehören zu meiner Art zu sein.',
+        description2:
+          'Ich zähle nie meine Stunden und das treibt mich dazu, das zu Ende zu bringen, was ich unternehme.',
+      },
+      point4: {
+        title: 'Umsetzung',
+        description1:
+          'Alle diese Persönlichkeitsmerkmale werden täglich in allen Aspekten meines Lebens angewendet, um mich weiterzuentwickeln.',
+      },
+    },
     course: {
       title: 'Mein Werdegang :',
       course1: {
@@ -372,6 +446,29 @@ const translations = {
       MePoint5: 'Licenciatura',
       MePoint6: 'al final del año',
       MePoint7: 'Rugby / Powerlifter / Artes marciales',
+    },
+    aboutMe: {
+      title: 'Mi personalidad :',
+      point1: {
+        title: 'Cooperativo',
+        description1: 'Comunicar, compartir y transmitir nos permiten progresar juntos.',
+        description2: 'Creo que la colaboración es una de las cualidades más importantes en el éxito de un proyecto.',
+      },
+      point2: {
+        title: 'Audaz',
+        description1: 'Me gusta atreverme, correr riesgos y tomar iniciativas.',
+        description2: 'La audacia me permite experimentar y aprender de mis éxitos, y aún más de mis fracasos.',
+      },
+      point3: {
+        title: 'Riguroso',
+        description1: 'La disciplina, el sacrificio y la ambición forman parte de mi forma de ser.',
+        description2: 'Nunca cuento mis horas y eso me empuja a ir hasta el final de lo que emprendo.',
+      },
+      point4: {
+        title: 'Implementación',
+        description1:
+          'Todos estos rasgos de personalidad se ponen en práctica todos los días para evolucionar en todos los aspectos de mi vida.',
+      },
     },
     course: {
       title: 'Mi recorrido :',
@@ -492,6 +589,28 @@ const translations = {
       MePoint6: '年底',
       MePoint7: '橄榄球/举重/武术',
     },
+    aboutMe: {
+      title: '我的个性 :',
+      point1: {
+        title: '合作',
+        description1: '沟通、分享和传递使我们能够共同进步。',
+        description2: '我认为合作是项目成功的最重要的品质之一。',
+      },
+      point2: {
+        title: '大胆',
+        description1: '我喜欢大胆、冒险和采取主动。',
+        description2: '大胆使我能够从我的成功中学习，甚至更多地从我的失败中学习。',
+      },
+      point3: {
+        title: '严谨',
+        description1: '纪律、自我牺牲和雄心是我的生活方式的一部分。',
+        description2: '我从不计算我的时间，这促使我去完成我所承担的一切。',
+      },
+      point4: {
+        title: '实施',
+        description1: '所有这些个性特征每天都在我的生活的各个方面得到实践。',
+      },
+    },
     course: {
       title: '我的课程 :',
       course1: {
@@ -600,6 +719,29 @@ const translations = {
       MePoint5: 'स्नातक',
       MePoint6: 'साल के अंत में',
       MePoint7: 'रग्बी / पावरलिफ्टर / युद्ध कला',
+    },
+    aboutMe: {
+      title: 'मेरी व्यक्तित्व :',
+      point1: {
+        title: 'सहकारी',
+        description1: 'संवाद करना, साझा करना और संदेशित करना हमें साथ में आगे बढ़ने की संभावना देता है।',
+        description2: 'मुझे लगता है कि सहयोग प्रोजेक्ट की सफलता में सबसे महत्वपूर्ण गुणों में से एक है।',
+      },
+      point2: {
+        title: 'साहसी',
+        description1: 'मुझे हिम्मत करना, जोखिम उठाना और पहल करना पसंद है।',
+        description2: 'साहस मुझे अपनी सफलताओं से सीखने और अपनी असफलताओं से भी अधिक सीखने की संभावना देता है।',
+      },
+      point3: {
+        title: 'संयमी',
+        description1: 'अनुशासन, त्याग और महत्वाकांक्षा मेरे जीवन के तरीके का हिस्सा हैं।',
+        description2:
+          'मैं कभी भी अपने घंटों की गिनती नहीं करता और यह मुझे उत्साहित करता है कि मैं वह पूरा करूँगा जो मैंने शुरू किया है।',
+      },
+      point4: {
+        title: 'क्रियान्वयन',
+        description1: 'ये सभी व्यक्तित्व विशेषताएं मेरे जीवन के सभी पहलुओं में रोजाना लागू होती हैं।',
+      },
     },
     course: {
       title: 'मेरा पाठ्यक्रम :',
@@ -712,6 +854,29 @@ const translations = {
       MePoint5: 'Бакалавр',
       MePoint6: 'в конце года',
       MePoint7: 'Регби / Пауэрлифтер / Боевые искусства',
+    },
+    aboutMe: {
+      title: 'Моя личность :',
+      point1: {
+        title: 'Сотрудничество',
+        description1: 'Общение, обмен и передача позволяют нам двигаться вперед вместе.',
+        description2: 'Я считаю, что сотрудничество - одно из самых важных качеств в успехе проекта.',
+      },
+      point2: {
+        title: 'Смелость',
+        description1: 'Мне нравится смелость, риск и инициатива.',
+        description2:
+          'Смелость позволяет мне экспериментировать и учиться на своих успехах, и еще больше на своих неудачах.',
+      },
+      point3: {
+        title: 'Строгость',
+        description1: 'Дисциплина, самоотверженность и амбиции являются частью моего образа жизни.',
+        description2: 'Я никогда не считаю свои часы, и это заставляет меня идти до конца во всем, что я предпринимаю.',
+      },
+      point4: {
+        title: 'Реализация',
+        description1: 'Все эти черты характера применяются каждый день во всех аспектах моей жизни.',
+      },
     },
     course: {
       title: 'Мой курс :',
@@ -829,6 +994,28 @@ const translations = {
       MePoint6: 'في نهاية السنة',
       MePoint7: 'رجبي / رفع الاثقال / فنون الدفاع عن النفس',
     },
+    aboutMe: {
+      title: 'شخصيتي :',
+      point1: {
+        title: 'التعاون',
+        description1: 'التواصل والمشاركة والتوجيه يسمح لنا بالتقدم معًا.',
+        description2: 'أعتقد أن التعاون هو واحد من أهم الصفات في نجاح المشروع.',
+      },
+      point2: {
+        title: 'الجرأة',
+        description1: 'أحب الجرأة والمخاطرة والمبادرة.',
+        description2: 'الجرأة تسمح لي بالتجربة والتعلم من نجاحاتي وأكثر من فشلي.',
+      },
+      point3: {
+        title: 'الانضباط',
+        description1: 'الانضباط والتفاني والطموح جزء من نمط حياتي.',
+        description2: 'أنا لا أعد أبدًا ساعاتي، وهذا يحفزني على الذهاب إلى النهاية في كل ما أبدأه.',
+      },
+      point4: {
+        title: 'التنفيذ',
+        description1: 'تطبق كل هذه الصفات الشخصية يوميًا في جميع جوانب حياتي.',
+      },
+    },
     course: {
       title: 'دورتي :',
       course1: {
@@ -938,6 +1125,28 @@ const translations = {
       MePoint5: 'Bacharel',
       MePoint6: 'no final do ano',
       MePoint7: 'Rugby / Powerlifter / Artes marciais',
+    },
+    aboutMe: {
+      title: 'Minha personalidade :',
+      point1: {
+        title: 'Colaboração',
+        description1: 'Comunicação, compartilhamento e orientação nos permitem avançar juntos.',
+        description2: 'Acredito que a colaboração é uma das qualidades mais importantes para o sucesso do projeto.',
+      },
+      point2: {
+        title: 'Coragem',
+        description1: 'Gosto de coragem, risco e iniciativa.',
+        description2: 'A coragem me permite experimentar e aprender com meus sucessos e ainda mais com meus fracassos.',
+      },
+      point3: {
+        title: 'Disciplina',
+        description1: 'Disciplina, dedicação e ambição fazem parte do meu estilo de vida.',
+        description2: 'Nunca conto minhas horas, e isso me motiva a ir até o fim em tudo o que empreendo.',
+      },
+      point4: {
+        title: 'Realização',
+        description1: 'Todas essas características são aplicadas diariamente em todos os aspectos da minha vida.',
+      },
     },
     course: {
       title: 'Meu curso :',
@@ -1056,6 +1265,31 @@ const translations = {
       MePoint6: 'alla fine dell anno',
       MePoint7: 'Rugby / Powerlifter / Arti marziali',
     },
+    aboutMe: {
+      title: 'La mia personalità :',
+      point1: {
+        title: 'Collaborazione',
+        description1: 'Comunicazione, condivisione e orientamento ci consentono di andare avanti insieme.',
+        description2: 'Credo che la collaborazione sia una delle qualità più importanti per il successo del progetto.',
+      },
+      point2: {
+        title: 'Coraggio',
+        description1: 'Mi piace il coraggio, il rischio e l iniziativa.',
+        description2:
+          'Il coraggio mi permette di sperimentare e imparare dai miei successi e ancora di più dai miei fallimenti.',
+      },
+      point3: {
+        title: 'Disciplina',
+        description1: 'Disciplina, dedizione e ambizione fanno parte del mio stile di vita.',
+        description2:
+          'Non conto mai le mie ore, e questo mi motiva a andare fino in fondo in tutto ciò che intraprendo.',
+      },
+      point4: {
+        title: 'Realizzazione',
+        description1:
+          'Tutte queste caratteristiche personali vengono applicate quotidianamente in tutti gli aspetti della mia vita.',
+      },
+    },
     course: {
       title: 'Il mio corso :',
       course1: {
@@ -1173,6 +1407,29 @@ const translations = {
       MePoint5: '学士',
       MePoint6: '年の終わりに',
       MePoint7: 'ラグビー/パワーリフター/武道',
+    },
+    aboutMe: {
+      title: '私の性格 :',
+      point1: {
+        title: '協力',
+        description1: 'コミュニケーション、共有、ガイダンスは一緒に前進することを可能にします。',
+        description2: '協力はプロジェクトの成功にとって最も重要な品質の1つだと思います。',
+      },
+      point2: {
+        title: '勇気',
+        description1: '私は勇気、リスク、そしてイニシアチブが好きです。',
+        description2: '勇気は私に成功から学び、失敗からさらに多くのことを学ぶことを可能にします。',
+      },
+      point3: {
+        title: '規律',
+        description1: '規律、献身、野心は私のライフスタイルの一部です。',
+        description2:
+          '私は決して私の時間を数えません、そしてそれは私にすべてのことで最後まで行くように刺激を与えます。',
+      },
+      point4: {
+        title: '達成',
+        description1: 'これらすべての個人的な特性は、私の生活のすべての側面で日常的に適用されます。',
+      },
     },
     course: {
       title: '私のコース :',
