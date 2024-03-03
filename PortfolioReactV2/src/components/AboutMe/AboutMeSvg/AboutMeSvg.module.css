@@ -34,3 +34,39 @@
 .path_arrow_target{
     transform: translate(5%, -5%);
 }
+
+/* sport */
+
+.sport_svg{
+    stroke-width: 30;
+}
+
+.path_body_sport{
+    transform: rotate(1deg);
+}
+.path_body_sport_anim{
+    transform: rotate(-1deg);
+}
+
+.path_head_sport{
+    transform: rotate(1deg);
+}
+.path_head_sport_anim{
+    transform: rotate(-1deg) translateX(2%);
+}
+
+.path_weight_small_sport_anim{
+    transform: rotate(4deg) translate(5%, -5%);
+}
+
+.path_weight_small_sport{
+    transform: rotate(4deg) translate(-1%, 1%);
+}
+
+.path_weight_big_sport_anim{
+    transform: rotate(4deg) translate(5%, -5%);
+}
+
+.path_weight_big_sport{
+    transform: rotate(4deg) translate(-1%, 1%);
+}
