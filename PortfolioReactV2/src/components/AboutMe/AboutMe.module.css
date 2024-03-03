@@ -1,0 +1,53 @@
+#aboutMe{
+    margin-top: 100px;
+}
+
+.aboutMeTitle{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+.parentdivpersonnality{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divpersonnality{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.descriptionpersonnality{
+    font-style: italic;
+    width: 250px;
+    text-align: center;
+}
+
+.descriptionpersonnality2{
+    font-style: italic;
+    width: 400px;
+    text-align: center;
+}
+
+.div_sport_computer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.personnality_svg{
+    width: 125px;
+    height: 125px;
+    overflow: visible;
+    fill: var(--dark-mode-on);
+}
+.personnality_svg path{
+    transition: 1s ease;
+}
+

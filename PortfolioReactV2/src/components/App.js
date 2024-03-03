@@ -11,6 +11,7 @@ import Contact from './Contact/contact';
 // import translations from '../translations/translations';
 
 import Mousetrail from './MouseTrail/Mousetrail';
+import AboutMe from './AboutMe/AboutMe';
 
 export default function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('fr');
@@ -24,6 +25,7 @@ export default function App() {
       <PositionFixedComponents selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />
       <main id="mainpage">
         <Home selectedLanguage={selectedLanguage} />
+        <AboutMe selectedLanguage={selectedLanguage} />
         <Parcour selectedLanguage={selectedLanguage} />
         <Project selectedLanguage={selectedLanguage} />
         <Skills />

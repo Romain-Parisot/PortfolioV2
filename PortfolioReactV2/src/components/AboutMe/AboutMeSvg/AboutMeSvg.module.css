@@ -1,0 +1,16 @@
+.aboutMePath {
+    fill: var(--dark-mode-on);
+}
+
+.aboutMeSvg {
+    width: 125px;
+    height: 125px;
+    overflow: visible;
+    fill: var(--dark-mode-on);
+}
+
+.sport_svg{
+    fill: none;
+    stroke: var(--dark-mode-on);
+    stroke-width: 30;
+}
