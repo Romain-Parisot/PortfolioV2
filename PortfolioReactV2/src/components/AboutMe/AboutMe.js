@@ -33,28 +33,28 @@ export default function AboutMe({ selectedLanguage }) {
         gsap.fromTo(
           top,
           { x: animations[0].x, y: animations[0].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: top },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: top, start: 'top center' } },
         );
       });
       fromLeft.forEach(left => {
         gsap.fromTo(
           left,
           { x: animations[1].x, y: animations[1].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: left },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: left, start: 'top center' } },
         );
       });
       fromRight.forEach(right => {
         gsap.fromTo(
           right,
           { x: animations[2].x, y: animations[2].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: right },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: right, start: 'top center' } },
         );
       });
       fromBottom.forEach(bottom => {
         gsap.fromTo(
           bottom,
           { x: animations[3].x, y: animations[3].y, opacity: 0 },
-          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: bottom },
+          { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: bottom, start: 'bottom bottom' } },
         );
       });
     }, 500);
@@ -64,7 +64,7 @@ export default function AboutMe({ selectedLanguage }) {
       <div>
         <h2 className={styles.aboutMeTitle}>{translations[selectedLanguage].aboutMe.title}</h2>
         <div className={styles.parentdivpersonnality}>
-          <div className={styles.divpersonnality}>
+          <div className={`${styles.divpersonnality} fromLeftAnimation`}>
             <h3>{translations[selectedLanguage].aboutMe.point1.title}</h3>
             <CooperativeSvg />
             <p className={styles.descriptionpersonnality}>
@@ -74,7 +74,7 @@ export default function AboutMe({ selectedLanguage }) {
               {translations[selectedLanguage].aboutMe.point1.description2}
             </p>
           </div>
-          <div className={styles.divpersonnality}>
+          <div className={`${styles.divpersonnality} fromTopAnimation`}>
             <h3>{translations[selectedLanguage].aboutMe.point2.title}</h3>
             <BoldSvg />
             <p className={styles.descriptionpersonnality}>
@@ -84,7 +84,7 @@ export default function AboutMe({ selectedLanguage }) {
               {translations[selectedLanguage].aboutMe.point2.description2}
             </p>
           </div>
-          <div className={styles.divpersonnality}>
+          <div className={`${styles.divpersonnality} fromRightAnimation`}>
             <h3>{translations[selectedLanguage].aboutMe.point3.title}</h3>
             <RigorousSvg />
             <p className={styles.descriptionpersonnality}>
@@ -96,7 +96,7 @@ export default function AboutMe({ selectedLanguage }) {
           </div>
         </div>
       </div>
-      <div className={styles.divpersonnality}>
+      <div className={`${styles.divpersonnality} fromBottomAnimation`}>
         <h3>{translations[selectedLanguage].aboutMe.point4.title}</h3>
         <div className={styles.div_sport_computer}>
           <ComputerSvg />

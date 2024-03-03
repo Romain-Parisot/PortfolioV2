@@ -5,8 +5,26 @@
     fill: var(--dark-mode-on);
 }
 
+.aboutMeSvg path {
+    transition: 1s ease;
+}
+
 .sport_svg{
     fill: none;
     stroke: var(--dark-mode-on);
     stroke-width: 30;
+}
+
+/* cooperative */
+
+.path_bar_mid_support{
+    transform: translateY(-5%);
+}
+
+.path_bar_left_support{
+    transform: translate(-5%, -5%);
+}
+
+.path_bar_right_support{
+    transform: translate(5%, -5%);
 }
