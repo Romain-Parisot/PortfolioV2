@@ -70,3 +70,25 @@
 .path_weight_big_sport{
     transform: rotate(4deg) translate(-1%, 1%);
 }
+
+/* bold */
+
+.path_flag_dare{
+    stroke: var(--dark-mode-on);
+    stroke-width: 15;
+    transform: translateY(-2%);
+}
+
+.path_stick_flag_dare{
+    stroke: var(--dark-mode-on);
+    stroke-width: 5;
+    transform: translateY(-2%);
+}
+
+.path_stick_flag_dare_anim{
+    transform: translateY(2%);
+}
+
+.path_flag_dare_anim{
+    transform: translateY(2%);
+}
