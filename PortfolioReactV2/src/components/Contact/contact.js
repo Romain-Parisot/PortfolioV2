@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,6 +10,9 @@ import Footer from '../PositionFixedComponents/Footer/Footer';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact({ selectedLanguage }) {
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userMessage, setUserMessage] = useState('');
   const containerRef = useRef(null);
   useEffect(() => {
     const fromTop = containerRef.current.querySelectorAll('.fromTopAnimation');
@@ -35,18 +38,50 @@ export default function Contact({ selectedLanguage }) {
       );
     });
   }, []);
+
+  // mail service
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const formData = {
+      userName,
+      userEmail,
+      userMessage,
+    };
+
+    fetch('/.netlify/functions/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    }).then(response => response.json());
+    // .then(responseData => {
+    //   if (responseData.error) {
+    //     console.error('Error:', responseData.error);
+    //   } else {
+    //     console.log(responseData);
+    //   }
+    // })
+    // .catch(error => {
+    //   console.error('Error:', JSON.stringify(error, null, 2));
+    // });
+  };
   return (
     <Element name="contact">
       <section id="contact" className={`${styles.contact}`} ref={containerRef}>
         <p className="fromLeftAnimation">{translations[selectedLanguage].contact.description}</p>
         <div className={`${styles.contact_div} fromTopAnimation`}>
-          <form action="#" method="post">
+          <form method="POST" onSubmit={handleSubmit}>
             <div className={`${styles.contact_form_field}`}>
               <label htmlFor="name">{translations[selectedLanguage].contact.form.name}</label>
               <input
                 type="text"
                 id="name"
                 name="name"
+                value={userName}
+                onChange={e => setUserName(e.target.value)}
                 placeholder={translations[selectedLanguage].contact.form.placeholderName}
                 required
                 className={`${styles.contact_form_input}`}
@@ -58,6 +93,8 @@ export default function Contact({ selectedLanguage }) {
                 type="email"
                 id="email"
                 name="email"
+                value={userEmail}
+                onChange={e => setUserEmail(e.target.value)}
                 placeholder={translations[selectedLanguage].contact.form.placeholderEmail}
                 required
                 className={`${styles.contact_form_input}`}
@@ -70,6 +107,8 @@ export default function Contact({ selectedLanguage }) {
                 id="message"
                 cols="30"
                 rows="10"
+                value={userMessage}
+                onChange={e => setUserMessage(e.target.value)}
                 placeholder={translations[selectedLanguage].contact.form.placeholderMessage}
                 required
                 className={`${styles.contact_form_input}`}
