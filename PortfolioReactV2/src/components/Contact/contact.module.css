@@ -66,17 +66,25 @@ textarea{
     justify-content: space-around;
     position: fixed;
     top: 0;
-    width: 200px;
+    gap: 20px;
     height: 50px;
     margin-left: 50%;
     transform: translate(-50%, -100px);
     border-radius: 15px;
     background-color: var(--main-color-20-no-opa);
     padding: 20px;
-    transition: 0.3s ease;
+    transition-duration: 0.2s;
     z-index: 15;
 }
 
 .popupAnim{
     transform: translate(-50%, 20px);
+}
+
+.popupErrorAnim {
+    transform: translate(-50%, 20px);
+}
+
+.opa0{    
+    opacity: 0;
 }

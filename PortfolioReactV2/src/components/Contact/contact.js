@@ -7,6 +7,7 @@ import styles from './contact.module.css';
 import translations from '../../translations/translations';
 import Footer from '../PositionFixedComponents/Footer/Footer';
 import ConfirmationSvg from './ConfirmationSvg';
+import ErrorSvg from './ErrorSvg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ export default function Contact({ selectedLanguage }) {
   const [userEmail, setUserEmail] = useState('');
   const [userMessage, setUserMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopupError, setShowPopupError] = useState(false);
   const containerRef = useRef(null);
 
   // gsap animations
@@ -52,6 +54,13 @@ export default function Contact({ selectedLanguage }) {
   // mail service
   const handleSubmit = event => {
     event.preventDefault();
+    const lastSubmissionTime = localStorage.getItem('lastSubmissionTime');
+    // Yes with this approach the user can delete the localstorage and bypass this to submit the form multiple times, but i don't want to use a backend server for now, so if a malicious person want to use all of my mailjet token (free version) i will not be able receive mails from clients as long as this person is spaming sending emails, hope humans is not that bad to spam a simple portfolio contact form ...
+    if (lastSubmissionTime && new Date() - new Date(lastSubmissionTime) < 24 * 60 * 60 * 1000) {
+      setShowPopupError(true);
+      setTimeout(() => setShowPopupError(false), 2000);
+      return;
+    }
     const formData = {
       userName,
       userEmail,
@@ -76,16 +85,27 @@ export default function Contact({ selectedLanguage }) {
     //   console.error('Error:', JSON.stringify(error, null, 2));
     // });
 
+    if (lastSubmissionTime === null) {
+      localStorage.setItem('lastSubmissionTime', new Date());
+    }
     setShowPopup(true);
     resetFormData();
     setTimeout(() => setShowPopup(false), 2000);
   };
+
   return (
     <Element name="contact">
-      <div className={`${showPopup ? styles.popupAnim : ''} ${styles.popup}`}>
-        <ConfirmationSvg />
-        <p>{translations[selectedLanguage].contact.form.submitted}</p>
+      <div
+        className={`${styles.popup} ${showPopup ? styles.popupAnim : ''} ${
+          showPopupError ? styles.popupErrorAnim : ''
+        } ${(showPopup && showPopupError) || (!showPopup && !showPopupError) ? styles.opa0 : ''}`}
+      >
+        {showPopup && <ConfirmationSvg />}
+        {showPopup && <p>{translations[selectedLanguage].contact.form.submitted}</p>}
+        {showPopupError && <ErrorSvg />}
+        {showPopupError && <p>{translations[selectedLanguage].contact.form.submitError}</p>}
       </div>
+
       <section id="contact" className={`${styles.contact}`} ref={containerRef}>
         <p className="fromLeftAnimation">{translations[selectedLanguage].contact.description}</p>
         <div className={`${styles.contact_div} fromTopAnimation`}>
