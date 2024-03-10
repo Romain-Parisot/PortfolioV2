@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './LanguageSelector.module.css';
+import FlagArabLeague from '../../../assets/Flag_of_the_Arab_League.png';
 
 export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
   const [showFlags, setShowFlags] = useState(true);
@@ -90,12 +91,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
             alt="Russian flag"
           />
         )}
-        {/* {selectedLanguage === 'ar' && (
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Flag_of_the_Arab_League.svg/800px-Flag_of_the_Arab_League.svg.png"
-            alt="Arab League flag"
-          />
-        )} */}
+        {selectedLanguage === 'ar' && <img className={`${styles.flag}`} src={FlagArabLeague} alt="Arab League flag" />}
         {selectedLanguage === 'pt' && (
           <img
             src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f5-1f1f9.svg"
@@ -196,7 +192,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           alt="Russian flag"
         />
       </button>
-      {/* <button
+      <button
         type="button"
         onClick={() => changeLanguage('ar')}
         className={`${showFlags2 && selectedLanguage !== 'ar' ? styles.flagDisplay : styles.flagHidden} ${
@@ -204,10 +200,11 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         } MouseHoverEffect`}
       >
         <img
+          className={`${styles.flag}`}
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Flag_of_the_Arab_League.svg/800px-Flag_of_the_Arab_League.svg.png"
           alt="Arab League flag"
         />
-      </button> */}
+      </button>
       <button
         type="button"
         onClick={() => changeLanguage('pt')}
