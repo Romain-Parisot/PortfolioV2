@@ -67,3 +67,15 @@ nav ul li{
 .navSelected_txt{
   color: var(--dark-mode-off);
 }
+
+@media (max-width: 1000px) {
+  nav ul{
+    flex-direction: column;
+    gap: 20px;
+  }
+  header{
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -500px);
+  }
+}

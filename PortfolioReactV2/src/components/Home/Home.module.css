@@ -5,19 +5,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
 }
 
 h1{
   font-size: 40px;
   text-align: center;
-  margin-top: 100px;
+  transition: 0.3s;
 }
 
 #poste{
   margin-bottom: 50px;
   text-align: center;
   margin-top: 50px;
+  transition: 0.3s;
 }
 
 .leftHome{
@@ -25,7 +26,6 @@ h1{
   flex-direction: column;
   width: 50%;
   height: 100%;
-  margin-top: 10vh;
 }
 
 .rightHome{
@@ -34,13 +34,13 @@ h1{
   flex-direction: column;
   width: 50%;
   height: 100%;
-  margin-top: 10vh;
 }
 
 .topHome{
   width: 100%;
   height: 70%;
   display: flex;
+  margin-top: 100px;
 }
 
 .bottomHome{
@@ -80,7 +80,7 @@ h1{
 
 .rect2Home{
   background-color: var(--main-color-20-no-opa);
-  width: 300px;
+  padding: 10px 20px;
   height: 250px;
   border-radius: 20px;
   margin-right: 10px;
@@ -158,25 +158,21 @@ h1{
   fill: var(--main-color-40-no-opa);
   width: 100px;
   height: 100px;
-  position: absolute;
-  margin-left: 255px;
-  margin-top: 190px;
   z-index: 12;
 }
 
-.aArrowCircle{
+.svgCircleContainer{
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  margin-left: 255px;
+  margin-top: 190px;
 }
-
 .svgArrowCircle{
   fill: var(--dark-mode-on);
   width: 40px;
   height: 40px;
-  position: absolute;
-  margin-top: 220px;
   z-index: 13;
   transition: transform 0.3s ease;
 }   
@@ -272,4 +268,84 @@ h1{
 }
 .translateX0{
   transform: translateX(0px);
+}
+
+
+@media (max-width: 1600px) {
+  .svgCircleContainer {
+    display: none;
+  }
+  .rect3Home{
+    display: none;
+  }
+  .containerRectHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .rect1Home img{
+    width: 250px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .topHome{
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .bottomHome{
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .leftHome{
+    width: 100%;
+    margin-top: 50px;
+  }
+  .rightHome{
+    width: 100%;
+  }
+  .containerRectHome{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .rect2Home{
+    height: 100%;
+    gap: 20px;
+  }
+  .containerBtToProject{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .containerRectHome{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .containerRectHome{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  #poste{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .containerBtToProject{
+    margin-top: 20px;
+  }
 }

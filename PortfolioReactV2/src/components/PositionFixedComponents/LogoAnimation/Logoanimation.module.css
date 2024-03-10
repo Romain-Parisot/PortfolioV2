@@ -51,3 +51,14 @@
 .path2LogoAnim{
   stroke-dashoffset: 0;
 }
+
+@media (max-width: 600px) {
+  .logoSvg{
+    width: 75px;
+    height: 75px;
+  }
+  .logoSvgAnim{
+    width: 75px;
+    height: 75px;
+  }
+}

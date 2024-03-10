@@ -4,7 +4,7 @@
   background: none;
   border: none;
   position: fixed;
-  margin-left: 95vw;
+  right: 20px;
   margin-top: 20px;
   z-index: 13;
 }
@@ -40,4 +40,21 @@
 
 .hidden{
   background-color: var(--dark-mode-off) !important;; 
+}
+
+@media (max-width: 600px) {
+  .bar{
+    width: 33.75px;
+    height: 3px;
+    margin-top: 7.5px;
+  }
+  .barMid{
+    width: 22.5px;
+  }
+  .barAnimationTop{
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+  }
+  .barAnimationBot{
+    transform: rotate(-45deg) translate(7.5px, -7.5px);
+  }
 }
