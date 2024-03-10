@@ -6,6 +6,7 @@ import { Element } from 'react-scroll';
 import styles from './contact.module.css';
 import translations from '../../translations/translations';
 import Footer from '../PositionFixedComponents/Footer/Footer';
+import ConfirmationSvg from './ConfirmationSvg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,11 +14,13 @@ export default function Contact({ selectedLanguage }) {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userMessage, setUserMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
   const containerRef = useRef(null);
+
+  // gsap animations
   useEffect(() => {
     const fromTop = containerRef.current.querySelectorAll('.fromTopAnimation');
     const fromLeft = containerRef.current.querySelectorAll('.fromLeftAnimation');
-
     const animations = [
       { x: 0, y: -100 }, // from top
       { x: -100, y: 0 }, // from left
@@ -39,11 +42,16 @@ export default function Contact({ selectedLanguage }) {
     });
   }, []);
 
-  // mail service
+  // reset form data
+  const resetFormData = () => {
+    setUserName('');
+    setUserEmail('');
+    setUserMessage('');
+  };
 
+  // mail service
   const handleSubmit = event => {
     event.preventDefault();
-
     const formData = {
       userName,
       userEmail,
@@ -67,9 +75,17 @@ export default function Contact({ selectedLanguage }) {
     // .catch(error => {
     //   console.error('Error:', JSON.stringify(error, null, 2));
     // });
+
+    setShowPopup(true);
+    resetFormData();
+    setTimeout(() => setShowPopup(false), 2000);
   };
   return (
     <Element name="contact">
+      <div className={`${showPopup ? styles.popupAnim : ''} ${styles.popup}`}>
+        <ConfirmationSvg />
+        <p>{translations[selectedLanguage].contact.form.submitted}</p>
+      </div>
       <section id="contact" className={`${styles.contact}`} ref={containerRef}>
         <p className="fromLeftAnimation">{translations[selectedLanguage].contact.description}</p>
         <div className={`${styles.contact_div} fromTopAnimation`}>
