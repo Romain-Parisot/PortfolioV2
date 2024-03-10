@@ -1,11 +1,9 @@
 /* -------------------------------------home------------------------------------- */
 
 .home {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 h1{
@@ -296,6 +294,7 @@ h1{
   .topHome{
     flex-direction: column;
     margin-top: 0;
+    height: auto;
   }
   .bottomHome{
     display: none;
