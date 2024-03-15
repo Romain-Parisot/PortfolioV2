@@ -1,5 +1,4 @@
 .skills {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,3 +40,82 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@media (max-width: 1600px) {
+  .skillsContainer{
+    width: 70%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .skillsContainer{
+    width: 80%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .skillsContainer{
+    padding: 25px 50px;
+  }
+  .skillsContainer svg{
+    width: 75px;
+    height: 75px;
+  }
+  .titleSkillsContainer{
+    font-size: 20px;
+  }
+  .cardSkills h3{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .skillsContainer{
+    padding: 15px 30px;
+  }
+  .skillsContainer svg{
+    width: 50px;
+    height: 50px;
+  }
+  .titleSkillsContainer{
+    font-size: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .cardSkills h3{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .skillsContainer{
+    flex-direction: column;
+    gap: 50px;
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .skillsContainer svg{
+    width: 100px;
+    height: 100px;
+  }
+  .titleSkillsContainer{
+    font-size: 20px;
+  }
+  .cardSkills h3{
+    font-size: 16px;
+  }
+}
+
+/* @media (max-width: 500px) {
+  .skillsContainer{
+    flex-direction: column;
+    gap: 25px;
+    width: 60%;
+  }
+  .skillsContainer svg{
+    width: 50px;
+    height: 50px;
+  }
+
+} */

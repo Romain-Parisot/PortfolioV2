@@ -55,7 +55,7 @@ export default function Skills() {
           opacity: 1,
           duration: 1,
           scrollTrigger: {
-            trigger: skill,
+            trigger: skill.parentElement.parentElement,
             start: 'top center',
           },
         },
