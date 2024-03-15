@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './LanguageSelector.module.css';
-import FlagArabLeague from '../../../assets/Flag_of_the_Arab_League.png';
+
+// Flags
+import FlagArabLeague from './FlagSvg/FlagArab';
+import FlagChina from './FlagSvg/FlagChina';
+import FlagEngland from './FlagSvg/FlagEngland';
+import FlagFrance from './FlagSvg/FlagFrance';
+import FlagGermany from './FlagSvg/FlagGermany';
+import FlagIndia from './FlagSvg/FlagIndia';
+import FlagItaly from './FlagSvg/FlagItaly';
+import FlagJapan from './FlagSvg/FlagJapan';
+import FlagPortugal from './FlagSvg/FlagPortugal';
+import FlagRussia from './FlagSvg/FlagRussia';
+import FlagSpain from './FlagSvg/FlagSpain';
 
 export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
   const [showFlags, setShowFlags] = useState(true);
@@ -50,65 +62,59 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
         className="MouseHoverEffect"
       >
         {selectedLanguage === 'fr' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1eb-1f1f7.svg"
-            alt="French flag"
-          />
+          <div>
+            <FlagFrance alt="French flag" />
+          </div>
         )}
         {selectedLanguage === 'en' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ec-1f1e7.svg"
-            alt="UK flag"
-          />
+          <div>
+            <FlagEngland alt="England flag" />
+          </div>
         )}
         {selectedLanguage === 'de' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1e9-1f1ea.svg"
-            alt="German flag"
-          />
+          <div>
+            <FlagGermany alt="German flag" />
+          </div>
         )}
         {selectedLanguage === 'es' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ea-1f1f8.svg"
-            alt="Spanish flag"
-          />
+          <div>
+            <FlagSpain alt="Spanish flag" />
+          </div>
         )}
         {selectedLanguage === 'zh' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1e8-1f1f3.svg"
-            alt="Chinese flag"
-          />
+          <div>
+            <FlagChina alt="Chinese flag" />
+          </div>
         )}
         {selectedLanguage === 'hi' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f3.svg"
-            alt="Indian flag"
-          />
+          <div>
+            <FlagIndia alt="Indian flag" />
+          </div>
         )}
         {selectedLanguage === 'ru' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f7-1f1fa.svg"
-            alt="Russian flag"
-          />
+          <div>
+            <FlagRussia alt="Russian flag" />
+          </div>
         )}
-        {selectedLanguage === 'ar' && <img className={`${styles.flag}`} src={FlagArabLeague} alt="Arab League flag" />}
+        {selectedLanguage === 'ar' && (
+          <div>
+            <FlagArabLeague alt="Arab League flag" className={`${styles.flag}`} src={FlagArabLeague} />
+          </div>
+        )}
         {selectedLanguage === 'pt' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f5-1f1f9.svg"
-            alt="Portuguese flag"
-          />
+          <div>
+            <FlagPortugal alt="Portuguese flag" />
+          </div>
         )}
         {selectedLanguage === 'it' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f9.svg"
-            alt="Italian flag"
-          />
+          <div>
+            <FlagItaly alt="Italian flag" />
+          </div>
         )}
         {selectedLanguage === 'ja' && (
-          <img
-            src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ef-1f1f5.svg"
-            alt="Japanese flag"
-          />
+          <div>
+            <FlagJapan alt="Japanese flag" />
+          </div>
         )}
       </button>
       <button
@@ -118,10 +124,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'fr' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1eb-1f1f7.svg"
-          alt="French flag"
-        />
+        <FlagFrance alt="French flag" />
       </button>
       <button
         type="button"
@@ -130,7 +133,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'en' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ec-1f1e7.svg" alt="UK flag" />
+        <FlagEngland alt="England flag" />
       </button>
       <button
         type="button"
@@ -139,10 +142,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'de' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1e9-1f1ea.svg"
-          alt="German flag"
-        />
+        <FlagGermany alt="German flag" />
       </button>
       <button
         type="button"
@@ -151,10 +151,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'es' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ea-1f1f8.svg"
-          alt="Spanish flag"
-        />
+        <FlagSpain alt="Spanish flag" />
       </button>
       <button
         type="button"
@@ -163,10 +160,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'zh' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1e8-1f1f3.svg"
-          alt="Chinese flag"
-        />
+        <FlagChina alt="Chinese flag" />
       </button>
       <button
         type="button"
@@ -175,10 +169,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'hi' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f3.svg"
-          alt="Indian flag"
-        />
+        <FlagIndia alt="Indian flag" />
       </button>
       <button
         type="button"
@@ -187,10 +178,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'ru' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f7-1f1fa.svg"
-          alt="Russian flag"
-        />
+        <FlagRussia alt="Russian flag" />
       </button>
       <button
         type="button"
@@ -199,11 +187,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'ar' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          className={`${styles.flag}`}
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Flag_of_the_Arab_League.svg/800px-Flag_of_the_Arab_League.svg.png"
-          alt="Arab League flag"
-        />
+        <FlagArabLeague alt="Arab League flag" className={`${styles.flag}`} />
       </button>
       <button
         type="button"
@@ -212,10 +196,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'pt' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1f5-1f1f9.svg"
-          alt="Portuguese flag"
-        />
+        <FlagPortugal alt="Portuguese flag" />
       </button>
       <button
         type="button"
@@ -224,10 +205,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'it' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ee-1f1f9.svg"
-          alt="Italian flag"
-        />
+        <FlagItaly alt="Italian flag" />
       </button>
       <button
         type="button"
@@ -236,10 +214,7 @@ export default function LanguageSelector({ selectedLanguage, updateLanguage }) {
           showFlags && selectedLanguage !== 'ja' ? '' : styles.dpnone
         } MouseHoverEffect`}
       >
-        <img
-          src="https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/svg/1f1ef-1f1f5.svg"
-          alt="Japanese flag"
-        />
+        <FlagJapan alt="Japanese flag" />
       </button>
     </div>
   );
