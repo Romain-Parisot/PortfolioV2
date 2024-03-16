@@ -20,12 +20,34 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 32px;
+}
+
+.descSiteContainer a{
+    text-decoration: none;
+    position: relative;
+}
+
+.descSiteContainer a:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: rgb(212, 139, 27);
+    transition: width 300ms;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.descSiteContainer a:hover:after {
+    width: 100%;
 }
 
 .descSite{
     text-align: center;
     color: var(--dark-mode-on);
-    padding: 32px;
 }
 
 .linkContainer{

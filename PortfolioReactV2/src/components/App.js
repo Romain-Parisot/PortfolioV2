@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.module.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
+import Attribution from './AttributionPage/Attribution';
 import PositionFixedComponents from './PositionFixedComponents/FixedComponents';
 import Home from './Home/Home';
 import Parcour from './Parcour/Parcour';
@@ -8,17 +11,10 @@ import Project from './Project/Project';
 import Skills from './Skills/skills';
 import Contact from './Contact/contact';
 
-// import translations from '../translations/translations';
-
 import Mousetrail from './MouseTrail/Mousetrail';
 import AboutMe from './AboutMe/AboutMe';
 
-export default function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState('fr');
-
-  const updateLanguage = newLanguage => {
-    setSelectedLanguage(newLanguage);
-  };
+function MainPage({ selectedLanguage, updateLanguage }) {
   return (
     <div className="App">
       <Mousetrail />
@@ -34,3 +30,25 @@ export default function App() {
     </div>
   );
 }
+
+export default function App() {
+  const [selectedLanguage, setSelectedLanguage] = useState('fr');
+
+  const updateLanguage = newLanguage => {
+    setSelectedLanguage(newLanguage);
+  };
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/attribution" element={<Attribution />} />
+        <Route path="/" element={<MainPage selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />} />
+      </Routes>
+    </Router>
+  );
+}
+
+MainPage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  updateLanguage: PropTypes.func.isRequired,
+};

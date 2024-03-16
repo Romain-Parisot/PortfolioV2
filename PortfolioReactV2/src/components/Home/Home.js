@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Element, Link } from 'react-scroll';
 import styles from './Home.module.css';
-import PersonalPicture from '../../assets/PersonalPicture.png';
+import PersonalPicture from '../../assets/PersonalPicture.webp';
 import translations from '../../translations/translations';
 
 gsap.registerPlugin(ScrollTrigger);

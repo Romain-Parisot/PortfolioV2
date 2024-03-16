@@ -5,35 +5,35 @@ import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
 // SwipperBar Icons
-import ExpandIcon from '../../assets/project/SwipperBar/expand.png';
-import CrossIcon from '../../assets/project/SwipperBar/cross.png';
-// import ThumbsUpIcon from '../../assets/project/SwipperBar/thumbsUp.png';
-import UndoIcon from '../../assets/project/SwipperBar/undoArrow.png';
+import ExpandIcon from '../../assets/project/SwipperBar/expand.webp';
+import CrossIcon from '../../assets/project/SwipperBar/cross.webp';
+// import ThumbsUpIcon from '../../assets/project/SwipperBar/thumbsUp.webp';
+import UndoIcon from '../../assets/project/SwipperBar/undoArrow.webp';
 
 // ViolonFrance Pictures
-import ViolonFrancePic1 from '../../assets/project/violonFrance/ViolonFrance_img1.JPG';
-import ViolonFrancePic2 from '../../assets/project/violonFrance/ViolonFrance_img2.JPG';
-import ViolonFrancePic3 from '../../assets/project/violonFrance/ViolonFrance_img3.JPG';
-import ViolonFrancePic4 from '../../assets/project/violonFrance/ViolonFrance_img4.JPG';
+import ViolonFrancePic1 from '../../assets/project/violonFrance/ViolonFrance_img1.webp';
+import ViolonFrancePic2 from '../../assets/project/violonFrance/ViolonFrance_img2.webp';
+import ViolonFrancePic3 from '../../assets/project/violonFrance/ViolonFrance_img3.webp';
+import ViolonFrancePic4 from '../../assets/project/violonFrance/ViolonFrance_img4.webp';
 
 // MousdikPianos Pictures
 
-import MousdikPianosPic1 from '../../assets/project/mousdikpianos/MousdikPianos_img1.PNG';
-import MousdikPianosPic2 from '../../assets/project/mousdikpianos/MousdikPianos_img2.PNG';
-import MousdikPianosPic3 from '../../assets/project/mousdikpianos/MousdikPianos_img3.PNG';
-import MousdikPianosPic4 from '../../assets/project/mousdikpianos/MousdikPianos_img4.PNG';
+import MousdikPianosPic1 from '../../assets/project/mousdikpianos/MousdikPianos_img1.webp';
+import MousdikPianosPic2 from '../../assets/project/mousdikpianos/MousdikPianos_img2.webp';
+import MousdikPianosPic3 from '../../assets/project/mousdikpianos/MousdikPianos_img3.webp';
+import MousdikPianosPic4 from '../../assets/project/mousdikpianos/MousdikPianos_img4.webp';
 
 // plessisRobinson Pictures
-import PlessisRobinsonPic1 from '../../assets/project/plessisRobinson/Plessis-Robinson_img1.png';
-import PlessisRobinsonPic2 from '../../assets/project/plessisRobinson/Plessis-Robinson_img2.png';
-import PlessisRobinsonPic3 from '../../assets/project/plessisRobinson/Plessis-Robinson_img3.png';
-import PlessisRobinsonPic4 from '../../assets/project/plessisRobinson/Plessis-Robinson_img4.png';
+import PlessisRobinsonPic1 from '../../assets/project/plessisRobinson/Plessis-Robinson_img1.webp';
+import PlessisRobinsonPic2 from '../../assets/project/plessisRobinson/Plessis-Robinson_img2.webp';
+import PlessisRobinsonPic3 from '../../assets/project/plessisRobinson/Plessis-Robinson_img3.webp';
+import PlessisRobinsonPic4 from '../../assets/project/plessisRobinson/Plessis-Robinson_img4.webp';
 
 // wikifilms Pictures
-import WikifilmsPic1 from '../../assets/project/wikiFilms/Wikifilm_img1.PNG';
-import WikifilmsPic2 from '../../assets/project/wikiFilms/Wikifilm_img2.PNG';
-import WikifilmsPic3 from '../../assets/project/wikiFilms/Wikifilm_img3.PNG';
-import WikifilmsPic4 from '../../assets/project/wikiFilms/Wikifilm_img4.PNG';
+import WikifilmsPic1 from '../../assets/project/wikiFilms/Wikifilm_img1.webp';
+import WikifilmsPic2 from '../../assets/project/wikiFilms/Wikifilm_img2.webp';
+import WikifilmsPic3 from '../../assets/project/wikiFilms/Wikifilm_img3.webp';
+import WikifilmsPic4 from '../../assets/project/wikiFilms/Wikifilm_img4.webp';
 
 const initialBaseProjectsList = [
   {

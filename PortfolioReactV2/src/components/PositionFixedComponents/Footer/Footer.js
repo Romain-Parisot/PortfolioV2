@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Footer.module.css';
 import MailSvg from './socialMediaSvg/MailSvg';
@@ -83,6 +84,9 @@ export default function Footer() {
       </div>
       <div className={`${styles.descSiteContainer}`}>
         <p className={`${styles.descSite} fromTopAnimation`}>Portfolio 2024 - Romain PARISOT</p>
+        <Link className="MouseHoverEffect" to="/attribution">
+          Attributions
+        </Link>
       </div>
     </footer>
   );

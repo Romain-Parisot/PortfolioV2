@@ -141,6 +141,9 @@ const translations = {
         submitError: 'You can submit only one time a day.',
       },
     },
+    attribution: {
+      linkMessage: 'Attributions page',
+    },
   },
   fr: {
     header: {
@@ -288,6 +291,9 @@ const translations = {
         submitted: 'Message envoyé',
         submitError: 'Vous ne pouvez envoyer qu’une seule fois par jour.',
       },
+    },
+    attribution: {
+      linkMessage: 'Page d’attributions',
     },
   },
   de: {
@@ -437,6 +443,9 @@ const translations = {
         submitError: 'Sie können nur einmal am Tag senden.',
       },
     },
+    attribution: {
+      linkMessage: 'Attributionsseite',
+    },
   },
   es: {
     header: {
@@ -583,6 +592,9 @@ const translations = {
         submitError: 'Solo puedes enviar una vez al día.',
       },
     },
+    attribution: {
+      linkMessage: 'Página de atribuciones',
+    },
   },
   zh: {
     header: {
@@ -717,6 +729,9 @@ const translations = {
         submitted: '消息已发送',
         submitError: '您每天只能发送一次。',
       },
+    },
+    attribution: {
+      linkMessage: '归因页面',
     },
   },
   hi: {
@@ -856,6 +871,9 @@ const translations = {
         submitted: 'संदेश भेज दिया गया',
         submitError: 'आप एक दिन में केवल एक बार ही भेज सकते हैं।',
       },
+    },
+    attribution: {
+      linkMessage: 'श्रेय सूची पेज',
     },
   },
   ru: {
@@ -1000,6 +1018,9 @@ const translations = {
         submitError: 'Вы можете отправлять сообщение только один раз в день.',
       },
     },
+    attribution: {
+      linkMessage: 'Страница атрибуции',
+    },
   },
   ar: {
     header: {
@@ -1135,6 +1156,9 @@ const translations = {
         submitted: 'تم إرسال الرسالة',
         submitError: 'يمكنك إرسال رسالة فقط مرة واحدة في اليوم.',
       },
+    },
+    attribution: {
+      linkMessage: 'صفحة الاعتراف',
     },
   },
   pt: {
@@ -1278,6 +1302,9 @@ const translations = {
         submitted: 'Mensagem enviada',
         submitError: 'Você só pode enviar uma mensagem uma vez por dia.',
       },
+    },
+    attribution: {
+      linkMessage: 'Página de atribuição',
     },
   },
   it: {
@@ -1426,6 +1453,9 @@ const translations = {
         submitError: 'Puoi inviare un messaggio solo una volta al giorno.',
       },
     },
+    attribution: {
+      linkMessage: 'Pagina di attribuzione',
+    },
   },
   ja: {
     header: {
@@ -1561,6 +1591,9 @@ const translations = {
         submitted: 'メッセージが送信されました',
         submitError: '1日に1回しかメッセージを送信できません。',
       },
+    },
+    attribution: {
+      linkMessage: '帰属ページ',
     },
   },
 };
