@@ -7,7 +7,7 @@ import Header from './Header/Header';
 import Darkmode from './DarkMode/Darkmode';
 import LanguageSelector from './LanguageSelector/LanguageSelector';
 
-export default function PositionFixedComponents({ selectedLanguage, updateLanguage }) {
+export default function PositionFixedComponents({ selectedLanguage, updateLanguage, hideHeader }) {
   const [isBurgerOpen, setisBurgerOpen] = useState(false);
   const toggleburger = useCallback(() => {
     setisBurgerOpen(prevIsBurgerOpen => !prevIsBurgerOpen);
@@ -17,7 +17,7 @@ export default function PositionFixedComponents({ selectedLanguage, updateLangua
     <div>
       <Onloadanimation />
       <Logoanimation />
-      <Burgermenu onToggleburger={toggleburger} isBurgerOpen={isBurgerOpen} />
+      {!hideHeader ? <Burgermenu onToggleburger={toggleburger} isBurgerOpen={isBurgerOpen} /> : null}
       <LanguageSelector selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />
       <Header isBurgerOpen={isBurgerOpen} selectedLanguage={selectedLanguage} />
       <Darkmode />
@@ -25,7 +25,12 @@ export default function PositionFixedComponents({ selectedLanguage, updateLangua
   );
 }
 
+PositionFixedComponents.defaultProps = {
+  hideHeader: false,
+};
+
 PositionFixedComponents.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   updateLanguage: PropTypes.func.isRequired,
+  hideHeader: PropTypes.bool,
 };

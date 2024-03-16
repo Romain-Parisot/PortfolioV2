@@ -24,7 +24,7 @@ function Attribution({ selectedLanguage, updateLanguage }) {
   return (
     <div>
       <Mousetrail />
-      <PositionFixedComponents selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />
+      <PositionFixedComponents selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} hideHeader />
       <h1 className={styles.title}>{translations[selectedLanguage].attribution.title}</h1>
       <p className={styles.description}>{translations[selectedLanguage].attribution.description}</p>
       <div className={styles.container}>
