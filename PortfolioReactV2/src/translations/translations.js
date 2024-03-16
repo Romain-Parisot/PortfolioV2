@@ -144,6 +144,9 @@ const translations = {
     attribution: {
       linkMessage: 'Attributions page',
       title: 'Attributions',
+      description: 'To realize my portfolio, I used icons from the site Flaticon and I would like to thank them here.',
+      madeBy: 'Made by :',
+      backToHome: 'Back to home',
     },
   },
   fr: {
@@ -451,6 +454,11 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Attributionsseite',
+      title: 'Zuschreibungen',
+      description:
+        'Für die Erstellung meines Portfolios habe ich Icons von der Website Flaticon verwendet und möchte mich hier bei ihnen bedanken.',
+      madeBy: 'Hergestellt von :',
+      backToHome: 'Zurück zur Startseite',
     },
   },
   es: {
@@ -600,6 +608,10 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Página de atribuciones',
+      title: 'Atribuciones',
+      description: 'Para realizar mi portafolio, utilicé iconos del sitio Flaticon y me gustaría agradecerles aquí.',
+      madeBy: 'Hecho por :',
+      backToHome: 'Volver a la página de inicio',
     },
   },
   zh: {
@@ -738,6 +750,10 @@ const translations = {
     },
     attribution: {
       linkMessage: '归因页面',
+      title: '归因',
+      description: '为了制作我的作品集，我使用了来自Flaticon网站的图标，并在此向他们表示感谢。',
+      madeBy: '制作人 :',
+      backToHome: '返回主页',
     },
   },
   hi: {
@@ -880,6 +896,11 @@ const translations = {
     },
     attribution: {
       linkMessage: 'श्रेय सूची पेज',
+      title: 'श्रेय',
+      description:
+        'मेरे पोर्टफोलियो को बनाने के लिए मैंने Flaticon साइट से आइकन का उपयोग किया और मैं चाहता हूँ कि मैं यहाँ उनका धन्यवाद करूँ।',
+      madeBy: 'निर्माण :',
+      backToHome: 'मुख्य पृष्ठ पर वापस जाएं',
     },
   },
   ru: {
@@ -1026,6 +1047,10 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Страница атрибуции',
+      title: 'Атрибуция',
+      description: 'Для создания своего портфолио я использовал иконки с сайта Flaticon и хочу поблагодарить их здесь.',
+      madeBy: 'Сделано :',
+      backToHome: 'Вернуться на главную',
     },
   },
   ar: {
@@ -1165,6 +1190,10 @@ const translations = {
     },
     attribution: {
       linkMessage: 'صفحة الاعتراف',
+      title: 'اعتراف',
+      description: 'لإنشاء بورتفوليو الخاص بي، استخدمت الرموز من موقع Flaticon وأريد أن أشكرهم هنا.',
+      madeBy: 'صنع بواسطة :',
+      backToHome: 'العودة إلى الصفحة الرئيسية',
     },
   },
   pt: {
@@ -1311,6 +1340,10 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Página de atribuição',
+      title: 'Atribuição',
+      description: 'Para criar meu portfólio, usei ícones do site Flaticon e quero agradecê-los aqui.',
+      madeBy: 'Feito por :',
+      backToHome: 'Voltar para a página inicial',
     },
   },
   it: {
@@ -1461,6 +1494,10 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Pagina di attribuzione',
+      title: 'Attribuzione',
+      description: 'Per creare il mio portfolio, ho utilizzato icone dal sito Flaticon e voglio ringraziarli qui.',
+      madeBy: 'Fatto da :',
+      backToHome: 'Torna alla pagina iniziale',
     },
   },
   ja: {
@@ -1600,6 +1637,10 @@ const translations = {
     },
     attribution: {
       linkMessage: '帰属ページ',
+      title: '帰属',
+      description: '私のポートフォリオを作成するために、Flaticonのアイコンを使用し、ここで感謝したいと思います。',
+      madeBy: '作成者 :',
+      backToHome: 'ホームに戻る',
     },
   },
 };
