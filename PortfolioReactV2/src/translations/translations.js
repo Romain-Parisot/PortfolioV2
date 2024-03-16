@@ -143,6 +143,7 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Attributions page',
+      title: 'Attributions',
     },
   },
   fr: {
@@ -294,6 +295,11 @@ const translations = {
     },
     attribution: {
       linkMessage: 'Page d’attributions',
+      title: 'Attributions',
+      description:
+        'Pour réaliser mon portfolio, j’ai utilisé des icônes depuis le site Flaticon et je tiens à les remercier ici.',
+      madeBy: 'Réalisées par :',
+      backToHome: 'Retour à l’accueil',
     },
   },
   de: {

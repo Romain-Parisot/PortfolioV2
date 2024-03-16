@@ -41,7 +41,10 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/attribution" element={<Attribution />} />
+        <Route
+          path="/attribution"
+          element={<Attribution selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />}
+        />
         <Route path="/" element={<MainPage selectedLanguage={selectedLanguage} updateLanguage={updateLanguage} />} />
       </Routes>
     </Router>
