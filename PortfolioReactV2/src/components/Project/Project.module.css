@@ -4,8 +4,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 300px;
-  margin-bottom: 300px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  gap: 50px;
 }
 
 .projects_swipper{
@@ -19,8 +20,8 @@
 }
 
 .swipper_card_container{
-  width: 50vw;
-  height: 50vh;
+  width: 1200px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,8 +40,8 @@
 
 .card{
   position: relative;
-  width: 50vw;
-  height: 50vh;
+  width: 1200px;
+  height: 600px;
   border-radius: 15px;
   background-size: cover;
   background-position: center;
@@ -136,4 +137,141 @@
 
 .opacity50{
   opacity: 0.5;
+}
+
+@media (max-width: 1600px) {
+  .swipper_card_container{
+    width: 1000px;
+    height: 500px;
+  }
+  .card{
+    width: 1000px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .swipper_card_container{
+    width: 800px;
+    height: 400px;
+  }
+  .card{
+    width: 800px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .swipper_card_container{
+    width: 700px;
+    height: 350px;
+  }
+  .card{
+    width: 700px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .swipper_card_container{
+    width: 600px;
+    height: 300px;
+  }
+  .card{
+    width: 600px;
+    height: 300px;
+  }
+  .swipper_buttons_container{
+    gap: 75px;
+  }
+  .projects_swipper{
+    padding: 10px;
+  
+  }
+}
+
+@media (max-width: 900px) {
+  .swipper_card_container{
+    width: 500px;
+    height: 250px;
+  }
+  .card{
+    width: 500px;
+    height: 250px;
+  }
+  .button_swipper_bar{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  .swipper_like_counter{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .swipper_card_container{
+    width: 400px;
+    height: 200px;
+  }
+  .card{
+    width: 400px;
+    height: 200px;
+  }
+  .swipper_buttons_container{
+    gap: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .button_swipper_bar{
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+  .swipper_like_counter{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .swipper_card_container{
+    width: 350px;
+    height: 175px;
+  }
+  .card{
+    width: 350px;
+    height: 175px;
+  }
+  .button_swipper_bar{
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+  .swipper_like_counter{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .swipper_card_container{
+    width: 300px;
+    height: 150px;
+  }
+  .card{
+    width: 300px;
+    height: 150px;
+  }
+  .button_swipper_bar{
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+  .swipper_like_counter{
+    width: 20px;
+    height: 20px;
+  }
 }

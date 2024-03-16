@@ -233,7 +233,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
         ))}
       </div>
       <div className={`${styles.swipper_buttons_container}`}>
-        <div className={`${styles.container_button_close}`}>
+        <div>
           <button
             type="button"
             className={`${styles.button_swipper_bar} MouseHoverEffect`}

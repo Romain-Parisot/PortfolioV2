@@ -304,4 +304,7 @@ h3{
   .parcourElmtChild{
     justify-content: space-around;
   }
+  .parcourElmt{
+    margin: 0px;
+  }
 }
