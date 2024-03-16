@@ -25,21 +25,39 @@ export default function Footer() {
       gsap.fromTo(
         top,
         { x: animations[0].x, y: animations[0].y, opacity: 0 },
-        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: top, start: 'bottom bottom' } },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: { trigger: top.parentElement.parentElement, start: 'top bottom' },
+        },
       );
     });
     fromLeft.forEach(left => {
       gsap.fromTo(
         left,
         { x: animations[1].x, y: animations[1].y, opacity: 0 },
-        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: left, start: 'bottom bottom' } },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: { trigger: left.parentElement.parentElement, start: 'top bottom' },
+        },
       );
     });
     fromRight.forEach(right => {
       gsap.fromTo(
         right,
         { x: animations[2].x, y: animations[2].y, opacity: 0 },
-        { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: right, start: 'bottom bottom' } },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: { trigger: right.parentElement.parentElement, start: 'top bottom' },
+        },
       );
     });
   }, []);

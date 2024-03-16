@@ -107,7 +107,9 @@ export default function Contact({ selectedLanguage }) {
       </div>
 
       <section id="contact" className={`${styles.contact}`} ref={containerRef}>
-        <p className="fromLeftAnimation">{translations[selectedLanguage].contact.description}</p>
+        <p className={`${styles.description} fromLeftAnimation`}>
+          {translations[selectedLanguage].contact.description}
+        </p>
         <div className={`${styles.contact_div} fromTopAnimation`}>
           <form method="POST" onSubmit={handleSubmit}>
             <div className={`${styles.contact_form_field}`}>

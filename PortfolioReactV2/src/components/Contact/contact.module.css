@@ -10,7 +10,7 @@
     border-radius: 5px;
     padding: 32px;
     background-color: var(--main-color-20-no-opa);
-    width: 40vw;
+    width: 50%;
 }
 
 .contact_form_field{
@@ -60,6 +60,10 @@ textarea{
     resize: none;
 }
 
+.description{
+    text-align: center;
+}
+
 .popup{
     display: flex;
     align-items: center;
@@ -87,4 +91,31 @@ textarea{
 
 .opa0{    
     opacity: 0;
+}
+
+@media (max-width: 1600px) {
+    .contact_div{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .contact_div{
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact_form_field_submit{
+        justify-content: center;
+    }
+    .contact_form_submit{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+    .contact_div{
+        padding: 16px;
+    }
 }
