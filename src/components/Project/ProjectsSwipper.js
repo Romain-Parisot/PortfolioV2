@@ -57,6 +57,7 @@ const initialBaseProjectsList = [
 export default function ProjectsSwipper({ selectedLanguage }) {
   const [currentIndex, setCurrentIndex] = useState(initialBaseProjectsList.length - 1);
   const [indexProjectPic1, setIndexProjectPic1] = useState(0);
+  const [projectLiked, setProjectLiked] = useState(false);
   const currentIndexRef = useRef(currentIndex);
   const childRefs = useMemo(
     () =>
@@ -186,72 +187,86 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   const ProjectNameOrder = [4, 3, 1, 2];
 
   return (
-    <div className={`${styles.projects_swipper}`}>
-      <div className={`${styles.swipper_card_container}`}>
-        {initialBaseProjectsList.map((project, index) => (
-          <TinderCard
-            ref={childRefs[index]}
-            className={`${styles.swipper_card}`}
-            key={`${project.code}`}
-            onSwipe={() => swiped(index)}
-            onCardLeftScreen={() => debouncedOutOfFrame(project.code, index)}
-          >
-            <div
-              className={`${styles.card}`}
-              style={{
-                backgroundImage: `url(${project.picture[indexProjectPic1]})`,
-              }}
+    <div>
+      <div className={`${styles.BeforeLikeContainer} ${projectLiked ? styles.AfterLikeContainer : null}`}>
+        <div className={styles.LikedContainer}>
+          <div>
+            <button
+              type="button"
+              className={`${styles.button_close_liked_project} MouseHoverEffect`}
+              onClick={() => setProjectLiked(false)}
             >
-              {/* <div className={`${styles.swipper_like_counter}`}>
+              <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className={`${styles.projects_swipper}`}>
+        <div className={`${styles.swipper_card_container}`}>
+          {initialBaseProjectsList.map((project, index) => (
+            <TinderCard
+              ref={childRefs[index]}
+              className={`${styles.swipper_card}`}
+              key={`${project.code}`}
+              onSwipe={() => swiped(index)}
+              onCardLeftScreen={() => debouncedOutOfFrame(project.code, index)}
+            >
+              <div
+                className={`${styles.card}`}
+                style={{
+                  backgroundImage: `url(${project.picture[indexProjectPic1]})`,
+                }}
+              >
+                {/* <div className={`${styles.swipper_like_counter}`}>
                 {loading ? <p>...</p> : <p>{likeCounterList[index]}</p>}
               </div> */}
-              <div className={`${styles.swipper_click} MouseHoverEffect`}>
-                <div
-                  role="button"
-                  className={`${styles.swipper_previous_pic}`}
-                  onClick={handleClickNextPicture(false)}
-                  onKeyDown={k => k.key === 'Enter' && handleClickNextPicture(false)}
-                  tabIndex={0}
-                  aria-label="Previous Picture"
-                />
-                <div
-                  role="button"
-                  className={`${styles.swipper_next_pic}`}
-                  onClick={handleClickNextPicture(true)}
-                  onKeyDown={k => k.key === 'Enter' && handleClickNextPicture(true)}
-                  tabIndex={0}
-                  aria-label="Next Picture"
-                />
+                <div className={`${styles.swipper_click} MouseHoverEffect`}>
+                  <div
+                    role="button"
+                    className={`${styles.swipper_click_pic}`}
+                    onClick={handleClickNextPicture(false)}
+                    onKeyDown={k => k.key === 'Enter' && handleClickNextPicture(false)}
+                    tabIndex={0}
+                    aria-label="Previous Picture"
+                  />
+                  <div
+                    role="button"
+                    className={`${styles.swipper_click_pic}`}
+                    onClick={handleClickNextPicture(true)}
+                    onKeyDown={k => k.key === 'Enter' && handleClickNextPicture(true)}
+                    tabIndex={0}
+                    aria-label="Next Picture"
+                  />
+                </div>
+                <div className={`${styles.swipper_card_overlay}`}>
+                  <p className={`${styles.swipper_card_text}`}>
+                    {translations[selectedLanguage].project[`project${ProjectNameOrder[index]}`].ProjectName}
+                  </p>
+                </div>
               </div>
-              <div className={`${styles.swipper_card_overlay}`}>
-                <p className={`${styles.swipper_card_text}`}>
-                  {translations[selectedLanguage].project[`project${ProjectNameOrder[index]}`].ProjectName}
-                </p>
-              </div>
-            </div>
-          </TinderCard>
-        ))}
-      </div>
-      <div className={`${styles.swipper_buttons_container}`}>
-        <div>
-          <button
-            type="button"
-            className={`${styles.button_swipper_bar} MouseHoverEffect`}
-            onClick={() => swipe('left')}
-          >
-            <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
-          </button>
+            </TinderCard>
+          ))}
         </div>
-        <div className={`${styles.container_middle_button} ${canGoBack ? '' : styles.opacity50}`}>
-          <button
-            type="button"
-            className={`${styles.button_swipper_bar} ${canGoBack ? '' : 'MouseHoverEffect'}`}
-            onClick={() => goBack()}
-          >
-            <img src={UndoIcon} alt="Undo Icon" className={`${styles.img_swipper_bar}`} />
-          </button>
-        </div>
-        {/* <div className={`${styles.container_middle_button}`}>
+        <div className={`${styles.swipper_buttons_container}`}>
+          <div>
+            <button
+              type="button"
+              className={`${styles.button_swipper_bar} MouseHoverEffect`}
+              onClick={() => swipe('left')}
+            >
+              <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
+            </button>
+          </div>
+          <div className={`${styles.container_middle_button} ${canGoBack ? '' : styles.opacity50}`}>
+            <button
+              type="button"
+              className={`${styles.button_swipper_bar} ${canGoBack ? '' : 'MouseHoverEffect'}`}
+              onClick={() => goBack()}
+            >
+              <img src={UndoIcon} alt="Undo Icon" className={`${styles.img_swipper_bar}`} />
+            </button>
+          </div>
+          {/* <div className={`${styles.container_middle_button}`}>
           <button
             type="button"
             className={`${styles.button_swipper_bar} MouseHoverEffect`}
@@ -261,14 +276,18 @@ export default function ProjectsSwipper({ selectedLanguage }) {
             <img src={ThumbsUpIcon} alt="Thumbs Up Icon" className={`${styles.img_swipper_bar}`} />
           </button>
         </div> */}
-        <div className={`${styles.container_button_expand}`}>
-          <button
-            type="button"
-            className={`${styles.button_swipper_bar} MouseHoverEffect`}
-            onClick={() => swipe('right')}
-          >
-            <img src={ExpandIcon} alt="Expand Icon" className={`${styles.img_swipper_bar}`} />
-          </button>
+          <div className={`${styles.container_button_expand}`}>
+            <button
+              type="button"
+              className={`${styles.button_swipper_bar} MouseHoverEffect`}
+              onClick={() => {
+                swipe('right');
+                setProjectLiked(true);
+              }}
+            >
+              <img src={ExpandIcon} alt="Expand Icon" className={`${styles.img_swipper_bar}`} />
+            </button>
+          </div>
         </div>
       </div>
     </div>
