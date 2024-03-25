@@ -34,6 +34,7 @@ import WikifilmsPic1 from '../../assets/project/wikiFilms/Wikifilm_img1.webp';
 import WikifilmsPic2 from '../../assets/project/wikiFilms/Wikifilm_img2.webp';
 import WikifilmsPic3 from '../../assets/project/wikiFilms/Wikifilm_img3.webp';
 import WikifilmsPic4 from '../../assets/project/wikiFilms/Wikifilm_img4.webp';
+import CrossSvg from './CrossSvg';
 
 const initialBaseProjectsList = [
   {
@@ -58,6 +59,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   const [currentIndex, setCurrentIndex] = useState(initialBaseProjectsList.length - 1);
   const [indexProjectPic1, setIndexProjectPic1] = useState(0);
   const [projectLiked, setProjectLiked] = useState(false);
+  const [projectLikedIndex, setProjectLikedIndex] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
   const currentIndexRef = useRef(currentIndex);
   const childRefs = useMemo(
     () =>
@@ -186,20 +191,61 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   // this is the order of the projects name, instead of editing all the translations file to modify the order of the projects, i can just change the order of the array here
   const ProjectNameOrder = [4, 3, 1, 2];
 
+  function sleep(ms) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, ms);
+    });
+  }
+
+  const handleMouseOver = async index => {
+    if (!isHovering) {
+      setIsHovering(true);
+      setSelectedImageIndex(index);
+      await sleep(100);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div>
       <div className={`${styles.BeforeLikeContainer} ${projectLiked ? styles.AfterLikeContainer : null}`}>
-        <div className={styles.LikedContainer}>
-          <div>
-            <button
-              type="button"
-              className={`${styles.button_close_liked_project} MouseHoverEffect`}
-              onClick={() => setProjectLiked(false)}
-            >
-              <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
-            </button>
+        {projectLikedIndex !== null && (
+          <div className={styles.LikedContainer}>
+            <div className={styles.headerContainer}>
+              <h2>
+                {translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`].ProjectName}
+              </h2>
+              <button
+                type="button"
+                className={`${styles.button_close_liked_project} MouseHoverEffect`}
+                onClick={() => setProjectLiked(false)}
+              >
+                <CrossSvg />
+              </button>
+            </div>
+            <div className={styles.contentContainer}>
+              <div className={styles.imageGalleryContainer}>
+                {initialBaseProjectsList[projectLikedIndex].picture.map((image, index) => (
+                  <img
+                    key={image}
+                    src={image}
+                    alt="project"
+                    className={index === selectedImageIndex ? styles.selectedGalleryImage : null}
+                    onMouseOver={() => handleMouseOver(index)}
+                    onMouseLeave={handleMouseLeave}
+                    onFocus={() => setSelectedImageIndex(index)}
+                  />
+                ))}
+              </div>
+              {/* <div></div> */}
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <div className={`${styles.projects_swipper}`}>
         <div className={`${styles.swipper_card_container}`}>
@@ -257,7 +303,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               <img src={CrossIcon} alt="Cross Icon" className={`${styles.img_swipper_bar}`} />
             </button>
           </div>
-          <div className={`${styles.container_middle_button} ${canGoBack ? '' : styles.opacity50}`}>
+          <div className={`${styles.container_middle_button} ${canGoBack ? '' : styles.opacity50} `}>
             <button
               type="button"
               className={`${styles.button_swipper_bar} ${canGoBack ? '' : 'MouseHoverEffect'}`}
@@ -283,6 +329,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               onClick={() => {
                 swipe('right');
                 setProjectLiked(true);
+                setProjectLikedIndex(currentIndex);
               }}
             >
               <img src={ExpandIcon} alt="Expand Icon" className={`${styles.img_swipper_bar}`} />
