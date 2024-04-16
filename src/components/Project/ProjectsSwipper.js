@@ -1,6 +1,14 @@
 import React, { useState, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import TinderCard from 'react-tinder-card';
+
+// material-ui
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import styles from './Project.module.css';
 import translations from '../../translations/translations';
 
@@ -242,7 +250,37 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                   />
                 ))}
               </div>
-              {/* <div></div> */}
+              <div className={styles.contentDescriptionContainer}>
+                <h3>
+                  Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla nulla
+                  est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad fugiat ea
+                  proident et pariatur mollit.
+                </h3>
+                <div>
+                  <Accordion defaultExpanded>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1-content" id="panel1-header">
+                      <Typography>Expanded by default</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
+                        amet blandit leo lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2-content" id="panel2-header">
+                      <Typography>Header</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
+                        amet blandit leo lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </div>
+              </div>
             </div>
           </div>
         )}

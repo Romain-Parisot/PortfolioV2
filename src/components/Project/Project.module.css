@@ -150,13 +150,13 @@
   z-index: 1;
   opacity: 0;
   position: absolute;
-  left: 70px;
+  left: 100px;
   margin-left: 45%;
 }
 
 .AfterLikeContainer {
-  width: calc(100vw - 160px);
-  height: 800px;
+  width: calc(100vw - 220px);
+  height: 650px;
   z-index: 3;
   opacity: 1;
   margin-left: 0;
@@ -205,7 +205,7 @@
   fill: white;
 }
 
-.headerContainer{
+.headerContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,13 +213,13 @@
   padding: 5px;
 }
 
-.contentContainer{
+.contentContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.imageGalleryContainer{
+.imageGalleryContainer {
   width: 20vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -227,14 +227,14 @@
   gap: 10px;
 }
 
-.imageGalleryContainer img{
+.imageGalleryContainer img {
   width: 100%;
   object-fit: cover;
   display: grid;
   transition: 1s;
 }
 
-.selectedGalleryImage{
+.selectedGalleryImage {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
