@@ -11,7 +11,7 @@ const translations = {
     home: {
       JobTitle1: 'Project Manager',
       JobTitle2: 'Web/Software Developer',
-      StarMessage1: '+10 Projects done',
+      StarMessage1: '+30 Projects done',
       StarMessage2: '3 years of experience',
       MeInSomePoints: 'Me in some points',
       MePoint1: 'I am 20 years old',
@@ -161,7 +161,7 @@ const translations = {
     home: {
       JobTitle1: 'Chef de projet',
       JobTitle2: 'Développeur Web/Logiciel',
-      StarMessage1: '+10 Projets réalisés',
+      StarMessage1: '+30 Projets réalisés',
       StarMessage2: "3 ans d'expérience",
       MeInSomePoints: 'Moi en quelques points',
       MePoint1: "J'ai 20 ans",
@@ -317,7 +317,7 @@ const translations = {
     home: {
       JobTitle1: 'Projektleiter',
       JobTitle2: 'Web / Software-Entwickler',
-      StarMessage1: '+10 Projekte erledigt',
+      StarMessage1: '+30 Projekte erledigt',
       StarMessage2: '3 Jahre Erfahrung',
       MeInSomePoints: 'Ich in einigen Punkten',
       MePoint1: 'Ich bin 20 Jahre alt',
@@ -473,7 +473,7 @@ const translations = {
     home: {
       JobTitle1: 'Gerente de proyecto',
       JobTitle2: 'Desarrollador web / de software',
-      StarMessage1: '+10 Proyectos realizados',
+      StarMessage1: '+30 Proyectos realizados',
       StarMessage2: '3 años de experiencia',
       MeInSomePoints: 'Yo en algunos puntos',
       MePoint1: 'Tengo 20 años',
@@ -626,7 +626,7 @@ const translations = {
     home: {
       JobTitle1: '项目经理',
       JobTitle2: '网络/软件开发人员',
-      StarMessage1: '+10 完成的项目',
+      StarMessage1: '+30 完成的项目',
       StarMessage2: '3年经验',
       MeInSomePoints: '我在一些观点',
       MePoint1: '我今年20岁',
@@ -768,7 +768,7 @@ const translations = {
     home: {
       JobTitle1: 'परियोजना प्रबंधक',
       JobTitle2: 'वेब / सॉफ्टवेयर डेवलपर',
-      StarMessage1: '+10 परियोजनाएं किया',
+      StarMessage1: '+30 परियोजनाएं किया',
       StarMessage2: '3 वर्षों का अनुभव',
       MeInSomePoints: 'मैं कुछ बिंदुओं में',
       MePoint1: 'मैं 20 वर्ष का हूँ',
@@ -915,7 +915,7 @@ const translations = {
     home: {
       JobTitle1: 'Руководитель проекта',
       JobTitle2: 'Веб / программист',
-      StarMessage1: '+10 Завершенные проекты',
+      StarMessage1: '+30 Завершенные проекты',
       StarMessage2: '3 года опыта',
       MeInSomePoints: 'Я в некоторых точках',
       MePoint1: 'Мне 20 лет',
@@ -1065,7 +1065,7 @@ const translations = {
     home: {
       JobTitle1: 'مدير المشروع',
       JobTitle2: 'مطور ويب / برامج',
-      StarMessage1: '+10 المشاريع التي تم الانتهاء منها',
+      StarMessage1: '+30 المشاريع التي تم الانتهاء منها',
       StarMessage2: '3 سنوات من الخبرة',
       MeInSomePoints: 'أنا في بعض النقاط',
       MePoint1: 'عمري 20 عامًا',
@@ -1208,7 +1208,7 @@ const translations = {
     home: {
       JobTitle1: 'Gerente de projeto',
       JobTitle2: 'Desenvolvedor web / software',
-      StarMessage1: '+10 Projetos concluídos',
+      StarMessage1: '+30 Projetos concluídos',
       StarMessage2: '3 anos de experiência',
       MeInSomePoints: 'Eu em alguns pontos',
       MePoint1: 'Eu tenho 20 anos',
@@ -1358,7 +1358,7 @@ const translations = {
     home: {
       JobTitle1: 'Project Manager',
       JobTitle2: 'Sviluppatore Web / Software',
-      StarMessage1: '+10 Progetti completati',
+      StarMessage1: '+30 Progetti completati',
       StarMessage2: '3 anni di esperienza',
       MeInSomePoints: 'Io in alcuni punti',
       MePoint1: 'Ho 20 anni',
@@ -1512,7 +1512,7 @@ const translations = {
     home: {
       JobTitle1: 'プロジェクトマネージャー',
       JobTitle2: 'Web /ソフトウェア開発者',
-      StarMessage1: '+10 完了したプロジェクト',
+      StarMessage1: '+30 完了したプロジェクト',
       StarMessage2: '3年の経験',
       MeInSomePoints: '私はいくつかのポイントで',
       MePoint1: '私は20歳です',
