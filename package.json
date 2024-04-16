@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
     "@react-spring/native": "^9.5.5",
     "@react-spring/web": "^9.5.5",
     "@testing-library/jest-dom": "^5.17.0",

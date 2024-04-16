@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TinderCard from 'react-tinder-card';
 import styles from './Project.module.css';
@@ -59,6 +59,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   const [currentIndex, setCurrentIndex] = useState(initialBaseProjectsList.length - 1);
   const [indexProjectPic1, setIndexProjectPic1] = useState(0);
   const [projectLiked, setProjectLiked] = useState(false);
+  const [delayedProjectLiked, setDelayedProjectLiked] = useState(false);
   const [projectLikedIndex, setProjectLikedIndex] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -211,11 +212,24 @@ export default function ProjectsSwipper({ selectedLanguage }) {
     setIsHovering(false);
   };
 
+  useEffect(() => {
+    if (projectLiked) {
+      const timeoutId = setTimeout(() => {
+        setDelayedProjectLiked(true);
+      }, 900);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+    return undefined;
+  }, [projectLiked]);
+
   return (
     <div>
       <div className={`${styles.BeforeLikeContainer} ${projectLiked ? styles.AfterLikeContainer : null}`}>
         {projectLikedIndex !== null && (
-          <div className={styles.LikedContainer}>
+          <div className={`${styles.LikedContainer} ${delayedProjectLiked ? styles.AfterLikedContainer : null}`}>
             <div className={styles.headerContainer}>
               <h2>
                 {translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`].ProjectName}
