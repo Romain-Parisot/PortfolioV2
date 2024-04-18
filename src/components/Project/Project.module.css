@@ -19,6 +19,10 @@
   border-radius: 15px;
 }
 
+.margin_bottom_0 {
+  margin-bottom: 0 !important;
+}
+
 .swipper_card_container {
   width: 1200px;
   height: 600px;
@@ -146,11 +150,12 @@
   width: 0px;
   height: 0px;
   transition: 1s;
-  background-color: red;
+  background-color: var(--main-color-30-no-opa);
   z-index: 1;
   opacity: 0;
   position: absolute;
   left: 100px;
+  right: 100px;
   margin-left: 45%;
 }
 
@@ -259,6 +264,14 @@
   grid-row-end: 2;
 }
 
+.accordion {
+  background-color: var(--main-color-50-no-opa);
+}
+
+.accordionDetails {
+  background: red;
+}
+
 @media (max-width: 1600px) {
   .swipper_card_container {
     width: 1000px;
@@ -267,6 +280,9 @@
   .card {
     width: 1000px;
     height: 500px;
+  }
+  .AfterLikeContainer {
+    height: 650px;
   }
 }
 
@@ -278,6 +294,9 @@
   .card {
     width: 800px;
     height: 400px;
+  }
+  .AfterLikeContainer {
+    height: 600px;
   }
 }
 
@@ -307,6 +326,12 @@
   .projects_swipper {
     padding: 10px;
   }
+  .AfterLikeContainer {
+    height: 550px;
+  }
+  .projects_swipper {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -327,6 +352,39 @@
     width: 25px;
     height: 25px;
   }
+  .contentContainer {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentDescriptionContainer {
+    width: auto;
+    padding: 20px;
+    margin-top: 0px;
+  }
+  .imageGalleryContainer {
+    width: auto;
+    padding: 20px;
+    grid-template-rows: 1fr 1fr;
+  }
+  .selectedGalleryImage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .AfterLikeContainer {
+    height: 900px;
+    width: calc(100vw - 120px);
+  }
+  .projects_swipper {
+    margin-bottom: 450px;
+  }
+  .BeforeLikeContainer {
+    left: 50px;
+    right: 50px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -341,6 +399,24 @@
   .swipper_buttons_container {
     gap: 50px;
   }
+  .AfterLikeContainer {
+    height: 800px;
+  }
+}
+
+@media (max-width: 600px) {
+  .button_swipper_bar {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+  .swipper_like_counter {
+    width: 20px;
+    height: 20px;
+  }
+  .AfterLikeContainer {
+    height: 850px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -352,6 +428,14 @@
   .swipper_like_counter {
     width: 20px;
     height: 20px;
+  }
+  .AfterLikeContainer {
+    height: 850px;
+    width: calc(100vw - 50px);
+  }
+  .BeforeLikeContainer {
+    left: 25px;
+    right: 25px;
   }
 }
 

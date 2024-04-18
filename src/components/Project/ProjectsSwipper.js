@@ -10,6 +10,7 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import styles from './Project.module.css';
 import translations from '../../translations/translations';
@@ -272,6 +273,9 @@ export default function ProjectsSwipper({ selectedLanguage }) {
     setExpanded(isExpanded ? panel : false);
   };
 
+  const matches = useMediaQuery('(min-width:1100px)');
+  const matches2 = useMediaQuery('(min-width:900px)');
+
   return (
     <div>
       <div className={`${styles.BeforeLikeContainer} ${projectLiked ? styles.AfterLikeContainer : null}`}>
@@ -297,68 +301,107 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     src={image}
                     alt="project"
                     className={index === selectedImageIndex ? styles.selectedGalleryImage : null}
-                    onMouseOver={() => handleMouseOver(index)}
-                    onMouseLeave={handleMouseLeave}
-                    onFocus={() => setSelectedImageIndex(index)}
+                    onMouseOver={matches2 ? () => handleMouseOver(index) : null}
+                    onMouseLeave={matches2 ? handleMouseLeave : null}
+                    onFocus={matches2 ? () => setSelectedImageIndex(index) : null}
                   />
                 ))}
               </div>
               <div className={styles.contentDescriptionContainer}>
-                <h3>
-                  Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla nulla
-                  est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad fugiat ea
-                  proident et pariatur mollit.
-                </h3>
+                {matches ? (
+                  <h3>
+                    Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla nulla
+                    est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad fugiat ea
+                    proident et pariatur mollit.
+                  </h3>
+                ) : (
+                  <Accordion
+                    expanded={expanded === 'panel0'}
+                    onChange={handleChange('panel0')}
+                    className={styles.accordion}
+                  >
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel0-content" id="panel0-header">
+                      <Typography>Description</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={styles.accordionDetails}>
+                      <Typography>
+                        Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla
+                        nulla est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad
+                        fugiat ea proident et pariatur mollit.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                )}
                 <div>
-                  <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                  <Accordion
+                    expanded={expanded === 'panel1'}
+                    onChange={handleChange('panel1')}
+                    className={styles.accordion}
+                  >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1-content" id="panel1-header">
                       <Typography>Apercy du projet</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
                         amet blandit leo lobortis eget.
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-                  <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                  <Accordion
+                    expanded={expanded === 'panel2'}
+                    onChange={handleChange('panel2')}
+                    className={styles.accordion}
+                  >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2-content" id="panel2-header">
                       <Typography>Technologies utilisé</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
                         amet blandit leo lobortis eget.
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-                  <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                  <Accordion
+                    expanded={expanded === 'panel3'}
+                    onChange={handleChange('panel3')}
+                    className={styles.accordion}
+                  >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3-content" id="panel3-header">
                       <Typography>équipe et collaborateurs</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
                         amet blandit leo lobortis eget.
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-                  <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                  <Accordion
+                    expanded={expanded === 'panel4'}
+                    onChange={handleChange('panel4')}
+                    className={styles.accordion}
+                  >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4-content" id="panel4-header">
                       <Typography>Mon roles et mes réalisations</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
                         amet blandit leo lobortis eget.
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-                  <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                  <Accordion
+                    expanded={expanded === 'panel5'}
+                    onChange={handleChange('panel5')}
+                    className={styles.accordion}
+                  >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel5-content" id="panel5-header">
                       <Typography>Ce que j&apos;ai appris</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
                         amet blandit leo lobortis eget.
@@ -371,7 +414,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
           </div>
         )}
       </div>
-      <div className={`${styles.projects_swipper}`}>
+      <div className={`${styles.projects_swipper} ${!projectLiked ? styles.margin_bottom_0 : ''}`}>
         <div className={`${styles.swipper_card_container}`}>
           {initialBaseProjectsList.map((project, index) => (
             <TinderCard
