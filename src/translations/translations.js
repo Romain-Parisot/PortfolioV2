@@ -9,8 +9,8 @@ const translations = {
       contact: 'Contact',
     },
     home: {
-      JobTitle1: 'Project Manager',
-      JobTitle2: 'Web/Software Developer',
+      JobTitle1: 'Fullstack Developer',
+      JobTitle2: 'Project Manager',
       StarMessage1: '+30 Projects done',
       StarMessage2: '3 years of experience',
       MeInSomePoints: 'Me in some points',
@@ -79,12 +79,12 @@ const translations = {
       course4: {
         CourseNamept1: 'DevOps developer at ',
         CourseNamept2: ' - Work-study',
-        CourseBulletPoint1: '- Maintenance of security on the group applications.',
+        CourseBulletPoint1:
+          '- Maintenance of infrastructures and applications in production and development with supervision systems such as Centreon and Graylog.',
         CourseBulletPoint2:
-          '- Development and maintenance of pipeline for the deployment of Front-end and Back-end applications and services.',
-        CourseBulletPoint3: '- Integration of automated code quality verification produced by developers.',
-        CourseBulletPoint4:
-          '- Maintenance of the infrastructure and deployment of the group applications and services.',
+          '- Maintenance and optimization of pipelines with Jenkins as well as automation processes with Rundeck.',
+        CourseBulletPoint3: '- Orchestration and management of containers with Docker and Kubernetes.',
+        CourseBulletPoint4: '- Identification and deployment of security measures.',
         CourseDate: 'February/2023 - Still in activity',
       },
     },
@@ -152,25 +152,25 @@ const translations = {
   fr: {
     header: {
       home: 'Accueil',
-      aboutMe: 'A propos',
+      aboutMe: 'À propos',
       course: 'Parcours',
       projects: 'Projets',
       skills: 'Compétences',
       contact: 'Me contacter',
     },
     home: {
-      JobTitle1: 'Chef de projet',
-      JobTitle2: 'Développeur Web/Logiciel',
+      JobTitle1: 'Développeur Fullstack',
+      JobTitle2: 'Chef de projet',
       StarMessage1: '+30 Projets réalisés',
       StarMessage2: "3 ans d'expérience",
       MeInSomePoints: 'Moi en quelques points',
       MePoint1: "J'ai 20 ans",
-      MePoint2: "J'habite proche de Paris",
+      MePoint2: "J'habite près de Paris",
       MePoint3: 'Alternant chez',
       MePoint4: "Etudiant a l'",
       MePoint5: 'Bachelor',
       MePoint6: "en fin d'année",
-      MePoint7: 'Rugby / Powerlifter / Art martiaux',
+      MePoint7: 'Rugby / Powerlifter / Sports de combats',
     },
     aboutMe: {
       title: 'Ma personnalité :',
@@ -200,7 +200,7 @@ const translations = {
     course: {
       title: 'Mon parcours :',
       course1: {
-        CourseName: "Etudiant en Coding & Digital Innovation a l'",
+        CourseName: "Étudiant en Coding & Digital Innovation à l'",
         CourseBulletPoint1:
           '- Socle de compétences en Coding, Creation & Design, Communication Digital & e-Business. (1ans)',
         CourseBulletPoint2:
@@ -223,8 +223,8 @@ const translations = {
         CourseNamept2: ' - Alternance',
         CourseBulletPoint1: "- Développement d'applications micro-frontend en React.",
         CourseBulletPoint2:
-          '- Intégration et configuration des intéraction avec des report PowerBi dans des applications React.',
-        CourseBulletPoint3: '- Configuration des applications coté Front-end avec les api AWS.',
+          '- Intégration et configuration des intéractions avec des report PowerBi dans des applications React.',
+        CourseBulletPoint3: '- Configuration des applications côté Front-end avec les API AWS.',
         CourseBulletPoint4:
           '- Développement, maintenance et déploiement de composants React pour le Design System du groupe Altus.',
         CourseDate: 'Septembre/2023 - Février/2023',
@@ -232,13 +232,12 @@ const translations = {
       course4: {
         CourseNamept1: 'Dévellopeur DevOps chez ',
         CourseNamept2: ' - Alternance',
-        CourseBulletPoint1: '- Maintenance de la sécutité sur les applications du groupe.',
+        CourseBulletPoint1:
+          '- Maintenance des infrastructures et applications en production et en développement avec des systèmes de supervision comme Centreon et Graylog.',
         CourseBulletPoint2:
-          '- Développement et maintenance de pipeline pour le déploiment des applications et services Front-end et Back-end.',
-        CourseBulletPoint3:
-          '- Intégration de vérification automatisé de la qualité du code pruduite par les développeurs.',
-        CourseBulletPoint4:
-          "- Maintenance de l'infrastructure et du déploiment des applications et services du groupe.",
+          '- Maintenance et optimisation des pipelines avec Jenkins ainsi que des processus d’automatisation avec Rundeck.',
+        CourseBulletPoint3: '- Orchestration et gestion des conteneurs avec Docker et Kubernetes.',
+        CourseBulletPoint4: '- Identification et déploiement de mesures de sécurité.',
         CourseDate: 'Février/2023 - Toujours en activité',
       },
     },
@@ -389,12 +388,12 @@ const translations = {
       course4: {
         CourseNamept1: 'DevOps-Entwickler bei ',
         CourseNamept2: ' - Duales Studium',
-        CourseBulletPoint1: '- Wartung der Sicherheit auf den Gruppenanwendungen.',
+        CourseBulletPoint1:
+          '- Wartung von Infrastrukturen und Anwendungen in Produktion und Entwicklung mit Überwachungssystemen wie Centreon und Graylog.',
         CourseBulletPoint2:
-          '- Entwicklung und Wartung von Pipelines für die Bereitstellung von Front-End- und Back-End-Anwendungen und -Diensten.',
-        CourseBulletPoint3:
-          '- Integration von automatisierten Codequalitätsprüfungen, die von Entwicklern erstellt wurden.',
-        CourseBulletPoint4: '- Wartung der Infrastruktur und Bereitstellung der Gruppenanwendungen und -dienste.',
+          '- Wartung und Optimierung von Pipelines mit Jenkins sowie Automatisierungsprozessen mit Rundeck.',
+        CourseBulletPoint3: '- Orchestrierung und Verwaltung von Containern mit Docker und Kubernetes.',
+        CourseBulletPoint4: '- Identifizierung und Bereitstellung von Sicherheitsmaßnahmen.',
         CourseDate: 'Februar/2023 - Noch in Aktivität',
       },
     },
@@ -542,13 +541,12 @@ const translations = {
       course4: {
         CourseNamept1: 'Desarrollador DevOps en ',
         CourseNamept2: ' - Aprendizaje',
-        CourseBulletPoint1: '- Mantenimiento de la seguridad en las aplicaciones del grupo.',
+        CourseBulletPoint1:
+          '- Mantenimiento de infraestructuras y aplicaciones en producción y desarrollo con sistemas de supervisión como Centreon y Graylog.',
         CourseBulletPoint2:
-          '- Desarrollo y mantenimiento de canalizaciones para el despliegue de aplicaciones y servicios front-end y back-end.',
-        CourseBulletPoint3:
-          '- Integración de verificación automatizada de la calidad del código producido por los desarrolladores.',
-        CourseBulletPoint4:
-          '- Mantenimiento de la infraestructura y despliegue de las aplicaciones y servicios del grupo.',
+          '- Mantenimiento y optimización de pipelines con Jenkins, así como procesos de automatización con Rundeck.',
+        CourseBulletPoint3: '- Orquestación y gestión de contenedores con Docker y Kubernetes.',
+        CourseBulletPoint4: '- Identificación y despliegue de medidas de seguridad.',
         CourseDate: 'Febrero/2023 - Todavía en actividad',
       },
     },
@@ -690,11 +688,11 @@ const translations = {
       course4: {
         CourseNamept1: 'DevOps开发人员在 ',
         CourseNamept2: ' - 学徒',
-        CourseBulletPoint1: '- 维护集团应用程序的安全性。',
-        CourseBulletPoint2: '- 开发和维护前端和后端应用程序和服务的部署流水线。',
-        CourseBulletPoint3: '- 集成开发人员生成的自动化代码质量验证。',
-        CourseBulletPoint4: '- 维护集团应用程序和服务的基础设施和部署。',
-        CourseDate: '2023年2月 - 活动中',
+        CourseBulletPoint1: '- 使用监控系统如Centreon和Graylog在生产和开发中维护基础设施和应用程序。',
+        CourseBulletPoint2: '- 使用Jenkins优化管道以及使用Rundeck自动化流程。',
+        CourseBulletPoint3: '- 使用Docker和Kubernetes编排和管理容器。',
+        CourseBulletPoint4: '- 识别和部署安全措施。',
+        CourseDate: '2023年2月 - 持续活动中',
       },
     },
     project: {
@@ -831,13 +829,14 @@ const translations = {
         CourseDate: 'सितंबर/2023 - फरवरी/2023',
       },
       course4: {
-        CourseNamept1: 'डेवओप्स डेवलपर के रूप में ',
+        CourseNamept1: 'डेवऑप्स डेवलपर के रूप में ',
         CourseNamept2: ' - आपरेंटिस',
-        CourseBulletPoint1: '- समूह के एप्लिकेशन की सुरक्षा की रखरखाव।',
-        CourseBulletPoint2: '- एप्लिकेशन और सेवाओं के डिप्लॉयमेंट के लिए पाइपलाइन का विकास और रखरखाव।',
-        CourseBulletPoint3: '- डेवलपर्स द्वारा उत्पन्न कोड क्वालिटी की स्वचालित जांच की इंटीग्रेशन।',
-        CourseBulletPoint4: '- समूह के एप्लिकेशन और सेवाओं के इंफ्रास्ट्रक्चर और डिप्लॉयमेंट की रखरखाव।',
-        CourseDate: 'फरवरी/2023 - वर्तमान में भी गतिविधि',
+        CourseBulletPoint1:
+          '- सेंट्रियन और ग्रेलॉग जैसे निगरानी सिस्टम के साथ उत्पादन और विकास में ढाल और एप्लिकेशन की रखरखाव।',
+        CourseBulletPoint2: '- जेंकिन्स के साथ पाइपलाइन की रखरखाव और अनुकूलन, साथ ही रंडेक के साथ स्वचालन प्रक्रियाएँ।',
+        CourseBulletPoint3: '- डॉकर और कुबरनेटीज़ के साथ कंटेनर की ऑर्केस्ट्रेशन और प्रबंधन।',
+        CourseBulletPoint4: '- सुरक्षा उपायों की पहचान और तैनाती।',
+        CourseDate: 'फरवरी/2023 - अभी भी गतिविधि में',
       },
     },
     project: {
@@ -981,14 +980,14 @@ const translations = {
         CourseDate: 'Сентябрь/2023 - Февраль/2023',
       },
       course4: {
-        CourseNamept1: 'Разработчик DevOps в ',
+        CourseNamept1: 'DevOps-разработчик в ',
         CourseNamept2: ' - Обучение',
-        CourseBulletPoint1: '- Поддержание безопасности в приложениях группы.',
-        CourseBulletPoint2:
-          '- Разработка и поддержание конвейеров для развертывания приложений и сервисов фронтенда и бэкенда.',
-        CourseBulletPoint3: '- Интеграция автоматизированной проверки качества кода, созданного разработчиками.',
-        CourseBulletPoint4: '- Поддержание инфраструктуры и развертывание приложений и сервисов группы.',
-        CourseDate: 'Февраль/2023 - По сей день',
+        CourseBulletPoint1:
+          '- Поддержание инфраструктуры и приложений в производстве и разработке с помощью мониторинговых систем, таких как Centreon и Graylog.',
+        CourseBulletPoint2: '- Оптимизация конвейера с Jenkins и автоматизация процессов с Rundeck.',
+        CourseBulletPoint3: '- Оркестрация и управление контейнерами с Docker и Kubernetes.',
+        CourseBulletPoint4: '- Идентификация и развертывание мер безопасности.',
+        CourseDate: 'Февраль/2023 - Продолжается',
       },
     },
     project: {
@@ -1130,11 +1129,12 @@ const translations = {
       course4: {
         CourseNamept1: 'مطور DevOps في ',
         CourseNamept2: ' - متدرب',
-        CourseBulletPoint1: '- الحفاظ على أمان تطبيقات المجموعة.',
-        CourseBulletPoint2: '- تطوير وصيانة خطوط الإنتاج لنشر تطبيقات وخدمات الأمامية والخلفية.',
-        CourseBulletPoint3: '- تكامل التحقق الآلي من جودة الكود التي تم إنشاؤها من قبل المطورين.',
-        CourseBulletPoint4: '- الحفاظ على البنية التحتية ونشر تطبيقات وخدمات المجموعة.',
-        CourseDate: 'فبراير/2023 - نشط',
+        CourseBulletPoint1:
+          '- الحفاظ على البنية التحتية والتطبيقات في الإنتاج والتطوير باستخدام أنظمة المراقبة مثل Centreon و Graylog.',
+        CourseBulletPoint2: '- تحسين الخط الأنابيب مع Jenkins وتلقين العمليات مع Rundeck.',
+        CourseBulletPoint3: '- تنظيم وإدارة الحاويات مع Docker و Kubernetes.',
+        CourseBulletPoint4: '- تحديد ونشر تدابير الأمان.',
+        CourseDate: 'فبراير/2023 - مستمر',
       },
     },
     project: {
@@ -1275,13 +1275,12 @@ const translations = {
       course4: {
         CourseNamept1: 'Desenvolvedor DevOps em ',
         CourseNamept2: ' - Aprendiz',
-        CourseBulletPoint1: '- Manutenção da segurança em aplicativos do grupo.',
-        CourseBulletPoint2:
-          '- Desenvolvimento e manutenção de pipelines para implantação de aplicativos e serviços front-end e back-end.',
-        CourseBulletPoint3:
-          '- Integração de verificação automatizada da qualidade do código criado pelos desenvolvedores.',
-        CourseBulletPoint4: '- Manutenção da infraestrutura e implantação de aplicativos e serviços do grupo.',
-        CourseDate: 'Fevereiro/2023 - Atual',
+        CourseBulletPoint1:
+          '- Manutenção da infraestrutura e aplicativos em produção e desenvolvimento com sistemas de monitoramento, como Centreon e Graylog.',
+        CourseBulletPoint2: '- Otimização do pipeline com Jenkins e automação de processos com Rundeck.',
+        CourseBulletPoint3: '- Orquestração e gerenciamento de contêineres com Docker e Kubernetes.',
+        CourseBulletPoint4: '- Identificação e implantação de medidas de segurança.',
+        CourseDate: 'Fevereiro/2023 - Em andamento',
       },
     },
     project: {
@@ -1429,13 +1428,12 @@ const translations = {
       course4: {
         CourseNamept1: 'Sviluppatore DevOps in ',
         CourseNamept2: ' - Apprendista',
-        CourseBulletPoint1: '- Mantenimento della sicurezza nelle applicazioni del gruppo.',
-        CourseBulletPoint2:
-          '- Sviluppo e manutenzione di pipeline per la distribuzione di applicazioni e servizi front-end e back-end.',
-        CourseBulletPoint3:
-          '- Integrazione del controllo automatizzato della qualità del codice creato dagli sviluppatori.',
-        CourseBulletPoint4: '- Mantenimento dell infrastruttura e distribuzione di applicazioni e servizi del gruppo.',
-        CourseDate: 'Febbraio/2023 - Attuale',
+        CourseBulletPoint1:
+          '- Manutenzione dell infrastruttura e delle applicazioni in produzione e sviluppo con sistemi di monitoraggio come Centreon e Graylog.',
+        CourseBulletPoint2: '- Ottimizzazione del pipeline con Jenkins e automazione dei processi con Rundeck.',
+        CourseBulletPoint3: '- Orchestrazione e gestione dei container con Docker e Kubernetes.',
+        CourseBulletPoint4: '- Identificazione e implementazione di misure di sicurezza.',
+        CourseDate: 'Febbraio/2023 - In corso',
       },
     },
     project: {
@@ -1574,13 +1572,13 @@ const translations = {
         CourseDate: '2023年9月 - 2023年2月',
       },
       course4: {
-        CourseNamept1: ' - トレーニングでDevOps開発者',
-        CourseBulletPoint1: '- グループのアプリケーションのセキュリティの維持。',
-        CourseBulletPoint2:
-          '- フロントエンドとバックエンドのアプリケーションとサービスの展開のためのパイプラインの開発と維持。',
-        CourseBulletPoint3: '- 開発者によって作成されたコードの自動品質チェックの統合。',
-        CourseBulletPoint4: '- グループのインフラストラクチャの維持とアプリケーションとサービスの展開。',
-        CourseDate: '2023年2月 - 現在',
+        CourseNamept1: ' - インターンシップでDevOps開発者',
+        CourseBulletPoint1:
+          '- CentreonやGraylogなどの監視システムを使用して本番環境と開発環境のインフラとアプリケーションを維持する。',
+        CourseBulletPoint2: '- Jenkinsでパイプラインを最適化し、Rundeckでプロセスを自動化する。',
+        CourseBulletPoint3: '- DockerとKubernetesでコンテナをオーケストレーションおよび管理する。',
+        CourseBulletPoint4: '- セキュリティ対策の特定と展開。',
+        CourseDate: '2023年2月 - 継続中',
       },
     },
     project: {
