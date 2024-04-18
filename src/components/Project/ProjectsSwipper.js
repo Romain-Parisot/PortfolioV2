@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import TinderCard from 'react-tinder-card';
 
 // material-ui
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -63,6 +65,36 @@ const initialBaseProjectsList = [
   },
 ];
 
+// eslint-disable-next-line react/jsx-props-no-spreading
+const Accordion = styled(props => <MuiAccordion disableGutters elevation={0} square {...props} />)(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
+  '&:not(:last-child)': {
+    borderBottom: 0,
+  },
+  '&::before': {
+    display: 'none',
+  },
+}));
+
+const AccordionSummary = styled(props => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <MuiAccordionSummary expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />} {...props} />
+))(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, .05)' : 'rgba(0, 0, 0, .03)',
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
+  },
+  '& .MuiAccordionSummary-content': {
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
+}));
+
 export default function ProjectsSwipper({ selectedLanguage }) {
   const [currentIndex, setCurrentIndex] = useState(initialBaseProjectsList.length - 1);
   const [indexProjectPic1, setIndexProjectPic1] = useState(0);
@@ -71,6 +103,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
   const [projectLikedIndex, setProjectLikedIndex] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [expanded, setExpanded] = React.useState(false);
 
   const currentIndexRef = useRef(currentIndex);
   const childRefs = useMemo(
@@ -233,6 +266,12 @@ export default function ProjectsSwipper({ selectedLanguage }) {
     return undefined;
   }, [projectLiked]);
 
+  // Control accordion
+
+  const handleChange = panel => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <div>
       <div className={`${styles.BeforeLikeContainer} ${projectLiked ? styles.AfterLikeContainer : null}`}>
@@ -271,9 +310,9 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                   proident et pariatur mollit.
                 </h3>
                 <div>
-                  <Accordion defaultExpanded>
+                  <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1-content" id="panel1-header">
-                      <Typography>Expanded by default</Typography>
+                      <Typography>Apercy du projet</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
@@ -282,9 +321,42 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-                  <Accordion>
+                  <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2-content" id="panel2-header">
-                      <Typography>Header</Typography>
+                      <Typography>Technologies utilisé</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
+                        amet blandit leo lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3-content" id="panel3-header">
+                      <Typography>équipe et collaborateurs</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
+                        amet blandit leo lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4-content" id="panel4-header">
+                      <Typography>Mon roles et mes réalisations</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
+                        amet blandit leo lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel5-content" id="panel5-header">
+                      <Typography>Ce que j&apos;ai appris</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>

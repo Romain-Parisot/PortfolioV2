@@ -156,7 +156,7 @@
 
 .AfterLikeContainer {
   width: calc(100vw - 220px);
-  height: 650px;
+  height: 750px;
   z-index: 3;
   opacity: 1;
   margin-left: 0;
@@ -174,7 +174,7 @@
   opacity: 0;
 }
 
-.AfterLikedContainer{
+.AfterLikedContainer {
   opacity: 1;
 }
 
@@ -221,12 +221,24 @@
 
 .contentContainer {
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
+  gap: 20px;
+}
+
+.contentDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.contentDescriptionContainer svg {
+  transform: rotate(-90deg);
 }
 
 .imageGalleryContainer {
-  width: 20vw;
+  width: 40%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 0.5fr 0.5fr;
