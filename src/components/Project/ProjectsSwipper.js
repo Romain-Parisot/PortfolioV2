@@ -321,7 +321,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel0-content" id="panel0-header">
-                      <Typography>Description</Typography>
+                      <Typography>{translations[selectedLanguage].project.description}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
@@ -339,7 +339,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1-content" id="panel1-header">
-                      <Typography>Apercy du projet</Typography>
+                      <Typography>{translations[selectedLanguage].project.projectOverview}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
@@ -354,7 +354,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2-content" id="panel2-header">
-                      <Typography>Technologies utilisé</Typography>
+                      <Typography>{translations[selectedLanguage].project.usedLanguages}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
@@ -369,7 +369,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3-content" id="panel3-header">
-                      <Typography>équipe et collaborateurs</Typography>
+                      <Typography>{translations[selectedLanguage].project.teamAndCollaborators}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
@@ -384,7 +384,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4-content" id="panel4-header">
-                      <Typography>Mon roles et mes réalisations</Typography>
+                      <Typography>{translations[selectedLanguage].project.myRoleAndRealization}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
@@ -399,7 +399,7 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel5-content" id="panel5-header">
-                      <Typography>Ce que j&apos;ai appris</Typography>
+                      <Typography>{translations[selectedLanguage].project.whatILearned}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>

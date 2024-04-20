@@ -90,7 +90,12 @@ const translations = {
     },
     project: {
       title: 'My projects :',
-      returnToDefaultView: 'Return to default view',
+      description: 'Description',
+      projectOverview: 'Project Overview',
+      usedLanguages: 'Used languages',
+      teamAndCollaborators: 'Team and collaborators',
+      myRoleAndRealization: 'My Role and Realization',
+      whatILearned: 'What did I learned',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -243,7 +248,12 @@ const translations = {
     },
     project: {
       title: 'Mes projets :',
-      returnToDefaultView: 'Retour à la vue par défaut',
+      description: 'Description',
+      projectOverview: 'Vue d’ensemble du projet',
+      usedLanguages: 'Langages utilisés',
+      teamAndCollaborators: 'Équipe et collaborateurs',
+      myRoleAndRealization: 'Mon Rôle et Réalisation',
+      whatILearned: 'Ce que j’ai appris',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -399,7 +409,12 @@ const translations = {
     },
     project: {
       title: 'Meine Projekte :',
-      returnToDefaultView: 'Zurück zur Standardansicht',
+      description: 'Beschreibung',
+      projectOverview: 'Projektübersicht',
+      usedLanguages: 'Verwendete Sprachen',
+      teamAndCollaborators: 'Team und Mitarbeiter',
+      myRoleAndRealization: 'Meine Rolle und Realisierung',
+      whatILearned: 'Was habe ich gelernt',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -552,7 +567,12 @@ const translations = {
     },
     project: {
       title: 'Mis proyectos :',
-      returnToDefaultView: 'Volver a la vista predeterminada',
+      description: 'Descripción',
+      projectOverview: 'Visión general del proyecto',
+      usedLanguages: 'Idiomas utilizados',
+      teamAndCollaborators: 'Equipo y colaboradores',
+      myRoleAndRealization: 'Mi papel y realización',
+      whatILearned: '¿Qué aprendí?',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -697,7 +717,12 @@ const translations = {
     },
     project: {
       title: '我的项目 :',
-      returnToDefaultView: '返回默认视图',
+      description: '描述',
+      projectOverview: '项目概述',
+      usedLanguages: '使用的语言',
+      teamAndCollaborators: '团队和合作者',
+      myRoleAndRealization: '我的角色和实现',
+      whatILearned: '我学到了什么',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription: '一位客户希望数字化钢琴的转售和翻新业务的一部分。',
@@ -841,7 +866,12 @@ const translations = {
     },
     project: {
       title: 'मेरे परियोजनाओं :',
-      returnToDefaultView: 'डिफ़ॉल्ट व्यू पर वापस जाएं',
+      description: 'विवरण',
+      projectOverview: 'परियोजना का अवलोकन',
+      usedLanguages: 'उपयोग की गई भाषाएँ',
+      teamAndCollaborators: 'टीम और सहयोगी',
+      myRoleAndRealization: 'मेरी भ ूमिका और प्राप्ति',
+      whatILearned: 'मैंने क्या सीखा?',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -992,7 +1022,12 @@ const translations = {
     },
     project: {
       title: 'Мои проекты :',
-      returnToDefaultView: 'Вернуться к стандартному виду',
+      description: 'Описание',
+      projectOverview: 'Обзор проекта',
+      usedLanguages: 'Используемые языки',
+      teamAndCollaborators: 'Команда и соавторы',
+      myRoleAndRealization: 'Моя роль и реализация',
+      whatILearned: 'Что я узнал',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -1139,7 +1174,12 @@ const translations = {
     },
     project: {
       title: 'مشاريعي :',
-      returnToDefaultView: 'العودة إلى العرض الافتراضي',
+      description: 'الوصف',
+      projectOverview: 'نظرة عامة على المشروع',
+      usedLanguages: 'اللغات المستخدمة',
+      teamAndCollaborators: 'الفريق والمتعاونين',
+      myRoleAndRealization: 'دوري وتحقيقي',
+      whatILearned: 'ماذا تعلمت',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription: 'عميل يريد تطوير جزء من أعماله في إعادة بيع وتجديد البيانو.',
@@ -1285,7 +1325,12 @@ const translations = {
     },
     project: {
       title: 'Meus projetos :',
-      returnToDefaultView: 'Voltar à visualização padrão',
+      description: 'Descrição',
+      projectOverview: 'Visão geral do projeto',
+      usedLanguages: 'Idiomas usados',
+      teamAndCollaborators: 'Equipe e colaboradores',
+      myRoleAndRealization: 'Meu papel e realização',
+      whatILearned: 'O que aprendi',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -1438,7 +1483,12 @@ const translations = {
     },
     project: {
       title: 'I miei progetti :',
-      returnToDefaultView: 'Torna alla visualizzazione predefinita',
+      description: 'Descrizione',
+      projectOverview: 'Panoramica del progetto',
+      usedLanguages: 'Linguaggi utilizzati',
+      teamAndCollaborators: 'Team e collaboratori',
+      myRoleAndRealization: 'Il mio ruolo e realizzazione',
+      whatILearned: 'Cosa ho imparato',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
@@ -1583,7 +1633,12 @@ const translations = {
     },
     project: {
       title: '私のプロジェクト :',
-      returnToDefaultView: 'デフォルトビューに戻る',
+      description: '説明',
+      projectOverview: 'プロジェクトの概要',
+      usedLanguages: '使用言語',
+      teamAndCollaborators: 'チームと協力者',
+      myRoleAndRealization: '私の役割と実現',
+      whatILearned: '私が学んだこと',
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription: 'ピアノの転売と改装の一部をデジタル化したいと考えていたクライアント。',
