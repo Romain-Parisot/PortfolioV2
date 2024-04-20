@@ -310,9 +310,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               <div className={styles.contentDescriptionContainer}>
                 {matches ? (
                   <h3>
-                    Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla nulla
-                    est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad fugiat ea
-                    proident et pariatur mollit.
+                    {
+                      translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                        .ProjectDescription
+                    }
                   </h3>
                 ) : (
                   <Accordion
@@ -325,9 +326,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla
-                        nulla est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad
-                        fugiat ea proident et pariatur mollit.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectDescription
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -343,8 +345,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectOverview
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -358,8 +362,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectUsedLanguages
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -373,8 +379,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectTeamAndCollaborators
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -388,8 +396,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectMyRoleAndRealization
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -403,8 +413,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectWhatILearned
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
