@@ -421,7 +421,13 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               ref={childRefs[index]}
               className={`${styles.swipper_card}`}
               key={`${project.code}`}
-              onSwipe={() => swiped(index)}
+              onSwipe={dir => {
+                swiped(index);
+                if (dir === 'right') {
+                  setProjectLiked(true);
+                  setProjectLikedIndex(currentIndex);
+                }
+              }}
               onCardLeftScreen={() => debouncedOutOfFrame(project.code, index)}
             >
               <div
