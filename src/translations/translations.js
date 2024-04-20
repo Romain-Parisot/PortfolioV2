@@ -114,11 +114,14 @@ const translations = {
         ProjectName: 'Violon France',
         ProjectDescription:
           'I created this E-commerce site to offer products in the world of the violin and its accessories.',
-        ProjectOverview: '',
-        ProjectUsedLanguages: '',
-        ProjectTeamAndCollaborators: '',
-        ProjectMyRoleAndRealization: '',
-        ProjectWhatILearned: '',
+        ProjectOverview: 'This was an entrepreneurial project to create a shop website ...',
+        ProjectUsedLanguages: 'The technologies used were Shopify CMS',
+        ProjectTeamAndCollaborators:
+          'We was a team of 2 people, my associate was doing all the marketing side, and the expertize about the product.',
+        ProjectMyRoleAndRealization:
+          'My role was to be the developper and the designer, so i have created the website, the design and some social media posts.',
+        ProjectWhatILearned:
+          'The project finally failed because of some disagreements with my associate, but i learned new skills on e-commerce ',
         ProjectDate: '01-2023 / 02-2023',
         ProjectTime: '70 ~ 80 h',
       },
