@@ -32,7 +32,7 @@ const translations = {
       point2: {
         title: 'Audacious',
         description1: 'I like to dare, take risks and take initiatives.',
-        description2: 'Audacity allows me to experiment and learn from my successes, and even more from my failures.',
+        description2: 'Audacity allows me to experiment and learn from my successes as well as my failures.',
       },
       point3: {
         title: 'Rigorous',
@@ -183,8 +183,7 @@ const translations = {
       point2: {
         title: 'Audacieux',
         description1: "J'aime oser, risquer et prendre des initiatives.",
-        description2:
-          "L'audace me permet d'expérimenter et d'apprendre de mes réussites, et d'autant plus de mes échecs.",
+        description2: "L'audace me permet d'expérimenter et d'apprendre de mes réussites comme de mes échecs.",
       },
       point3: {
         title: 'Rigoureux',
