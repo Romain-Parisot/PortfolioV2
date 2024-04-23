@@ -310,9 +310,10 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               <div className={styles.contentDescriptionContainer}>
                 {matches ? (
                   <h3>
-                    Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla nulla
-                    est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad fugiat ea
-                    proident et pariatur mollit.
+                    {
+                      translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                        .ProjectDescription
+                    }
                   </h3>
                 ) : (
                   <Accordion
@@ -321,13 +322,14 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel0-content" id="panel0-header">
-                      <Typography>Description</Typography>
+                      <Typography>{translations[selectedLanguage].project.description}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Et fugiat pariatur reprehenderit ut eu incididunt culpa eu ipsum ipsum id. Enim aliquip nulla
-                        nulla est tempor proident culpa labore. Nulla non aliquip reprehenderit quis aliquip anim ad
-                        fugiat ea proident et pariatur mollit.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectDescription
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -339,12 +341,14 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1-content" id="panel1-header">
-                      <Typography>Apercy du projet</Typography>
+                      <Typography>{translations[selectedLanguage].project.projectOverview}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectOverview
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -354,12 +358,14 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2-content" id="panel2-header">
-                      <Typography>Technologies utilisé</Typography>
+                      <Typography>{translations[selectedLanguage].project.usedLanguages}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectUsedLanguages
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -369,12 +375,14 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3-content" id="panel3-header">
-                      <Typography>équipe et collaborateurs</Typography>
+                      <Typography>{translations[selectedLanguage].project.teamAndCollaborators}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectTeamAndCollaborators
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -384,12 +392,14 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4-content" id="panel4-header">
-                      <Typography>Mon roles et mes réalisations</Typography>
+                      <Typography>{translations[selectedLanguage].project.myRoleAndRealization}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectMyRoleAndRealization
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -399,12 +409,14 @@ export default function ProjectsSwipper({ selectedLanguage }) {
                     className={styles.accordion}
                   >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel5-content" id="panel5-header">
-                      <Typography>Ce que j&apos;ai appris</Typography>
+                      <Typography>{translations[selectedLanguage].project.whatILearned}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={styles.accordionDetails}>
                       <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
+                        {
+                          translations[selectedLanguage].project[`project${ProjectNameOrder[projectLikedIndex]}`]
+                            .ProjectWhatILearned
+                        }
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -421,7 +433,13 @@ export default function ProjectsSwipper({ selectedLanguage }) {
               ref={childRefs[index]}
               className={`${styles.swipper_card}`}
               key={`${project.code}`}
-              onSwipe={() => swiped(index)}
+              onSwipe={dir => {
+                swiped(index);
+                if (dir === 'right') {
+                  setProjectLiked(true);
+                  setProjectLikedIndex(currentIndex);
+                }
+              }}
               onCardLeftScreen={() => debouncedOutOfFrame(project.code, index)}
             >
               <div
