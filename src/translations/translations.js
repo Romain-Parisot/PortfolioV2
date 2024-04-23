@@ -1,5 +1,8 @@
 const translations = {
   en: {
+    topBar: {
+      title: 'This portfolio is currently under construction. Check back soon to see the improvements!',
+    },
     header: {
       home: 'Home',
       aboutMe: 'About me',
@@ -174,6 +177,9 @@ const translations = {
     },
   },
   fr: {
+    topBar: {
+      title: 'Ce portfolio est actuellement en construction. Revenez bientôt pour voir les améliorations !',
+    },
     header: {
       home: 'Accueil',
       aboutMe: 'À propos',
@@ -345,6 +351,10 @@ const translations = {
     },
   },
   de: {
+    topBar: {
+      title:
+        'Dieses Portfolio befindet sich derzeit im Aufbau. Schauen Sie bald wieder vorbei, um die Verbesserungen zu sehen!',
+    },
     header: {
       home: 'Startseite',
       aboutMe: 'Über mich',
@@ -518,6 +528,9 @@ const translations = {
     },
   },
   es: {
+    topBar: {
+      title: 'Este portafolio está actualmente en construcción. ¡Vuelve pronto para ver las mejoras!',
+    },
     header: {
       home: 'Casa',
       aboutMe: 'Sobre mí',
@@ -687,6 +700,9 @@ const translations = {
     },
   },
   zh: {
+    topBar: {
+      title: '此投资组合目前正在建设中。请稍后再次查看以查看改进！',
+    },
     header: {
       home: '家',
       aboutMe: '关于我',
@@ -846,6 +862,9 @@ const translations = {
     },
   },
   hi: {
+    topBar: {
+      title: 'यह पोर्टफोलियो वर्तमान में निर्माणाधीन है। सुधार देखने के लिए फिर से जल्दी आइए!',
+    },
     header: {
       home: 'घर',
       aboutMe: 'मेरे बारे में',
@@ -1011,6 +1030,10 @@ const translations = {
     },
   },
   ru: {
+    topBar: {
+      title:
+        'Этот портфолио в настоящее время находится в разработке. Пожалуйста, вернитесь позже, чтобы увидеть улучшения!',
+    },
     header: {
       home: 'Главная',
       aboutMe: 'Обо мне',
@@ -1178,6 +1201,9 @@ const translations = {
     },
   },
   ar: {
+    topBar: {
+      title: 'هذا السير الذاتي قيد التطوير حاليًا. يرجى العودة لاحقًا لرؤية التحسينات!',
+    },
     header: {
       home: 'الرئيسية',
       aboutMe: 'حولي',
@@ -1339,6 +1365,9 @@ const translations = {
     },
   },
   pt: {
+    topBar: {
+      title: 'Este portfólio está atualmente em desenvolvimento. Por favor, volte mais tarde para ver as melhorias!',
+    },
     header: {
       home: 'Início',
       aboutMe: 'Sobre mim',
@@ -1505,6 +1534,9 @@ const translations = {
     },
   },
   it: {
+    topBar: {
+      title: 'Questo portfolio è attualmente in fase di sviluppo. Torna più tardi per vedere i miglioramenti!',
+    },
     header: {
       home: 'Casa',
       aboutMe: 'Su di me',
@@ -1675,6 +1707,9 @@ const translations = {
     },
   },
   ja: {
+    topBar: {
+      title: 'このポートフォリオは現在開発中です。改善を見るために後で戻ってください！',
+    },
     header: {
       home: 'ホーム',
       aboutMe: '私について',
