@@ -329,15 +329,18 @@ const translations = {
         ProjectDate: '02-2023 / 04-2023',
         ProjectTime: '70 ~ 80 h',
       },
-
       project4: {
         ProjectName: 'Wiki film',
         ProjectDescription: "Ce site permet d'obtenir des informations sur n'importe quel film.",
-        ProjectOverview: '',
-        ProjectUsedLanguages: '',
-        ProjectTeamAndCollaborators: '',
-        ProjectMyRoleAndRealization: '',
-        ProjectWhatILearned: '',
+        ProjectOverview:
+          'Dans le cadre de notre formation, nous avons dû réaliser ce site web qui permettait de récupérer des informations sur des films et des séries.',
+        ProjectUsedLanguages:
+          "Nous avons utilisé l'API TMDB pour récupérer les informations sur les films et séries. Nous avons également utilisé PHP, Tailwind et Axios pour consommer l'API et afficher les informations sur le site.",
+        ProjectTeamAndCollaborators: 'Nous étions 2 développeurs sur ce projet.',
+        ProjectMyRoleAndRealization:
+          "J'ai réalisé un système de registration et de connexion, ajouté 7 filtres de recherche, une page de détail pour chaque film, des favoris par utilisateur, ainsi qu'une gestion d'albums.",
+        ProjectWhatILearned:
+          "J'ai appris à quel point le pair programming pouvait être puissant pour accomplir des tâches plus rapidement et améliorer la qualité d'implémentation des fonctionnalités.",
         ProjectDate: '11-2022 / 01-2023',
         ProjectTime: '35 ~ 45 h',
       },
