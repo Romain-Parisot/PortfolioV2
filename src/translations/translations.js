@@ -281,38 +281,55 @@ const translations = {
       project1: {
         ProjectName: 'Mousdik Pianos',
         ProjectDescription:
-          'Un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos.',
-        ProjectOverview: '',
-        ProjectUsedLanguages: '',
-        ProjectTeamAndCollaborators: '',
-        ProjectMyRoleAndRealization: '',
-        ProjectWhatILearned: '',
+          'Nous avons réalisé ce site pour un client qui souhaitait digitaliser une partie de son activité de revente et de rénovation de pianos.',
+        ProjectOverview:
+          "Ce site était un projet scolaire réalisé dans le cadre d'une BAP (Bourse au Projet). Des clients nous décrivent leur problématique et nous devons répondre à leurs besoins. Nous avons donc créé un site permettant à notre client de pouvoir référencer ses articles et d'accroître sa visibilité sur le web.",
+        ProjectUsedLanguages:
+          'Nous avons réalisé ce site avec le CMS WordPress. Le site était ensuite hébergé sur Hostinger. Nous avions également ajouté des plugins WordPress pour automatiser certaines tâches.',
+        ProjectTeamAndCollaborators:
+          'Nous étions une équipe de 10 personnes, dont 3 développeurs, 4 designers, 1 marketeur et 2 chefs de projet (Ces derniers ont très peu pris part au projet, nous avons donc dû créer notre propre organisation).',
+        ProjectMyRoleAndRealization:
+          "Mon rôle était de réaliser le site en intégrant les maquettes de nos designers, créer un back office personnalisé aux besoins du client et j'ai également pris le rôle de Chef de Projet pour communiquer avec le client, fluidifier la collaboration avec chaque équipe ainsi que prioriser les features à ajouter au produit.",
+        ProjectWhatILearned:
+          "J'ai appris que pour la réussite d'un projet, il faut parfois sortir de son rôle prédéfini, car si personne ne le fait, le projet n'aurait jamais été fini à temps. J'ai également appris à communiquer avec le client pour comprendre ses besoins et lui partager les informations sur l'avancement du projet, tout en omettant certaines pour de multiples raisons.",
         ProjectDate: '12-2022 / 12-2022',
         ProjectTime: '90 ~ 110 h',
       },
       project2: {
         ProjectName: 'Violon France',
         ProjectDescription:
-          "J'ai crée ce site E-commerce pour proposer des produits dans le monde du violon et ses accessoires.",
-        ProjectOverview: '',
-        ProjectUsedLanguages: '',
-        ProjectTeamAndCollaborators: '',
-        ProjectMyRoleAndRealization: '',
-        ProjectWhatILearned: '',
+          "J'ai créé ce site e-commerce pour proposer des produits dans l'univers du violon et de ses accessoires.",
+        ProjectOverview:
+          'Ce site était un projet entrepreneurial pour créer une boutique en ligne sur le thème du violon. Nous avions une cinquantaine de produits à proposer, et nous avons automatisé tout le processus de livraison ainsi que la gestion du stock.',
+        ProjectUsedLanguages:
+          "Ce site a été créé avec le CMS Shopify, puis j'ai relié le site avec l'application Dsers pour automatiser les commandes avec le fournisseur.",
+        ProjectTeamAndCollaborators:
+          "Nous étions une équipe de 2 personnes, mon associé s'occupait de toute la partie marketing et de l’expertise sur le produit.",
+        ProjectMyRoleAndRealization:
+          'Mon rôle était d’être le développeur et le designer. J’ai donc créé le site, le design de la marque, quelques posts sur les réseaux sociaux ainsi que des brochures physiques qui possédaient un QR code vers le site.',
+        ProjectWhatILearned:
+          "J'ai appris que l'un des points les plus importants dans un projet avec des associés est de définir clairement la vision et les objectifs de l'entreprise en amont de la réalisation de celui-ci.",
         ProjectDate: '01-2023 / 02-2023',
         ProjectTime: '70 ~ 80 h',
       },
       project3: {
         ProjectName: 'Plessis Robinson',
-        ProjectDescription: "Notre objectif était de faciliter l'accès aux ressources de la ville.",
-        ProjectOverview: '',
-        ProjectUsedLanguages: '',
-        ProjectTeamAndCollaborators: '',
-        ProjectMyRoleAndRealization: '',
-        ProjectWhatILearned: '',
+        ProjectDescription:
+          "La mairie de Plessis Robinson nous a missionnés pour faciliter l'accessibilité aux lieux ressources de la ville.",
+        ProjectOverview:
+          "Nous avons donc créé une carte interactive avec tous les lieux ressources de la ville ainsi qu'un back office accessible par la mairie pour ajouter, modifier ou supprimer des lieux sur cette carte.",
+        ProjectUsedLanguages:
+          "Nous avons réalisé ce site avec Symfony, Twig et Tailwind pour créer l'interface utilisateur, la base de données, ainsi que le back office. Nous avons également utilisé l'API GeoApify pour la géolocalisation des lieux sur la carte.",
+        ProjectTeamAndCollaborators:
+          'Nous étions une équipe de 15 personnes, dont 2 Chefs de Projet, 5 développeurs, 6 designers et 2 marketeurs.',
+        ProjectMyRoleAndRealization:
+          "Mes réalisations ont été d'auditer la solution préexistante, de scrapper tous les lieux et les intégrer à notre système, de créer un back office ainsi que d'intégrer les maquettes de nos designers.",
+        ProjectWhatILearned:
+          "Ce que j'ai appris lors de ce projet, c'est que lorsque le projet est bien organisé, il est beaucoup plus facile pour le reste de l'équipe de tirer leur plein potentiel et donc de maximiser la qualité du produit final.",
         ProjectDate: '02-2023 / 04-2023',
         ProjectTime: '70 ~ 80 h',
       },
+
       project4: {
         ProjectName: 'Wiki film',
         ProjectDescription: "Ce site permet d'obtenir des informations sur n'importe quel film.",
